@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-07-01 14:00+0900\n"
+"PO-Revision-Date: 2023-07-02 14:58+0900\n"
 "Last-Translator: ashiojin@gmail.com\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -339,12 +339,10 @@ msgstr ""
 "ンはより多くの問題を引き起こします。"
 
 #: src\translations.md:1
-#, fuzzy
 msgid "# Translations"
 msgstr "# 翻訳"
 
 #: src\translations.md:3
-#, fuzzy
 msgid ""
 "We are utilizing [mdbook-i18n-helper](https://github.com/google/mdbook-i18n-"
 "helpers).\n"
@@ -353,37 +351,31 @@ msgid ""
 "updating-translations)"
 msgstr ""
 "私たちは[mdbook-i18n-helper](https://github.com/google/mdbook-i18n-helpers)を"
-"利用しています。\n"
-"翻訳の追加と更新の方法は[リポジトリ](https://github.com/google/mdbook-i18n-"
-"helpers#creating-and-updating-translations)を参照してください。"
+"利用しています。翻訳の追加と更新の方法は[そのリポジトリ](https://github.com/"
+"google/mdbook-i18n-helpers#creating-and-updating-translations)を参照してくだ"
+"さい。"
 
 #: src\translations.md:6
-#, fuzzy
 msgid "## External translations"
-msgstr "## 外部翻訳"
+msgstr "## 外部の翻訳"
 
 #: src\translations.md:8
-#, fuzzy
 msgid "- [简体中文](https://fomalhauthmj.github.io/patterns/)"
 msgstr "- [简体中文](https://fomalhauthmj.github.io/patterns/)"
 
 #: src\translations.md:10
-#, fuzzy
 msgid ""
 "If you want to add a translation, please open an issue in the\n"
 "[main repository](https://github.com/rust-unofficial/patterns)."
 msgstr ""
-"翻訳を追加したい場合は、issueを\n"
-"[メインリポジトリ](https://github.com/rust-unofficial/patterns) にissueを開い"
-"てください。"
+"翻訳を追加したい場合は、[メインリポジトリ](https://github.com/rust-"
+"unofficial/patterns) にissueを開いてください。"
 
 #: src\idioms/index.md:1
-#, fuzzy
 msgid "# Idioms"
-msgstr "# ♪イディオム"
+msgstr "# イディオム"
 
 #: src\idioms/index.md:3
-#, fuzzy
 msgid ""
 "[Idioms](https://en.wikipedia.org/wiki/Programming_idiom) are commonly used\n"
 "styles, guidelines and patterns largely agreed upon by a community.\n"
@@ -391,29 +383,24 @@ msgid ""
 "happening."
 msgstr ""
 "[イディオム](https://en.wikipedia.org/wiki/Programming_idiom)は、一般的に使わ"
-"れている\n"
-"スタイル、ガイドライン、パターンです。\n"
+"れているスタイル、ガイドライン、パターンです。\n"
 "慣用的なコードを書くことで、他の開発者は何が起こっているのかをよりよく理解す"
-"ることができます。\n"
-"をよりよく理解することができます。"
+"ることができます。"
 
 #: src\idioms/index.md:8
-#, fuzzy
 msgid ""
 "After all, the computer only cares about the machine code that is generated\n"
 "by the compiler.\n"
 "Instead, the source code is mainly beneficial to the developer.\n"
 "So, since we have this abstraction layer, why not make it more readable?"
 msgstr ""
-"結局のところ、コンピュータが気にするのは、コンパイラが生成したマシンコードだ"
-"けなのです。\n"
-"にしか関心がありません。\n"
-"その代わり、ソースコードは主に開発者にとって有益です。\n"
-"では、せっかく抽象化レイヤーがあるのだから、もっと読みやすくしたらどうでしょ"
-"う？"
+"結局のところ、コンピュータにとって重要なものは、コンパイラが生成したマシン"
+"コードのみです。\n"
+"むしろ、ソースコードは主に開発者にとって有益なものです。\n"
+"せっかく、私たちには抽象化レイヤーがあるのですから、もっと読みやすくしたらど"
+"うでしょう？"
 
 #: src\idioms/index.md:13
-#, fuzzy
 msgid ""
 "Remember the [KISS principle](https://en.wikipedia.org/wiki/"
 "KISS_principle):\n"
@@ -423,26 +410,21 @@ msgid ""
 "key\n"
 "goal in design, and unnecessary complexity should be avoided\"."
 msgstr ""
-"KISSの原則](https://en.wikipedia.org/wiki/KISS_principle)を思い出してくださ"
-"い：\n"
-"「シンプルに、バカらしく」。この原則は、「ほとんどのシステムは、複雑にするよ"
-"りもシンプルにしたほうが最もうまく機能する」と主張しています。\n"
-"したがって、シンプルであることが設計の重要な目標であり、不必要な複雑さは避け"
-"るべきです。\n"
-"したがって、シンプルであることが設計における重要な目標であるべきであり、不必"
-"要な複雑さは避けるべきである」と主張しています。"
+"[KISSの原則](https://en.wikipedia.org/wiki/KISS_principle) ：「シンプルにして"
+"おけ！この間抜け」を思い出してください。この原則は、「ほとんどのシステムは、"
+"複雑にするよりもシンプルにしたほうが最もうまく機能する。したがって、シンプル"
+"であることが設計における重要な目標であるべきであり、不必要な複雑さは避けるべ"
+"きである」と主張しています。"
 
 #: src\idioms/index.md:18
-#, fuzzy
 msgid "> Code is there for humans, not computers, to understand."
 msgstr ""
 "> コードは人間が理解するものであって、コンピューターが理解するものではありま"
 "せん。"
 
 #: src\idioms/coercion-arguments.md:1
-#, fuzzy
 msgid "# Use borrowed types for arguments"
-msgstr "# 引数に借用型を使用"
+msgstr "# 引数には借用型を使用する"
 
 #: src\idioms/coercion-arguments.md:3 src\idioms/concat-format.md:3
 #: src\idioms/default.md:3 src\idioms/deref.md:3 src\idioms/dtor-finally.md:3
@@ -467,34 +449,29 @@ msgid "## Description"
 msgstr "## 説明"
 
 #: src\idioms/coercion-arguments.md:5
-#, fuzzy
 msgid ""
 "Using a target of a deref coercion can increase the flexibility of your "
 "code\n"
 "when you are deciding which argument type to use for a function argument.\n"
 "In this way, the function will accept more input types."
 msgstr ""
-"derefの強制のターゲットを使うことで、関数の引数にどの引数型を使うかを決めると"
-"きに、コードの柔軟性を高めることができます。\n"
-"の柔軟性を高めることができます。\n"
-"こうすることで、関数はより多くの入力型を受け入れることができます。"
+"関数の引数にどの型を使うかを決めるときに、参照外し型強制(deref coercion)の対"
+"象を使うことで、コードの柔軟性を高めることができます。この方法により、関数は"
+"より多くの型を入力として受け入れられるようになります。"
 
 #: src\idioms/coercion-arguments.md:9
-#, fuzzy
 msgid ""
 "This is not limited to slice-able or fat pointer types.\n"
 "In fact, you should always prefer using the **borrowed type** over\n"
 "**borrowing the owned type**.\n"
 "Such as `&str` over `&String`, `&[T]` over `&Vec<T>`, or `&T` over `&Box<T>`."
 msgstr ""
-"これはスライス可能な型やファット・ポインタ型に限ったことではありません。\n"
-"実際、**所有型**よりも**借用型**を使用することを常に好むべきです。\n"
-"**借用型** を使用することをお勧めします。\n"
-"例えば、 `&amp;String` よりも `&amp;str` の方が、 `&amp;Vec<T>` よりも `&amp;"
-"[T]` の方が、 `&amp;Box<T>` よりも `&amp;T` の方が優れています。"
+"これはスライス可能な型やファットポインタ型に限ったことではありません。\n"
+"実際、**所有型の借用**よりも **借用型** を常に使用することをお勧めします。\n"
+"例えば、 `&String` よりも `&str` の方が、 `&Vec<T>` よりも `&[T]` の方が、 "
+"`&Box<T>` よりも `&T` の方が優れています。"
 
 #: src\idioms/coercion-arguments.md:14
-#, fuzzy
 msgid ""
 "Using borrowed types you can avoid layers of indirection for those "
 "instances\n"
@@ -505,14 +482,12 @@ msgid ""
 "`&String`\n"
 "coerce to a `&str` whenever the function is invoked."
 msgstr ""
-"借用型を使えば、所有する型がすでに間接的なレイヤーを提供しているような場合"
-"に、間接的なレイヤーを避けることができます。\n"
-"を使用することで、何層もの間接処理を避けることができます。例えば\n"
-"String`には間接のレイヤーがあるので、`&String`は2つの間接のレイヤーを持つこと"
-"になります。\n"
-"を持つことになります。代わりに `&str` を使用し、`&String` を `&str` に強制す"
-"ることでこれを避けることができます。\n"
-"を `&str` に変換させることで回避できます。"
+"借用型を使えば、所有型がすでに間接的なレイヤーを提供しているような場合に、そ"
+"のインスタンスに対する多重の間接的なレイヤーを避けることができます。例えば "
+"`String` には間接的なレイヤーがあるので、 `&String` は2つの間接的なレイヤーを"
+"持つことになってしまいます。\n"
+"代わりに `&str` を使用し、関数呼び出し毎に `&String` を `&str` に型強制するこ"
+"とでこれを避けることができます。"
 
 #: src\idioms/coercion-arguments.md:20 src\idioms/concat-format.md:10
 #: src\idioms/default.md:20 src\idioms/deref.md:9 src\idioms/dtor-finally.md:9
@@ -528,12 +503,10 @@ msgstr ""
 #: src\patterns/structural/compose-structs.md:17
 #: src\anti_patterns/borrow_clone.md:11 src\anti_patterns/deny-warnings.md:8
 #: src\anti_patterns/deref.md:8 src\functional/generics-type-classes.md:38
-#, fuzzy
 msgid "## Example"
 msgstr "## 例"
 
 #: src\idioms/coercion-arguments.md:22
-#, fuzzy
 msgid ""
 "For this example, we will illustrate some differences for using `&String` as "
 "a\n"
@@ -541,34 +514,26 @@ msgid ""
 "using\n"
 "`&Vec<T>` versus using a `&[T]` or using a `&Box<T>` versus a `&T`."
 msgstr ""
-"この例では、関数の引数として `&amp;String` を使用する場合と `&amp;str` を使用"
-"する場合の違いを説明します。\n"
-"関数の引数として `&amp;String` を使用する場合と `&amp;str` を使用する場合の違"
-"いを説明します。\n"
-"Vec<T>` を使用する場合と `&amp;[T]` を使用する場合、または `&amp;Box<T>` を使"
-"用する場合と `&amp;T` を使用する場合にも当てはまります。"
+"この例では、関数の引数として `&String` を使用する場合と `&str` を使用する場合"
+"の違いを説明します。例で示すものは型の組み合わせが `Vec<T>` に対して "
+"`&[T]` 、 `&Box<T>` に対して `&T` 、などあっても同様です。"
 
 #: src\idioms/coercion-arguments.md:26
-#, fuzzy
 msgid ""
 "Consider an example where we wish to determine if a word contains three\n"
 "consecutive vowels. We don't need to own the string to determine this, so "
 "we\n"
 "will take a reference."
 msgstr ""
-"ある単語が3つの連続した母音を含むかどうかを判断したい場合を考えてみましょ"
-"う。\n"
-"母音が連続しているかどうかを判定したい場合を考えてみましょう。これを判断する"
-"ために文字列を所有する必要はありません。\n"
-"を参照します。"
+"例として、ある単語が3つの連続した母音を含むかどうかを調べたい場合を考えてみま"
+"しょう。調べるにあたって、対象の文字列を所有する必要はありません。私たちは参"
+"照を使うでしょう。"
 
 #: src\idioms/coercion-arguments.md:30
-#, fuzzy
 msgid "The code might look something like this:"
 msgstr "コードは次のようになります："
 
 #: src\idioms/coercion-arguments.md:32
-#, fuzzy
 msgid ""
 "```rust\n"
 "fn three_vowels(word: &String) -> bool {\n"
@@ -600,14 +565,14 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
-"ラスト\n"
-"fn three_vowels(word: &String) -> bool { {.\n"
-"    mut vowel_count = 0；\n"
-"    for c in word.chars() { 以下のようにします。\n"
-"        マッチ c { { 'a' | 'e' | 'e'\n"
-"            'a' | 'e' | 'i' | 'o' | 'u' => {.\n"
-"                vowel_count += 1；\n"
-"                if vowel_count >= 3 { もし母音カウントが3以上なら\n"
+"```rust\n"
+"fn three_vowels(word: &String) -> bool {\n"
+"    let mut vowel_count = 0;\n"
+"    for c in word.chars() {\n"
+"        match c {\n"
+"            'a' | 'e' | 'i' | 'o' | 'u' => {\n"
+"                vowel_count += 1;\n"
+"                if vowel_count >= 3 {\n"
 "                    return true\n"
 "                }\n"
 "            }\n"
@@ -618,20 +583,19 @@ msgstr ""
 "}\n"
 "\n"
 "fn main() {\n"
-"    let ferris = \"Ferris\".to_string()；\n"
-"    let curious = \"Curious\".to_string()；\n"
-"    println!(\"{}：{}\", ferris, three_vowels(&ferris))；\n"
-"    println!(\"{}：{}\", curious, three_vowels(&curious))；\n"
+"    let ferris = \"Ferris\".to_string();\n"
+"    let curious = \"Curious\".to_string();\n"
+"    println!(\"{}: {}\", ferris, three_vowels(&ferris));\n"
+"    println!(\"{}: {}\", curious, three_vowels(&curious));\n"
 "\n"
-"    // これはうまくいきますが、次の2行は失敗します：\n"
-"    // println!(\"Ferris: {}\", three_vowels(\"Ferris\"))；\n"
-"    // println!(\"Curious: {}\", three_vowels(\"Curious\"))；\n"
+"    // 以上はうまく動作する。しかし以下の2行は失敗する：\n"
+"    // println!(\"Ferris: {}\", three_vowels(\"Ferris\"));\n"
+"    // println!(\"Curious: {}\", three_vowels(\"Curious\"));\n"
 "\n"
 "}\n"
 "```"
 
 #: src\idioms/coercion-arguments.md:62
-#, fuzzy
 msgid ""
 "This works fine because we are passing a `&String` type as a parameter.\n"
 "If we remove the comments on the last two lines, the example will fail. "
@@ -640,48 +604,44 @@ msgid ""
 "this\n"
 "by simply modifying the type for our argument."
 msgstr ""
-"これは `&String` 型をパラメータとして渡しているため、問題なく動作します。\n"
-"最後の2行のコメントを削除すると、この例は失敗します。これは\n"
-"これは `&str` 型が `&String` 型に強制変換されないからです。これを修正するに"
-"は\n"
-"を修正することができます。"
+"これは `&String` 型をパラメータとして渡しているため、問題なく動作します。最後"
+"の2行のコメントを削除すると、この例は失敗します。これは `&str` 型が "
+"`&String` 型に型強制されないからです。この問題を、単に引数の型を変更すること"
+"で修正できます。"
 
 #: src\idioms/coercion-arguments.md:67
-#, fuzzy
 msgid "For instance, if we change our function declaration to:"
 msgstr "例えば、関数宣言を次のように変更します："
 
 #: src\idioms/coercion-arguments.md:69
-#, fuzzy
 msgid ""
 "```rust, ignore\n"
 "fn three_vowels(word: &str) -> bool {\n"
 "```"
 msgstr ""
-"錆、無視\n"
-"fn three_vowels(word: &str) -> bool { { ``ラスト(word): &str)\n"
+"```rust, ignore\n"
+"fn three_vowels(word: &str) -> bool {\n"
 "```"
 
 #: src\idioms/coercion-arguments.md:73
-#, fuzzy
 msgid "then both versions will compile and print the same output."
-msgstr "であれば、どちらのバージョンもコンパイルされ、同じ出力が表示されます。"
+msgstr ""
+"すると、上述の例のどちらのバージョンもコンパイルされ、同じ出力が表示されま"
+"す。"
 
 #: src\idioms/coercion-arguments.md:75
-#, fuzzy
 msgid ""
 "```bash\n"
 "Ferris: false\n"
 "Curious: true\n"
 "```"
 msgstr ""
-"バッシュ\n"
-"フェリス：偽\n"
-"好奇心: true\n"
+"```bash\n"
+"Ferris: false\n"
+"Curious: true\n"
 "```"
 
 #: src\idioms/coercion-arguments.md:80
-#, fuzzy
 msgid ""
 "But wait, that's not all! There is more to this story.\n"
 "It's likely that you may say to yourself: that doesn't matter, I will never "
@@ -692,17 +652,13 @@ msgid ""
 "will\n"
 "give you more flexibility than using a `&String`."
 msgstr ""
-"でも待ってください！この話にはまだ続きがあります。\n"
-"そんなことはどうでもいい。\n"
-"Ferris\"`を使ったときのように）とにかく入力として`&'static str`を使うことはな"
-"いのだから。\n"
-"この特別な例を無視しても、`&str`を使用する方が`&'static str`を使用するよりも"
-"柔軟性があることに気づくかもしれません。\n"
-"を使用する方が `&String` を使用するよりも柔軟性があることに気づくかもしれませ"
-"ん。"
+"でも待ってください！この話にはまだ続きがあります。もしかしたら、あなたは"
+"「 `&'static str` （上述の例では `\"Ferris\"` ）を入力に使うことは絶対ない"
+"し・・・」と考え、こんなことどうでもいいと感じるかもしれません。\n"
+"または、この特別な例を無視しても、`&str`を使用する方が`&'static str`を使用す"
+"るよりも柔軟性があることに気づくかもしれません。"
 
 #: src\idioms/coercion-arguments.md:86
-#, fuzzy
 msgid ""
 "Let's now take an example where someone gives us a sentence, and we want to\n"
 "determine if any of the words in the sentence contain three consecutive "
@@ -711,19 +667,16 @@ msgid ""
 "simply\n"
 "feed in each word from the sentence."
 msgstr ""
-"では、誰かが私たちに文章をくれたとして、その中に3つの母音が連続する単語がある"
+"では、誰かが私たちに文章を与えたとして、その中に3つの母音が連続する単語がある"
 "かどうかを調べる例を考えてみましょう。\n"
-"文の中に3つの母音が連続する単語があるかどうかを調べます。\n"
-"この場合、すでに定義した関数を使い、文中の単語を入力します。\n"
-"を入力します。"
+"この場合、すでに定義した関数を利用すべきでしょう。単純に、文中の単語を関数に"
+"与えるべきです。"
 
 #: src\idioms/coercion-arguments.md:91
-#, fuzzy
 msgid "An example of this could look like this:"
 msgstr "その例は次のようなものです："
 
 #: src\idioms/coercion-arguments.md:93
-#, fuzzy
 msgid ""
 "```rust\n"
 "fn three_vowels(word: &str) -> bool {\n"
@@ -754,14 +707,14 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
-"ラスト\n"
-"fn three_vowels(word: &str) -> bool { {.\n"
-"    mut vowel_count = 0；\n"
-"    for c in word.chars() { { { { for c in word.chars()\n"
-"        マッチ c { { 'a' | 'e' | 'i\n"
-"            'a' | 'e' | 'i' | 'o' | 'u' => {.\n"
-"                vowel_count += 1；\n"
-"                if vowel_count >= 3 { もし母音カウントが3以上なら\n"
+"```rust\n"
+"fn three_vowels(word: &str) -> bool {\n"
+"    let mut vowel_count = 0;\n"
+"    for c in word.chars() {\n"
+"        match c {\n"
+"            'a' | 'e' | 'i' | 'o' | 'u' => {\n"
+"                vowel_count += 1;\n"
+"                if vowel_count >= 3 {\n"
 "                    return true\n"
 "                }\n"
 "            }\n"
@@ -773,40 +726,36 @@ msgstr ""
 "\n"
 "fn main() {\n"
 "    let sentence_string =\n"
-"        \"むかしむかし、フェリスという名前の人なつっこいカニがいました。\"."
-"to_string()；\n"
-"    for word in sentence_string.split(' ') { もし three_vowels(word)\n"
-"        if three_vowels(word) { もしthree_vowels(word)なら\n"
-"            println!(\"{} has three consecutive vowels!\", word)；\n"
+"        \"Once upon a time, there was a friendly curious crab named Ferris\"."
+"to_string();\n"
+"    for word in sentence_string.split(' ') {\n"
+"        if three_vowels(word) {\n"
+"            println!(\"{} has three consecutive vowels!\", word);\n"
 "        }\n"
 "    }\n"
 "}\n"
 "```"
 
 #: src\idioms/coercion-arguments.md:121
-#, fuzzy
 msgid ""
 "Running this example using our function declared with an argument type "
 "`&str`\n"
 "will yield"
 msgstr ""
-"引数 `&str` 型で宣言した関数を使用してこの例を実行すると、次のようになりま"
-"す。\n"
-"を使って実行すると"
+"引数を `&str` として宣言した関数を使用してこの例を実行すると、次のようになり"
+"ます。"
 
 #: src\idioms/coercion-arguments.md:124
-#, fuzzy
 msgid ""
 "```bash\n"
 "curious has three consecutive vowels!\n"
 "```"
 msgstr ""
-"バッシュ\n"
-"は3つの母音が連続しています！\n"
+"```bash\n"
+"curious has three consecutive vowels!\n"
 "```"
 
 #: src\idioms/coercion-arguments.md:128
-#, fuzzy
 msgid ""
 "However, this example will not run when our function is declared with an\n"
 "argument type `&String`. This is because string slices are a `&str` and not "
@@ -816,12 +765,11 @@ msgid ""
 "is not implicit, whereas converting from `String` to `&str` is cheap and "
 "implicit."
 msgstr ""
-"しかし、この例は関数が `&String` という引数型で宣言されている場合には実行され"
-"ません。\n"
-"引数の型が `&String` で宣言されている場合、この例は実行されません。これは、文"
-"字列スライスが `&str` であり、 `&String` ではないためです。\n"
-"文字列スライスは `&String` ではなく `&String` であるためです。\n"
-"文字列スライスは `&String` 型ではなく `&String` 型だからです。"
+"しかし私たちが関数の引数型を `&String` として宣言していた場合には、この例は実"
+"行できません。これは、文字列スライスが `&str` であり、`&String` ではないため"
+"です。 `&str` は `&String` に変換するためにはアロケーションを必要とし、暗黙期"
+"には変換されません。対して `String` は `&str` に安価かつ暗黙的に変換されま"
+"す。"
 
 #: src\idioms/coercion-arguments.md:133 src\idioms/default.md:58
 #: src\idioms/deref.md:76 src\idioms/dtor-finally.md:88
@@ -837,12 +785,10 @@ msgstr ""
 #: src\patterns/structural/unsafe-mods.md:32
 #: src\anti_patterns/borrow_clone.md:68 src\anti_patterns/deny-warnings.md:96
 #: src\anti_patterns/deref.md:123 src\functional/generics-type-classes.md:237
-#, fuzzy
 msgid "## See also"
 msgstr "## See also"
 
 #: src\idioms/coercion-arguments.md:135
-#, fuzzy
 msgid ""
 "- [Rust Language Reference on Type Coercions](https://doc.rust-lang.org/"
 "reference/type-coercions.html)\n"
@@ -851,12 +797,12 @@ msgid ""
 "https://hermanradtke.com/2015/05/03/string-vs-str-in-rust-functions.html)\n"
 "  by Herman J. Radtke III"
 msgstr ""
-"- [型強制に関するRust言語リファレンス](https://doc.rust-lang.org/reference/"
-"type-coercions.html)\n"
-"- String`と`&str`の扱い方については\n"
+"- [型強制(Type coercions)に関するRust言語リファレンス](https://doc.rust-lang."
+"org/reference/type-coercions.html)\n"
+"- `String`と`&str`の扱い方に関する議論は、Herman J. Radtke III の\n"
 "  [このブログのシリーズ(2015)](https://web.archive.org/web/20201112023149/"
-"https://hermanradtke.com/2015/05/03/string-vs-str-in-rust-functions.html)\n"
-"  ハーマン・J・ラトケ III 著"
+"https://hermanradtke.com/2015/05/03/string-vs-str-in-rust-functions.html) を"
+"見てください"
 
 #: src\idioms/concat-format.md:1
 #, fuzzy
