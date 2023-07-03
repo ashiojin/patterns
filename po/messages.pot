@@ -12,219 +12,219 @@ msgstr ""
 "Language: en\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: src\SUMMARY.md:3
+#: src/SUMMARY.md:3
 msgid "Introduction"
 msgstr ""
 
-#: src\SUMMARY.md:4
+#: src/SUMMARY.md:4
 msgid "Translations"
 msgstr ""
 
-#: src\SUMMARY.md:5
+#: src/SUMMARY.md:5
 msgid "Idioms"
 msgstr ""
 
-#: src\SUMMARY.md:6
+#: src/SUMMARY.md:6
 msgid "Use borrowed types for arguments"
 msgstr ""
 
-#: src\SUMMARY.md:7
+#: src/SUMMARY.md:7
 msgid "Concatenating Strings with format!"
 msgstr ""
 
-#: src\SUMMARY.md:8
+#: src/SUMMARY.md:8
 msgid "Constructor"
 msgstr ""
 
-#: src\SUMMARY.md:9
+#: src/SUMMARY.md:9
 msgid "The Default Trait"
 msgstr ""
 
-#: src\SUMMARY.md:10
+#: src/SUMMARY.md:10
 msgid "Collections Are Smart Pointers"
 msgstr ""
 
-#: src\SUMMARY.md:11
+#: src/SUMMARY.md:11
 msgid "Finalisation in Destructors"
 msgstr ""
 
-#: src\SUMMARY.md:12
+#: src/SUMMARY.md:12
 msgid "mem::{take(_), replace(_)}"
 msgstr ""
 
-#: src\SUMMARY.md:13
+#: src/SUMMARY.md:13
 msgid "On-Stack Dynamic Dispatch"
 msgstr ""
 
-#: src\SUMMARY.md:14
-#: src\SUMMARY.md:40
+#: src/SUMMARY.md:14
+#: src/SUMMARY.md:40
 msgid "Foreign function interface (FFI)"
 msgstr ""
 
-#: src\SUMMARY.md:15
+#: src/SUMMARY.md:15
 msgid "Idiomatic Errors"
 msgstr ""
 
-#: src\SUMMARY.md:16
+#: src/SUMMARY.md:16
 msgid "Accepting Strings"
 msgstr ""
 
-#: src\SUMMARY.md:17
+#: src/SUMMARY.md:17
 msgid "Passing Strings"
 msgstr ""
 
-#: src\SUMMARY.md:18
+#: src/SUMMARY.md:18
 msgid "Iterating over an Option"
 msgstr ""
 
-#: src\SUMMARY.md:19
+#: src/SUMMARY.md:19
 msgid "Pass Variables to Closure"
 msgstr ""
 
-#: src\SUMMARY.md:20
+#: src/SUMMARY.md:20
 msgid "Privacy For Extensibility"
 msgstr ""
 
-#: src\SUMMARY.md:21
+#: src/SUMMARY.md:21
 msgid "Easy doc initialization"
 msgstr ""
 
-#: src\SUMMARY.md:22
+#: src/SUMMARY.md:22
 msgid "Temporary mutability"
 msgstr ""
 
-#: src\SUMMARY.md:23
+#: src/SUMMARY.md:23
 msgid "Return consumed arg on error"
 msgstr ""
 
-#: src\SUMMARY.md:25
+#: src/SUMMARY.md:25
 msgid "Design Patterns"
 msgstr ""
 
-#: src\SUMMARY.md:26
+#: src/SUMMARY.md:26
 msgid "Behavioural"
 msgstr ""
 
-#: src\SUMMARY.md:27
+#: src/SUMMARY.md:27
 msgid "Command"
 msgstr ""
 
-#: src\SUMMARY.md:28
+#: src/SUMMARY.md:28
 msgid "Interpreter"
 msgstr ""
 
-#: src\SUMMARY.md:29
+#: src/SUMMARY.md:29
 msgid "Newtype"
 msgstr ""
 
-#: src\SUMMARY.md:30
+#: src/SUMMARY.md:30
 msgid "RAII Guards"
 msgstr ""
 
-#: src\SUMMARY.md:31
+#: src/SUMMARY.md:31
 msgid "Strategy"
 msgstr ""
 
-#: src\SUMMARY.md:32
+#: src/SUMMARY.md:32
 msgid "Visitor"
 msgstr ""
 
-#: src\SUMMARY.md:33
+#: src/SUMMARY.md:33
 msgid "Creational"
 msgstr ""
 
-#: src\SUMMARY.md:34
+#: src/SUMMARY.md:34
 msgid "Builder"
 msgstr ""
 
-#: src\SUMMARY.md:35
+#: src/SUMMARY.md:35
 msgid "Fold"
 msgstr ""
 
-#: src\SUMMARY.md:36
+#: src/SUMMARY.md:36
 msgid "Structural"
 msgstr ""
 
-#: src\SUMMARY.md:37
+#: src/SUMMARY.md:37
 msgid "Compose Structs"
 msgstr ""
 
-#: src\SUMMARY.md:38
+#: src/SUMMARY.md:38
 msgid "Prefer Small Crates"
 msgstr ""
 
-#: src\SUMMARY.md:39
+#: src/SUMMARY.md:39
 msgid "Contain unsafety in small modules"
 msgstr ""
 
-#: src\SUMMARY.md:41
+#: src/SUMMARY.md:41
 msgid "Object-Based APIs"
 msgstr ""
 
-#: src\SUMMARY.md:42
+#: src/SUMMARY.md:42
 msgid "Type Consolidation into Wrappers"
 msgstr ""
 
-#: src\SUMMARY.md:44
+#: src/SUMMARY.md:44
 msgid "Anti-patterns"
 msgstr ""
 
-#: src\SUMMARY.md:45
+#: src/SUMMARY.md:45
 msgid "Clone to satisfy the borrow checker"
 msgstr ""
 
-#: src\SUMMARY.md:46
+#: src/SUMMARY.md:46
 msgid "#[deny(warnings)]"
 msgstr ""
 
-#: src\SUMMARY.md:47
+#: src/SUMMARY.md:47
 msgid "Deref Polymorphism"
 msgstr ""
 
-#: src\SUMMARY.md:49
+#: src/SUMMARY.md:49
 msgid "Functional Programming"
 msgstr ""
 
-#: src\SUMMARY.md:50
+#: src/SUMMARY.md:50
 msgid "Programming paradigms"
 msgstr ""
 
-#: src\SUMMARY.md:51
+#: src/SUMMARY.md:51
 msgid "Generics as Type Classes"
 msgstr ""
 
-#: src\SUMMARY.md:52
+#: src/SUMMARY.md:52
 msgid "Lenses and Prisms"
 msgstr ""
 
-#: src\SUMMARY.md:54
+#: src/SUMMARY.md:54
 msgid "Additional Resources"
 msgstr ""
 
-#: src\SUMMARY.md:55
+#: src/SUMMARY.md:55
 msgid "Design principles"
 msgstr ""
 
-#: src\intro.md:1
+#: src/intro.md:1
 msgid "# Introduction"
 msgstr ""
 
-#: src\intro.md:3
+#: src/intro.md:3
 msgid "## Participation"
 msgstr ""
 
-#: src\intro.md:5
+#: src/intro.md:5
 msgid ""
 "If you are interested in contributing to this book, check out the\n"
 "[contribution "
 "guidelines](https://github.com/rust-unofficial/patterns/blob/master/CONTRIBUTING.md)."
 msgstr ""
 
-#: src\intro.md:8
+#: src/intro.md:8
 msgid "## Design patterns"
 msgstr ""
 
-#: src\intro.md:10
+#: src/intro.md:10
 msgid ""
 "In software development, we often come across problems that share\n"
 "similarities regardless of the environment they appear in. Although the\n"
@@ -233,7 +233,7 @@ msgid ""
 "are generically applicable."
 msgstr ""
 
-#: src\intro.md:16
+#: src/intro.md:16
 msgid ""
 "Design patterns are a collection of reusable and tested solutions to\n"
 "recurring problems in engineering. They make our software more modular,\n"
@@ -242,12 +242,12 @@ msgid ""
 "communication when problem-solving in teams."
 msgstr ""
 
-#: src\intro.md:22
-#: src\patterns/index.md:14
+#: src/intro.md:22
+#: src/patterns/index.md:14
 msgid "## Design patterns in Rust"
 msgstr ""
 
-#: src\intro.md:24
+#: src/intro.md:24
 msgid ""
 "Rust is not object-oriented, and the combination of all its "
 "characteristics,\n"
@@ -259,7 +259,7 @@ msgid ""
 "The book is divided in three main chapters:"
 msgstr ""
 
-#: src\intro.md:32
+#: src/intro.md:32
 msgid ""
 "- [Idioms](./idioms/index.md): guidelines to follow when coding.\n"
 "  They are the social norms of the community.\n"
@@ -273,11 +273,11 @@ msgid ""
 "  anti-patterns create more problems."
 msgstr ""
 
-#: src\translations.md:1
+#: src/translations.md:1
 msgid "# Translations"
 msgstr ""
 
-#: src\translations.md:3
+#: src/translations.md:3
 msgid ""
 "We are utilizing "
 "[mdbook-i18n-helper](https://github.com/google/mdbook-i18n-helpers).\n"
@@ -285,25 +285,25 @@ msgid ""
 "repository](https://github.com/google/mdbook-i18n-helpers#creating-and-updating-translations)"
 msgstr ""
 
-#: src\translations.md:6
+#: src/translations.md:6
 msgid "## External translations"
 msgstr ""
 
-#: src\translations.md:8
+#: src/translations.md:8
 msgid "- [简体中文](https://fomalhauthmj.github.io/patterns/)"
 msgstr ""
 
-#: src\translations.md:10
+#: src/translations.md:10
 msgid ""
 "If you want to add a translation, please open an issue in the\n"
 "[main repository](https://github.com/rust-unofficial/patterns)."
 msgstr ""
 
-#: src\idioms/index.md:1
+#: src/idioms/index.md:1
 msgid "# Idioms"
 msgstr ""
 
-#: src\idioms/index.md:3
+#: src/idioms/index.md:3
 msgid ""
 "[Idioms](https://en.wikipedia.org/wiki/Programming_idiom) are commonly used\n"
 "styles, guidelines and patterns largely agreed upon by a community.\n"
@@ -311,7 +311,7 @@ msgid ""
 "happening."
 msgstr ""
 
-#: src\idioms/index.md:8
+#: src/idioms/index.md:8
 msgid ""
 "After all, the computer only cares about the machine code that is generated\n"
 "by the compiler.\n"
@@ -319,7 +319,7 @@ msgid ""
 "So, since we have this abstraction layer, why not make it more readable?"
 msgstr ""
 
-#: src\idioms/index.md:13
+#: src/idioms/index.md:13
 msgid ""
 "Remember the [KISS "
 "principle](https://en.wikipedia.org/wiki/KISS_principle):\n"
@@ -330,50 +330,52 @@ msgid ""
 "goal in design, and unnecessary complexity should be avoided\"."
 msgstr ""
 
-#: src\idioms/index.md:18
+#: src/idioms/index.md:18
 msgid "> Code is there for humans, not computers, to understand."
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:1
+#: src/idioms/coercion-arguments.md:1
 msgid "# Use borrowed types for arguments"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:3
-#: src\idioms/concat-format.md:3
-#: src\idioms/default.md:3
-#: src\idioms/deref.md:3
-#: src\idioms/dtor-finally.md:3
-#: src\idioms/mem-replace.md:3
-#: src\idioms/on-stack-dyn-dispatch.md:3
-#: src\idioms/ffi/errors.md:3
-#: src\idioms/ffi/accepting-strings.md:3
-#: src\idioms/ffi/passing-strings.md:3
-#: src\idioms/option-iter.md:3
-#: src\idioms/pass-var-to-closure.md:3
-#: src\idioms/priv-extend.md:3
-#: src\idioms/temporary-mutability.md:3
-#: src\idioms/return-consumed-arg-on-error.md:3
-#: src\patterns/behavioural/command.md:3
-#: src\patterns/behavioural/interpreter.md:3
-#: src\patterns/behavioural/newtype.md:13
-#: src\patterns/behavioural/RAII.md:3
-#: src\patterns/behavioural/strategy.md:3
-#: src\patterns/behavioural/visitor.md:3
-#: src\patterns/creational/builder.md:3
-#: src\patterns/creational/fold.md:3
-#: src\patterns/structural/compose-structs.md:5
-#: src\patterns/structural/small-crates.md:3
-#: src\patterns/structural/unsafe-mods.md:3
-#: src\patterns/ffi/export.md:3
-#: src\patterns/ffi/wrappers.md:3
-#: src\anti_patterns/borrow_clone.md:3
-#: src\anti_patterns/deny-warnings.md:3
-#: src\anti_patterns/deref.md:3
-#: src\functional/generics-type-classes.md:3
+#: src/idioms/coercion-arguments.md:3
+#: src/idioms/concat-format.md:3
+#: src/idioms/ctor.md:3
+#: src/idioms/default.md:3
+#: src/idioms/deref.md:3
+#: src/idioms/dtor-finally.md:3
+#: src/idioms/mem-replace.md:3
+#: src/idioms/on-stack-dyn-dispatch.md:3
+#: src/idioms/ffi/errors.md:3
+#: src/idioms/ffi/accepting-strings.md:3
+#: src/idioms/ffi/passing-strings.md:3
+#: src/idioms/option-iter.md:3
+#: src/idioms/pass-var-to-closure.md:3
+#: src/idioms/priv-extend.md:3
+#: src/idioms/rustdoc-init.md:3
+#: src/idioms/temporary-mutability.md:3
+#: src/idioms/return-consumed-arg-on-error.md:3
+#: src/patterns/behavioural/command.md:3
+#: src/patterns/behavioural/interpreter.md:3
+#: src/patterns/behavioural/newtype.md:13
+#: src/patterns/behavioural/RAII.md:3
+#: src/patterns/behavioural/strategy.md:3
+#: src/patterns/behavioural/visitor.md:3
+#: src/patterns/creational/builder.md:3
+#: src/patterns/creational/fold.md:3
+#: src/patterns/structural/compose-structs.md:3
+#: src/patterns/structural/small-crates.md:3
+#: src/patterns/structural/unsafe-mods.md:3
+#: src/patterns/ffi/export.md:3
+#: src/patterns/ffi/wrappers.md:3
+#: src/anti_patterns/borrow_clone.md:3
+#: src/anti_patterns/deny-warnings.md:3
+#: src/anti_patterns/deref.md:3
+#: src/functional/generics-type-classes.md:3
 msgid "## Description"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:5
+#: src/idioms/coercion-arguments.md:5
 msgid ""
 "Using a target of a deref coercion can increase the flexibility of your "
 "code\n"
@@ -381,7 +383,7 @@ msgid ""
 "In this way, the function will accept more input types."
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:9
+#: src/idioms/coercion-arguments.md:9
 msgid ""
 "This is not limited to slice-able or fat pointer types.\n"
 "In fact, you should always prefer using the **borrowed type** over\n"
@@ -389,7 +391,7 @@ msgid ""
 "Such as `&str` over `&String`, `&[T]` over `&Vec<T>`, or `&T` over `&Box<T>`."
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:14
+#: src/idioms/coercion-arguments.md:14
 msgid ""
 "Using borrowed types you can avoid layers of indirection for those "
 "instances\n"
@@ -401,33 +403,34 @@ msgid ""
 "coerce to a `&str` whenever the function is invoked."
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:20
-#: src\idioms/concat-format.md:10
-#: src\idioms/default.md:20
-#: src\idioms/deref.md:9
-#: src\idioms/dtor-finally.md:9
-#: src\idioms/mem-replace.md:11
-#: src\idioms/on-stack-dyn-dispatch.md:10
-#: src\idioms/pass-var-to-closure.md:12
-#: src\idioms/priv-extend.md:18
-#: src\idioms/temporary-mutability.md:12
-#: src\idioms/return-consumed-arg-on-error.md:8
-#: src\patterns/behavioural/command.md:18
-#: src\patterns/behavioural/newtype.md:18
-#: src\patterns/behavioural/RAII.md:11
-#: src\patterns/behavioural/strategy.md:28
-#: src\patterns/behavioural/visitor.md:13
-#: src\patterns/creational/builder.md:7
-#: src\patterns/creational/fold.md:12
-#: src\patterns/structural/compose-structs.md:17
-#: src\anti_patterns/borrow_clone.md:11
-#: src\anti_patterns/deny-warnings.md:8
-#: src\anti_patterns/deref.md:8
-#: src\functional/generics-type-classes.md:38
+#: src/idioms/coercion-arguments.md:20
+#: src/idioms/concat-format.md:10
+#: src/idioms/default.md:20
+#: src/idioms/deref.md:9
+#: src/idioms/dtor-finally.md:9
+#: src/idioms/mem-replace.md:11
+#: src/idioms/on-stack-dyn-dispatch.md:10
+#: src/idioms/pass-var-to-closure.md:12
+#: src/idioms/priv-extend.md:18
+#: src/idioms/rustdoc-init.md:45
+#: src/idioms/temporary-mutability.md:12
+#: src/idioms/return-consumed-arg-on-error.md:8
+#: src/patterns/behavioural/command.md:18
+#: src/patterns/behavioural/newtype.md:18
+#: src/patterns/behavioural/RAII.md:11
+#: src/patterns/behavioural/strategy.md:28
+#: src/patterns/behavioural/visitor.md:13
+#: src/patterns/creational/builder.md:7
+#: src/patterns/creational/fold.md:12
+#: src/patterns/structural/compose-structs.md:15
+#: src/anti_patterns/borrow_clone.md:11
+#: src/anti_patterns/deny-warnings.md:8
+#: src/anti_patterns/deref.md:8
+#: src/functional/generics-type-classes.md:38
 msgid "## Example"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:22
+#: src/idioms/coercion-arguments.md:22
 msgid ""
 "For this example, we will illustrate some differences for using `&String` as "
 "a\n"
@@ -436,7 +439,7 @@ msgid ""
 "`&Vec<T>` versus using a `&[T]` or using a `&Box<T>` versus a `&T`."
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:26
+#: src/idioms/coercion-arguments.md:26
 msgid ""
 "Consider an example where we wish to determine if a word contains three\n"
 "consecutive vowels. We don't need to own the string to determine this, so "
@@ -444,11 +447,11 @@ msgid ""
 "will take a reference."
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:30
+#: src/idioms/coercion-arguments.md:30
 msgid "The code might look something like this:"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:32
+#: src/idioms/coercion-arguments.md:32
 msgid ""
 "```rust\n"
 "fn three_vowels(word: &String) -> bool {\n"
@@ -481,7 +484,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:62
+#: src/idioms/coercion-arguments.md:62
 msgid ""
 "This works fine because we are passing a `&String` type as a parameter.\n"
 "If we remove the comments on the last two lines, the example will fail. "
@@ -491,22 +494,22 @@ msgid ""
 "by simply modifying the type for our argument."
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:67
+#: src/idioms/coercion-arguments.md:67
 msgid "For instance, if we change our function declaration to:"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:69
+#: src/idioms/coercion-arguments.md:69
 msgid ""
 "```rust, ignore\n"
 "fn three_vowels(word: &str) -> bool {\n"
 "```"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:73
+#: src/idioms/coercion-arguments.md:73
 msgid "then both versions will compile and print the same output."
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:75
+#: src/idioms/coercion-arguments.md:75
 msgid ""
 "```bash\n"
 "Ferris: false\n"
@@ -514,7 +517,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:80
+#: src/idioms/coercion-arguments.md:80
 msgid ""
 "But wait, that's not all! There is more to this story.\n"
 "It's likely that you may say to yourself: that doesn't matter, I will never "
@@ -526,7 +529,7 @@ msgid ""
 "give you more flexibility than using a `&String`."
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:86
+#: src/idioms/coercion-arguments.md:86
 msgid ""
 "Let's now take an example where someone gives us a sentence, and we want to\n"
 "determine if any of the words in the sentence contain three consecutive "
@@ -536,11 +539,11 @@ msgid ""
 "feed in each word from the sentence."
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:91
+#: src/idioms/coercion-arguments.md:91
 msgid "An example of this could look like this:"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:93
+#: src/idioms/coercion-arguments.md:93
 msgid ""
 "```rust\n"
 "fn three_vowels(word: &str) -> bool {\n"
@@ -572,21 +575,21 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:121
+#: src/idioms/coercion-arguments.md:121
 msgid ""
 "Running this example using our function declared with an argument type "
 "`&str`\n"
 "will yield"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:124
+#: src/idioms/coercion-arguments.md:124
 msgid ""
 "```bash\n"
 "curious has three consecutive vowels!\n"
 "```"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:128
+#: src/idioms/coercion-arguments.md:128
 msgid ""
 "However, this example will not run when our function is declared with an\n"
 "argument type `&String`. This is because string slices are a `&str` and not "
@@ -597,32 +600,33 @@ msgid ""
 "implicit."
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:133
-#: src\idioms/default.md:58
-#: src\idioms/deref.md:76
-#: src\idioms/dtor-finally.md:88
-#: src\idioms/mem-replace.md:108
-#: src\idioms/on-stack-dyn-dispatch.md:83
-#: src\idioms/option-iter.md:46
-#: src\idioms/priv-extend.md:120
-#: src\patterns/behavioural/command.md:218
-#: src\patterns/behavioural/interpreter.md:142
-#: src\patterns/behavioural/newtype.md:104
-#: src\patterns/behavioural/RAII.md:111
-#: src\patterns/behavioural/strategy.md:174
-#: src\patterns/behavioural/visitor.md:106
-#: src\patterns/creational/builder.md:108
-#: src\patterns/creational/fold.md:109
-#: src\patterns/structural/small-crates.md:45
-#: src\patterns/structural/unsafe-mods.md:32
-#: src\anti_patterns/borrow_clone.md:68
-#: src\anti_patterns/deny-warnings.md:96
-#: src\anti_patterns/deref.md:123
-#: src\functional/generics-type-classes.md:237
+#: src/idioms/coercion-arguments.md:133
+#: src/idioms/ctor.md:101
+#: src/idioms/default.md:58
+#: src/idioms/deref.md:76
+#: src/idioms/dtor-finally.md:88
+#: src/idioms/mem-replace.md:108
+#: src/idioms/on-stack-dyn-dispatch.md:83
+#: src/idioms/option-iter.md:46
+#: src/idioms/priv-extend.md:120
+#: src/patterns/behavioural/command.md:218
+#: src/patterns/behavioural/interpreter.md:142
+#: src/patterns/behavioural/newtype.md:93
+#: src/patterns/behavioural/RAII.md:111
+#: src/patterns/behavioural/strategy.md:174
+#: src/patterns/behavioural/visitor.md:106
+#: src/patterns/creational/builder.md:108
+#: src/patterns/creational/fold.md:109
+#: src/patterns/structural/small-crates.md:45
+#: src/patterns/structural/unsafe-mods.md:32
+#: src/anti_patterns/borrow_clone.md:68
+#: src/anti_patterns/deny-warnings.md:96
+#: src/anti_patterns/deref.md:123
+#: src/functional/generics-type-classes.md:237
 msgid "## See also"
 msgstr ""
 
-#: src\idioms/coercion-arguments.md:135
+#: src/idioms/coercion-arguments.md:135
 msgid ""
 "- [Rust Language Reference on Type "
 "Coercions](https://doc.rust-lang.org/reference/type-coercions.html)\n"
@@ -632,11 +636,11 @@ msgid ""
 "  by Herman J. Radtke III"
 msgstr ""
 
-#: src\idioms/concat-format.md:1
+#: src/idioms/concat-format.md:1
 msgid "# Concatenating strings with `format!`"
 msgstr ""
 
-#: src\idioms/concat-format.md:5
+#: src/idioms/concat-format.md:5
 msgid ""
 "It is possible to build up strings using the `push` and `push_str` methods "
 "on a\n"
@@ -645,7 +649,7 @@ msgid ""
 "non-literal strings."
 msgstr ""
 
-#: src\idioms/concat-format.md:12
+#: src/idioms/concat-format.md:12
 msgid ""
 "```rust\n"
 "fn say_hello(name: &str) -> String {\n"
@@ -661,63 +665,65 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/concat-format.md:25
-#: src\idioms/deref.md:43
-#: src\idioms/dtor-finally.md:42
-#: src\idioms/mem-replace.md:83
-#: src\idioms/on-stack-dyn-dispatch.md:48
-#: src\idioms/ffi/errors.md:131
-#: src\idioms/ffi/accepting-strings.md:68
-#: src\idioms/ffi/passing-strings.md:68
-#: src\idioms/pass-var-to-closure.md:48
-#: src\idioms/temporary-mutability.md:38
-#: src\idioms/return-consumed-arg-on-error.md:55
-#: src\patterns/behavioural/newtype.md:66
-#: src\patterns/behavioural/RAII.md:78
-#: src\patterns/behavioural/strategy.md:96
-#: src\patterns/creational/builder.md:68
-#: src\patterns/structural/compose-structs.md:75
-#: src\patterns/structural/small-crates.md:12
-#: src\patterns/structural/unsafe-mods.md:11
-#: src\patterns/ffi/export.md:111
-#: src\patterns/ffi/wrappers.md:63
-#: src\anti_patterns/deny-warnings.md:16
-#: src\anti_patterns/deref.md:69
-#: src\functional/generics-type-classes.md:210
+#: src/idioms/concat-format.md:25
+#: src/idioms/deref.md:43
+#: src/idioms/dtor-finally.md:42
+#: src/idioms/mem-replace.md:83
+#: src/idioms/on-stack-dyn-dispatch.md:48
+#: src/idioms/ffi/errors.md:131
+#: src/idioms/ffi/accepting-strings.md:68
+#: src/idioms/ffi/passing-strings.md:68
+#: src/idioms/pass-var-to-closure.md:48
+#: src/idioms/rustdoc-init.md:77
+#: src/idioms/temporary-mutability.md:38
+#: src/idioms/return-consumed-arg-on-error.md:55
+#: src/patterns/behavioural/newtype.md:55
+#: src/patterns/behavioural/RAII.md:78
+#: src/patterns/behavioural/strategy.md:95
+#: src/patterns/creational/builder.md:68
+#: src/patterns/structural/compose-structs.md:98
+#: src/patterns/structural/small-crates.md:12
+#: src/patterns/structural/unsafe-mods.md:11
+#: src/patterns/ffi/export.md:111
+#: src/patterns/ffi/wrappers.md:63
+#: src/anti_patterns/deny-warnings.md:16
+#: src/anti_patterns/deref.md:69
+#: src/functional/generics-type-classes.md:210
 msgid "## Advantages"
 msgstr ""
 
-#: src\idioms/concat-format.md:27
+#: src/idioms/concat-format.md:27
 msgid ""
 "Using `format!` is usually the most succinct and readable way to combine "
 "strings."
 msgstr ""
 
-#: src\idioms/concat-format.md:29
-#: src\idioms/deref.md:50
-#: src\idioms/dtor-finally.md:47
-#: src\idioms/mem-replace.md:87
-#: src\idioms/on-stack-dyn-dispatch.md:54
-#: src\idioms/ffi/errors.md:136
-#: src\idioms/ffi/accepting-strings.md:141
-#: src\idioms/ffi/passing-strings.md:103
-#: src\idioms/pass-var-to-closure.md:57
-#: src\idioms/temporary-mutability.md:42
-#: src\idioms/return-consumed-arg-on-error.md:59
-#: src\patterns/behavioural/newtype.md:77
-#: src\patterns/behavioural/strategy.md:104
-#: src\patterns/creational/builder.md:76
-#: src\patterns/structural/compose-structs.md:81
-#: src\patterns/structural/small-crates.md:22
-#: src\patterns/structural/unsafe-mods.md:17
-#: src\patterns/ffi/export.md:234
-#: src\patterns/ffi/wrappers.md:69
-#: src\anti_patterns/deref.md:81
-#: src\functional/generics-type-classes.md:221
+#: src/idioms/concat-format.md:29
+#: src/idioms/deref.md:50
+#: src/idioms/dtor-finally.md:47
+#: src/idioms/mem-replace.md:87
+#: src/idioms/on-stack-dyn-dispatch.md:54
+#: src/idioms/ffi/errors.md:136
+#: src/idioms/ffi/accepting-strings.md:141
+#: src/idioms/ffi/passing-strings.md:103
+#: src/idioms/pass-var-to-closure.md:57
+#: src/idioms/rustdoc-init.md:81
+#: src/idioms/temporary-mutability.md:42
+#: src/idioms/return-consumed-arg-on-error.md:59
+#: src/patterns/behavioural/newtype.md:66
+#: src/patterns/behavioural/strategy.md:104
+#: src/patterns/creational/builder.md:76
+#: src/patterns/structural/compose-structs.md:103
+#: src/patterns/structural/small-crates.md:22
+#: src/patterns/structural/unsafe-mods.md:17
+#: src/patterns/ffi/export.md:234
+#: src/patterns/ffi/wrappers.md:69
+#: src/anti_patterns/deref.md:81
+#: src/functional/generics-type-classes.md:221
 msgid "## Disadvantages"
 msgstr ""
 
-#: src\idioms/concat-format.md:31
+#: src/idioms/concat-format.md:31
 msgid ""
 "It is usually not the most efficient way to combine strings - a series of "
 "`push`\n"
@@ -726,164 +732,153 @@ msgid ""
 "string has been pre-allocated to the expected size)."
 msgstr ""
 
-#: src\idioms/ctor.md:1
-msgid "# Constructors\r"
+#: src/idioms/ctor.md:1
+msgid "# Constructors"
 msgstr ""
 
-#: src\idioms/ctor.md:3
-#: src\idioms/rustdoc-init.md:3
-msgid "## Description\r"
-msgstr ""
-
-#: src\idioms/ctor.md:5
+#: src/idioms/ctor.md:5
 msgid ""
-"Rust does not have constructors as a language construct. Instead, the\r\n"
+"Rust does not have constructors as a language construct. Instead, the\n"
 "convention is to use an [associated function][associated function] `new` to "
 "create an object:"
 msgstr ""
 
-#: src\idioms/ctor.md:8
+#: src/idioms/ctor.md:8
 msgid ""
-"````rust\r\n"
-"/// Time in seconds.\r\n"
-"///\r\n"
-"/// # Example\r\n"
-"///\r\n"
-"/// ```\r\n"
-"/// let s = Second::new(42);\r\n"
-"/// assert_eq!(42, s.value());\r\n"
-"/// ```\r\n"
-"pub struct Second {\r\n"
-"    value: u64\r\n"
-"}\r\n"
-"\r\n"
-"impl Second {\r\n"
-"    // Constructs a new instance of [`Second`].\r\n"
-"    // Note this is an associated function - no self.\r\n"
-"    pub fn new(value: u64) -> Self {\r\n"
-"        Self { value }\r\n"
-"    }\r\n"
-"\r\n"
-"    /// Returns the value in seconds.\r\n"
-"    pub fn value(&self) -> u64 {\r\n"
-"        self.value\r\n"
-"    }\r\n"
-"}\r\n"
+"````rust\n"
+"/// Time in seconds.\n"
+"///\n"
+"/// # Example\n"
+"///\n"
+"/// ```\n"
+"/// let s = Second::new(42);\n"
+"/// assert_eq!(42, s.value());\n"
+"/// ```\n"
+"pub struct Second {\n"
+"    value: u64\n"
+"}\n"
+"\n"
+"impl Second {\n"
+"    // Constructs a new instance of [`Second`].\n"
+"    // Note this is an associated function - no self.\n"
+"    pub fn new(value: u64) -> Self {\n"
+"        Self { value }\n"
+"    }\n"
+"\n"
+"    /// Returns the value in seconds.\n"
+"    pub fn value(&self) -> u64 {\n"
+"        self.value\n"
+"    }\n"
+"}\n"
 "````"
 msgstr ""
 
-#: src\idioms/ctor.md:35
-msgid "## Default Constructors\r"
+#: src/idioms/ctor.md:35
+msgid "## Default Constructors"
 msgstr ""
 
-#: src\idioms/ctor.md:37
+#: src/idioms/ctor.md:37
 msgid ""
 "Rust supports default constructors with the [`Default`][std-default] trait:"
 msgstr ""
 
-#: src\idioms/ctor.md:39
+#: src/idioms/ctor.md:39
 msgid ""
-"````rust\r\n"
-"/// Time in seconds.\r\n"
-"///\r\n"
-"/// # Example\r\n"
-"///\r\n"
-"/// ```\r\n"
-"/// let s = Second::default();\r\n"
-"/// assert_eq!(0, s.value());\r\n"
-"/// ```\r\n"
-"pub struct Second {\r\n"
-"    value: u64\r\n"
-"}\r\n"
-"\r\n"
-"impl Second {\r\n"
-"    /// Returns the value in seconds.\r\n"
-"    pub fn value(&self) -> u64 {\r\n"
-"        self.value\r\n"
-"    }\r\n"
-"}\r\n"
-"\r\n"
-"impl Default for Second {\r\n"
-"    fn default() -> Self {\r\n"
-"        Self { value: 0 }\r\n"
-"    }\r\n"
-"}\r\n"
+"````rust\n"
+"/// Time in seconds.\n"
+"///\n"
+"/// # Example\n"
+"///\n"
+"/// ```\n"
+"/// let s = Second::default();\n"
+"/// assert_eq!(0, s.value());\n"
+"/// ```\n"
+"pub struct Second {\n"
+"    value: u64\n"
+"}\n"
+"\n"
+"impl Second {\n"
+"    /// Returns the value in seconds.\n"
+"    pub fn value(&self) -> u64 {\n"
+"        self.value\n"
+"    }\n"
+"}\n"
+"\n"
+"impl Default for Second {\n"
+"    fn default() -> Self {\n"
+"        Self { value: 0 }\n"
+"    }\n"
+"}\n"
 "````"
 msgstr ""
 
-#: src\idioms/ctor.md:66
+#: src/idioms/ctor.md:66
 msgid ""
 "`Default` can also be derived if all types of all fields implement "
-"`Default`,\r\n"
+"`Default`,\n"
 "like they do with `Second`:"
 msgstr ""
 
-#: src\idioms/ctor.md:69
+#: src/idioms/ctor.md:69
 msgid ""
-"````rust\r\n"
-"/// Time in seconds.\r\n"
-"///\r\n"
-"/// # Example\r\n"
-"///\r\n"
-"/// ```\r\n"
-"/// let s = Second::default();\r\n"
-"/// assert_eq!(0, s.value());\r\n"
-"/// ```\r\n"
-"#[derive(Default)]\r\n"
-"pub struct Second {\r\n"
-"    value: u64\r\n"
-"}\r\n"
-"\r\n"
-"impl Second {\r\n"
-"    /// Returns the value in seconds.\r\n"
-"    pub fn value(&self) -> u64 {\r\n"
-"        self.value\r\n"
-"    }\r\n"
-"}\r\n"
+"````rust\n"
+"/// Time in seconds.\n"
+"///\n"
+"/// # Example\n"
+"///\n"
+"/// ```\n"
+"/// let s = Second::default();\n"
+"/// assert_eq!(0, s.value());\n"
+"/// ```\n"
+"#[derive(Default)]\n"
+"pub struct Second {\n"
+"    value: u64\n"
+"}\n"
+"\n"
+"impl Second {\n"
+"    /// Returns the value in seconds.\n"
+"    pub fn value(&self) -> u64 {\n"
+"        self.value\n"
+"    }\n"
+"}\n"
 "````"
 msgstr ""
 
-#: src\idioms/ctor.md:91
+#: src/idioms/ctor.md:91
 msgid ""
-"**Note:** It is common and expected for types to implement both\r\n"
-"`Default` and an empty `new` constructor. `new` is the constructor\r\n"
-"convention in Rust, and users expect it to exist, so if it is\r\n"
-"reasonable for the basic constructor to take no arguments, then it\r\n"
+"**Note:** It is common and expected for types to implement both\n"
+"`Default` and an empty `new` constructor. `new` is the constructor\n"
+"convention in Rust, and users expect it to exist, so if it is\n"
+"reasonable for the basic constructor to take no arguments, then it\n"
 "should, even if it is functionally identical to default."
 msgstr ""
 
-#: src\idioms/ctor.md:97
+#: src/idioms/ctor.md:97
 msgid ""
 "**Hint:** The advantage of implementing or deriving `Default` is that your "
-"type\r\n"
+"type\n"
 "can now be used where a `Default` implementation is required, most "
-"prominently,\r\n"
+"prominently,\n"
 "any of the [`*or_default` functions in the standard library][std-or-default]."
 msgstr ""
 
-#: src\idioms/ctor.md:101
-msgid "## See also\r"
-msgstr ""
-
-#: src\idioms/ctor.md:103
+#: src/idioms/ctor.md:103
 msgid ""
-"- The [default idiom](default.md) for a more in-depth description of the\r\n"
-"  `Default` trait.\r\n"
-"\r\n"
-"- The [builder pattern](../patterns/creational/builder.md) for "
-"constructing\r\n"
-"  objects where there are multiple configurations.\r\n"
-"\r\n"
-"- [API Guidelines/C-COMMON-TRAITS][API Guidelines/C-COMMON-TRAITS] for\r\n"
-"  implementing both, `Default` and `new`.\r\n"
-"\r"
+"- The [default idiom](default.md) for a more in-depth description of the\n"
+"  `Default` trait.\n"
+"\n"
+"- The [builder pattern](../patterns/creational/builder.md) for constructing\n"
+"  objects where there are multiple configurations.\n"
+"\n"
+"- [API Guidelines/C-COMMON-TRAITS][API Guidelines/C-COMMON-TRAITS] for\n"
+"  implementing both, `Default` and `new`."
 msgstr ""
 
-#: src\idioms/default.md:1
+#: src/idioms/default.md:1
 msgid "# The `Default` Trait"
 msgstr ""
 
-#: src\idioms/default.md:5
+#: src/idioms/default.md:5
 msgid ""
 "Many types in Rust have a [constructor]. However, this is _specific_ to the\n"
 "type; Rust cannot abstract over \"everything that has a `new()` method\". "
@@ -894,7 +889,7 @@ msgid ""
 "Notably, some containers already implement it where applicable."
 msgstr ""
 
-#: src\idioms/default.md:11
+#: src/idioms/default.md:11
 msgid ""
 "Not only do one-element containers like `Cow`, `Box` or `Arc` implement\n"
 "`Default` for contained `Default` types, one can automatically\n"
@@ -902,14 +897,14 @@ msgid ""
 "types implement `Default`, the more useful it becomes."
 msgstr ""
 
-#: src\idioms/default.md:16
+#: src/idioms/default.md:16
 msgid ""
 "On the other hand, constructors can take multiple arguments, while the\n"
 "`default()` method does not. There can even be multiple constructors with\n"
 "different names, but there can only be one `Default` implementation per type."
 msgstr ""
 
-#: src\idioms/default.md:22
+#: src/idioms/default.md:22
 msgid ""
 "```rust\n"
 "use std::{path::PathBuf, time::Duration};\n"
@@ -949,7 +944,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/default.md:60
+#: src/idioms/default.md:60
 msgid ""
 "- The [constructor] idiom is another way to generate instances that may or "
 "may\n"
@@ -959,18 +954,18 @@ msgid ""
 "- [`derive(new)`]"
 msgstr ""
 
-#: src\idioms/deref.md:1
+#: src/idioms/deref.md:1
 msgid "# Collections are smart pointers"
 msgstr ""
 
-#: src\idioms/deref.md:5
+#: src/idioms/deref.md:5
 msgid ""
 "Use the [`Deref`](https://doc.rust-lang.org/std/ops/trait.Deref.html)\n"
 "trait to treat collections like smart pointers, offering owning\n"
 "and borrowed views of data."
 msgstr ""
 
-#: src\idioms/deref.md:11
+#: src/idioms/deref.md:11
 msgid ""
 "```rust,ignore\n"
 "use std::ops::Deref;\n"
@@ -990,7 +985,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/deref.md:28
+#: src/idioms/deref.md:28
 msgid ""
 "A `Vec<T>` is an owning collection of `T`s, while a slice (`&[T]`) is a "
 "borrowed\n"
@@ -1002,32 +997,33 @@ msgid ""
 "implemented for slices."
 msgstr ""
 
-#: src\idioms/deref.md:34
+#: src/idioms/deref.md:34
 msgid "Also `String` and `&str` have a similar relation."
 msgstr ""
 
-#: src\idioms/deref.md:36
-#: src\idioms/dtor-finally.md:32
-#: src\idioms/mem-replace.md:57
-#: src\idioms/on-stack-dyn-dispatch.md:37
-#: src\idioms/ffi/accepting-strings.md:12
-#: src\idioms/ffi/passing-strings.md:14
-#: src\idioms/return-consumed-arg-on-error.md:43
-#: src\patterns/behavioural/command.md:8
-#: src\patterns/behavioural/interpreter.md:16
-#: src\patterns/behavioural/newtype.md:56
-#: src\patterns/behavioural/RAII.md:72
-#: src\patterns/behavioural/strategy.md:19
-#: src\patterns/behavioural/visitor.md:72
-#: src\patterns/creational/builder.md:63
-#: src\patterns/creational/fold.md:73
-#: src\patterns/structural/compose-structs.md:71
-#: src\patterns/ffi/export.md:15
-#: src\anti_patterns/borrow_clone.md:30
+#: src/idioms/deref.md:36
+#: src/idioms/dtor-finally.md:32
+#: src/idioms/mem-replace.md:57
+#: src/idioms/on-stack-dyn-dispatch.md:37
+#: src/idioms/ffi/accepting-strings.md:12
+#: src/idioms/ffi/passing-strings.md:14
+#: src/idioms/rustdoc-init.md:9
+#: src/idioms/return-consumed-arg-on-error.md:43
+#: src/patterns/behavioural/command.md:8
+#: src/patterns/behavioural/interpreter.md:16
+#: src/patterns/behavioural/newtype.md:45
+#: src/patterns/behavioural/RAII.md:72
+#: src/patterns/behavioural/strategy.md:19
+#: src/patterns/behavioural/visitor.md:72
+#: src/patterns/creational/builder.md:63
+#: src/patterns/creational/fold.md:73
+#: src/patterns/structural/compose-structs.md:92
+#: src/patterns/ffi/export.md:15
+#: src/anti_patterns/borrow_clone.md:30
 msgid "## Motivation"
 msgstr ""
 
-#: src\idioms/deref.md:38
+#: src/idioms/deref.md:38
 msgid ""
 "Ownership and borrowing are key aspects of the Rust language. Data "
 "structures\n"
@@ -1037,17 +1033,17 @@ msgid ""
 "borrowed view of that data allows for more flexible APIs."
 msgstr ""
 
-#: src\idioms/deref.md:45
+#: src/idioms/deref.md:45
 msgid ""
 "Most methods can be implemented only for the borrowed view, they are then\n"
 "implicitly available for the owning view."
 msgstr ""
 
-#: src\idioms/deref.md:48
+#: src/idioms/deref.md:48
 msgid "Gives clients a choice between borrowing or taking ownership of data."
 msgstr ""
 
-#: src\idioms/deref.md:52
+#: src/idioms/deref.md:52
 msgid ""
 "Methods and traits only available via dereferencing are not taken into "
 "account\n"
@@ -1056,25 +1052,26 @@ msgid ""
 "pattern can get complex (see the `Borrow` and `AsRef` traits, etc.)."
 msgstr ""
 
-#: src\idioms/deref.md:56
-#: src\idioms/dtor-finally.md:61
-#: src\idioms/mem-replace.md:97
-#: src\idioms/on-stack-dyn-dispatch.md:68
-#: src\idioms/priv-extend.md:85
-#: src\patterns/behavioural/command.md:203
-#: src\patterns/behavioural/interpreter.md:103
-#: src\patterns/behavioural/newtype.md:85
-#: src\patterns/behavioural/RAII.md:83
-#: src\patterns/behavioural/strategy.md:110
-#: src\patterns/behavioural/visitor.md:79
-#: src\patterns/creational/builder.md:81
-#: src\patterns/creational/fold.md:85
-#: src\patterns/structural/compose-structs.md:89
-#: src\anti_patterns/deref.md:102
+#: src/idioms/deref.md:56
+#: src/idioms/dtor-finally.md:61
+#: src/idioms/mem-replace.md:97
+#: src/idioms/on-stack-dyn-dispatch.md:68
+#: src/idioms/priv-extend.md:85
+#: src/idioms/rustdoc-init.md:87
+#: src/patterns/behavioural/command.md:203
+#: src/patterns/behavioural/interpreter.md:103
+#: src/patterns/behavioural/newtype.md:74
+#: src/patterns/behavioural/RAII.md:83
+#: src/patterns/behavioural/strategy.md:110
+#: src/patterns/behavioural/visitor.md:79
+#: src/patterns/creational/builder.md:81
+#: src/patterns/creational/fold.md:85
+#: src/patterns/structural/compose-structs.md:109
+#: src/anti_patterns/deref.md:102
 msgid "## Discussion"
 msgstr ""
 
-#: src\idioms/deref.md:58
+#: src/idioms/deref.md:58
 msgid ""
 "Smart pointers and collections are analogous: a smart pointer points to a "
 "single\n"
@@ -1091,7 +1088,7 @@ msgid ""
 "it can be referenced multiple times."
 msgstr ""
 
-#: src\idioms/deref.md:67
+#: src/idioms/deref.md:67
 msgid ""
 "Most smart pointers (e.g., `Foo<T>`) implement `Deref<Target=T>`. However,\n"
 "collections will usually dereference to a custom type. `[T]` and `str` have "
@@ -1103,25 +1100,25 @@ msgid ""
 "`&Bar<T>` is a borrowed view of the data in `Foo<T>`."
 msgstr ""
 
-#: src\idioms/deref.md:73
+#: src/idioms/deref.md:73
 msgid ""
 "Commonly, ordered collections will implement `Index` for `Range`s to "
 "provide\n"
 "slicing syntax. The target will be the borrowed view."
 msgstr ""
 
-#: src\idioms/deref.md:78
+#: src/idioms/deref.md:78
 msgid ""
 "- [Deref polymorphism anti-pattern](../anti_patterns/deref.md).\n"
 "- [Documentation for `Deref` "
 "trait](https://doc.rust-lang.org/std/ops/trait.Deref.html)."
 msgstr ""
 
-#: src\idioms/dtor-finally.md:1
+#: src/idioms/dtor-finally.md:1
 msgid "# Finalisation in destructors"
 msgstr ""
 
-#: src\idioms/dtor-finally.md:5
+#: src/idioms/dtor-finally.md:5
 msgid ""
 "Rust does not provide the equivalent to `finally` blocks - code that will "
 "be\n"
@@ -1130,7 +1127,7 @@ msgid ""
 "be used to run code that must be run before exit."
 msgstr ""
 
-#: src\idioms/dtor-finally.md:11
+#: src/idioms/dtor-finally.md:11
 msgid ""
 "```rust,ignore\n"
 "fn bar() -> Result<(), ()> {\n"
@@ -1154,7 +1151,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/dtor-finally.md:34
+#: src/idioms/dtor-finally.md:34
 msgid ""
 "If a function has multiple return points, then executing code on exit "
 "becomes\n"
@@ -1169,13 +1166,13 @@ msgid ""
 "Panicking will also exit a function early."
 msgstr ""
 
-#: src\idioms/dtor-finally.md:44
+#: src/idioms/dtor-finally.md:44
 msgid ""
 "Code in destructors will (nearly) always be run - copes with panics, early\n"
 "returns, etc."
 msgstr ""
 
-#: src\idioms/dtor-finally.md:49
+#: src/idioms/dtor-finally.md:49
 msgid ""
 "It is not guaranteed that destructors will run. For example, if there is an\n"
 "infinite loop in a function or if running a function crashes before exit.\n"
@@ -1185,7 +1182,7 @@ msgid ""
 "absolutely essential that finalisation happens."
 msgstr ""
 
-#: src\idioms/dtor-finally.md:55
+#: src/idioms/dtor-finally.md:55
 msgid ""
 "This pattern introduces some hard to notice, implicit code. Reading a "
 "function\n"
@@ -1193,13 +1190,13 @@ msgid ""
 "debugging tricky."
 msgstr ""
 
-#: src\idioms/dtor-finally.md:59
+#: src/idioms/dtor-finally.md:59
 msgid ""
 "Requiring an object and `Drop` impl just for finalisation is heavy on "
 "boilerplate."
 msgstr ""
 
-#: src\idioms/dtor-finally.md:63
+#: src/idioms/dtor-finally.md:63
 msgid ""
 "There is some subtlety about how exactly to store the object used as a\n"
 "finalizer. It must be kept alive until the end of the function and must then "
@@ -1212,7 +1209,7 @@ msgid ""
 "finalizer should not be moved or returned."
 msgstr ""
 
-#: src\idioms/dtor-finally.md:70
+#: src/idioms/dtor-finally.md:70
 msgid ""
 "The finalizer must be assigned into a variable, otherwise it will be "
 "destroyed\n"
@@ -1225,7 +1222,7 @@ msgid ""
 "`_` with no suffix - in that case it will be destroyed immediately."
 msgstr ""
 
-#: src\idioms/dtor-finally.md:76
+#: src/idioms/dtor-finally.md:76
 msgid ""
 "In Rust, destructors are run when an object goes out of scope. This happens\n"
 "whether we reach the end of block, there is an early return, or the program\n"
@@ -1235,7 +1232,7 @@ msgid ""
 "in a function being called."
 msgstr ""
 
-#: src\idioms/dtor-finally.md:82
+#: src/idioms/dtor-finally.md:82
 msgid ""
 "If a destructor panics while unwinding, there is no good action to take, so "
 "Rust\n"
@@ -1247,26 +1244,26 @@ msgid ""
 "resources in an unexpected state."
 msgstr ""
 
-#: src\idioms/dtor-finally.md:90
+#: src/idioms/dtor-finally.md:90
 msgid "[RAII guards](../patterns/behavioural/RAII.md)."
 msgstr ""
 
-#: src\idioms/mem-replace.md:1
+#: src/idioms/mem-replace.md:1
 msgid "# `mem::{take(_), replace(_)}` to keep owned values in changed enums"
 msgstr ""
 
-#: src\idioms/mem-replace.md:5
+#: src/idioms/mem-replace.md:5
 msgid ""
 "Say we have a `&mut MyEnum` which has (at least) two variants,\n"
 "`A { name: String, x: u8 }` and `B { name: String }`. Now we want to change\n"
 "`MyEnum::A` to a `B` if `x` is zero, while keeping `MyEnum::B` intact."
 msgstr ""
 
-#: src\idioms/mem-replace.md:9
+#: src/idioms/mem-replace.md:9
 msgid "We can do this without cloning the `name`."
 msgstr ""
 
-#: src\idioms/mem-replace.md:13
+#: src/idioms/mem-replace.md:13
 msgid ""
 "```rust\n"
 "use std::mem;\n"
@@ -1288,11 +1285,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/mem-replace.md:32
+#: src/idioms/mem-replace.md:32
 msgid "This also works with more variants:"
 msgstr ""
 
-#: src\idioms/mem-replace.md:34
+#: src/idioms/mem-replace.md:34
 msgid ""
 "```rust\n"
 "use std::mem;\n"
@@ -1319,7 +1316,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/mem-replace.md:59
+#: src/idioms/mem-replace.md:59
 msgid ""
 "When working with enums, we may want to change an enum value in place, "
 "perhaps\n"
@@ -1331,7 +1328,7 @@ msgid ""
 "change the value (as in the example above)."
 msgstr ""
 
-#: src\idioms/mem-replace.md:65
+#: src/idioms/mem-replace.md:65
 msgid ""
 "The borrow checker won't allow us to take out `name` of the enum (because\n"
 "_something_ must be there.) We could of course `.clone()` name and put the "
@@ -1342,7 +1339,7 @@ msgid ""
 "can avoid the extra allocation by changing `e` with only a mutable borrow."
 msgstr ""
 
-#: src\idioms/mem-replace.md:70
+#: src/idioms/mem-replace.md:70
 msgid ""
 "`mem::take` lets us swap out the value, replacing it with it's default "
 "value,\n"
@@ -1352,26 +1349,26 @@ msgid ""
 "`name` _as an owned value_. We can then wrap this in another enum."
 msgstr ""
 
-#: src\idioms/mem-replace.md:75
+#: src/idioms/mem-replace.md:75
 msgid ""
 "**NOTE:** `mem::replace` is very similar, but allows us to specify what to\n"
 "replace the value with. An equivalent to our `mem::take` line would be\n"
 "`mem::replace(name, String::new())`."
 msgstr ""
 
-#: src\idioms/mem-replace.md:79
+#: src/idioms/mem-replace.md:79
 msgid ""
 "Note, however, that if we are using an `Option` and want to replace its\n"
 "value with a `None`, `Option`’s `take()` method provides a shorter and\n"
 "more idiomatic alternative."
 msgstr ""
 
-#: src\idioms/mem-replace.md:85
+#: src/idioms/mem-replace.md:85
 msgid ""
 "Look ma, no allocation! Also you may feel like Indiana Jones while doing it."
 msgstr ""
 
-#: src\idioms/mem-replace.md:89
+#: src/idioms/mem-replace.md:89
 msgid ""
 "This gets a bit wordy. Getting it wrong repeatedly will make you hate the\n"
 "borrow checker. The compiler may fail to optimize away the double store,\n"
@@ -1379,14 +1376,14 @@ msgid ""
 "languages."
 msgstr ""
 
-#: src\idioms/mem-replace.md:94
+#: src/idioms/mem-replace.md:94
 msgid ""
 "Furthermore, the type you are taking needs to implement the [`Default` "
 "trait](./default.md). However, if the type you're working with doesn't\n"
 "implement this, you can instead use `mem::replace`."
 msgstr ""
 
-#: src\idioms/mem-replace.md:99
+#: src/idioms/mem-replace.md:99
 msgid ""
 "This pattern is only of interest in Rust. In GC'd languages, you'd take the\n"
 "reference to the value by default (and the GC would keep track of refs), and "
@@ -1396,7 +1393,7 @@ msgid ""
 "later."
 msgstr ""
 
-#: src\idioms/mem-replace.md:104
+#: src/idioms/mem-replace.md:104
 msgid ""
 "However, in Rust, we have to do a little more work to do this. An owned "
 "value\n"
@@ -1405,18 +1402,18 @@ msgid ""
 "like Indiana Jones, replacing the artifact with a bag of sand."
 msgstr ""
 
-#: src\idioms/mem-replace.md:110
+#: src/idioms/mem-replace.md:110
 msgid ""
 "This gets rid of the [Clone to satisfy the borrow "
 "checker](../anti_patterns/borrow_clone.md)\n"
 "anti-pattern in a specific case."
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:1
+#: src/idioms/on-stack-dyn-dispatch.md:1
 msgid "# On-Stack Dynamic Dispatch"
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:5
+#: src/idioms/on-stack-dyn-dispatch.md:5
 msgid ""
 "We can dynamically dispatch over multiple values, however, to do so, we "
 "need\n"
@@ -1427,7 +1424,7 @@ msgid ""
 "below:"
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:12
+#: src/idioms/on-stack-dyn-dispatch.md:12
 msgid ""
 "```rust\n"
 "use std::io;\n"
@@ -1455,7 +1452,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:39
+#: src/idioms/on-stack-dyn-dispatch.md:39
 msgid ""
 "Rust monomorphises code by default. This means a copy of the code will be\n"
 "generated for each type it is used with and optimized independently. While "
@@ -1467,25 +1464,25 @@ msgid ""
 "usage."
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:45
+#: src/idioms/on-stack-dyn-dispatch.md:45
 msgid ""
 "Luckily, Rust allows us to use dynamic dispatch, but we have to explicitly "
 "ask\n"
 "for it."
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:50
+#: src/idioms/on-stack-dyn-dispatch.md:50
 msgid ""
 "We do not need to allocate anything on the heap. Neither do we need to\n"
 "initialize something we won't use later, nor do we need to monomorphize the\n"
 "whole code that follows to work with both `File` or `Stdin`."
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:56
+#: src/idioms/on-stack-dyn-dispatch.md:56
 msgid "The code needs more moving parts than the `Box`-based version:"
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:58
+#: src/idioms/on-stack-dyn-dispatch.md:58
 msgid ""
 "```rust,ignore\n"
 "// We still need to ascribe the type for dynamic dispatch.\n"
@@ -1498,7 +1495,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:70
+#: src/idioms/on-stack-dyn-dispatch.md:70
 msgid ""
 "Rust newcomers will usually learn that Rust requires all variables to be\n"
 "initialized _before use_, so it's easy to overlook the fact that _unused_\n"
@@ -1509,11 +1506,11 @@ msgid ""
 "scope."
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:76
+#: src/idioms/on-stack-dyn-dispatch.md:76
 msgid "The example meets all the constraints Rust places on us:"
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:78
+#: src/idioms/on-stack-dyn-dispatch.md:78
 msgid ""
 "- All variables are initialized before using (in this case borrowing) them\n"
 "- Each variable only holds values of a single type. In our example, `stdin` "
@@ -1523,7 +1520,7 @@ msgid ""
 "- Each borrowed value outlives all the references borrowed from it"
 msgstr ""
 
-#: src\idioms/on-stack-dyn-dispatch.md:85
+#: src/idioms/on-stack-dyn-dispatch.md:85
 msgid ""
 "- [Finalisation in destructors](dtor-finally.md) and\n"
 "  [RAII guards](../patterns/behavioural/RAII.md) can benefit from tight "
@@ -1535,22 +1532,22 @@ msgid ""
 "  optional reference."
 msgstr ""
 
-#: src\idioms/ffi/intro.md:1
+#: src/idioms/ffi/intro.md:1
 msgid "# FFI Idioms"
 msgstr ""
 
-#: src\idioms/ffi/intro.md:3
+#: src/idioms/ffi/intro.md:3
 msgid ""
 "Writing FFI code is an entire course in itself.\n"
 "However, there are several idioms here that can act as pointers, and avoid\n"
 "traps for inexperienced users of `unsafe` Rust."
 msgstr ""
 
-#: src\idioms/ffi/intro.md:7
+#: src/idioms/ffi/intro.md:7
 msgid "This section contains idioms that may be useful when doing FFI."
 msgstr ""
 
-#: src\idioms/ffi/intro.md:9
+#: src/idioms/ffi/intro.md:9
 msgid ""
 "1. [Idiomatic Errors](./errors.md) - Error handling with integer codes and\n"
 "   sentinel return values (such as `NULL` pointers)\n"
@@ -1560,25 +1557,25 @@ msgid ""
 "3. [Passing Strings](./passing-strings.md) to FFI functions"
 msgstr ""
 
-#: src\idioms/ffi/errors.md:1
+#: src/idioms/ffi/errors.md:1
 msgid "# Error Handling in FFI"
 msgstr ""
 
-#: src\idioms/ffi/errors.md:5
+#: src/idioms/ffi/errors.md:5
 msgid ""
 "In foreign languages like C, errors are represented by return codes.\n"
 "However, Rust's type system allows much more rich error information to be\n"
 "captured and propogated through a full type."
 msgstr ""
 
-#: src\idioms/ffi/errors.md:9
+#: src/idioms/ffi/errors.md:9
 msgid ""
 "This best practice shows different kinds of error codes, and how to expose "
 "them\n"
 "in a usable way:"
 msgstr ""
 
-#: src\idioms/ffi/errors.md:12
+#: src/idioms/ffi/errors.md:12
 msgid ""
 "1. Flat Enums should be converted to integers and returned as codes.\n"
 "2. Structured Enums should be converted to an integer code with a string "
@@ -1587,19 +1584,19 @@ msgid ""
 "3. Custom Error Types should become \"transparent\", with a C representation."
 msgstr ""
 
-#: src\idioms/ffi/errors.md:17
-#: src\idioms/ffi/accepting-strings.md:29
-#: src\idioms/ffi/passing-strings.md:26
-#: src\patterns/ffi/export.md:40
-#: src\patterns/ffi/wrappers.md:23
+#: src/idioms/ffi/errors.md:17
+#: src/idioms/ffi/accepting-strings.md:29
+#: src/idioms/ffi/passing-strings.md:26
+#: src/patterns/ffi/export.md:40
+#: src/patterns/ffi/wrappers.md:23
 msgid "## Code Example"
 msgstr ""
 
-#: src\idioms/ffi/errors.md:19
+#: src/idioms/ffi/errors.md:19
 msgid "### Flat Enums"
 msgstr ""
 
-#: src\idioms/ffi/errors.md:21
+#: src/idioms/ffi/errors.md:21
 msgid ""
 "```rust,ignore\n"
 "enum DatabaseError {\n"
@@ -1616,11 +1613,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/ffi/errors.md:35
+#: src/idioms/ffi/errors.md:35
 msgid "### Structured Enums"
 msgstr ""
 
-#: src\idioms/ffi/errors.md:37
+#: src/idioms/ffi/errors.md:37
 msgid ""
 "```rust,ignore\n"
 "pub mod errors {\n"
@@ -1692,11 +1689,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/ffi/errors.md:104
+#: src/idioms/ffi/errors.md:104
 msgid "### Custom Error Types"
 msgstr ""
 
-#: src\idioms/ffi/errors.md:106
+#: src/idioms/ffi/errors.md:106
 msgid ""
 "```rust,ignore\n"
 "struct ParseError {\n"
@@ -1724,31 +1721,31 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/ffi/errors.md:133
+#: src/idioms/ffi/errors.md:133
 msgid ""
 "This ensures that the foreign language has clear access to error "
 "information\n"
 "while not compromising the Rust code's API at all."
 msgstr ""
 
-#: src\idioms/ffi/errors.md:138
+#: src/idioms/ffi/errors.md:138
 msgid ""
 "It's a lot of typing, and some types may not be able to be converted easily\n"
 "to C."
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:1
+#: src/idioms/ffi/accepting-strings.md:1
 msgid "# Accepting Strings"
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:5
+#: src/idioms/ffi/accepting-strings.md:5
 msgid ""
 "When accepting strings via FFI through pointers, there are two principles "
 "that\n"
 "should be followed:"
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:8
+#: src/idioms/ffi/accepting-strings.md:8
 msgid ""
 "1. Keep foreign strings \"borrowed\", rather than copying them directly.\n"
 "2. Minimize the amount of complexity and `unsafe` code involved in "
@@ -1756,13 +1753,13 @@ msgid ""
 "   from a C-style string to native Rust strings."
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:14
+#: src/idioms/ffi/accepting-strings.md:14
 msgid ""
 "The strings used in C have different behaviours to those used in Rust, "
 "namely:"
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:16
+#: src/idioms/ffi/accepting-strings.md:16
 msgid ""
 "- C strings are null-terminated while Rust strings store their length\n"
 "- C strings can contain any arbitrary non-zero byte while Rust strings must "
@@ -1772,7 +1769,7 @@ msgid ""
 "  while interactions with Rust strings go through safe methods"
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:22
+#: src/idioms/ffi/accepting-strings.md:22
 msgid ""
 "The Rust standard library comes with C equivalents of Rust's `String` and "
 "`&str`\n"
@@ -1781,13 +1778,13 @@ msgid ""
 "and `unsafe` code involved in converting between C strings and Rust strings."
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:26
+#: src/idioms/ffi/accepting-strings.md:26
 msgid ""
 "The `&CStr` type also allows us to work with borrowed data, meaning passing\n"
 "strings between Rust and C is a zero-cost operation."
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:31
+#: src/idioms/ffi/accepting-strings.md:31
 msgid ""
 "```rust,ignore\n"
 "pub mod unsafe_module {\n"
@@ -1827,22 +1824,22 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:70
+#: src/idioms/ffi/accepting-strings.md:70
 msgid "The example is is written to ensure that:"
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:72
+#: src/idioms/ffi/accepting-strings.md:72
 msgid ""
 "1. The `unsafe` block is as small as possible.\n"
 "2. The pointer with an \"untracked\" lifetime becomes a \"tracked\" shared\n"
 "   reference"
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:76
+#: src/idioms/ffi/accepting-strings.md:76
 msgid "Consider an alternative, where the string is actually copied:"
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:78
+#: src/idioms/ffi/accepting-strings.md:78
 msgid ""
 "```rust,ignore\n"
 "pub mod unsafe_module {\n"
@@ -1888,11 +1885,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:120
+#: src/idioms/ffi/accepting-strings.md:120
 msgid "This code in inferior to the original in two respects:"
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:122
+#: src/idioms/ffi/accepting-strings.md:122
 msgid ""
 "1. There is much more `unsafe` code, and more importantly, more invariants "
 "it\n"
@@ -1901,14 +1898,14 @@ msgid ""
 "   that cases Rust `undefined behaviour`."
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:127
+#: src/idioms/ffi/accepting-strings.md:127
 msgid ""
 "The bug here is a simple mistake in pointer arithmetic: the string was "
 "copied,\n"
 "all `msg_len` bytes of it. However, the `NUL` terminator at the end was not."
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:130
+#: src/idioms/ffi/accepting-strings.md:130
 msgid ""
 "The Vector then had its size _set_ to the length of the _zero padded string_ "
 "--\n"
@@ -1918,7 +1915,7 @@ msgid ""
 "Vector will cause `undefined behaviour`!"
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:136
+#: src/idioms/ffi/accepting-strings.md:136
 msgid ""
 "Like many such issues, this would be difficult issue to track down.\n"
 "Sometimes it would panic because the string was not `UTF-8`, sometimes it "
@@ -1927,23 +1924,23 @@ msgid ""
 "completely crash."
 msgstr ""
 
-#: src\idioms/ffi/accepting-strings.md:143
-#: src\idioms/ffi/passing-strings.md:105
+#: src/idioms/ffi/accepting-strings.md:143
+#: src/idioms/ffi/passing-strings.md:105
 msgid "None?"
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:1
+#: src/idioms/ffi/passing-strings.md:1
 msgid "# Passing Strings"
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:5
+#: src/idioms/ffi/passing-strings.md:5
 msgid ""
 "When passing strings to FFI functions, there are four principles that should "
 "be\n"
 "followed:"
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:8
+#: src/idioms/ffi/passing-strings.md:8
 msgid ""
 "1. Make the lifetime of owned strings as long as possible.\n"
 "2. Minimize `unsafe` code during the conversion.\n"
@@ -1953,7 +1950,7 @@ msgid ""
 "   should not transfer to the callee."
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:16
+#: src/idioms/ffi/passing-strings.md:16
 msgid ""
 "Rust has built-in support for C-style strings with its `CString` and `CStr`\n"
 "types. However, there are different approaches one can take with strings "
@@ -1961,7 +1958,7 @@ msgid ""
 "are being sent to a foreign function call from a Rust function."
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:20
+#: src/idioms/ffi/passing-strings.md:20
 msgid ""
 "The best practice is simple: use `CString` in such a way as to minimize\n"
 "`unsafe` code. However, a secondary caveat is that\n"
@@ -1972,7 +1969,7 @@ msgid ""
 "modification is UB, so additional work is necessary in that case."
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:28
+#: src/idioms/ffi/passing-strings.md:28
 msgid ""
 "```rust,ignore\n"
 "pub mod unsafe_module {\n"
@@ -2017,24 +2014,24 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:70
+#: src/idioms/ffi/passing-strings.md:70
 msgid "The example is written in a way to ensure that:"
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:72
+#: src/idioms/ffi/passing-strings.md:72
 msgid ""
 "1. The `unsafe` block is as small as possible.\n"
 "2. The `CString` lives long enough.\n"
 "3. Errors with typecasts are always propagated when possible."
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:76
+#: src/idioms/ffi/passing-strings.md:76
 msgid ""
 "A common mistake (so common it's in the documentation) is to not use the\n"
 "variable in the first block:"
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:79
+#: src/idioms/ffi/passing-strings.md:79
 msgid ""
 "```rust,ignore\n"
 "pub mod unsafe_module {\n"
@@ -2053,7 +2050,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:94
+#: src/idioms/ffi/passing-strings.md:94
 msgid ""
 "This code will result in a dangling pointer, because the lifetime of the\n"
 "`CString` is not extended by the pointer creation, unlike if a reference "
@@ -2061,7 +2058,7 @@ msgid ""
 "created."
 msgstr ""
 
-#: src\idioms/ffi/passing-strings.md:98
+#: src/idioms/ffi/passing-strings.md:98
 msgid ""
 "Another issue frequently raised is that the initialization of a 1k vector "
 "of\n"
@@ -2071,30 +2068,30 @@ msgid ""
 "system's ability to return zeroed memory (which is quite fast)."
 msgstr ""
 
-#: src\idioms/option-iter.md:1
+#: src/idioms/option-iter.md:1
 msgid "# Iterating over an `Option`"
 msgstr ""
 
-#: src\idioms/option-iter.md:5
+#: src/idioms/option-iter.md:5
 msgid ""
 "`Option` can be viewed as a container that contains either zero or one\n"
 "element. In particular, it implements the `IntoIterator` trait, and as such\n"
 "can be used with generic code that needs such a type."
 msgstr ""
 
-#: src\idioms/option-iter.md:9
-#: src\patterns/structural/small-crates.md:34
-#: src\patterns/structural/unsafe-mods.md:22
+#: src/idioms/option-iter.md:9
+#: src/patterns/structural/small-crates.md:34
+#: src/patterns/structural/unsafe-mods.md:22
 msgid "## Examples"
 msgstr ""
 
-#: src\idioms/option-iter.md:11
+#: src/idioms/option-iter.md:11
 msgid ""
 "Since `Option` implements `IntoIterator`, it can be used as an argument to\n"
 "[`.extend()`](https://doc.rust-lang.org/std/iter/trait.Extend.html#tymethod.extend):"
 msgstr ""
 
-#: src\idioms/option-iter.md:14
+#: src/idioms/option-iter.md:14
 msgid ""
 "```rust\n"
 "let turing = Some(\"Turing\");\n"
@@ -2109,14 +2106,14 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/option-iter.md:26
+#: src/idioms/option-iter.md:26
 msgid ""
 "If you need to tack an `Option` to the end of an existing iterator, you can\n"
 "pass it to "
 "[`.chain()`](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.chain):"
 msgstr ""
 
-#: src\idioms/option-iter.md:29
+#: src/idioms/option-iter.md:29
 msgid ""
 "```rust\n"
 "let turing = Some(\"Turing\");\n"
@@ -2128,7 +2125,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/option-iter.md:38
+#: src/idioms/option-iter.md:38
 msgid ""
 "Note that if the `Option` is always `Some`, then it is more idiomatic to "
 "use\n"
@@ -2136,7 +2133,7 @@ msgid ""
 "element instead."
 msgstr ""
 
-#: src\idioms/option-iter.md:42
+#: src/idioms/option-iter.md:42
 msgid ""
 "Also, since `Option` implements `IntoIterator`, it's possible to iterate "
 "over\n"
@@ -2145,7 +2142,7 @@ msgid ""
 "and in most cases you should prefer the latter."
 msgstr ""
 
-#: src\idioms/option-iter.md:48
+#: src/idioms/option-iter.md:48
 msgid ""
 "- [`std::iter::once`](https://doc.rust-lang.org/std/iter/fn.once.html) is "
 "an\n"
@@ -2167,11 +2164,11 @@ msgid ""
 "`Option<T>`](https://doc.rust-lang.org/std/option/enum.Option.html)"
 msgstr ""
 
-#: src\idioms/pass-var-to-closure.md:1
+#: src/idioms/pass-var-to-closure.md:1
 msgid "# Pass variables to closure"
 msgstr ""
 
-#: src\idioms/pass-var-to-closure.md:5
+#: src/idioms/pass-var-to-closure.md:5
 msgid ""
 "By default, closures capture their environment by borrowing. Or you can use\n"
 "`move`-closure to move whole environment. However, often you want to move "
@@ -2181,15 +2178,15 @@ msgid ""
 "perform some other transformation."
 msgstr ""
 
-#: src\idioms/pass-var-to-closure.md:10
+#: src/idioms/pass-var-to-closure.md:10
 msgid "Use variable rebinding in separate scope for that."
 msgstr ""
 
-#: src\idioms/pass-var-to-closure.md:14
+#: src/idioms/pass-var-to-closure.md:14
 msgid "Use"
 msgstr ""
 
-#: src\idioms/pass-var-to-closure.md:16
+#: src/idioms/pass-var-to-closure.md:16
 msgid ""
 "```rust\n"
 "use std::rc::Rc;\n"
@@ -2208,11 +2205,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/pass-var-to-closure.md:32
+#: src/idioms/pass-var-to-closure.md:32
 msgid "instead of"
 msgstr ""
 
-#: src\idioms/pass-var-to-closure.md:34
+#: src/idioms/pass-var-to-closure.md:34
 msgid ""
 "```rust\n"
 "use std::rc::Rc;\n"
@@ -2229,7 +2226,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/pass-var-to-closure.md:50
+#: src/idioms/pass-var-to-closure.md:50
 msgid ""
 "Copied data are grouped together with closure definition, so their purpose "
 "is\n"
@@ -2238,22 +2235,22 @@ msgid ""
 "by closure."
 msgstr ""
 
-#: src\idioms/pass-var-to-closure.md:54
+#: src/idioms/pass-var-to-closure.md:54
 msgid ""
 "Closure uses same variable names as surrounding code whether data are copied "
 "or\n"
 "moved."
 msgstr ""
 
-#: src\idioms/pass-var-to-closure.md:59
+#: src/idioms/pass-var-to-closure.md:59
 msgid "Additional indentation of closure body."
 msgstr ""
 
-#: src\idioms/priv-extend.md:1
+#: src/idioms/priv-extend.md:1
 msgid "# `#[non_exhaustive]` and private fields for extensibility"
 msgstr ""
 
-#: src\idioms/priv-extend.md:5
+#: src/idioms/priv-extend.md:5
 msgid ""
 "A small set of scenarios exist where a library author may want to add "
 "public\n"
@@ -2262,11 +2259,11 @@ msgid ""
 "compatibility."
 msgstr ""
 
-#: src\idioms/priv-extend.md:9
+#: src/idioms/priv-extend.md:9
 msgid "Rust offers two solutions to this problem:"
 msgstr ""
 
-#: src\idioms/priv-extend.md:11
+#: src/idioms/priv-extend.md:11
 msgid ""
 "- Use `#[non_exhaustive]` on `struct`s, `enum`s, and `enum` variants.\n"
 "  For extensive documentation on all the places where `#[non_exhaustive]` "
@@ -2278,7 +2275,7 @@ msgid ""
 "  instantiated or matched against (see Alternative)"
 msgstr ""
 
-#: src\idioms/priv-extend.md:20
+#: src/idioms/priv-extend.md:20
 msgid ""
 "```rust\n"
 "mod a {\n"
@@ -2318,17 +2315,17 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/priv-extend.md:57
+#: src/idioms/priv-extend.md:57
 msgid "## Alternative: `Private fields` for structs"
 msgstr ""
 
-#: src\idioms/priv-extend.md:59
+#: src/idioms/priv-extend.md:59
 msgid ""
 "`#[non_exhaustive]` only works across crate boundaries.\n"
 "Within a crate, the private field method may be used."
 msgstr ""
 
-#: src\idioms/priv-extend.md:62
+#: src/idioms/priv-extend.md:62
 msgid ""
 "Adding a field to a struct is a mostly backwards compatible change.\n"
 "However, if a client uses a pattern to deconstruct a struct instance, they\n"
@@ -2343,7 +2340,7 @@ msgid ""
 "form of patterns, ensuring that the struct is future-proof."
 msgstr ""
 
-#: src\idioms/priv-extend.md:71
+#: src/idioms/priv-extend.md:71
 msgid ""
 "The downside of this approach is that you might need to add an otherwise "
 "unneeded\n"
@@ -2353,7 +2350,7 @@ msgid ""
 "the field name to avoid the unused field warning."
 msgstr ""
 
-#: src\idioms/priv-extend.md:76
+#: src/idioms/priv-extend.md:76
 msgid ""
 "```rust\n"
 "pub struct S {\n"
@@ -2366,7 +2363,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/priv-extend.md:87
+#: src/idioms/priv-extend.md:87
 msgid ""
 "On `struct`s, `#[non_exhaustive]` allows adding additional fields in a "
 "backwards\n"
@@ -2381,14 +2378,14 @@ msgid ""
 "undiscovered."
 msgstr ""
 
-#: src\idioms/priv-extend.md:95
+#: src/idioms/priv-extend.md:95
 msgid ""
 "`#[non_exhaustive]` can be applied to enum variants as well.\n"
 "A `#[non_exhaustive]` variant behaves in the same way as a "
 "`#[non_exhaustive]` struct."
 msgstr ""
 
-#: src\idioms/priv-extend.md:98
+#: src/idioms/priv-extend.md:98
 msgid ""
 "Use this deliberately and with caution: incrementing the major version when "
 "adding\n"
@@ -2400,11 +2397,11 @@ msgid ""
 "tool."
 msgstr ""
 
-#: src\idioms/priv-extend.md:104
+#: src/idioms/priv-extend.md:104
 msgid "### Disadvantages"
 msgstr ""
 
-#: src\idioms/priv-extend.md:106
+#: src/idioms/priv-extend.md:106
 msgid ""
 "`#[non_exhaustive]` can make your code much less ergonomic to use, "
 "especially when\n"
@@ -2414,7 +2411,7 @@ msgid ""
 "incrementing the major version."
 msgstr ""
 
-#: src\idioms/priv-extend.md:111
+#: src/idioms/priv-extend.md:111
 msgid ""
 "When `#[non_exhaustive]` is applied to `enum`s, it forces clients to handle "
 "a\n"
@@ -2430,165 +2427,143 @@ msgid ""
 "there is rarely a sensible action to take in this scenario."
 msgstr ""
 
-#: src\idioms/priv-extend.md:122
+#: src/idioms/priv-extend.md:122
 msgid ""
 "- [RFC introducing #[non_exhaustive] attribute for enums and "
 "structs](https://github.com/rust-lang/rfcs/blob/master/text/2008-non-exhaustive.md)"
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:1
-msgid "# Easy doc initialization\r"
+#: src/idioms/rustdoc-init.md:1
+msgid "# Easy doc initialization"
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:5
+#: src/idioms/rustdoc-init.md:5
 msgid ""
 "If a struct takes significant effort to initialize when writing docs, it can "
-"be\r\n"
+"be\n"
 "quicker to wrap your example with a helper function which takes the struct "
-"as an\r\n"
+"as an\n"
 "argument."
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:9
-msgid "## Motivation\r"
-msgstr ""
-
-#: src\idioms/rustdoc-init.md:11
+#: src/idioms/rustdoc-init.md:11
 msgid ""
 "Sometimes there is a struct with multiple or complicated parameters and "
-"several\r\n"
+"several\n"
 "methods. Each of these methods should have examples."
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:14
+#: src/idioms/rustdoc-init.md:14
 msgid "For example:"
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:16
+#: src/idioms/rustdoc-init.md:16
 msgid ""
-"````rust,ignore\r\n"
-"struct Connection {\r\n"
-"    name: String,\r\n"
-"    stream: TcpStream,\r\n"
-"}\r\n"
-"\r\n"
-"impl Connection {\r\n"
-"    /// Sends a request over the connection.\r\n"
-"    ///\r\n"
-"    /// # Example\r\n"
-"    /// ```no_run\r\n"
-"    /// # // Boilerplate are required to get an example working.\r\n"
-"    /// # let stream = TcpStream::connect(\"127.0.0.1:34254\");\r\n"
-"    /// # let connection = Connection { name: \"foo\".to_owned(), stream "
-"};\r\n"
+"````rust,ignore\n"
+"struct Connection {\n"
+"    name: String,\n"
+"    stream: TcpStream,\n"
+"}\n"
+"\n"
+"impl Connection {\n"
+"    /// Sends a request over the connection.\n"
+"    ///\n"
+"    /// # Example\n"
+"    /// ```no_run\n"
+"    /// # // Boilerplate are required to get an example working.\n"
+"    /// # let stream = TcpStream::connect(\"127.0.0.1:34254\");\n"
+"    /// # let connection = Connection { name: \"foo\".to_owned(), stream };\n"
 "    /// # let request = Request::new(\"RequestId\", RequestType::Get, "
-"\"payload\");\r\n"
-"    /// let response = connection.send_request(request);\r\n"
-"    /// assert!(response.is_ok());\r\n"
-"    /// ```\r\n"
-"    fn send_request(&self, request: Request) -> Result<Status, SendErr> {\r\n"
-"        // ...\r\n"
-"    }\r\n"
-"\r\n"
-"    /// Oh no, all that boilerplate needs to be repeated here!\r\n"
-"    fn check_status(&self) -> Status {\r\n"
-"        // ...\r\n"
-"    }\r\n"
-"}\r\n"
+"\"payload\");\n"
+"    /// let response = connection.send_request(request);\n"
+"    /// assert!(response.is_ok());\n"
+"    /// ```\n"
+"    fn send_request(&self, request: Request) -> Result<Status, SendErr> {\n"
+"        // ...\n"
+"    }\n"
+"\n"
+"    /// Oh no, all that boilerplate needs to be repeated here!\n"
+"    fn check_status(&self) -> Status {\n"
+"        // ...\n"
+"    }\n"
+"}\n"
 "````"
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:45
-msgid "## Example\r"
-msgstr ""
-
-#: src\idioms/rustdoc-init.md:47
+#: src/idioms/rustdoc-init.md:47
 msgid ""
-"Instead of typing all of this boilerplate to create a `Connection` and\r\n"
+"Instead of typing all of this boilerplate to create a `Connection` and\n"
 "`Request`, it is easier to just create a wrapping helper function which "
-"takes\r\n"
+"takes\n"
 "them as arguments:"
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:51
+#: src/idioms/rustdoc-init.md:51
 msgid ""
-"````rust,ignore\r\n"
-"struct Connection {\r\n"
-"    name: String,\r\n"
-"    stream: TcpStream,\r\n"
-"}\r\n"
-"\r\n"
-"impl Connection {\r\n"
-"    /// Sends a request over the connection.\r\n"
-"    ///\r\n"
-"    /// # Example\r\n"
-"    /// ```\r\n"
-"    /// # fn call_send(connection: Connection, request: Request) {\r\n"
-"    /// let response = connection.send_request(request);\r\n"
-"    /// assert!(response.is_ok());\r\n"
-"    /// # }\r\n"
-"    /// ```\r\n"
-"    fn send_request(&self, request: Request) {\r\n"
-"        // ...\r\n"
-"    }\r\n"
-"}\r\n"
+"````rust,ignore\n"
+"struct Connection {\n"
+"    name: String,\n"
+"    stream: TcpStream,\n"
+"}\n"
+"\n"
+"impl Connection {\n"
+"    /// Sends a request over the connection.\n"
+"    ///\n"
+"    /// # Example\n"
+"    /// ```\n"
+"    /// # fn call_send(connection: Connection, request: Request) {\n"
+"    /// let response = connection.send_request(request);\n"
+"    /// assert!(response.is_ok());\n"
+"    /// # }\n"
+"    /// ```\n"
+"    fn send_request(&self, request: Request) {\n"
+"        // ...\n"
+"    }\n"
+"}\n"
 "````"
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:73
+#: src/idioms/rustdoc-init.md:73
 msgid ""
 "**Note** in the above example the line `assert!(response.is_ok());` will "
-"not\r\n"
-"actually run while testing because it is inside a function which is never\r\n"
+"not\n"
+"actually run while testing because it is inside a function which is never\n"
 "invoked."
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:77
-msgid "## Advantages\r"
-msgstr ""
-
-#: src\idioms/rustdoc-init.md:79
+#: src/idioms/rustdoc-init.md:79
 msgid "This is much more concise and avoids repetitive code in examples."
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:81
-msgid "## Disadvantages\r"
-msgstr ""
-
-#: src\idioms/rustdoc-init.md:83
+#: src/idioms/rustdoc-init.md:83
 msgid ""
 "As example is in a function, the code will not be tested. Though it will "
-"still be\r\n"
+"still be\n"
 "checked to make sure it compiles when running a `cargo test`. So this "
-"pattern is\r\n"
+"pattern is\n"
 "most useful when you need `no_run`. With this, you do not need to add "
 "`no_run`."
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:87
-msgid "## Discussion\r"
-msgstr ""
-
-#: src\idioms/rustdoc-init.md:89
+#: src/idioms/rustdoc-init.md:89
 msgid "If assertions are not required this pattern works well."
 msgstr ""
 
-#: src\idioms/rustdoc-init.md:91
+#: src/idioms/rustdoc-init.md:91
 msgid ""
 "If they are, an alternative can be to create a public method to create a "
-"helper\r\n"
+"helper\n"
 "instance which is annotated with `#[doc(hidden)]` (so that users won't see "
-"it).\r\n"
-"Then this method can be called inside of rustdoc because it is part of "
-"the\r\n"
+"it).\n"
+"Then this method can be called inside of rustdoc because it is part of the\n"
 "crate's public API."
 msgstr ""
 
-#: src\idioms/temporary-mutability.md:1
+#: src/idioms/temporary-mutability.md:1
 msgid "# Temporary mutability"
 msgstr ""
 
-#: src\idioms/temporary-mutability.md:5
+#: src/idioms/temporary-mutability.md:5
 msgid ""
 "Often it is necessary to prepare and process some data, but after that data "
 "are\n"
@@ -2597,22 +2572,22 @@ msgid ""
 "the mutable variable as immutable."
 msgstr ""
 
-#: src\idioms/temporary-mutability.md:9
+#: src/idioms/temporary-mutability.md:9
 msgid ""
 "It can be done either by processing data within a nested block or by "
 "redefining\n"
 "the variable."
 msgstr ""
 
-#: src\idioms/temporary-mutability.md:14
+#: src/idioms/temporary-mutability.md:14
 msgid "Say, vector must be sorted before usage."
 msgstr ""
 
-#: src\idioms/temporary-mutability.md:16
+#: src/idioms/temporary-mutability.md:16
 msgid "Using nested block:"
 msgstr ""
 
-#: src\idioms/temporary-mutability.md:18
+#: src/idioms/temporary-mutability.md:18
 msgid ""
 "```rust,ignore\n"
 "let data = {\n"
@@ -2625,11 +2600,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/temporary-mutability.md:28
+#: src/idioms/temporary-mutability.md:28
 msgid "Using variable rebinding:"
 msgstr ""
 
-#: src\idioms/temporary-mutability.md:30
+#: src/idioms/temporary-mutability.md:30
 msgid ""
 "```rust,ignore\n"
 "let mut data = get_vec();\n"
@@ -2640,29 +2615,29 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/temporary-mutability.md:40
+#: src/idioms/temporary-mutability.md:40
 msgid ""
 "Compiler ensures that you don't accidentally mutate data after some point."
 msgstr ""
 
-#: src\idioms/temporary-mutability.md:44
+#: src/idioms/temporary-mutability.md:44
 msgid ""
 "Nested block requires additional indentation of block body.\n"
 "One more line to return data from block or redefine variable."
 msgstr ""
 
-#: src\idioms/return-consumed-arg-on-error.md:1
+#: src/idioms/return-consumed-arg-on-error.md:1
 msgid "# Return consumed argument on error"
 msgstr ""
 
-#: src\idioms/return-consumed-arg-on-error.md:5
+#: src/idioms/return-consumed-arg-on-error.md:5
 msgid ""
 "If a fallible function consumes (moves) an argument, return that argument "
 "back inside\n"
 "an error."
 msgstr ""
 
-#: src\idioms/return-consumed-arg-on-error.md:10
+#: src/idioms/return-consumed-arg-on-error.md:10
 msgid ""
 "```rust\n"
 "pub fn send(value: String) -> Result<(), SendError> {\n"
@@ -2699,7 +2674,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\idioms/return-consumed-arg-on-error.md:45
+#: src/idioms/return-consumed-arg-on-error.md:45
 msgid ""
 "In case of error you may want to try some alternative way or to\n"
 "retry action in case of non-deterministic function. But if the argument\n"
@@ -2707,7 +2682,7 @@ msgid ""
 "is not very efficient."
 msgstr ""
 
-#: src\idioms/return-consumed-arg-on-error.md:50
+#: src/idioms/return-consumed-arg-on-error.md:50
 msgid ""
 "The standard library uses this approach in e.g. `String::from_utf8` method.\n"
 "When given a vector that doesn't contain valid UTF-8, a `FromUtf8Error`\n"
@@ -2715,19 +2690,19 @@ msgid ""
 "You can get original vector back using `FromUtf8Error::into_bytes` method."
 msgstr ""
 
-#: src\idioms/return-consumed-arg-on-error.md:57
+#: src/idioms/return-consumed-arg-on-error.md:57
 msgid "Better performance because of moving arguments whenever possible."
 msgstr ""
 
-#: src\idioms/return-consumed-arg-on-error.md:61
+#: src/idioms/return-consumed-arg-on-error.md:61
 msgid "Slightly more complex error types."
 msgstr ""
 
-#: src\patterns/index.md:1
+#: src/patterns/index.md:1
 msgid "# Design Patterns"
 msgstr ""
 
-#: src\patterns/index.md:3
+#: src/patterns/index.md:3
 msgid ""
 "[Design patterns](https://en.wikipedia.org/wiki/Software_design_pattern) "
 "are\n"
@@ -2740,7 +2715,7 @@ msgid ""
 "language feature, or impossible to express due to a missing feature."
 msgstr ""
 
-#: src\patterns/index.md:10
+#: src/patterns/index.md:10
 msgid ""
 "If overused, design patterns can add unnecessary complexity to programs.\n"
 "However, they are a great way to share intermediate and advanced level "
@@ -2748,7 +2723,7 @@ msgid ""
 "about a programming language."
 msgstr ""
 
-#: src\patterns/index.md:16
+#: src/patterns/index.md:16
 msgid ""
 "Rust has many unique features. These features give us great benefit by "
 "removing\n"
@@ -2756,21 +2731,21 @@ msgid ""
 "to Rust."
 msgstr ""
 
-#: src\patterns/index.md:19
+#: src/patterns/index.md:19
 msgid "## YAGNI"
 msgstr ""
 
-#: src\patterns/index.md:21
+#: src/patterns/index.md:21
 msgid ""
 "YAGNI is an acronym that stands for `You Aren't Going to Need It`.\n"
 "It's a vital software design principle to apply as you write code."
 msgstr ""
 
-#: src\patterns/index.md:24
+#: src/patterns/index.md:24
 msgid "> The best code I ever wrote was code I never wrote."
 msgstr ""
 
-#: src\patterns/index.md:26
+#: src/patterns/index.md:26
 msgid ""
 "If we apply YAGNI to design patterns, we see that the features of Rust allow "
 "us to\n"
@@ -2780,15 +2755,15 @@ msgid ""
 "[traits](https://doc.rust-lang.org/book/traits.html)."
 msgstr ""
 
-#: src\patterns/behavioural/intro.md:1
+#: src/patterns/behavioural/intro.md:1
 msgid "# Behavioural Patterns"
 msgstr ""
 
-#: src\patterns/behavioural/intro.md:3
+#: src/patterns/behavioural/intro.md:3
 msgid "From [Wikipedia](https://en.wikipedia.org/wiki/Behavioral_pattern):"
 msgstr ""
 
-#: src\patterns/behavioural/intro.md:5
+#: src/patterns/behavioural/intro.md:5
 msgid ""
 "> Design patterns that identify common communication patterns among "
 "objects.\n"
@@ -2796,18 +2771,18 @@ msgid ""
 "communication."
 msgstr ""
 
-#: src\patterns/behavioural/command.md:1
+#: src/patterns/behavioural/command.md:1
 msgid "# Command"
 msgstr ""
 
-#: src\patterns/behavioural/command.md:5
+#: src/patterns/behavioural/command.md:5
 msgid ""
 "The basic idea of the Command pattern is to separate out actions into its "
 "own\n"
 "objects and pass them as parameters."
 msgstr ""
 
-#: src\patterns/behavioural/command.md:10
+#: src/patterns/behavioural/command.md:10
 msgid ""
 "Suppose we have a sequence of actions or transactions encapsulated as "
 "objects.\n"
@@ -2822,7 +2797,7 @@ msgid ""
 "we could reapply the changes later if the system crashes."
 msgstr ""
 
-#: src\patterns/behavioural/command.md:20
+#: src/patterns/behavioural/command.md:20
 msgid ""
 "Define two database operations `create table` and `add field`. Each of "
 "these\n"
@@ -2835,17 +2810,17 @@ msgid ""
 "operation then the whole set of commands is invoked in reverse order."
 msgstr ""
 
-#: src\patterns/behavioural/command.md:26
+#: src/patterns/behavioural/command.md:26
 msgid "## Approach: Using trait objects"
 msgstr ""
 
-#: src\patterns/behavioural/command.md:28
+#: src/patterns/behavioural/command.md:28
 msgid ""
 "We define a common trait which encapsulates our command with two operations\n"
 "`execute` and `rollback`. All command `structs` must implement this trait."
 msgstr ""
 
-#: src\patterns/behavioural/command.md:31
+#: src/patterns/behavioural/command.md:31
 msgid ""
 "```rust\n"
 "pub trait Migration {\n"
@@ -2912,11 +2887,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/command.md:95
+#: src/patterns/behavioural/command.md:95
 msgid "## Approach: Using function pointers"
 msgstr ""
 
-#: src\patterns/behavioural/command.md:97
+#: src/patterns/behavioural/command.md:97
 msgid ""
 "We could follow another approach by creating each individual command as\n"
 "a different function and store function pointers to invoke these functions "
@@ -2927,7 +2902,7 @@ msgid ""
 "function pointers."
 msgstr ""
 
-#: src\patterns/behavioural/command.md:103
+#: src/patterns/behavioural/command.md:103
 msgid ""
 "```rust\n"
 "type FnPtr = fn() -> String;\n"
@@ -2978,17 +2953,17 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/command.md:150
+#: src/patterns/behavioural/command.md:150
 msgid "## Approach: Using `Fn` trait objects"
 msgstr ""
 
-#: src\patterns/behavioural/command.md:152
+#: src/patterns/behavioural/command.md:152
 msgid ""
 "Finally, instead of defining a common command trait we could store\n"
 "each command implementing the `Fn` trait separately in vectors."
 msgstr ""
 
-#: src\patterns/behavioural/command.md:155
+#: src/patterns/behavioural/command.md:155
 msgid ""
 "```rust\n"
 "type Migration<'a> = Box<dyn Fn() -> &'a str>;\n"
@@ -3039,7 +3014,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/command.md:205
+#: src/patterns/behavioural/command.md:205
 msgid ""
 "If our commands are small and may be defined as functions or passed as a "
 "closure\n"
@@ -3055,7 +3030,7 @@ msgid ""
 "way as we used in case of function pointers."
 msgstr ""
 
-#: src\patterns/behavioural/command.md:214
+#: src/patterns/behavioural/command.md:214
 msgid ""
 "As performance, there is always a trade-off between performance and code\n"
 "simplicity and organisation. Static dispatch gives faster performance, "
@@ -3063,7 +3038,7 @@ msgid ""
 "dynamic dispatch provides flexibility when we structure our application."
 msgstr ""
 
-#: src\patterns/behavioural/command.md:220
+#: src/patterns/behavioural/command.md:220
 msgid ""
 "- [Command pattern](https://en.wikipedia.org/wiki/Command_pattern)\n"
 "\n"
@@ -3071,11 +3046,11 @@ msgid ""
 "pattern](https://web.archive.org/web/20210223131236/https://chercher.tech/rust/command-design-pattern-rust)"
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:1
+#: src/patterns/behavioural/interpreter.md:1
 msgid "# Interpreter"
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:5
+#: src/patterns/behavioural/interpreter.md:5
 msgid ""
 "If a problem occurs very often and requires long and repetitive steps to "
 "solve\n"
@@ -3086,11 +3061,11 @@ msgid ""
 "simple language."
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:10
+#: src/patterns/behavioural/interpreter.md:10
 msgid "Basically, for any kind of problems we define:"
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:12
+#: src/patterns/behavioural/interpreter.md:12
 msgid ""
 "- A [domain specific "
 "language](https://en.wikipedia.org/wiki/Domain-specific_language),\n"
@@ -3098,7 +3073,7 @@ msgid ""
 "- An interpreter that solves the problem instances."
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:18
+#: src/patterns/behavioural/interpreter.md:18
 msgid ""
 "Our goal is to translate simple mathematical expressions into postfix "
 "expressions\n"
@@ -3109,11 +3084,11 @@ msgid ""
 "`2 4 +`."
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:24
+#: src/patterns/behavioural/interpreter.md:24
 msgid "## Context Free Grammar for our problem"
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:26
+#: src/patterns/behavioural/interpreter.md:26
 msgid ""
 "Our task is translating infix expressions into postfix ones. Let's define a "
 "context\n"
@@ -3122,7 +3097,7 @@ msgid ""
 "where:"
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:30
+#: src/patterns/behavioural/interpreter.md:30
 msgid ""
 "- Terminal symbols: `0`, `...`, `9`, `+`, `-`\n"
 "- Non-terminal symbols: `exp`, `term`\n"
@@ -3130,7 +3105,7 @@ msgid ""
 "- And the following are production rules"
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:35
+#: src/patterns/behavioural/interpreter.md:35
 msgid ""
 "```ignore\n"
 "exp -> exp + term\n"
@@ -3140,7 +3115,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:42
+#: src/patterns/behavioural/interpreter.md:42
 msgid ""
 "**NOTE:** This grammar should be further transformed depending on what we "
 "are going\n"
@@ -3151,11 +3126,11 @@ msgid ""
 "(aka Dragon Book)."
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:47
+#: src/patterns/behavioural/interpreter.md:47
 msgid "## Solution"
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:49
+#: src/patterns/behavioural/interpreter.md:49
 msgid ""
 "We simply implement a recursive descent parser. For simplicity's sake, the "
 "code\n"
@@ -3164,7 +3139,7 @@ msgid ""
 "are wrong according to the grammar definition)."
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:53
+#: src/patterns/behavioural/interpreter.md:53
 msgid ""
 "```rust\n"
 "pub struct Interpreter<'a> {\n"
@@ -3217,7 +3192,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:105
+#: src/patterns/behavioural/interpreter.md:105
 msgid ""
 "There may be a wrong perception that the Interpreter design pattern is about "
 "design\n"
@@ -3232,7 +3207,7 @@ msgid ""
 "on how to expand this syntax into source code."
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:112
+#: src/patterns/behavioural/interpreter.md:112
 msgid ""
 "In the following example we create a simple `macro_rules!` that computes\n"
 "[Euclidean length](https://en.wikipedia.org/wiki/Euclidean_distance) of `n`\n"
@@ -3243,7 +3218,7 @@ msgid ""
 "the length."
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:118
+#: src/patterns/behavioural/interpreter.md:118
 msgid ""
 "```rust\n"
 "macro_rules! norm {\n"
@@ -3270,7 +3245,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/interpreter.md:144
+#: src/patterns/behavioural/interpreter.md:144
 msgid ""
 "- [Interpreter pattern](https://en.wikipedia.org/wiki/Interpreter_pattern)\n"
 "- [Context free "
@@ -3278,78 +3253,70 @@ msgid ""
 "- [macro_rules!](https://doc.rust-lang.org/rust-by-example/macros.html)"
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:1
+#: src/patterns/behavioural/newtype.md:1
 msgid "# Newtype"
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:3
+#: src/patterns/behavioural/newtype.md:3
 msgid ""
 "What if in some cases we want a type to behave similar to another type or\n"
 "enforce some behaviour at compile time when using only type aliases would\n"
 "not be enough?"
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:7
+#: src/patterns/behavioural/newtype.md:7
 msgid ""
 "For example, if we want to create a custom `Display` implementation for "
 "`String`\n"
 "due to security considerations (e.g. passwords)."
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:10
+#: src/patterns/behavioural/newtype.md:10
 msgid ""
 "For such cases we could use the `Newtype` pattern to provide **type "
 "safety**\n"
 "and **encapsulation**."
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:15
+#: src/patterns/behavioural/newtype.md:15
 msgid ""
 "Use a tuple struct with a single field to make an opaque wrapper for a "
 "type.\n"
 "This creates a new type, rather than an alias to a type (`type` items)."
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:20
+#: src/patterns/behavioural/newtype.md:20
 msgid ""
-"```rust,ignore\n"
-"// Some type, not necessarily in the same module or even crate.\n"
-"struct Foo {\n"
-"    //..\n"
-"}\n"
+"```rust\n"
+"use std::fmt::Display;\n"
 "\n"
-"impl Foo {\n"
-"    // These functions are not present on Bar.\n"
-"    //..\n"
-"}\n"
+"// Create Newtype Password to override the Display trait for String\n"
+"struct Password(String);\n"
 "\n"
-"// The newtype.\n"
-"pub struct Bar(Foo);\n"
-"\n"
-"impl Bar {\n"
-"    // Constructor.\n"
-"    pub fn new(\n"
-"        //..\n"
-"    ) -> Self {\n"
-"\n"
-"        //..\n"
-"\n"
+"impl Display for Password {\n"
+"    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {\n"
+"        write!(f, \"****************\")\n"
 "    }\n"
-"\n"
-"    //..\n"
 "}\n"
 "\n"
 "fn main() {\n"
-"    let b = Bar::new(...);\n"
-"\n"
-"    // Foo and Bar are type incompatible, the following do not type check.\n"
-"    // let f: Foo = b;\n"
-"    // let b: Bar = Foo { ... };\n"
+"    let unsecured_password: String = \"ThisIsMyPassword\".to_string();\n"
+"    let secured_password: Password = Password(unsecured_password.clone());\n"
+"    println!(\"unsecured_password: {unsecured_password}\");\n"
+"    println!(\"secured_password: {secured_password}\");\n"
 "}\n"
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:58
+#: src/patterns/behavioural/newtype.md:40
+msgid ""
+"```shell\n"
+"unsecured_password: ThisIsMyPassword\n"
+"secured_password: ****************\n"
+"```"
+msgstr ""
+
+#: src/patterns/behavioural/newtype.md:47
 msgid ""
 "The primary motivation for newtypes is abstraction. It allows you to share\n"
 "implementation details between types while precisely controlling the "
@@ -3359,13 +3326,13 @@ msgid ""
 "API, it allows you to change implementation backwards compatibly."
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:63
+#: src/patterns/behavioural/newtype.md:52
 msgid ""
 "Newtypes can be used for distinguishing units, e.g., wrapping `f64` to give\n"
 "distinguishable `Miles` and `Kilometres`."
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:68
+#: src/patterns/behavioural/newtype.md:57
 msgid ""
 "The wrapped and wrapper types are not type compatible (as opposed to using\n"
 "`type`), so users of the newtype will never 'confuse' the wrapped and "
@@ -3373,18 +3340,18 @@ msgid ""
 "types."
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:72
+#: src/patterns/behavioural/newtype.md:61
 msgid "Newtypes are a zero-cost abstraction - there is no runtime overhead."
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:74
+#: src/patterns/behavioural/newtype.md:63
 msgid ""
 "The privacy system ensures that users cannot access the wrapped type (if "
 "the\n"
 "field is private, which it is by default)."
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:79
+#: src/patterns/behavioural/newtype.md:68
 msgid ""
 "The downside of newtypes (especially compared with type aliases), is that "
 "there\n"
@@ -3396,14 +3363,14 @@ msgid ""
 "the wrapper type."
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:87
+#: src/patterns/behavioural/newtype.md:76
 msgid ""
 "Newtypes are very common in Rust code. Abstraction or representing units are "
 "the\n"
 "most common uses, but they can be used for other reasons:"
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:90
+#: src/patterns/behavioural/newtype.md:79
 msgid ""
 "- restricting functionality (reduce the functions exposed or traits "
 "implemented),\n"
@@ -3413,14 +3380,14 @@ msgid ""
 "  e.g.,"
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:95
+#: src/patterns/behavioural/newtype.md:84
 msgid ""
 "```rust,ignore\n"
 "pub struct Foo(Bar<T1, T2>);\n"
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:99
+#: src/patterns/behavioural/newtype.md:88
 msgid ""
 "Here, `Bar` might be some public, generic type and `T1` and `T2` are some "
 "internal\n"
@@ -3431,7 +3398,7 @@ msgid ""
 "with `Bar`."
 msgstr ""
 
-#: src\patterns/behavioural/newtype.md:106
+#: src/patterns/behavioural/newtype.md:95
 msgid ""
 "- [Advanced Types in the "
 "book](https://doc.rust-lang.org/book/ch19-04-advanced-types.html?highlight=newtype#using-the-newtype-pattern-for-type-safety-and-abstraction)\n"
@@ -3442,14 +3409,14 @@ msgid ""
 "many\n"
 "  builtin traits on newtypes.\n"
 "- [The Newtype Pattern In "
-"Rust](https://www.worthe-it.co.za/blog/2020-10-31-newtype-pattern-in-rust.html)"
+"Rust](https://web.archive.org/web/20230519162111/https://www.worthe-it.co.za/blog/2020-10-31-newtype-pattern-in-rust.html)"
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:1
+#: src/patterns/behavioural/RAII.md:1
 msgid "# RAII with guards"
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:5
+#: src/patterns/behavioural/RAII.md:5
 msgid ""
 "[RAII][wikipedia] stands for \"Resource Acquisition is Initialisation\" "
 "which is a\n"
@@ -3463,14 +3430,14 @@ msgid ""
 "object."
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:13
+#: src/patterns/behavioural/RAII.md:13
 msgid ""
 "Mutex guards are the classic example of this pattern from the std library "
 "(this\n"
 "is a simplified version of the real implementation):"
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:16
+#: src/patterns/behavioural/RAII.md:16
 msgid ""
 "```rust,ignore\n"
 "use std::ops::Deref;\n"
@@ -3531,7 +3498,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:74
+#: src/patterns/behavioural/RAII.md:74
 msgid ""
 "Where a resource must be finalised after use, RAII can be used to do this\n"
 "finalisation. If it is an error to access that resource after finalisation, "
@@ -3539,14 +3506,14 @@ msgid ""
 "this pattern can be used to prevent such errors."
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:80
+#: src/patterns/behavioural/RAII.md:80
 msgid ""
 "Prevents errors where a resource is not finalised and where a resource is "
 "used\n"
 "after finalisation."
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:85
+#: src/patterns/behavioural/RAII.md:85
 msgid ""
 "RAII is a useful pattern for ensuring resources are properly deallocated or\n"
 "finalised. We can make use of the borrow checker in Rust to statically "
@@ -3554,7 +3521,7 @@ msgid ""
 "errors stemming from using resources after finalisation takes place."
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:89
+#: src/patterns/behavioural/RAII.md:89
 msgid ""
 "The core aim of the borrow checker is to ensure that references to data do "
 "not\n"
@@ -3569,7 +3536,7 @@ msgid ""
 "without lifetime elision:"
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:97
+#: src/patterns/behavioural/RAII.md:97
 msgid ""
 "```rust,ignore\n"
 "fn deref<'a>(&'a self) -> &'a T {\n"
@@ -3578,7 +3545,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:103
+#: src/patterns/behavioural/RAII.md:103
 msgid ""
 "The returned reference to the resource has the same lifetime as `self` "
 "(`'a`).\n"
@@ -3587,7 +3554,7 @@ msgid ""
 "is shorter than the lifetime of `self`."
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:107
+#: src/patterns/behavioural/RAII.md:107
 msgid ""
 "Note that implementing `Deref` is not a core part of this pattern, it only "
 "makes\n"
@@ -3596,29 +3563,29 @@ msgid ""
 "works just as well."
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:113
+#: src/patterns/behavioural/RAII.md:113
 msgid "[Finalisation in destructors idiom](../../idioms/dtor-finally.md)"
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:115
+#: src/patterns/behavioural/RAII.md:115
 msgid ""
 "RAII is a common pattern in C++: "
 "[cppreference.com](http://en.cppreference.com/w/cpp/language/raii),\n"
 "[wikipedia][wikipedia]."
 msgstr ""
 
-#: src\patterns/behavioural/RAII.md:120
+#: src/patterns/behavioural/RAII.md:120
 msgid ""
 "[Style guide "
 "entry](https://doc.rust-lang.org/1.0.0/style/ownership/raii.html)\n"
 "(currently just a placeholder)."
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:1
+#: src/patterns/behavioural/strategy.md:1
 msgid "# Strategy (aka Policy)"
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:5
+#: src/patterns/behavioural/strategy.md:5
 msgid ""
 "The [Strategy design "
 "pattern](https://en.wikipedia.org/wiki/Strategy_pattern)\n"
@@ -3627,7 +3594,7 @@ msgid ""
 "Inversion](https://en.wikipedia.org/wiki/Dependency_inversion_principle)."
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:9
+#: src/patterns/behavioural/strategy.md:9
 msgid ""
 "The basic idea behind the Strategy pattern is that, given an algorithm "
 "solving\n"
@@ -3637,7 +3604,7 @@ msgid ""
 "different parts."
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:13
+#: src/patterns/behavioural/strategy.md:13
 msgid ""
 "In this way, a client using the algorithm may choose a specific "
 "implementation,\n"
@@ -3650,7 +3617,7 @@ msgid ""
 "This is why we call it \"Dependency Inversion\"."
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:21
+#: src/patterns/behavioural/strategy.md:21
 msgid ""
 "Imagine we are working on a project that generates reports every month.\n"
 "We need the reports to be generated in different formats (strategies), "
@@ -3663,16 +3630,15 @@ msgid ""
 "format, or just modify one of the existing formats."
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:30
+#: src/patterns/behavioural/strategy.md:30
 msgid ""
-"In this example our invariants (or abstractions) are `Context`, "
-"`Formatter`,\n"
-"and `Report`, while `Text` and `Json` are our strategy structs. These "
+"In this example our invariants (or abstractions) are `Formatter` and "
+"`Report`, while `Text` and `Json` are our strategy structs. These "
 "strategies\n"
 "have to implement the `Formatter` trait."
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:34
+#: src/patterns/behavioural/strategy.md:33
 msgid ""
 "```rust\n"
 "use std::collections::HashMap;\n"
@@ -3739,19 +3705,20 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:98
+#: src/patterns/behavioural/strategy.md:97
 msgid ""
 "The main advantage is separation of concerns. For example, in this case "
 "`Report`\n"
 "does not know anything about specific implementations of `Json` and `Text`,\n"
 "whereas the output implementations does not care about how data is "
 "preprocessed,\n"
-"stored, and fetched. The only thing they have to know is context and a "
-"specific\n"
-"trait and method to implement, i.e,`Formatter` and `run`."
+"stored, and fetched. The only thing they have to know is a specific\n"
+"trait to implement and its method defining the concrete algorithm "
+"implementation processing\n"
+"the result, i.e., `Formatter` and `format(...)`."
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:106
+#: src/patterns/behavioural/strategy.md:106
 msgid ""
 "For each strategy there must be implemented at least one module, so number "
 "of modules\n"
@@ -3760,13 +3727,13 @@ msgid ""
 "then users have to know how strategies differ from one another."
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:112
+#: src/patterns/behavioural/strategy.md:112
 msgid ""
 "In the previous example all strategies are implemented in a single file.\n"
 "Ways of providing different strategies includes:"
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:115
+#: src/patterns/behavioural/strategy.md:115
 msgid ""
 "- All in one file (as shown in this example, similar to being separated as "
 "modules)\n"
@@ -3776,7 +3743,7 @@ msgid ""
 "- Separated as crates, E.g. `json` crate, `text` crate"
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:120
+#: src/patterns/behavioural/strategy.md:120
 msgid ""
 "Serde crate is a good example of the `Strategy` pattern in action. Serde "
 "allows\n"
@@ -3791,19 +3758,19 @@ msgid ""
 "more useful and ergonomic."
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:127
+#: src/patterns/behavioural/strategy.md:127
 msgid ""
 "However, we don't need to use traits in order to design this pattern in Rust."
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:129
+#: src/patterns/behavioural/strategy.md:129
 msgid ""
 "The following toy example demonstrates the idea of the Strategy pattern "
 "using Rust\n"
 "`closures`:"
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:132
+#: src/patterns/behavioural/strategy.md:132
 msgid ""
 "```rust\n"
 "struct Adder;\n"
@@ -3834,11 +3801,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:160
+#: src/patterns/behavioural/strategy.md:160
 msgid "In fact, Rust already uses this idea for `Options`'s `map` method:"
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:162
+#: src/patterns/behavioural/strategy.md:162
 msgid ""
 "```rust\n"
 "fn main() {\n"
@@ -3853,7 +3820,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/strategy.md:176
+#: src/patterns/behavioural/strategy.md:176
 msgid ""
 "- [Strategy Pattern](https://en.wikipedia.org/wiki/Strategy_pattern)\n"
 "- [Dependency "
@@ -3862,11 +3829,11 @@ msgid ""
 "Design](https://en.wikipedia.org/wiki/Modern_C++_Design#Policy-based_design)"
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:1
+#: src/patterns/behavioural/visitor.md:1
 msgid "# Visitor"
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:5
+#: src/patterns/behavioural/visitor.md:5
 msgid ""
 "A visitor encapsulates an algorithm that operates over a heterogeneous\n"
 "collection of objects. It allows multiple different algorithms to be "
@@ -3875,13 +3842,13 @@ msgid ""
 "behaviour)."
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:10
+#: src/patterns/behavioural/visitor.md:10
 msgid ""
 "Furthermore, the visitor pattern allows separating the traversal of\n"
 "a collection of objects from the operations performed on each object."
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:15
+#: src/patterns/behavioural/visitor.md:15
 msgid ""
 "```rust,ignore\n"
 "// The data we will visit\n"
@@ -3941,14 +3908,14 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:69
+#: src/patterns/behavioural/visitor.md:69
 msgid ""
 "One could implement further visitors, for example a type checker, without "
 "having\n"
 "to modify the AST data."
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:74
+#: src/patterns/behavioural/visitor.md:74
 msgid ""
 "The visitor pattern is useful anywhere that you want to apply an algorithm "
 "to\n"
@@ -3959,7 +3926,7 @@ msgid ""
 "be stateful and thus communicate information between nodes."
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:81
+#: src/patterns/behavioural/visitor.md:81
 msgid ""
 "It is common for the `visit_*` methods to return void (as opposed to in the\n"
 "example). In that case it is possible to factor out the traversal code and "
@@ -3970,7 +3937,7 @@ msgid ""
 "example,"
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:87
+#: src/patterns/behavioural/visitor.md:87
 msgid ""
 "```rust,ignore\n"
 "pub fn walk_expr(visitor: &mut Visitor, e: &Expr) {\n"
@@ -3989,37 +3956,37 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:103
+#: src/patterns/behavioural/visitor.md:103
 msgid ""
 "In other languages (e.g., Java) it is common for data to have an `accept` "
 "method\n"
 "which performs the same duty."
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:108
+#: src/patterns/behavioural/visitor.md:108
 msgid "The visitor pattern is a common pattern in most OO languages."
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:110
+#: src/patterns/behavioural/visitor.md:110
 msgid "[Wikipedia article](https://en.wikipedia.org/wiki/Visitor_pattern)"
 msgstr ""
 
-#: src\patterns/behavioural/visitor.md:112
+#: src/patterns/behavioural/visitor.md:112
 msgid ""
 "The [fold](../creational/fold.md) pattern is similar to visitor but "
 "produces\n"
 "a new version of the visited data structure."
 msgstr ""
 
-#: src\patterns/creational/intro.md:1
+#: src/patterns/creational/intro.md:1
 msgid "# Creational Patterns"
 msgstr ""
 
-#: src\patterns/creational/intro.md:3
+#: src/patterns/creational/intro.md:3
 msgid "From [Wikipedia](https://en.wikipedia.org/wiki/Creational_pattern):"
 msgstr ""
 
-#: src\patterns/creational/intro.md:5
+#: src/patterns/creational/intro.md:5
 msgid ""
 "> Design patterns that deal with object creation mechanisms, trying to "
 "create objects\n"
@@ -4030,15 +3997,15 @@ msgid ""
 "> patterns solve this problem by somehow controlling this object creation."
 msgstr ""
 
-#: src\patterns/creational/builder.md:1
+#: src/patterns/creational/builder.md:1
 msgid "# Builder"
 msgstr ""
 
-#: src\patterns/creational/builder.md:5
+#: src/patterns/creational/builder.md:5
 msgid "Construct an object with calls to a builder helper."
 msgstr ""
 
-#: src\patterns/creational/builder.md:9
+#: src/patterns/creational/builder.md:9
 msgid ""
 "```rust\n"
 "#[derive(Debug, PartialEq)]\n"
@@ -4099,34 +4066,34 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/creational/builder.md:65
+#: src/patterns/creational/builder.md:65
 msgid ""
 "Useful when you would otherwise require many constructors or where\n"
 "construction has side effects."
 msgstr ""
 
-#: src\patterns/creational/builder.md:70
+#: src/patterns/creational/builder.md:70
 msgid "Separates methods for building from other methods."
 msgstr ""
 
-#: src\patterns/creational/builder.md:72
+#: src/patterns/creational/builder.md:72
 msgid "Prevents proliferation of constructors."
 msgstr ""
 
-#: src\patterns/creational/builder.md:74
+#: src/patterns/creational/builder.md:74
 msgid ""
 "Can be used for one-liner initialisation as well as more complex "
 "construction."
 msgstr ""
 
-#: src\patterns/creational/builder.md:78
+#: src/patterns/creational/builder.md:78
 msgid ""
 "More complex than creating a struct object directly, or a simple "
 "constructor\n"
 "function."
 msgstr ""
 
-#: src\patterns/creational/builder.md:83
+#: src/patterns/creational/builder.md:83
 msgid ""
 "This pattern is seen more frequently in Rust (and for simpler objects) than "
 "in\n"
@@ -4137,7 +4104,7 @@ msgid ""
 "Rust than in C++, Java, or others."
 msgstr ""
 
-#: src\patterns/creational/builder.md:88
+#: src/patterns/creational/builder.md:88
 msgid ""
 "This pattern is often used where the builder object is useful in its own "
 "right,\n"
@@ -4149,7 +4116,7 @@ msgid ""
 "used."
 msgstr ""
 
-#: src\patterns/creational/builder.md:94
+#: src/patterns/creational/builder.md:94
 msgid ""
 "The example takes and returns the builder by value. It is often more "
 "ergonomic\n"
@@ -4160,7 +4127,7 @@ msgid ""
 "one can write code like"
 msgstr ""
 
-#: src\patterns/creational/builder.md:99
+#: src/patterns/creational/builder.md:99
 msgid ""
 "```rust,ignore\n"
 "let mut fb = FooBuilder::new();\n"
@@ -4170,11 +4137,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/creational/builder.md:106
+#: src/patterns/creational/builder.md:106
 msgid "as well as the `FooBuilder::new().a().b().build()` style."
 msgstr ""
 
-#: src\patterns/creational/builder.md:110
+#: src/patterns/creational/builder.md:110
 msgid ""
 "- [Description in the style "
 "guide](https://web.archive.org/web/20210104103100/https://doc.rust-lang.org/1.12.0/style/ownership/builders.html)\n"
@@ -4189,18 +4156,18 @@ msgid ""
 "values](https://web.archive.org/web/20210104103000/https://rust-lang.github.io/api-guidelines/type-safety.html#c-builder)"
 msgstr ""
 
-#: src\patterns/creational/fold.md:1
+#: src/patterns/creational/fold.md:1
 msgid "# Fold"
 msgstr ""
 
-#: src\patterns/creational/fold.md:5
+#: src/patterns/creational/fold.md:5
 msgid ""
 "Run an algorithm over each item in a collection of data to create a new "
 "item,\n"
 "thus creating a whole new collection."
 msgstr ""
 
-#: src\patterns/creational/fold.md:8
+#: src/patterns/creational/fold.md:8
 msgid ""
 "The etymology here is unclear to me. The terms 'fold' and 'folder' are used\n"
 "in the Rust compiler, although it appears to me to be more like a map than "
@@ -4208,7 +4175,7 @@ msgid ""
 "fold in the usual sense. See the discussion below for more details."
 msgstr ""
 
-#: src\patterns/creational/fold.md:14
+#: src/patterns/creational/fold.md:14
 msgid ""
 "```rust,ignore\n"
 "// The data we will fold, a simple AST.\n"
@@ -4264,7 +4231,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/creational/fold.md:65
+#: src/patterns/creational/fold.md:65
 msgid ""
 "The result of running the `Renamer` on an AST is a new AST identical to the "
 "old\n"
@@ -4273,7 +4240,7 @@ msgid ""
 "state preserved between nodes in the struct itself."
 msgstr ""
 
-#: src\patterns/creational/fold.md:69
+#: src/patterns/creational/fold.md:69
 msgid ""
 "A folder can also be defined to map one data structure to a different (but\n"
 "usually similar) data structure. For example, we could fold an AST into a "
@@ -4281,7 +4248,7 @@ msgid ""
 "tree (HIR stands for high-level intermediate representation)."
 msgstr ""
 
-#: src\patterns/creational/fold.md:75
+#: src/patterns/creational/fold.md:75
 msgid ""
 "It is common to want to map a data structure by performing some operation "
 "on\n"
@@ -4295,14 +4262,14 @@ msgid ""
 "appropriate."
 msgstr ""
 
-#: src\patterns/creational/fold.md:82
+#: src/patterns/creational/fold.md:82
 msgid ""
 "Like the visitor pattern, the fold pattern allows us to separate traversal "
 "of a\n"
 "data structure from the operations performed to each node."
 msgstr ""
 
-#: src\patterns/creational/fold.md:87
+#: src/patterns/creational/fold.md:87
 msgid ""
 "Mapping data structures in this fashion is common in functional languages. "
 "In OO\n"
@@ -4314,14 +4281,14 @@ msgid ""
 "reasoning about the code easier in most circumstances."
 msgstr ""
 
-#: src\patterns/creational/fold.md:93
+#: src/patterns/creational/fold.md:93
 msgid ""
 "The trade-off between efficiency and reusability can be tweaked by changing "
 "how\n"
 "nodes are accepted by the `fold_*` methods."
 msgstr ""
 
-#: src\patterns/creational/fold.md:96
+#: src/patterns/creational/fold.md:96
 msgid ""
 "In the above example we operate on `Box` pointers. Since these own their "
 "data\n"
@@ -4330,7 +4297,7 @@ msgid ""
 "other hand if a node is not changed, reusing it is very efficient."
 msgstr ""
 
-#: src\patterns/creational/fold.md:100
+#: src/patterns/creational/fold.md:100
 msgid ""
 "If we were to operate on borrowed references, the original data structure "
 "can be\n"
@@ -4338,7 +4305,7 @@ msgid ""
 "expensive."
 msgstr ""
 
-#: src\patterns/creational/fold.md:104
+#: src/patterns/creational/fold.md:104
 msgid ""
 "Using a reference counted pointer gives the best of both worlds - we can "
 "reuse\n"
@@ -4348,7 +4315,7 @@ msgid ""
 "mutable."
 msgstr ""
 
-#: src\patterns/creational/fold.md:111
+#: src/patterns/creational/fold.md:111
 msgid ""
 "Iterators have a `fold` method, however this folds a data structure into a\n"
 "value, rather than into a new data structure. An iterator's `map` is more "
@@ -4356,7 +4323,7 @@ msgid ""
 "this fold pattern."
 msgstr ""
 
-#: src\patterns/creational/fold.md:115
+#: src/patterns/creational/fold.md:115
 msgid ""
 "In other languages, fold is usually used in the sense of Rust's iterators,\n"
 "rather than this pattern. Some functional languages have powerful constructs "
@@ -4364,7 +4331,7 @@ msgid ""
 "performing flexible maps over data structures."
 msgstr ""
 
-#: src\patterns/creational/fold.md:119
+#: src/patterns/creational/fold.md:119
 msgid ""
 "The [visitor](../behavioural/visitor.md) pattern is closely related to "
 "fold.\n"
@@ -4375,30 +4342,26 @@ msgid ""
 "the old one."
 msgstr ""
 
-#: src\patterns/structural/intro.md:1
+#: src/patterns/structural/intro.md:1
 msgid "# Structural Patterns"
 msgstr ""
 
-#: src\patterns/structural/intro.md:3
+#: src/patterns/structural/intro.md:3
 msgid "From [Wikipedia](https://en.wikipedia.org/wiki/Structural_pattern):"
 msgstr ""
 
-#: src\patterns/structural/intro.md:5
+#: src/patterns/structural/intro.md:5
 msgid ""
 "> Design patterns that ease the design by identifying a simple way to "
 "realize relationships\n"
 "> among entities."
 msgstr ""
 
-#: src\patterns/structural/compose-structs.md:1
-msgid "# Compose structs together for better borrowing"
+#: src/patterns/structural/compose-structs.md:1
+msgid "# Struct decomposition for independent borrowing"
 msgstr ""
 
-#: src\patterns/structural/compose-structs.md:3
-msgid "TODO - this is not a very snappy name"
-msgstr ""
-
-#: src\patterns/structural/compose-structs.md:7
+#: src/patterns/structural/compose-structs.md:5
 msgid ""
 "Sometimes a large struct will cause issues with the borrow checker - "
 "although\n"
@@ -4411,106 +4374,127 @@ msgid ""
 "behaviour."
 msgstr ""
 
-#: src\patterns/structural/compose-structs.md:14
+#: src/patterns/structural/compose-structs.md:12
 msgid ""
 "This will often lead to a better design in other ways: applying this design\n"
 "pattern often reveals smaller units of functionality."
 msgstr ""
 
-#: src\patterns/structural/compose-structs.md:19
+#: src/patterns/structural/compose-structs.md:17
 msgid ""
 "Here is a contrived example of where the borrow checker foils us in our plan "
 "to\n"
 "use a struct:"
 msgstr ""
 
-#: src\patterns/structural/compose-structs.md:22
+#: src/patterns/structural/compose-structs.md:20
 msgid ""
 "```rust\n"
-"struct A {\n"
-"    f1: u32,\n"
-"    f2: u32,\n"
-"    f3: u32,\n"
+"struct Database {\n"
+"    connection_string: String,\n"
+"    timeout: u32,\n"
+"    pool_size: u32,\n"
 "}\n"
 "\n"
-"fn foo(a: &mut A) -> &u32 { &a.f2 }\n"
-"fn bar(a: &mut A) -> u32 { a.f1 + a.f3 }\n"
+"fn print_database(database: &Database) {\n"
+"    println!(\"Connection string: {}\", database.connection_string);\n"
+"    println!(\"Timeout: {}\", database.timeout);\n"
+"    println!(\"Pool size: {}\", database.pool_size);\n"
+"}\n"
 "\n"
-"fn baz(a: &mut A) {\n"
-"    // The later usage of x causes a to be borrowed for the rest of the "
-"function.\n"
-"    let x = foo(a);\n"
-"    // Borrow checker error:\n"
-"    // let y = bar(a); // ~ ERROR: cannot borrow `*a` as mutable more than "
-"once\n"
-"                       //          at a time\n"
-"    println!(\"{}\", x);\n"
+"fn main() {\n"
+"    let mut db = Database {\n"
+"        connection_string: \"initial string\".to_string(),\n"
+"        timeout: 30,\n"
+"        pool_size: 100,\n"
+"    };\n"
+"\n"
+"    let connection_string = &mut db.connection_string;\n"
+"    print_database(&db);  // Immutable borrow of `db` happens here\n"
+"    // *connection_string = \"new string\".to_string();  // Mutable borrow "
+"is used\n"
+"                                                       // here\n"
 "}\n"
 "```"
 msgstr ""
 
-#: src\patterns/structural/compose-structs.md:42
+#: src/patterns/structural/compose-structs.md:47
 msgid ""
-"We can apply this design pattern and refactor `A` into two smaller structs, "
-"thus\n"
-"solving the borrow checking issue:"
+"We can apply this design pattern and refactor `Database` into three smaller\n"
+"structs, thus solving the borrow checking issue:"
 msgstr ""
 
-#: src\patterns/structural/compose-structs.md:45
+#: src/patterns/structural/compose-structs.md:50
 msgid ""
 "```rust\n"
-"// A is now composed of two structs - B and C.\n"
-"struct A {\n"
-"    b: B,\n"
-"    c: C,\n"
-"}\n"
-"struct B {\n"
-"    f2: u32,\n"
-"}\n"
-"struct C {\n"
-"    f1: u32,\n"
-"    f3: u32,\n"
+"// Database is now composed of three structs - ConnectionString, Timeout and "
+"PoolSize.\n"
+"// Let's decompose it into smaller structs\n"
+"#[derive(Debug, Clone)]\n"
+"struct ConnectionString(String);\n"
+"\n"
+"#[derive(Debug, Clone, Copy)]\n"
+"struct Timeout(u32);\n"
+"\n"
+"#[derive(Debug, Clone, Copy)]\n"
+"struct PoolSize(u32);\n"
+"\n"
+"// We then compose these smaller structs back into `Database`\n"
+"struct Database {\n"
+"    connection_string: ConnectionString,\n"
+"    timeout: Timeout,\n"
+"    pool_size: PoolSize,\n"
 "}\n"
 "\n"
-"// These functions take a B or C, rather than A.\n"
-"fn foo(b: &mut B) -> &u32 { &b.f2 }\n"
-"fn bar(c: &mut C) -> u32 { c.f1 + c.f3 }\n"
+"// print_database can then take ConnectionString, Timeout and Poolsize "
+"struct instead\n"
+"fn print_database(connection_str: ConnectionString, \n"
+"                  timeout: Timeout, \n"
+"                  pool_size: PoolSize) {\n"
+"    println!(\"Connection string: {:?}\", connection_str);\n"
+"    println!(\"Timeout: {:?}\", timeout);\n"
+"    println!(\"Pool size: {:?}\", pool_size);\n"
+"}\n"
 "\n"
-"fn baz(a: &mut A) {\n"
-"    let x = foo(&mut a.b);\n"
-"    // Now it's OK!\n"
-"    let y = bar(&mut a.c);\n"
-"    println!(\"{}\", x);\n"
+"fn main() {\n"
+"    // Initialize the Database with the three structs\n"
+"    let mut db = Database {\n"
+"        connection_string: ConnectionString(\"localhost\".to_string()),\n"
+"        timeout: Timeout(30),\n"
+"        pool_size: PoolSize(100),\n"
+"    };\n"
+"\n"
+"    let connection_string = &mut db.connection_string;\n"
+"    print_database(connection_string.clone(), db.timeout, db.pool_size);\n"
+"    *connection_string = ConnectionString(\"new string\".to_string());\n"
 "}\n"
 "```"
 msgstr ""
 
-#: src\patterns/structural/compose-structs.md:73
-msgid "TODO Why and where you should use the pattern"
-msgstr ""
-
-#: src\patterns/structural/compose-structs.md:77
-msgid "Lets you work around limitations in the borrow checker."
-msgstr ""
-
-#: src\patterns/structural/compose-structs.md:79
-msgid "Often produces a better design."
-msgstr ""
-
-#: src\patterns/structural/compose-structs.md:83
-msgid "Leads to more verbose code."
-msgstr ""
-
-#: src\patterns/structural/compose-structs.md:85
+#: src/patterns/structural/compose-structs.md:94
 msgid ""
-"Sometimes, the smaller structs are not good abstractions, and so we end up "
-"with\n"
-"a worse design. That is probably a 'code smell', indicating that the "
-"program\n"
-"should be refactored in some way."
+"This pattern is most useful, when you have a struct that ended up with a lot "
+"of\n"
+"fields that you want to borrow independently. Thus having a more flexible\n"
+"behaviour in the end."
 msgstr ""
 
-#: src\patterns/structural/compose-structs.md:91
+#: src/patterns/structural/compose-structs.md:100
+msgid ""
+"Decomposition of structs lets you work around limitations in the borrow "
+"checker.\n"
+"And it often produces a better design."
+msgstr ""
+
+#: src/patterns/structural/compose-structs.md:105
+msgid ""
+"It can lead to more verbose code. And sometimes, the smaller structs are "
+"not\n"
+"good abstractions, and so we end up with a worse design. That is probably a\n"
+"'code smell', indicating that the program should be refactored in some way."
+msgstr ""
+
+#: src/patterns/structural/compose-structs.md:111
 msgid ""
 "This pattern is not required in languages that don't have a borrow checker, "
 "so\n"
@@ -4520,7 +4504,7 @@ msgid ""
 "engineering, independent of the language."
 msgstr ""
 
-#: src\patterns/structural/compose-structs.md:96
+#: src/patterns/structural/compose-structs.md:116
 msgid ""
 "This pattern relies on Rust's borrow checker to be able to borrow fields\n"
 "independently of each other. In the example, the borrow checker knows that "
@@ -4530,15 +4514,15 @@ msgid ""
 "borrow all of `a`, which would make this pattern useless."
 msgstr ""
 
-#: src\patterns/structural/small-crates.md:1
+#: src/patterns/structural/small-crates.md:1
 msgid "# Prefer small crates"
 msgstr ""
 
-#: src\patterns/structural/small-crates.md:5
+#: src/patterns/structural/small-crates.md:5
 msgid "Prefer small crates that do one thing well."
 msgstr ""
 
-#: src\patterns/structural/small-crates.md:7
+#: src/patterns/structural/small-crates.md:7
 msgid ""
 "Cargo and crates.io make it easy to add third-party libraries, much more so "
 "than\n"
@@ -4550,7 +4534,7 @@ msgid ""
 "dependencies."
 msgstr ""
 
-#: src\patterns/structural/small-crates.md:14
+#: src/patterns/structural/small-crates.md:14
 msgid ""
 "- Small crates are easier to understand, and encourage more modular code.\n"
 "- Crates allow for re-using code between projects.\n"
@@ -4563,7 +4547,7 @@ msgid ""
 "  the code to be built in parallel."
 msgstr ""
 
-#: src\patterns/structural/small-crates.md:24
+#: src/patterns/structural/small-crates.md:24
 msgid ""
 "- This can lead to \"dependency hell\", when a project depends on multiple "
 "conflicting\n"
@@ -4582,36 +4566,36 @@ msgid ""
 "  does not perform link-time optimization (LTO) by default."
 msgstr ""
 
-#: src\patterns/structural/small-crates.md:36
-msgid ""
-"The [`ref_slice`](https://crates.io/crates/ref_slice) crate provides "
-"functions\n"
-"for converting `&T` to `&[T]`."
-msgstr ""
-
-#: src\patterns/structural/small-crates.md:39
+#: src/patterns/structural/small-crates.md:36
 msgid ""
 "The [`url`](https://crates.io/crates/url) crate provides tools for working "
 "with\n"
 "URLs."
 msgstr ""
 
-#: src\patterns/structural/small-crates.md:42
+#: src/patterns/structural/small-crates.md:39
 msgid ""
 "The [`num_cpus`](https://crates.io/crates/num_cpus) crate provides a "
 "function to\n"
 "query the number of CPUs on a machine."
 msgstr ""
 
-#: src\patterns/structural/small-crates.md:47
+#: src/patterns/structural/small-crates.md:42
+msgid ""
+"The [`ref_slice`](https://crates.io/crates/ref_slice) crate provides "
+"functions\n"
+"for converting `&T` to `&[T]`. (Historical example)"
+msgstr ""
+
+#: src/patterns/structural/small-crates.md:47
 msgid "- [crates.io: The Rust community crate host](https://crates.io/)"
 msgstr ""
 
-#: src\patterns/structural/unsafe-mods.md:1
+#: src/patterns/structural/unsafe-mods.md:1
 msgid "# Contain unsafety in small modules"
 msgstr ""
 
-#: src\patterns/structural/unsafe-mods.md:5
+#: src/patterns/structural/unsafe-mods.md:5
 msgid ""
 "If you have `unsafe` code, create the smallest possible module that can "
 "uphold\n"
@@ -4625,7 +4609,7 @@ msgid ""
 "benefits."
 msgstr ""
 
-#: src\patterns/structural/unsafe-mods.md:13
+#: src/patterns/structural/unsafe-mods.md:13
 msgid ""
 "- This restricts the unsafe code that must be audited\n"
 "- Writing the outer module is much easier, since you can count on the "
@@ -4633,13 +4617,13 @@ msgid ""
 "  of the inner module"
 msgstr ""
 
-#: src\patterns/structural/unsafe-mods.md:19
+#: src/patterns/structural/unsafe-mods.md:19
 msgid ""
 "- Sometimes, it may be hard to find a suitable interface.\n"
 "- The abstraction may introduce inefficiencies."
 msgstr ""
 
-#: src\patterns/structural/unsafe-mods.md:24
+#: src/patterns/structural/unsafe-mods.md:24
 msgid ""
 "- The [`toolshed`](https://docs.rs/toolshed) crate contains its unsafe "
 "operations\n"
@@ -4655,17 +4639,17 @@ msgid ""
 "contents."
 msgstr ""
 
-#: src\patterns/structural/unsafe-mods.md:34
+#: src/patterns/structural/unsafe-mods.md:34
 msgid ""
 "- [Ralf Jung's Blog about invariants in unsafe "
 "code](https://www.ralfj.de/blog/2018/08/22/two-kinds-of-invariants.html)"
 msgstr ""
 
-#: src\patterns/ffi/intro.md:1
+#: src/patterns/ffi/intro.md:1
 msgid "# FFI Patterns"
 msgstr ""
 
-#: src\patterns/ffi/intro.md:3
+#: src/patterns/ffi/intro.md:3
 msgid ""
 "Writing FFI code is an entire course in itself.\n"
 "However, there are several idioms here that can act as pointers, and avoid "
@@ -4673,11 +4657,11 @@ msgid ""
 "for inexperienced users of unsafe Rust."
 msgstr ""
 
-#: src\patterns/ffi/intro.md:7
+#: src/patterns/ffi/intro.md:7
 msgid "This section contains design patterns that may be useful when doing FFI."
 msgstr ""
 
-#: src\patterns/ffi/intro.md:9
+#: src/patterns/ffi/intro.md:9
 msgid ""
 "1. [Object-Based API](./export.md) design that has good memory safety "
 "characteristics,\n"
@@ -4688,18 +4672,18 @@ msgid ""
 "   together into an opaque \"object\""
 msgstr ""
 
-#: src\patterns/ffi/export.md:1
+#: src/patterns/ffi/export.md:1
 msgid "# Object-Based APIs"
 msgstr ""
 
-#: src\patterns/ffi/export.md:5
+#: src/patterns/ffi/export.md:5
 msgid ""
 "When designing APIs in Rust which are exposed to other languages, there are "
 "some\n"
 "important design principles which are contrary to normal Rust API design:"
 msgstr ""
 
-#: src\patterns/ffi/export.md:8
+#: src/patterns/ffi/export.md:8
 msgid ""
 "1. All Encapsulated types should be _owned_ by Rust, _managed_ by the user,\n"
 "   and _opaque_.\n"
@@ -4711,7 +4695,7 @@ msgid ""
 "   but _provenance/lifetime_."
 msgstr ""
 
-#: src\patterns/ffi/export.md:17
+#: src/patterns/ffi/export.md:17
 msgid ""
 "Rust has built-in FFI support to other languages.\n"
 "It does this by providing a way for crate authors to provide C-compatible "
@@ -4719,7 +4703,7 @@ msgid ""
 "through different ABIs (though that is unimportant to this practice)."
 msgstr ""
 
-#: src\patterns/ffi/export.md:21
+#: src/patterns/ffi/export.md:21
 msgid ""
 "Well-designed Rust FFI follows C API design principles, while compromising "
 "the\n"
@@ -4727,7 +4711,7 @@ msgid ""
 "API:"
 msgstr ""
 
-#: src\patterns/ffi/export.md:24
+#: src/patterns/ffi/export.md:24
 msgid ""
 "1. Make it easy to use in the target language.\n"
 "2. Avoid the API dictating internal unsafety on the Rust side as much as "
@@ -4737,7 +4721,7 @@ msgid ""
 "   as possible."
 msgstr ""
 
-#: src\patterns/ffi/export.md:29
+#: src/patterns/ffi/export.md:29
 msgid ""
 "Rust code must trust the memory safety of the foreign language beyond a "
 "certain\n"
@@ -4746,7 +4730,7 @@ msgid ""
 "bugs, or to exacerbate `undefined behaviour`."
 msgstr ""
 
-#: src\patterns/ffi/export.md:33
+#: src/patterns/ffi/export.md:33
 msgid ""
 "For example, if a pointer provenance is wrong, that may be a segfault due "
 "to\n"
@@ -4755,21 +4739,21 @@ msgid ""
 "full-blown heap corruption."
 msgstr ""
 
-#: src\patterns/ffi/export.md:37
+#: src/patterns/ffi/export.md:37
 msgid ""
 "The Object-Based API design allows for writing shims that have good memory "
 "safety\n"
 "characteristics, and a clean boundary of what is safe and what is `unsafe`."
 msgstr ""
 
-#: src\patterns/ffi/export.md:42
+#: src/patterns/ffi/export.md:42
 msgid ""
 "The POSIX standard defines the API to access an on-file database, known as "
 "[DBM](https://web.archive.org/web/20210105035602/https://www.mankier.com/0p/ndbm.h).\n"
 "It is an excellent example of an \"object-based\" API."
 msgstr ""
 
-#: src\patterns/ffi/export.md:45
+#: src/patterns/ffi/export.md:45
 msgid ""
 "Here is the definition in C, which hopefully should be easy to read for "
 "those\n"
@@ -4777,7 +4761,7 @@ msgid ""
 "miss the subtleties."
 msgstr ""
 
-#: src\patterns/ffi/export.md:49
+#: src/patterns/ffi/export.md:49
 msgid ""
 "```C\n"
 "struct DBM;\n"
@@ -4795,11 +4779,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/ffi/export.md:64
+#: src/patterns/ffi/export.md:64
 msgid "This API defines two types: `DBM` and `datum`."
 msgstr ""
 
-#: src\patterns/ffi/export.md:66
+#: src/patterns/ffi/export.md:66
 msgid ""
 "The `DBM` type was called an \"encapsulated\" type above.\n"
 "It is designed to contain internal state, and acts as an entry point for "
@@ -4807,7 +4791,7 @@ msgid ""
 "library's behavior."
 msgstr ""
 
-#: src\patterns/ffi/export.md:70
+#: src/patterns/ffi/export.md:70
 msgid ""
 "It is completely opaque to the user, who cannot create a `DBM` themselves "
 "since\n"
@@ -4816,7 +4800,7 @@ msgid ""
 "only gives them _a pointer to one_."
 msgstr ""
 
-#: src\patterns/ffi/export.md:74
+#: src/patterns/ffi/export.md:74
 msgid ""
 "This means all `DBM`s are \"owned\" by the library in a Rust sense.\n"
 "The internal state of unknown size is kept in memory controlled by the "
@@ -4826,7 +4810,7 @@ msgid ""
 "and perform operations on it with the other functions."
 msgstr ""
 
-#: src\patterns/ffi/export.md:79
+#: src/patterns/ffi/export.md:79
 msgid ""
 "The `datum` type was called a \"transactional\" type above.\n"
 "It is designed to facilitate the exchange of information between the library "
@@ -4834,7 +4818,7 @@ msgid ""
 "its user."
 msgstr ""
 
-#: src\patterns/ffi/export.md:83
+#: src/patterns/ffi/export.md:83
 msgid ""
 "The database is designed to store \"unstructured data\", with no pre-defined "
 "length\n"
@@ -4845,7 +4829,7 @@ msgid ""
 "no type information, which is what `void` indicates."
 msgstr ""
 
-#: src\patterns/ffi/export.md:88
+#: src/patterns/ffi/export.md:88
 msgid ""
 "Keep in mind that this header is written from the library's point of view.\n"
 "The user likely has some type they are using, which has a known size.\n"
@@ -4854,7 +4838,7 @@ msgid ""
 "pointer can be cast to `void`."
 msgstr ""
 
-#: src\patterns/ffi/export.md:93
+#: src/patterns/ffi/export.md:93
 msgid ""
 "As noted earlier, this type is _transparent_ to the user. But also, this "
 "type is\n"
@@ -4863,7 +4847,7 @@ msgid ""
 "The question is, who owns the memory that pointer points to?"
 msgstr ""
 
-#: src\patterns/ffi/export.md:98
+#: src/patterns/ffi/export.md:98
 msgid ""
 "The answer for best memory safety is, \"the user\".\n"
 "But in cases such as retrieving a value, the user does not know how to "
@@ -4875,7 +4859,7 @@ msgid ""
 "`malloc` and `free` -- and then _transfer ownership_ in the Rust sense."
 msgstr ""
 
-#: src\patterns/ffi/export.md:104
+#: src/patterns/ffi/export.md:104
 msgid ""
 "This may all seem speculative, but this is what a pointer means in C.\n"
 "It means the same thing as Rust: \"user defined lifetime.\"\n"
@@ -4888,14 +4872,14 @@ msgid ""
 "is to _transfer ownership of everything that is transparent_."
 msgstr ""
 
-#: src\patterns/ffi/export.md:113
+#: src/patterns/ffi/export.md:113
 msgid ""
 "This minimizes the number of memory safety guarantees the user must uphold "
 "to a\n"
 "relatively small number:"
 msgstr ""
 
-#: src\patterns/ffi/export.md:116
+#: src/patterns/ffi/export.md:116
 msgid ""
 "1. Do not call any function with a pointer not returned by `dbm_open` "
 "(invalid\n"
@@ -4906,14 +4890,14 @@ msgid ""
 "   at the advertised length."
 msgstr ""
 
-#: src\patterns/ffi/export.md:122
+#: src/patterns/ffi/export.md:122
 msgid ""
 "In addition, it avoids a lot of pointer provenance issues.\n"
 "To understand why, let us consider an alternative in some depth: key "
 "iteration."
 msgstr ""
 
-#: src\patterns/ffi/export.md:125
+#: src/patterns/ffi/export.md:125
 msgid ""
 "Rust is well known for its iterators.\n"
 "When implementing one, the programmer makes a separate type with a bounded "
@@ -4921,11 +4905,11 @@ msgid ""
 "to its owner, and implements the `Iterator` trait."
 msgstr ""
 
-#: src\patterns/ffi/export.md:129
+#: src/patterns/ffi/export.md:129
 msgid "Here is how iteration would be done in Rust for `DBM`:"
 msgstr ""
 
-#: src\patterns/ffi/export.md:131
+#: src/patterns/ffi/export.md:131
 msgid ""
 "```rust,ignore\n"
 "struct Dbm { ... }\n"
@@ -4944,13 +4928,13 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/ffi/export.md:147
+#: src/patterns/ffi/export.md:147
 msgid ""
 "This is clean, idiomatic, and safe. thanks to Rust's guarantees.\n"
 "However, consider what a straightforward API translation would look like:"
 msgstr ""
 
-#: src\patterns/ffi/export.md:150
+#: src/patterns/ffi/export.md:150
 msgid ""
 "```rust,ignore\n"
 "#[no_mangle]\n"
@@ -4974,7 +4958,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/ffi/export.md:168
+#: src/patterns/ffi/export.md:168
 msgid ""
 "This API loses a key piece of information: the lifetime of the iterator must "
 "not\n"
@@ -4985,12 +4969,12 @@ msgid ""
 "resulting in reading uninitialized memory."
 msgstr ""
 
-#: src\patterns/ffi/export.md:173
+#: src/patterns/ffi/export.md:173
 msgid ""
 "This example written in C contains a bug that will be explained afterwards:"
 msgstr ""
 
-#: src\patterns/ffi/export.md:175
+#: src/patterns/ffi/export.md:175
 msgid ""
 "```C\n"
 "int count_key_sizes(DBM *db) {\n"
@@ -5021,13 +5005,13 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/ffi/export.md:202
+#: src/patterns/ffi/export.md:202
 msgid ""
 "This bug is a classic. Here's what happens when the iterator returns the\n"
 "end-of-iteration marker:"
 msgstr ""
 
-#: src\patterns/ffi/export.md:205
+#: src/patterns/ffi/export.md:205
 msgid ""
 "1. The loop condition sets `l` to zero, and enters the loop because `0 >= "
 "0`.\n"
@@ -5039,7 +5023,7 @@ msgid ""
 "object."
 msgstr ""
 
-#: src\patterns/ffi/export.md:211
+#: src/patterns/ffi/export.md:211
 msgid ""
 "The worst part about this bug?\n"
 "If the Rust implementation was careful, this code will work most of the "
@@ -5053,7 +5037,7 @@ msgid ""
 "nonsensical memory corruption!"
 msgstr ""
 
-#: src\patterns/ffi/export.md:218
+#: src/patterns/ffi/export.md:218
 msgid ""
 "None of this can be avoided by Rust.\n"
 "From its perspective, it put those objects on its heap, returned pointers to "
@@ -5061,7 +5045,7 @@ msgid ""
 "and gave up control of their lifetimes. The C code simply must \"play nice\"."
 msgstr ""
 
-#: src\patterns/ffi/export.md:222
+#: src/patterns/ffi/export.md:222
 msgid ""
 "The programmer must read and understand the API documentation.\n"
 "While some consider that par for the course in C, a good API design can "
@@ -5071,7 +5055,7 @@ msgid ""
 "the iterator with its parent:"
 msgstr ""
 
-#: src\patterns/ffi/export.md:227
+#: src/patterns/ffi/export.md:227
 msgid ""
 "```C\n"
 "datum   dbm_firstkey(DBM *);\n"
@@ -5079,18 +5063,18 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/ffi/export.md:232
+#: src/patterns/ffi/export.md:232
 msgid ""
 "Thus, all the lifetimes were bound together, and such unsafety was prevented."
 msgstr ""
 
-#: src\patterns/ffi/export.md:236
+#: src/patterns/ffi/export.md:236
 msgid ""
 "However, this design choice also has a number of drawbacks, which should be\n"
 "considered as well."
 msgstr ""
 
-#: src\patterns/ffi/export.md:239
+#: src/patterns/ffi/export.md:239
 msgid ""
 "First, the API itself becomes less expressive.\n"
 "With POSIX DBM, there is only one iterator per object, and every call "
@@ -5102,7 +5086,7 @@ msgid ""
 "less hierarchical, this limitation is more of a cost than the safety."
 msgstr ""
 
-#: src\patterns/ffi/export.md:245
+#: src/patterns/ffi/export.md:245
 msgid ""
 "Second, depending on the relationships of the API's parts, significant "
 "design effort\n"
@@ -5111,7 +5095,7 @@ msgid ""
 "with them:"
 msgstr ""
 
-#: src\patterns/ffi/export.md:249
+#: src/patterns/ffi/export.md:249
 msgid ""
 "- [Wrapper Type Consolidation](./wrappers.md) groups multiple Rust types "
 "together\n"
@@ -5127,31 +5111,31 @@ msgid ""
 "  [Passing Strings to FFI](../../idioms/ffi/passing-strings.md)"
 msgstr ""
 
-#: src\patterns/ffi/export.md:259
+#: src/patterns/ffi/export.md:259
 msgid ""
 "However, not every API can be done this way.\n"
 "It is up to the best judgement of the programmer as to who their audience is."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:1
+#: src/patterns/ffi/wrappers.md:1
 msgid "# Type Consolidation into Wrappers"
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:5
+#: src/patterns/ffi/wrappers.md:5
 msgid ""
 "This pattern is designed to allow gracefully handling multiple related "
 "types,\n"
 "while minimizing the surface area for memory unsafety."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:8
+#: src/patterns/ffi/wrappers.md:8
 msgid ""
 "One of the cornerstones of Rust's aliasing rules is lifetimes.\n"
 "This ensures that many patterns of access between types can be memory safe,\n"
 "data race safety included."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:12
+#: src/patterns/ffi/wrappers.md:12
 msgid ""
 "However, when Rust types are exported to other languages, they are usually "
 "transformed\n"
@@ -5160,7 +5144,7 @@ msgid ""
 "It is their responsibility to avoid memory unsafety."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:16
+#: src/patterns/ffi/wrappers.md:16
 msgid ""
 "Some level of trust in the user code is thus required, notably around "
 "use-after-free\n"
@@ -5169,7 +5153,7 @@ msgid ""
 "than others on the code written in the other language."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:20
+#: src/patterns/ffi/wrappers.md:20
 msgid ""
 "The lowest risk API is the \"consolidated wrapper\", where all possible "
 "interactions\n"
@@ -5177,18 +5161,18 @@ msgid ""
 "API clean."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:25
+#: src/patterns/ffi/wrappers.md:25
 msgid ""
 "To understand this, let us look at a classic example of an API to export: "
 "iteration\n"
 "through a collection."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:28
+#: src/patterns/ffi/wrappers.md:28
 msgid "That API looks like this:"
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:30
+#: src/patterns/ffi/wrappers.md:30
 msgid ""
 "1. The iterator is initialized with `first_key`.\n"
 "2. Each call to `next_key` will advance the iterator.\n"
@@ -5198,14 +5182,14 @@ msgid ""
 "   Rust API)."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:36
+#: src/patterns/ffi/wrappers.md:36
 msgid ""
 "If the iterator implements `nth()` efficiently, then it is possible to make "
 "it\n"
 "ephemeral to each function call:"
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:39
+#: src/patterns/ffi/wrappers.md:39
 msgid ""
 "```rust,ignore\n"
 "struct MySetWrapper {\n"
@@ -5230,11 +5214,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:61
+#: src/patterns/ffi/wrappers.md:61
 msgid "As a result, the wrapper is simple and contains no `unsafe` code."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:65
+#: src/patterns/ffi/wrappers.md:65
 msgid ""
 "This makes APIs safer to use, avoiding issues with lifetimes between types.\n"
 "See [Object-Based APIs](./export.md) for more on the advantages and "
@@ -5242,14 +5226,14 @@ msgid ""
 "this avoids."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:71
+#: src/patterns/ffi/wrappers.md:71
 msgid ""
 "Often, wrapping types is quite difficult, and sometimes a Rust API "
 "compromise\n"
 "would make things easier."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:74
+#: src/patterns/ffi/wrappers.md:74
 msgid ""
 "As an example, consider an iterator which does not efficiently implement "
 "`nth()`.\n"
@@ -5260,11 +5244,11 @@ msgid ""
 "only the Foreign Function API will use."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:79
+#: src/patterns/ffi/wrappers.md:79
 msgid "### Trying to Wrap Iterators (and Failing)"
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:81
+#: src/patterns/ffi/wrappers.md:81
 msgid ""
 "To wrap any type of iterator into the API correctly, the wrapper would need "
 "to\n"
@@ -5273,19 +5257,19 @@ msgid ""
 "and manage it manually."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:85
+#: src/patterns/ffi/wrappers.md:85
 msgid "Suffice it to say, this is _incredibly_ difficult."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:87
+#: src/patterns/ffi/wrappers.md:87
 msgid "Here is an illustration of just _one_ pitfall."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:89
+#: src/patterns/ffi/wrappers.md:89
 msgid "A first version of `MySetWrapper` would look like this:"
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:91
+#: src/patterns/ffi/wrappers.md:91
 msgid ""
 "```rust,ignore\n"
 "struct MySetWrapper {\n"
@@ -5297,14 +5281,14 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:100
+#: src/patterns/ffi/wrappers.md:100
 msgid ""
 "With `transmute` being used to extend a lifetime, and a pointer to hide it,\n"
 "it's ugly already. But it gets even worse: _any other operation can cause\n"
 "Rust `undefined behaviour`_."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:104
+#: src/patterns/ffi/wrappers.md:104
 msgid ""
 "Consider that the `MySet` in the wrapper could be manipulated by other\n"
 "functions during iteration, such as storing a new value to the key it was\n"
@@ -5312,11 +5296,11 @@ msgid ""
 "libraries expect it."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:109
+#: src/patterns/ffi/wrappers.md:109
 msgid "A simple implementation of `myset_store` would be:"
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:111
+#: src/patterns/ffi/wrappers.md:111
 msgid ""
 "```rust,ignore\n"
 "pub mod unsafe_module {\n"
@@ -5346,7 +5330,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:137
+#: src/patterns/ffi/wrappers.md:137
 msgid ""
 "If the iterator exists when this function is called, we have violated one of "
 "Rust's\n"
@@ -5357,7 +5341,7 @@ msgid ""
 "so we have `undefined behaviour`! "
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:142
+#: src/patterns/ffi/wrappers.md:142
 msgid ""
 "To avoid this, we must have a way of ensuring that mutable reference really "
 "is exclusive.\n"
@@ -5368,7 +5352,7 @@ msgid ""
 "the C version."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:147
+#: src/patterns/ffi/wrappers.md:147
 msgid ""
 "Some may ask: how can C do this more efficiently?\n"
 "The answer is, it cheats. Rust's aliasing rules are the problem, and C "
@@ -5382,7 +5366,7 @@ msgid ""
 "has an entire lexicon dedicated to concurrent behavior!"
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:154
+#: src/patterns/ffi/wrappers.md:154
 msgid ""
 "Rust would rather make everything memory safe all the time, for both safety "
 "and\n"
@@ -5391,7 +5375,7 @@ msgid ""
 "is the price Rust programmers need to pay."
 msgstr ""
 
-#: src\patterns/ffi/wrappers.md:158
+#: src/patterns/ffi/wrappers.md:158
 msgid ""
 "For the C programmers out there scratching their heads, the iterator need\n"
 "not be read _during_ this code cause the UB. The exclusivity rule also "
@@ -5404,11 +5388,11 @@ msgid ""
 "created."
 msgstr ""
 
-#: src\anti_patterns/index.md:1
+#: src/anti_patterns/index.md:1
 msgid "# Anti-patterns"
 msgstr ""
 
-#: src\anti_patterns/index.md:3
+#: src/anti_patterns/index.md:3
 msgid ""
 "An [anti-pattern](https://en.wikipedia.org/wiki/Anti-pattern) is a solution "
 "to\n"
@@ -5421,11 +5405,11 @@ msgid ""
 "For example, a process can be an anti-pattern, too."
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:1
+#: src/anti_patterns/borrow_clone.md:1
 msgid "# Clone to satisfy the borrow checker"
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:5
+#: src/anti_patterns/borrow_clone.md:5
 msgid ""
 "The borrow checker prevents Rust users from developing otherwise unsafe code "
 "by\n"
@@ -5438,7 +5422,7 @@ msgid ""
 "error by cloning the variable."
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:13
+#: src/anti_patterns/borrow_clone.md:13
 msgid ""
 "```rust\n"
 "// define any variable\n"
@@ -5459,7 +5443,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:32
+#: src/anti_patterns/borrow_clone.md:32
 msgid ""
 "It is tempting, particularly for beginners, to use this pattern to resolve\n"
 "confusing issues with the borrow checker. However, there are serious\n"
@@ -5470,7 +5454,7 @@ msgid ""
 "exist."
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:38
+#: src/anti_patterns/borrow_clone.md:38
 msgid ""
 "There are special cases -- `Rc<T>` is designed to handle clones "
 "intelligently.\n"
@@ -5479,7 +5463,7 @@ msgid ""
 "clone the reference."
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:42
+#: src/anti_patterns/borrow_clone.md:42
 msgid ""
 "There is also `Arc<T>` which provides shared ownership of a value of type T\n"
 "that is allocated in the heap. Invoking `.clone()` on `Arc` produces a new "
@@ -5489,20 +5473,20 @@ msgid ""
 "while increasing a reference count."
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:47
+#: src/anti_patterns/borrow_clone.md:47
 msgid ""
 "In general, clones should be deliberate, with full understanding of the\n"
 "consequences. If a clone is used to make a borrow checker error disappear,\n"
 "that's a good indication this anti-pattern may be in use."
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:51
+#: src/anti_patterns/borrow_clone.md:51
 msgid ""
 "Even though `.clone()` is an indication of a bad pattern, sometimes\n"
 "**it is fine to write inefficient code**, in cases such as when:"
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:54
+#: src/anti_patterns/borrow_clone.md:54
 msgid ""
 "- the developer is still new to ownership\n"
 "- the code doesn't have great speed or memory constraints\n"
@@ -5511,7 +5495,7 @@ msgid ""
 "  optimize readability over performance"
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:60
+#: src/anti_patterns/borrow_clone.md:60
 msgid ""
 "If an unnecessary clone is suspected, The [Rust Book's chapter on "
 "Ownership](https://doc.rust-lang.org/book/ownership.html)\n"
@@ -5519,7 +5503,7 @@ msgid ""
 "not."
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:63
+#: src/anti_patterns/borrow_clone.md:63
 msgid ""
 "Also be sure to always run `cargo clippy` in your project, which will detect "
 "some\n"
@@ -5530,7 +5514,7 @@ msgid ""
 "[4](https://rust-lang.github.io/rust-clippy/master/index.html#clone_double_ref)."
 msgstr ""
 
-#: src\anti_patterns/borrow_clone.md:70
+#: src/anti_patterns/borrow_clone.md:70
 msgid ""
 "- [`mem::{take(_), replace(_)}` to keep owned values in changed "
 "enums](../idioms/mem-replace.md)\n"
@@ -5542,17 +5526,17 @@ msgid ""
 "Rust](https://web.archive.org/web/20210120233744/https://xion.io/post/code/rust-borrowchk-tricks.html)"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:1
+#: src/anti_patterns/deny-warnings.md:1
 msgid "# `#![deny(warnings)]`"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:5
+#: src/anti_patterns/deny-warnings.md:5
 msgid ""
 "A well-intentioned crate author wants to ensure their code builds without\n"
 "warnings. So they annotate their crate root with the following:"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:10
+#: src/anti_patterns/deny-warnings.md:10
 msgid ""
 "```rust\n"
 "#![deny(warnings)]\n"
@@ -5561,15 +5545,15 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:18
+#: src/anti_patterns/deny-warnings.md:18
 msgid "It is short and will stop the build if anything is amiss."
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:20
+#: src/anti_patterns/deny-warnings.md:20
 msgid "## Drawbacks"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:22
+#: src/anti_patterns/deny-warnings.md:22
 msgid ""
 "By disallowing the compiler to build with warnings, a crate author opts out "
 "of\n"
@@ -5580,7 +5564,7 @@ msgid ""
 "period before being turned to `deny`."
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:27
+#: src/anti_patterns/deny-warnings.md:27
 msgid ""
 "For example, it was discovered that a type could have two `impl`s with the "
 "same\n"
@@ -5591,18 +5575,18 @@ msgid ""
 "stumbling on this fact, before it becomes a hard error in a future release."
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:32
+#: src/anti_patterns/deny-warnings.md:32
 msgid ""
 "Also sometimes APIs get deprecated, so their use will emit a warning where\n"
 "before there was none."
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:35
+#: src/anti_patterns/deny-warnings.md:35
 msgid ""
 "All this conspires to potentially break the build whenever something changes."
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:37
+#: src/anti_patterns/deny-warnings.md:37
 msgid ""
 "Furthermore, crates that supply additional lints (e.g. [rust-clippy]) can "
 "no\n"
@@ -5612,12 +5596,12 @@ msgid ""
 "lint errors into warnings."
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:42
-#: src\functional/generics-type-classes.md:227
+#: src/anti_patterns/deny-warnings.md:42
+#: src/functional/generics-type-classes.md:227
 msgid "## Alternatives"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:44
+#: src/anti_patterns/deny-warnings.md:44
 msgid ""
 "There are two ways of tackling this problem: First, we can decouple the "
 "build\n"
@@ -5625,29 +5609,29 @@ msgid ""
 "explicitly."
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:48
+#: src/anti_patterns/deny-warnings.md:48
 msgid "The following command line will build with all warnings set to `deny`:"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:50
+#: src/anti_patterns/deny-warnings.md:50
 msgid "`RUSTFLAGS=\"-D warnings\" cargo build`"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:52
+#: src/anti_patterns/deny-warnings.md:52
 msgid ""
 "This can be done by any individual developer (or be set in a CI tool like\n"
 "Travis, but remember that this may break the build when something changes)\n"
 "without requiring a change to the code."
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:56
+#: src/anti_patterns/deny-warnings.md:56
 msgid ""
 "Alternatively, we can specify the lints that we want to `deny` in the code.\n"
 "Here is a list of warning lints that is (hopefully) safe to deny (as of "
 "Rustc 1.48.0):"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:59
+#: src/anti_patterns/deny-warnings.md:59
 msgid ""
 "```rust,ignore\n"
 "#![deny(bad_style,\n"
@@ -5669,11 +5653,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:78
+#: src/anti_patterns/deny-warnings.md:78
 msgid "In addition, the following `allow`ed lints may be a good idea to `deny`:"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:80
+#: src/anti_patterns/deny-warnings.md:80
 msgid ""
 "```rust,ignore\n"
 "#![deny(missing_debug_implementations,\n"
@@ -5687,17 +5671,17 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:91
+#: src/anti_patterns/deny-warnings.md:91
 msgid "Some may also want to add `missing-copy-implementations` to their list."
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:93
+#: src/anti_patterns/deny-warnings.md:93
 msgid ""
 "Note that we explicitly did not add the `deprecated` lint, as it is fairly\n"
 "certain that there will be more deprecated APIs in the future."
 msgstr ""
 
-#: src\anti_patterns/deny-warnings.md:98
+#: src/anti_patterns/deny-warnings.md:98
 msgid ""
 "- [A collection of all clippy "
 "lints](https://rust-lang.github.io/rust-clippy/master)\n"
@@ -5707,25 +5691,25 @@ msgid ""
 "- [rust-clippy] is a collection of lints for better Rust code"
 msgstr ""
 
-#: src\anti_patterns/deref.md:1
+#: src/anti_patterns/deref.md:1
 msgid "# `Deref` polymorphism"
 msgstr ""
 
-#: src\anti_patterns/deref.md:5
+#: src/anti_patterns/deref.md:5
 msgid ""
 "Misuse the `Deref` trait to emulate inheritance between structs, and thus "
 "reuse\n"
 "methods."
 msgstr ""
 
-#: src\anti_patterns/deref.md:10
+#: src/anti_patterns/deref.md:10
 msgid ""
 "Sometimes we want to emulate the following common pattern from OO languages "
 "such\n"
 "as Java:"
 msgstr ""
 
-#: src\anti_patterns/deref.md:13
+#: src/anti_patterns/deref.md:13
 msgid ""
 "```java\n"
 "class Foo {\n"
@@ -5741,11 +5725,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\anti_patterns/deref.md:26
+#: src/anti_patterns/deref.md:26
 msgid "We can use the deref polymorphism anti-pattern to do so:"
 msgstr ""
 
-#: src\anti_patterns/deref.md:28
+#: src/anti_patterns/deref.md:28
 msgid ""
 "```rust\n"
 "use std::ops::Deref;\n"
@@ -5776,7 +5760,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\anti_patterns/deref.md:56
+#: src/anti_patterns/deref.md:56
 msgid ""
 "There is no struct inheritance in Rust. Instead we use composition and "
 "include\n"
@@ -5787,7 +5771,7 @@ msgid ""
 "version (probably, you should use `#[repr(C)]` if you want to be sure))."
 msgstr ""
 
-#: src\anti_patterns/deref.md:61
+#: src/anti_patterns/deref.md:61
 msgid ""
 "In order to make the method call work we implement `Deref` for `Bar` with "
 "`Foo`\n"
@@ -5802,11 +5786,11 @@ msgid ""
 "well as `Bar`."
 msgstr ""
 
-#: src\anti_patterns/deref.md:71
+#: src/anti_patterns/deref.md:71
 msgid "You save a little boilerplate, e.g.,"
 msgstr ""
 
-#: src\anti_patterns/deref.md:73
+#: src/anti_patterns/deref.md:73
 msgid ""
 "```rust,ignore\n"
 "impl Bar {\n"
@@ -5817,7 +5801,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\anti_patterns/deref.md:83
+#: src/anti_patterns/deref.md:83
 msgid ""
 "Most importantly this is a surprising idiom - future programmers reading "
 "this in\n"
@@ -5828,7 +5812,7 @@ msgid ""
 "the mechanism here is completely implicit."
 msgstr ""
 
-#: src\anti_patterns/deref.md:88
+#: src/anti_patterns/deref.md:88
 msgid ""
 "This pattern does not introduce subtyping between `Foo` and `Bar` like\n"
 "inheritance in Java or C++ does. Furthermore, traits implemented by `Foo` "
@@ -5838,7 +5822,7 @@ msgid ""
 "bounds checking and thus generic programming."
 msgstr ""
 
-#: src\anti_patterns/deref.md:93
+#: src/anti_patterns/deref.md:93
 msgid ""
 "Using this pattern gives subtly different semantics from most OO languages "
 "with\n"
@@ -5847,7 +5831,7 @@ msgid ""
 "pattern it will be the 'class' where the method is defined."
 msgstr ""
 
-#: src\anti_patterns/deref.md:97
+#: src/anti_patterns/deref.md:97
 msgid ""
 "Finally, this pattern only supports single inheritance, and has no notion "
 "of\n"
@@ -5858,7 +5842,7 @@ msgid ""
 "inheritance, etc."
 msgstr ""
 
-#: src\anti_patterns/deref.md:104
+#: src/anti_patterns/deref.md:104
 msgid ""
 "There is no one good alternative. Depending on the exact circumstances it "
 "might\n"
@@ -5873,7 +5857,7 @@ msgid ""
 "details."
 msgstr ""
 
-#: src\anti_patterns/deref.md:112
+#: src/anti_patterns/deref.md:112
 msgid ""
 "The `Deref` trait is designed for the implementation of custom pointer "
 "types.\n"
@@ -5882,7 +5866,7 @@ msgid ""
 "enforced by the trait definition."
 msgstr ""
 
-#: src\anti_patterns/deref.md:117
+#: src/anti_patterns/deref.md:117
 msgid ""
 "Rust tries to strike a careful balance between explicit and implicit "
 "mechanisms,\n"
@@ -5894,7 +5878,7 @@ msgid ""
 "conversion between arbitrary types."
 msgstr ""
 
-#: src\anti_patterns/deref.md:125
+#: src/anti_patterns/deref.md:125
 msgid ""
 "- [Collections are smart pointers idiom](../idioms/deref.md).\n"
 "- Delegation crates for less boilerplate like "
@@ -5904,18 +5888,18 @@ msgid ""
 "trait](https://doc.rust-lang.org/std/ops/trait.Deref.html)."
 msgstr ""
 
-#: src\functional/index.md:1
+#: src/functional/index.md:1
 msgid "# Functional Usage of Rust"
 msgstr ""
 
-#: src\functional/index.md:3
+#: src/functional/index.md:3
 msgid ""
 "Rust is an imperative language, but it follows many\n"
 "[functional "
 "programming](https://en.wikipedia.org/wiki/Functional_programming) paradigms."
 msgstr ""
 
-#: src\functional/index.md:6
+#: src/functional/index.md:6
 msgid ""
 "> In computer science, _functional programming_ is a programming paradigm "
 "where\n"
@@ -5926,11 +5910,11 @@ msgid ""
 "> imperative statements which change the state of the program."
 msgstr ""
 
-#: src\functional/paradigms.md:1
+#: src/functional/paradigms.md:1
 msgid "# Programming paradigms"
 msgstr ""
 
-#: src\functional/paradigms.md:3
+#: src/functional/paradigms.md:3
 msgid ""
 "One of the biggest hurdles to understanding functional programs when coming\n"
 "from an imperative background is the shift in thinking. Imperative programs\n"
@@ -5938,11 +5922,11 @@ msgid ""
 "**what** to do. Let's sum the numbers from 1 to 10 to show this."
 msgstr ""
 
-#: src\functional/paradigms.md:8
+#: src/functional/paradigms.md:8
 msgid "## Imperative"
 msgstr ""
 
-#: src\functional/paradigms.md:10
+#: src/functional/paradigms.md:10
 msgid ""
 "```rust\n"
 "let mut sum = 0;\n"
@@ -5953,7 +5937,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/paradigms.md:18
+#: src/functional/paradigms.md:18
 msgid ""
 "With imperative programs, we have to play compiler to see what is "
 "happening.\n"
@@ -5963,7 +5947,7 @@ msgid ""
 "Then we print it out."
 msgstr ""
 
-#: src\functional/paradigms.md:24
+#: src/functional/paradigms.md:24
 msgid ""
 "| `i` | `sum` |\n"
 "| :-: | :---: |\n"
@@ -5979,25 +5963,25 @@ msgid ""
 "| 10  |  55   |"
 msgstr ""
 
-#: src\functional/paradigms.md:37
+#: src/functional/paradigms.md:37
 msgid ""
 "This is how most of us start out programming. We learn that a program is a "
 "set\n"
 "of steps."
 msgstr ""
 
-#: src\functional/paradigms.md:40
+#: src/functional/paradigms.md:40
 msgid "## Declarative"
 msgstr ""
 
-#: src\functional/paradigms.md:42
+#: src/functional/paradigms.md:42
 msgid ""
 "```rust\n"
 "println!(\"{}\", (1..11).fold(0, |a, b| a + b));\n"
 "```"
 msgstr ""
 
-#: src\functional/paradigms.md:46
+#: src/functional/paradigms.md:46
 msgid ""
 "Whoa! This is really different! What's going on here?\n"
 "Remember that with declarative programs we are describing **what** to do,\n"
@@ -6006,7 +5990,7 @@ msgid ""
 "functions. The name is a convention from Haskell."
 msgstr ""
 
-#: src\functional/paradigms.md:51
+#: src/functional/paradigms.md:51
 msgid ""
 "Here, we are composing functions of addition (this closure: `|a, b| a + b`)\n"
 "with a range from 1 to 10. The `0` is the starting point, so `a` is `0` at\n"
@@ -6019,7 +6003,7 @@ msgid ""
 "`10`."
 msgstr ""
 
-#: src\functional/paradigms.md:58
+#: src/functional/paradigms.md:58
 msgid ""
 "| `a` | `b` | result |\n"
 "| :-: | :-: | :----: |\n"
@@ -6035,11 +6019,11 @@ msgid ""
 "| 45  | 10  |   55   |"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:1
+#: src/functional/generics-type-classes.md:1
 msgid "# Generics as Type Classes"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:5
+#: src/functional/generics-type-classes.md:5
 msgid ""
 "Rust's type system is designed more like functional languages (like "
 "Haskell)\n"
@@ -6052,7 +6036,7 @@ msgid ""
 "of Rust's compile time guarantees."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:11
+#: src/functional/generics-type-classes.md:11
 msgid ""
 "A key part of this idea is the way generic types work. In C++ and Java, for\n"
 "example, generic types are a meta-programming construct for the compiler.\n"
@@ -6062,7 +6046,7 @@ msgid ""
 "different types filled in."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:17
+#: src/functional/generics-type-classes.md:17
 msgid ""
 "In Rust, a generic type parameter creates what is known in functional "
 "languages\n"
@@ -6075,7 +6059,7 @@ msgid ""
 "type system."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:23
+#: src/functional/generics-type-classes.md:23
 msgid ""
 "This is called **monomorphization**, where different types are created from\n"
 "**polymorphic** code. This special behavior requires `impl` blocks to "
@@ -6085,7 +6069,7 @@ msgid ""
 "and different types can have different `impl` blocks."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:28
+#: src/functional/generics-type-classes.md:28
 msgid ""
 "In object-oriented languages, classes can inherit behavior from their "
 "parents.\n"
@@ -6093,7 +6077,7 @@ msgid ""
 "particular members of a type class, but extra behavior as well."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:32
+#: src/functional/generics-type-classes.md:32
 msgid ""
 "The nearest equivalent is the runtime polymorphism in Javascript and "
 "Python,\n"
@@ -6105,7 +6089,7 @@ msgid ""
 "makes them more usable while remaining safe."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:40
+#: src/functional/generics-type-classes.md:40
 msgid ""
 "Suppose you are designing a storage server for a series of lab machines.\n"
 "Because of the software involved, there are two different protocols you "
@@ -6113,7 +6097,7 @@ msgid ""
 "to support: BOOTP (for PXE network boot), and NFS (for remote mount storage)."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:44
+#: src/functional/generics-type-classes.md:44
 msgid ""
 "Your goal is to have one program, written in Rust, which can handle both of\n"
 "them. It will have protocol handlers and listen for both kinds of requests. "
@@ -6123,7 +6107,7 @@ msgid ""
 "and security controls for the actual files."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:49
+#: src/functional/generics-type-classes.md:49
 msgid ""
 "The requests from machines in the lab for files contain the same basic\n"
 "information, no matter what protocol they came from: an authentication "
@@ -6132,7 +6116,7 @@ msgid ""
 "something like this:"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:54
+#: src/functional/generics-type-classes.md:54
 msgid ""
 "```rust,ignore\n"
 "enum AuthInfo {\n"
@@ -6147,7 +6131,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:66
+#: src/functional/generics-type-classes.md:66
 msgid ""
 "This design might work well enough. But now suppose you needed to support\n"
 "adding metadata that was _protocol specific_. For example, with NFS, you\n"
@@ -6156,7 +6140,7 @@ msgid ""
 "security rules."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:71
+#: src/functional/generics-type-classes.md:71
 msgid ""
 "The way the current struct is designed leaves the protocol decision until\n"
 "runtime. That means any method that applies to one protocol and not the "
@@ -6164,11 +6148,11 @@ msgid ""
 "requires the programmer to do a runtime check."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:75
+#: src/functional/generics-type-classes.md:75
 msgid "Here is how getting an NFS mount point would look:"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:77
+#: src/functional/generics-type-classes.md:77
 msgid ""
 "```rust,ignore\n"
 "struct FileDownloadRequest {\n"
@@ -6189,7 +6173,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:95
+#: src/functional/generics-type-classes.md:95
 msgid ""
 "Every caller of `mount_point()` must check for `None` and write code to "
 "handle\n"
@@ -6198,7 +6182,7 @@ msgid ""
 "code path!"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:99
+#: src/functional/generics-type-classes.md:99
 msgid ""
 "It would be far more optimal to cause a compile-time error if the different\n"
 "request types were confused. After all, the entire path of the user's code,\n"
@@ -6207,18 +6191,18 @@ msgid ""
 "is an NFS request or a BOOTP request."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:104
+#: src/functional/generics-type-classes.md:104
 msgid ""
 "In Rust, this is actually possible! The solution is to _add a generic type_ "
 "in\n"
 "order to split the API."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:107
+#: src/functional/generics-type-classes.md:107
 msgid "Here is what that looks like:"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:109
+#: src/functional/generics-type-classes.md:109
 msgid ""
 "```rust\n"
 "use std::path::{Path, PathBuf};\n"
@@ -6302,13 +6286,13 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:190
+#: src/functional/generics-type-classes.md:190
 msgid ""
 "With this approach, if the user were to make a mistake and use the wrong\n"
 "type;"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:193
+#: src/functional/generics-type-classes.md:193
 msgid ""
 "```rust,ignore\n"
 "fn main() {\n"
@@ -6324,7 +6308,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:206
+#: src/functional/generics-type-classes.md:206
 msgid ""
 "They would get a syntax error. The type `FileDownloadRequest<Bootp>` does "
 "not\n"
@@ -6333,14 +6317,14 @@ msgid ""
 "that is created by the NFS module, not the BOOTP module of course!"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:212
+#: src/functional/generics-type-classes.md:212
 msgid ""
 "First, it allows fields that are common to multiple states to be "
 "de-duplicated.\n"
 "By making the non-shared fields generic, they are implemented once."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:215
+#: src/functional/generics-type-classes.md:215
 msgid ""
 "Second, it makes the `impl` blocks easier to read, because they are broken "
 "down\n"
@@ -6349,13 +6333,13 @@ msgid ""
 "unique to one state are in a separate block."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:219
+#: src/functional/generics-type-classes.md:219
 msgid ""
 "Both of these mean there are fewer lines of code, and they are better "
 "organized."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:223
+#: src/functional/generics-type-classes.md:223
 msgid ""
 "This currently increases the size of the binary, due to the way "
 "monomorphization\n"
@@ -6364,7 +6348,7 @@ msgid ""
 "improve in the future."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:229
+#: src/functional/generics-type-classes.md:229
 msgid ""
 "- If a type seems to need a \"split API\" due to construction or partial\n"
 "  initialization, consider the\n"
@@ -6377,11 +6361,11 @@ msgid ""
 "  instead."
 msgstr ""
 
-#: src\functional/generics-type-classes.md:239
+#: src/functional/generics-type-classes.md:239
 msgid "This pattern is used throughout the standard library:"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:241
+#: src/functional/generics-type-classes.md:241
 msgid ""
 "- `Vec<u8>` can be cast from a String, unlike every other type of "
 "`Vec<T>`.[^1]\n"
@@ -6390,11 +6374,11 @@ msgid ""
 "- The `to_string` method was specialized for `Cow` only of type `str`.[^3]"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:246
+#: src/functional/generics-type-classes.md:246
 msgid "It is also used by several popular crates to allow API flexibility:"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:248
+#: src/functional/generics-type-classes.md:248
 msgid ""
 "- The `embedded-hal` ecosystem used for embedded devices makes extensive use "
 "of\n"
@@ -6419,37 +6403,37 @@ msgid ""
 "  concept, and a slightly different technique. [^6]"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:263
+#: src/functional/generics-type-classes.md:263
 msgid ""
 "See: [impl From\\<CString\\> for "
 "Vec\\<u8\\>](https://doc.rust-lang.org/1.59.0/src/std/ffi/c_str.rs.html#803-811)"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:265
+#: src/functional/generics-type-classes.md:265
 msgid ""
 "See: [impl\\<T\\> From\\<Vec\\<T, Global\\>\\> for "
 "BinaryHeap\\<T\\>](https://doc.rust-lang.org/stable/src/alloc/collections/binary_heap.rs.html#1345-1354)"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:267
+#: src/functional/generics-type-classes.md:267
 msgid ""
 "See: [impl\\<'\\_\\> ToString for Cow\\<'\\_, "
 "str>](https://doc.rust-lang.org/stable/src/alloc/string.rs.html#2235-2240)"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:269
+#: src/functional/generics-type-classes.md:269
 msgid ""
 "Example:\n"
 "[https://docs.rs/stm32f30x-hal/0.1.0/stm32f30x_hal/gpio/gpioa/struct.PA0.html](https://docs.rs/stm32f30x-hal/0.1.0/stm32f30x_hal/gpio/gpioa/struct.PA0.html)"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:272
+#: src/functional/generics-type-classes.md:272
 msgid ""
 "See:\n"
 "[https://docs.rs/hyper/0.14.5/hyper/client/struct.Client.html](https://docs.rs/hyper/0.14.5/hyper/client/struct.Client.html)"
 msgstr ""
 
-#: src\functional/generics-type-classes.md:275
+#: src/functional/generics-type-classes.md:275
 msgid ""
 "See:\n"
 "[The Case for the Type State "
@@ -6459,11 +6443,11 @@ msgid ""
 "thesis)](https://web.archive.org/web/20210328164854/https://rustype.github.io/notes/notes/rust-typestate-series/rust-typestate-index)"
 msgstr ""
 
-#: src\functional/lenses.md:1
+#: src/functional/lenses.md:1
 msgid "# Lenses and Prisms"
 msgstr ""
 
-#: src\functional/lenses.md:3
+#: src/functional/lenses.md:3
 msgid ""
 "This is a pure functional concept that is not frequently used in Rust.\n"
 "Nevertheless, exploring the concept may be helpful to understand other\n"
@@ -6472,11 +6456,11 @@ msgid ""
 "They also have niche use cases."
 msgstr ""
 
-#: src\functional/lenses.md:8
+#: src/functional/lenses.md:8
 msgid "## Lenses: Uniform Access Across Types"
 msgstr ""
 
-#: src\functional/lenses.md:10
+#: src/functional/lenses.md:10
 msgid ""
 "A lens is a concept from functional programming languages that allows\n"
 "accessing parts of a data type in an abstract, unified way.[^1]\n"
@@ -6485,7 +6469,7 @@ msgid ""
 "but it has a bit more power and flexibility."
 msgstr ""
 
-#: src\functional/lenses.md:15
+#: src/functional/lenses.md:15
 msgid ""
 "For example, suppose a bank contains several JSON formats for customer\n"
 "data.\n"
@@ -6493,7 +6477,7 @@ msgid ""
 "One database contains the data needed to perform credit checks:"
 msgstr ""
 
-#: src\functional/lenses.md:20
+#: src/functional/lenses.md:20
 msgid ""
 "```json\n"
 "{ \"name\": \"Jane Doe\",\n"
@@ -6504,11 +6488,11 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/lenses.md:28
+#: src/functional/lenses.md:28
 msgid "Another one contains the account information:"
 msgstr ""
 
-#: src\functional/lenses.md:30
+#: src/functional/lenses.md:30
 msgid ""
 "```json\n"
 "{ \"customer_id\": 1048576332,\n"
@@ -6528,21 +6512,21 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/lenses.md:47
+#: src/functional/lenses.md:47
 msgid ""
 "Notice that both types have a customer ID number which corresponds to a "
 "person.\n"
 "How would a single function handle both records of different types?"
 msgstr ""
 
-#: src\functional/lenses.md:50
+#: src/functional/lenses.md:50
 msgid ""
 "In Rust, a `struct` could represent each of these types, and a trait would "
 "have\n"
 "a `get_customer_id` function they would implement:"
 msgstr ""
 
-#: src\functional/lenses.md:53
+#: src/functional/lenses.md:53
 msgid ""
 "```rust\n"
 "use std::collections::HashSet;\n"
@@ -6597,7 +6581,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/lenses.md:104
+#: src/functional/lenses.md:104
 msgid ""
 "Lenses, however, allow the code supporting customer ID to be moved from the\n"
 "_type_ to the _accessor function_.\n"
@@ -6605,7 +6589,7 @@ msgid ""
 "simply be accessed the same way."
 msgstr ""
 
-#: src\functional/lenses.md:109
+#: src/functional/lenses.md:109
 msgid ""
 "While the Rust language itself does not support this (type erasure is the\n"
 "preferred solution to this problem), the [lens-rs "
@@ -6614,7 +6598,7 @@ msgid ""
 "that feels like this to be written with macros:"
 msgstr ""
 
-#: src\functional/lenses.md:113
+#: src/functional/lenses.md:113
 msgid ""
 "```rust,ignore\n"
 "use std::collections::HashSet;\n"
@@ -6653,7 +6637,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/lenses.md:149
+#: src/functional/lenses.md:149
 msgid ""
 "The version of `unique_ids_lens` shown here allows any type to be in the "
 "iterator,\n"
@@ -6663,7 +6647,7 @@ msgid ""
 "This is how most functional programming languages operate on lenses."
 msgstr ""
 
-#: src\functional/lenses.md:154
+#: src/functional/lenses.md:154
 msgid ""
 "Rather than macros, they achieve this with a technique known as "
 "\"currying\".\n"
@@ -6677,7 +6661,7 @@ msgid ""
 "That is what the `optics!` and `view_ref` in the example above simulates."
 msgstr ""
 
-#: src\functional/lenses.md:162
+#: src/functional/lenses.md:162
 msgid ""
 "The functional approach need not be restricted to accessing members.\n"
 "More powerful lenses can be created which both _set_ and _get_ data in a\n"
@@ -6688,11 +6672,11 @@ msgid ""
 "That is where the concept appears more clearly in Rust."
 msgstr ""
 
-#: src\functional/lenses.md:169
+#: src/functional/lenses.md:169
 msgid "## Prisms: A Higher-Order form of \"Optics\""
 msgstr ""
 
-#: src\functional/lenses.md:171
+#: src/functional/lenses.md:171
 msgid ""
 "A simple function such as `unique_ids_lens` above operates on a single "
 "lens.\n"
@@ -6704,7 +6688,7 @@ msgid ""
 "focus here."
 msgstr ""
 
-#: src\functional/lenses.md:178
+#: src/functional/lenses.md:178
 msgid ""
 "The same way that traits allow \"lens-like\" design with static polymorphism "
 "and\n"
@@ -6714,7 +6698,7 @@ msgid ""
 "A good example of this is the traits in the parsing crate _Serde_."
 msgstr ""
 
-#: src\functional/lenses.md:183
+#: src/functional/lenses.md:183
 msgid ""
 "Trying to understand the way _Serde_ works by only reading the API is a\n"
 "challenge, especially the first time.\n"
@@ -6722,7 +6706,7 @@ msgid ""
 "which parses a new format:"
 msgstr ""
 
-#: src\functional/lenses.md:188
+#: src/functional/lenses.md:188
 msgid ""
 "```rust,ignore\n"
 "pub trait Deserializer<'de>: Sized {\n"
@@ -6743,23 +6727,23 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/lenses.md:204
+#: src/functional/lenses.md:204
 msgid ""
 "For a trait that is just supposed to parse data from a format and return a\n"
 "value, this looks odd."
 msgstr ""
 
-#: src\functional/lenses.md:207
+#: src/functional/lenses.md:207
 msgid "Why are all the return types type erased?"
 msgstr ""
 
-#: src\functional/lenses.md:209
+#: src/functional/lenses.md:209
 msgid ""
 "To understand that, we need to keep the lens concept in mind and look at\n"
 "the definition of the `Visitor` type that is passed in generically:"
 msgstr ""
 
-#: src\functional/lenses.md:212
+#: src/functional/lenses.md:212
 msgid ""
 "```rust,ignore\n"
 "pub trait Visitor<'de>: Sized {\n"
@@ -6782,21 +6766,21 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/lenses.md:232
+#: src/functional/lenses.md:232
 msgid ""
 "The job of the `Visitor` type is to construct values in the _Serde_ data "
 "model,\n"
 "which are represented by its associated `Value` type."
 msgstr ""
 
-#: src\functional/lenses.md:235
+#: src/functional/lenses.md:235
 msgid ""
 "These values represent parts of the Rust value being deserialized.\n"
 "If this fails, it returns an `Error` type - an error type determined by the\n"
 "`Deserializer` when its methods were called."
 msgstr ""
 
-#: src\functional/lenses.md:239
+#: src/functional/lenses.md:239
 msgid ""
 "This highlights that `Deserializer` is similar to `CustomerId` from "
 "earlier,\n"
@@ -6806,7 +6790,7 @@ msgid ""
 "The `Value` trait is acting like a lens in functional programming languages."
 msgstr ""
 
-#: src\functional/lenses.md:244
+#: src/functional/lenses.md:244
 msgid ""
 "But unlike the `CustomerId` trait, the return types of `Visitor` methods "
 "are\n"
@@ -6814,13 +6798,13 @@ msgid ""
 "itself_."
 msgstr ""
 
-#: src\functional/lenses.md:247
+#: src/functional/lenses.md:247
 msgid ""
 "Instead of acting as one lens, it effectively acts as a family of\n"
 "lenses, one for each concrete type of `Visitor`."
 msgstr ""
 
-#: src\functional/lenses.md:250
+#: src/functional/lenses.md:250
 msgid ""
 "The `Deserializer` API is based on having a generic set of \"lenses\" work "
 "across\n"
@@ -6828,11 +6812,11 @@ msgid ""
 "It is a _prism_."
 msgstr ""
 
-#: src\functional/lenses.md:254
+#: src/functional/lenses.md:254
 msgid "For example, consider the identity record from earlier but simplified:"
 msgstr ""
 
-#: src\functional/lenses.md:256
+#: src/functional/lenses.md:256
 msgid ""
 "```json\n"
 "{ \"name\": \"Jane Doe\",\n"
@@ -6841,13 +6825,13 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/lenses.md:262
+#: src/functional/lenses.md:262
 msgid ""
 "How would the _Serde_ library deserialize this JSON into `struct "
 "CreditRecord`?"
 msgstr ""
 
-#: src\functional/lenses.md:264
+#: src/functional/lenses.md:264
 msgid ""
 "1. The user would call a library function to deserialize the data. This "
 "would\n"
@@ -6861,11 +6845,11 @@ msgid ""
 "   raise an error to indicate deserialization has failed."
 msgstr ""
 
-#: src\functional/lenses.md:273
+#: src/functional/lenses.md:273
 msgid "For our very simple structure above, the expected pattern would be:"
 msgstr ""
 
-#: src\functional/lenses.md:275
+#: src/functional/lenses.md:275
 msgid ""
 "1. Visit a map (_Serde_'s equvialent to `HashMap` or JSON's dictionary).\n"
 "1. Visit a string key called \"name\".\n"
@@ -6875,11 +6859,11 @@ msgid ""
 "1. Visit the end of the map."
 msgstr ""
 
-#: src\functional/lenses.md:282
+#: src/functional/lenses.md:282
 msgid "But what determines which \"observation\" pattern is expected?"
 msgstr ""
 
-#: src\functional/lenses.md:284
+#: src/functional/lenses.md:284
 msgid ""
 "A functional programming language would be able to use currying to create\n"
 "reflection of each type based on the type itself.\n"
@@ -6887,11 +6871,11 @@ msgid ""
 "code written based on its fields and their properties."
 msgstr ""
 
-#: src\functional/lenses.md:289
+#: src/functional/lenses.md:289
 msgid "_Serde_ solves this usability challenge with a derive macro:"
 msgstr ""
 
-#: src\functional/lenses.md:291
+#: src/functional/lenses.md:291
 msgid ""
 "```rust,ignore\n"
 "use serde::Deserialize;\n"
@@ -6904,17 +6888,17 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/lenses.md:301
+#: src/functional/lenses.md:301
 msgid ""
 "That macro simply generates an impl block causing the struct to implement a\n"
 "trait called `Deserialize`."
 msgstr ""
 
-#: src\functional/lenses.md:304
+#: src/functional/lenses.md:304
 msgid "It is defined this way:"
 msgstr ""
 
-#: src\functional/lenses.md:306
+#: src/functional/lenses.md:306
 msgid ""
 "```rust,ignore\n"
 "pub trait Deserialize<'de>: Sized {\n"
@@ -6925,7 +6909,7 @@ msgid ""
 "```"
 msgstr ""
 
-#: src\functional/lenses.md:314
+#: src/functional/lenses.md:314
 msgid ""
 "This is the function that determines how to create the struct itself.\n"
 "Code is generated based on the struct's fields.\n"
@@ -6935,7 +6919,7 @@ msgid ""
 "parameter."
 msgstr ""
 
-#: src\functional/lenses.md:320
+#: src/functional/lenses.md:320
 msgid ""
 "The `deserialize` code will then create a `Visitor` which will have its "
 "calls\n"
@@ -6944,17 +6928,17 @@ msgid ""
 "corresponding to the type being parsed and return it."
 msgstr ""
 
-#: src\functional/lenses.md:325
+#: src/functional/lenses.md:325
 msgid ""
 "For a complete example, see the [_Serde_ "
 "documentation](https://serde.rs/deserialize-struct.html)."
 msgstr ""
 
-#: src\functional/lenses.md:327
+#: src/functional/lenses.md:327
 msgid "To wrap up, this is the power of _Serde_:"
 msgstr ""
 
-#: src\functional/lenses.md:329
+#: src/functional/lenses.md:329
 msgid ""
 "1. The structure being parsed is represented by an `impl` block for "
 "`Deserialize`\n"
@@ -6966,7 +6950,7 @@ msgid ""
 "   calls which actually build the data value"
 msgstr ""
 
-#: src\functional/lenses.md:335
+#: src/functional/lenses.md:335
 msgid ""
 "The result is that types to be deserialized only implement the \"top layer\" "
 "of\n"
@@ -6976,7 +6960,7 @@ msgid ""
 "types will bridge them."
 msgstr ""
 
-#: src\functional/lenses.md:340
+#: src/functional/lenses.md:340
 msgid ""
 "To emphasize, the only reason this model works on any format and any type "
 "is\n"
@@ -6987,7 +6971,7 @@ msgid ""
 "This was not true in the account example earlier."
 msgstr ""
 
-#: src\functional/lenses.md:346
+#: src/functional/lenses.md:346
 msgid ""
 "Rust's generic-inspired type system can bring it close to these concepts "
 "and\n"
@@ -6995,11 +6979,11 @@ msgid ""
 "But it may also need procedural macros to create bridges for its generics."
 msgstr ""
 
-#: src\functional/lenses.md:350
+#: src/functional/lenses.md:350
 msgid "## See Also"
 msgstr ""
 
-#: src\functional/lenses.md:352
+#: src/functional/lenses.md:352
 msgid ""
 "- [lens-rs crate](https://crates.io/crates/lens-rs) for a pre-built lenses\n"
 "  implementation, with a cleaner interface than these examples\n"
@@ -7021,25 +7005,25 @@ msgid ""
 "Accessors](https://web.archive.org/web/20220701102832/https://arxiv.org/ftp/arxiv/papers/1703/1703.10857.pdf)"
 msgstr ""
 
-#: src\functional/lenses.md:365
+#: src/functional/lenses.md:365
 msgid ""
 "[School of Haskell: A Little Lens Starter "
 "Tutorial](https://web.archive.org/web/20221128190041/https://www.schoolofhaskell.com/school/to-infinity-and-beyond/pick-of-the-week/a-little-lens-starter-tutorial)"
 msgstr ""
 
-#: src\additional_resources/index.md:1
+#: src/additional_resources/index.md:1
 msgid "# Additional resources"
 msgstr ""
 
-#: src\additional_resources/index.md:3
+#: src/additional_resources/index.md:3
 msgid "A collection of complementary helpful content"
 msgstr ""
 
-#: src\additional_resources/index.md:5
+#: src/additional_resources/index.md:5
 msgid "## Talks"
 msgstr ""
 
-#: src\additional_resources/index.md:7
+#: src/additional_resources/index.md:7
 msgid ""
 "- [Design Patterns in Rust](https://www.youtube.com/watch?v=Pm_oO0N5B9k) by\n"
 "  Nicholas Cameron at the PDRust (2016)\n"
@@ -7051,27 +7035,27 @@ msgid ""
 "  Nicholas Cameron at LinuxConfAu (2018)"
 msgstr ""
 
-#: src\additional_resources/index.md:14
+#: src/additional_resources/index.md:14
 msgid "## Books (Online)"
 msgstr ""
 
-#: src\additional_resources/index.md:16
+#: src/additional_resources/index.md:16
 msgid "- [The Rust API Guidelines](https://rust-lang.github.io/api-guidelines)"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:1
+#: src/additional_resources/design-principles.md:1
 msgid "# Design principles"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:3
+#: src/additional_resources/design-principles.md:3
 msgid "## A brief overview over common design principles"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:7
+#: src/additional_resources/design-principles.md:7
 msgid "## [SOLID](https://en.wikipedia.org/wiki/SOLID)"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:9
+#: src/additional_resources/design-principles.md:9
 msgid ""
 "- [Single Responsibility Principle "
 "(SRP)](https://en.wikipedia.org/wiki/Single-responsibility_principle):\n"
@@ -7097,23 +7081,23 @@ msgid ""
 "  One should \"depend upon abstractions, [not] concretions.\""
 msgstr ""
 
-#: src\additional_resources/design-principles.md:25
+#: src/additional_resources/design-principles.md:25
 msgid ""
 "## [DRY (Don’t Repeat "
 "Yourself)](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:27
+#: src/additional_resources/design-principles.md:27
 msgid ""
 "\"Every piece of knowledge must have a single, unambiguous, authoritative\n"
 "representation within a system\""
 msgstr ""
 
-#: src\additional_resources/design-principles.md:30
+#: src/additional_resources/design-principles.md:30
 msgid "## [KISS principle](https://en.wikipedia.org/wiki/KISS_principle)"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:32
+#: src/additional_resources/design-principles.md:32
 msgid ""
 "most systems work best if they are kept simple rather than made "
 "complicated;\n"
@@ -7121,11 +7105,11 @@ msgid ""
 "complexity should be avoided"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:36
+#: src/additional_resources/design-principles.md:36
 msgid "## [Law of Demeter (LoD)](https://en.wikipedia.org/wiki/Law_of_Demeter)"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:38
+#: src/additional_resources/design-principles.md:38
 msgid ""
 "a given object should assume as little as possible about the structure or\n"
 "properties of anything else (including its subcomponents), in accordance "
@@ -7133,13 +7117,13 @@ msgid ""
 "the principle of \"information hiding\""
 msgstr ""
 
-#: src\additional_resources/design-principles.md:42
+#: src/additional_resources/design-principles.md:42
 msgid ""
 "## [Design by contract "
 "(DbC)](https://en.wikipedia.org/wiki/Design_by_contract)"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:44
+#: src/additional_resources/design-principles.md:44
 msgid ""
 "software designers should define formal, precise and verifiable interface\n"
 "specifications for software components, which extend the ordinary definition "
@@ -7147,13 +7131,13 @@ msgid ""
 "abstract data types with preconditions, postconditions and invariants"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:48
+#: src/additional_resources/design-principles.md:48
 msgid ""
 "## "
 "[Encapsulation](https://en.wikipedia.org/wiki/Encapsulation_(computer_programming))"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:50
+#: src/additional_resources/design-principles.md:50
 msgid ""
 "bundling of data with the methods that operate on that data, or the "
 "restricting\n"
@@ -7164,48 +7148,48 @@ msgid ""
 "unauthorized parties' direct access to them."
 msgstr ""
 
-#: src\additional_resources/design-principles.md:55
+#: src/additional_resources/design-principles.md:55
 msgid ""
 "## "
 "[Command-Query-Separation(CQS)](https://en.wikipedia.org/wiki/Command%E2%80%93query_separation)"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:57
+#: src/additional_resources/design-principles.md:57
 msgid ""
 "“Functions should not produce abstract side effects...only commands\n"
 "(procedures) will be permitted to produce side effects.” - Bertrand Meyer:\n"
 "Object-Oriented Software Construction"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:61
+#: src/additional_resources/design-principles.md:61
 msgid ""
 "## [Principle of least astonishment "
 "(POLA)](https://en.wikipedia.org/wiki/Principle_of_least_astonishment)"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:63
+#: src/additional_resources/design-principles.md:63
 msgid ""
 "a component of a system should behave in a way that most users will expect "
 "it\n"
 "to behave. The behavior should not astonish or surprise users"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:66
+#: src/additional_resources/design-principles.md:66
 msgid "## Linguistic-Modular-Units"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:68
+#: src/additional_resources/design-principles.md:68
 msgid ""
 "“Modules must correspond to syntactic units in the language used.” - "
 "Bertrand\n"
 "Meyer: Object-Oriented Software Construction"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:71
+#: src/additional_resources/design-principles.md:71
 msgid "## Self-Documentation"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:73
+#: src/additional_resources/design-principles.md:73
 msgid ""
 "“The designer of a module should strive to make all information about the\n"
 "module part of the module itself.” - Bertrand Meyer: Object-Oriented "
@@ -7213,11 +7197,11 @@ msgid ""
 "Construction"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:77
+#: src/additional_resources/design-principles.md:77
 msgid "## Uniform-Access"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:79
+#: src/additional_resources/design-principles.md:79
 msgid ""
 "“All services offered by a module should be available through a uniform\n"
 "notation, which does not betray whether they are implemented through storage "
@@ -7225,11 +7209,11 @@ msgid ""
 "through computation.” - Bertrand Meyer: Object-Oriented Software Construction"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:83
+#: src/additional_resources/design-principles.md:83
 msgid "## Single-Choice"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:85
+#: src/additional_resources/design-principles.md:85
 msgid ""
 "“Whenever a software system must support a set of alternatives, one and "
 "only\n"
@@ -7238,11 +7222,11 @@ msgid ""
 "Object-Oriented Software Construction"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:89
+#: src/additional_resources/design-principles.md:89
 msgid "## Persistence-Closure"
 msgstr ""
 
-#: src\additional_resources/design-principles.md:91
+#: src/additional_resources/design-principles.md:91
 msgid ""
 "“Whenever a storage mechanism stores an object, it must store with it the\n"
 "dependents of that object. Whenever a retrieval mechanism retrieves a\n"
