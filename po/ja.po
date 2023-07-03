@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-07-02 14:58+0900\n"
+"PO-Revision-Date: 2023-07-08 13:18+0900\n"
 "Last-Translator: ashiojin@gmail.com\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -21,19 +21,16 @@ msgid "Translations"
 msgstr "翻訳"
 
 #: src\SUMMARY.md:5
-#, fuzzy
 msgid "Idioms"
 msgstr "イディオム"
 
 #: src\SUMMARY.md:6
-#, fuzzy
 msgid "Use borrowed types for arguments"
-msgstr "引数に借用型を使用"
+msgstr "引数には借用型（borrowed types）を使用する"
 
 #: src\SUMMARY.md:7
-#, fuzzy
 msgid "Concatenating Strings with format!"
-msgstr "フォーマットによる文字列の連結！"
+msgstr "format!による文字列の連結"
 
 #: src\SUMMARY.md:8
 #, fuzzy
@@ -424,7 +421,7 @@ msgstr ""
 
 #: src\idioms/coercion-arguments.md:1
 msgid "# Use borrowed types for arguments"
-msgstr "# 引数には借用型を使用する"
+msgstr "# 引数には借用型（borrowed types）を使用する"
 
 #: src\idioms/coercion-arguments.md:3 src\idioms/concat-format.md:3
 #: src\idioms/default.md:3 src\idioms/deref.md:3 src\idioms/dtor-finally.md:3
@@ -805,12 +802,10 @@ msgstr ""
 "見てください"
 
 #: src\idioms/concat-format.md:1
-#, fuzzy
 msgid "# Concatenating strings with `format!`"
-msgstr "# 文字列を `format!"
+msgstr "# `format! による文字列の連結"
 
 #: src\idioms/concat-format.md:5
-#, fuzzy
 msgid ""
 "It is possible to build up strings using the `push` and `push_str` methods "
 "on a\n"
@@ -818,15 +813,12 @@ msgid ""
 "convenient to use `format!`, especially where there is a mix of literal and\n"
 "non-literal strings."
 msgstr ""
-"の `push` メソッドと `push_str` メソッドを使用して文字列を構築することができ"
-"ます。\n"
-"メソッドを使用したり、 `+` 演算子を使用したりすることができます。しかし\n"
-"特に、リテラル文字列と非リテラル文字列が混在している場合には、 `format!\n"
-"特に、リテラル文字列と非リテラル文字列が混在している場合には、 `format!` を使"
-"用した方が便利なことがあります。"
+"`String` の `push` メソッドや `push_str` メソッドを使用したり、 `+` 演算子を"
+"使用したりすることで、文字列を構築することは可能です。\n"
+"しかし`format!` を使用した方がより便利なことがあります。特にリテラル文字列と"
+"非リテラル文字列が混在している場合がそうです。"
 
 #: src\idioms/concat-format.md:12
-#, fuzzy
 msgid ""
 "```rust\n"
 "fn say_hello(name: &str) -> String {\n"
@@ -841,16 +833,16 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
-"ラスト\n"
-"fn say_hello(name: &str) -> String { // 結果の文字列を手動で作成できます。\n"
-"    // 結果文字列を手動で作成することもできます。\n"
-"    // let mut result = \"Hello \".to_owned()；\n"
-"    // result.push_str(名前)；\n"
-"    // result.push('!')；\n"
-"    // 結果\n"
+"```rust\n"
+"fn say_hello(name: &str) -> String {\n"
+"    // 以下のように result 文字列を構築することができます。\n"
+"    // let mut result = \"Hello \".to_owned();\n"
+"    // result.push_str(name);\n"
+"    // result.push('!');\n"
+"    // result\n"
 "\n"
-"    // しかし、format!\n"
-"    format!(\"こんにちは {}!\", name)\n"
+"    // しかし format! を使うほうがよいでしょう。\n"
+"    format!(\"Hello {}!\", name)\n"
 "}\n"
 "```"
 
@@ -868,17 +860,16 @@ msgstr ""
 #: src\patterns/structural/unsafe-mods.md:11 src\patterns/ffi/export.md:111
 #: src\patterns/ffi/wrappers.md:63 src\anti_patterns/deny-warnings.md:16
 #: src\anti_patterns/deref.md:69 src\functional/generics-type-classes.md:210
-#, fuzzy
 msgid "## Advantages"
 msgstr "## メリット"
 
 #: src\idioms/concat-format.md:27
-#, fuzzy
 msgid ""
 "Using `format!` is usually the most succinct and readable way to combine "
 "strings."
 msgstr ""
-"format!`を使うのが、通常、文字列を組み合わせる最も簡潔で読みやすい方法です。"
+"`format!` を使う方法が、通常、文字列を組み合わせる最も簡潔で読みやすい方法で"
+"す。"
 
 #: src\idioms/concat-format.md:29 src\idioms/deref.md:50
 #: src\idioms/dtor-finally.md:47 src\idioms/mem-replace.md:87
@@ -895,12 +886,10 @@ msgstr ""
 #: src\patterns/structural/unsafe-mods.md:17 src\patterns/ffi/export.md:234
 #: src\patterns/ffi/wrappers.md:69 src\anti_patterns/deref.md:81
 #: src\functional/generics-type-classes.md:221
-#, fuzzy
 msgid "## Disadvantages"
 msgstr "## デメリット"
 
 #: src\idioms/concat-format.md:31
-#, fuzzy
 msgid ""
 "It is usually not the most efficient way to combine strings - a series of "
 "`push`\n"
@@ -908,29 +897,27 @@ msgid ""
 "the\n"
 "string has been pre-allocated to the expected size)."
 msgstr ""
-"通常、文字列を結合する最も効率的な方法とは言えません。\n"
-"の一連の操作が最も効率的です。\n"
-"特に、文字列があらかじめ期待されるサイズに割り当てられている場合）。"
+"通常、文字列を結合する最も効率的な方法とは言えません。通常、ミュータブルな文"
+"字列への `push` の繰り返しが最も効率的です（特に、その文字列があらかじめ期待"
+"されるサイズに割り当てられている場合）。"
 
 #: src\idioms/ctor.md:1
-#, fuzzy
 msgid "# Constructors\r"
 msgstr "# コンストラクタ"
 
 #: src\idioms/ctor.md:3 src\idioms/rustdoc-init.md:3
-#, fuzzy
 msgid "## Description\r"
-msgstr "#説明"
+msgstr "## 説明"
 
 #: src\idioms/ctor.md:5
-#, fuzzy
 msgid ""
 "Rust does not have constructors as a language construct. Instead, the\r\n"
 "convention is to use an [associated function][associated function] `new` to "
 "create an object:"
 msgstr ""
-"Rustには、コンストラクタという言語構成要素がありません。その代わりに\r\n"
-"関連関数][関連関数] `new` を使ってオブジェクトを生成するのが一般的です："
+"Rustには、言語の構成要素としてコンストラクタというものを持っていません。\n"
+"代わりに [関連関数][関連関数] の `new` を使ってオブジェクトを生成するのが一般"
+"的です："
 
 #: src\idioms/ctor.md:8
 #, fuzzy
