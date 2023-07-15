@@ -2,3 +2,6 @@
 /book
 .DS_Store
 .vscode/settings.json
+
+# *.mo Compoiled from *.po
+/po/*.mo
