@@ -37,13 +37,15 @@ jobs:
           curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
           rustup update
           cargo install --version ${MDBOOK_VERSION} mdbook
+          cargo install mdbook-i18n-helpers
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v3
       - name: Build with mdBook
-        run: mdbook build
-      - name: Build Translated Book
-        run: MDBOOK_BOOK__LANGUAGE=ja mdbook build -d book/ja
+        run: |
+             mdbook build
+             MDBOOK_BOOK__LANGUAGE=ja \
+             mdbook build -d book/ja
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
