@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-07-22 16:28+0900\n"
+"PO-Revision-Date: 2023-07-23 10:59+0900\n"
 "Last-Translator: ashiojin@gmail.com\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -85,43 +85,36 @@ msgid "Privacy For Extensibility"
 msgstr "拡張性のための隠蔽"
 
 #: src/SUMMARY.md:21
-#, fuzzy
 msgid "Easy doc initialization"
-msgstr "簡単なドキュメントの初期化"
+msgstr "docコメント内の簡易な初期化"
 
 #: src/SUMMARY.md:22
-#, fuzzy
 msgid "Temporary mutability"
-msgstr "一時的な変更可能性"
+msgstr "一時的なミュータビリティ"
 
 #: src/SUMMARY.md:23
-#, fuzzy
 msgid "Return consumed arg on error"
 msgstr "エラー時に消費された引数を返す"
 
 #: src/SUMMARY.md:25
-#, fuzzy
 msgid "Design Patterns"
 msgstr "デザインパターン"
 
 #: src/SUMMARY.md:26
-#, fuzzy
 msgid "Behavioural"
-msgstr "Behavioural"
+msgstr "振る舞いに関するパターン"
 
 #: src/SUMMARY.md:27
 msgid "Command"
-msgstr "コマンド"
+msgstr "Command"
 
 #: src/SUMMARY.md:28
-#, fuzzy
 msgid "Interpreter"
 msgstr "Interpreter"
 
 #: src/SUMMARY.md:29
-#, fuzzy
 msgid "Newtype"
-msgstr "ニュータイプ"
+msgstr "NewType"
 
 #: src/SUMMARY.md:30
 #, fuzzy
@@ -3556,12 +3549,10 @@ msgstr ""
 "github.com/rust-lang/rfcs/blob/master/text/2008-non-exhaustive.md)"
 
 #: src/idioms/rustdoc-init.md:1
-#, fuzzy
 msgid "# Easy doc initialization"
-msgstr "# 簡単なドキュメントの初期化"
+msgstr "# docコメント内の簡易な初期化"
 
 #: src/idioms/rustdoc-init.md:5
-#, fuzzy
 msgid ""
 "If a struct takes significant effort to initialize when writing docs, it can "
 "be\n"
@@ -3569,27 +3560,25 @@ msgid ""
 "as an\n"
 "argument."
 msgstr ""
-"ドキュメントを書くときに、構造体を初期化するのに多大な労力がかかる場合は\n"
-"構造体を引数に取るヘルパー関数で例をラップした方が早い場合があります。\n"
-"を引数に取るヘルパー関数で例をラップするのが手っ取り早いでしょう。"
+"docコメントを書く際に、構造体を初期化するのに多大な労力がかかる場合は、\n"
+"構造体を引数に取るヘルパー関数でコード例をラップした方が手っ取り早いかもしれ"
+"ません。"
 
 #: src/idioms/rustdoc-init.md:11
-#, fuzzy
 msgid ""
 "Sometimes there is a struct with multiple or complicated parameters and "
 "several\n"
 "methods. Each of these methods should have examples."
 msgstr ""
-"複数の、あるいは複雑なパラメータと複数のメソッドを持つ構造体が存在することが"
-"あります。\n"
-"メソッドがあります。これらのメソッドにはそれぞれ例があるはずです。"
+"多数の、または複雑なパラメータや複数のメソッドが、構造体に存在するとしましょ"
+"う。\n"
+"これらのメソッドにはそれぞれコード例があるはずです。"
 
 #: src/idioms/rustdoc-init.md:14
 msgid "For example:"
 msgstr "例:"
 
 #: src/idioms/rustdoc-init.md:16
-#, fuzzy
 msgid ""
 "````rust,ignore\n"
 "struct Connection {\n"
@@ -3621,54 +3610,48 @@ msgid ""
 "}\n"
 "````"
 msgstr ""
-"錆、無視\n"
-"struct 接続 {\n"
-"    name: 文字列、\n"
-"    stream：TcpStream、\n"
+"````rust,ignore\n"
+"struct Connection {\n"
+"    name: String,\n"
+"    stream: TcpStream,\n"
 "}\n"
 "\n"
 "impl Connection {\n"
-"    /// 接続を介してリクエストを送信します。\n"
+"    /// 接続を介してリクエストを送信\n"
 "    ///\n"
-"    /// # 例\n"
-"    /// ``no_run\n"
-"    /// # // 例を動かすにはボイラープレートが必要です。\n"
-"    /// # let stream = TcpStream::connect(\"127.0.0.1:34254\")；\n"
-"    /// # let connection = Connection { name: \"foo\".to_owned(), "
-"stream }；\n"
+"    /// # Example\n"
+"    /// ```no_run\n"
+"    /// # // コード例を機能させるにはボイラーテンプレートが必要になります。\n"
+"    /// # let stream = TcpStream::connect(\"127.0.0.1:34254\");\n"
+"    /// # let connection = Connection { name: \"foo\".to_owned(), stream };\n"
 "    /// # let request = Request::new(\"RequestId\", RequestType::Get, "
-"\"payload\")；\n"
-"    /// let response = connection.send_request(request)；\n"
-"    /// assert!(response.is_ok())；\n"
+"\"payload\");\n"
+"    /// let response = connection.send_request(request);\n"
+"    /// assert!(response.is_ok());\n"
 "    /// ```\n"
-"    fn send_request(&self, request: Request) -> Result<Status, SendErr> "
-"{ // ...\n"
+"    fn send_request(&self, request: Request) -> Result<Status, SendErr> {\n"
 "        // ...\n"
 "    }\n"
 "\n"
-"    /// いやはや、すべての定型文はここで繰り返す必要があります！\n"
-"    fn check_status(&self) -> Status { // ...\n"
+"    /// なんと、ここでも同じボイラーテンプレートが必要です！\n"
+"    fn check_status(&self) -> Status {\n"
 "        // ...\n"
 "    }\n"
 "}\n"
 "````"
 
 #: src/idioms/rustdoc-init.md:47
-#, fuzzy
 msgid ""
 "Instead of typing all of this boilerplate to create a `Connection` and\n"
 "`Request`, it is easier to just create a wrapping helper function which "
 "takes\n"
 "them as arguments:"
 msgstr ""
-"このような定型文をすべて入力して `Connection` と `Request` を作成する代わり"
-"に\n"
-"と `Request` を作成するためにこのような定型文をすべて入力するよりも、それらを"
-"引数として受け取るラッパーのヘルパー関数を作成する方が簡単です。\n"
-"を作成する方が簡単です："
+"このような `Connection` や `Request` を生成するボイラーテンプレートすべてをタ"
+"イピングする代わりに、\n"
+"それらを引数として受け取るヘルパー関数をラッパーとして作成する方が簡単です："
 
 #: src/idioms/rustdoc-init.md:51
-#, fuzzy
 msgid ""
 "````rust,ignore\n"
 "struct Connection {\n"
@@ -3692,49 +3675,44 @@ msgid ""
 "}\n"
 "````"
 msgstr ""
-"錆、無視\n"
-"struct 接続 {\n"
-"    name: 文字列、\n"
-"    stream：TcpStream、\n"
+"````rust,ignore\n"
+"struct Connection {\n"
+"    name: String,\n"
+"    stream: TcpStream,\n"
 "}\n"
 "\n"
 "impl Connection {\n"
-"    /// 接続を介してリクエストを送信します。\n"
+"    /// 接続を介してリクエストを送信\n"
 "    ///\n"
-"    /// # 例\n"
+"    /// # Example\n"
 "    /// ```\n"
 "    /// # fn call_send(connection: Connection, request: Request) {\n"
-"    /// let response = connection.send_request(request)；\n"
-"    /// assert!(response.is_ok())；\n"
+"    /// let response = connection.send_request(request);\n"
+"    /// assert!(response.is_ok());\n"
 "    /// # }\n"
 "    /// ```\n"
-"    fn send_request(&self, request: Request) { //...\n"
+"    fn send_request(&self, request: Request) {\n"
 "        // ...\n"
 "    }\n"
 "}\n"
 "````"
 
 #: src/idioms/rustdoc-init.md:73
-#, fuzzy
 msgid ""
 "**Note** in the above example the line `assert!(response.is_ok());` will "
 "not\n"
 "actually run while testing because it is inside a function which is never\n"
 "invoked."
 msgstr ""
-"**注意** 上の例では、`assert!(response.is_ok());`という行は、テスト中に実際に"
-"は実行されません。\n"
-"という行はテスト中に実際に実行されることはありません。\n"
-"の中にあるためです。"
+"**注意** 上記の例における、 `assert!(response.is_ok());` という行は、\n"
+"呼び出されない関数内にあるため、実際にはテスト中に実行されません。"
 
 #: src/idioms/rustdoc-init.md:79
-#, fuzzy
 msgid "This is much more concise and avoids repetitive code in examples."
 msgstr ""
-"この方がはるかに簡潔で、例題でのコードの繰り返しを避けることができます。"
+"この方がはるかに簡潔で、コード例中のコードの繰り返しを避けることができます。"
 
 #: src/idioms/rustdoc-init.md:83
-#, fuzzy
 msgid ""
 "As example is in a function, the code will not be tested. Though it will "
 "still be\n"
@@ -3743,19 +3721,17 @@ msgid ""
 "most useful when you need `no_run`. With this, you do not need to add "
 "`no_run`."
 msgstr ""
-"例題は関数の中にあるので、コードはテストされません。しかし\n"
-"cargoテスト`を実行したときにコンパイルされているかどうかはチェックされます。"
-"ですから、このパターンは\n"
-"このパターンは `no_run` が必要なときに便利です。このパターンでは `no_run` を"
-"追加する必要はありません。"
+"コード例が関数定義の中にあるので、コードはテストされません。\n"
+"しかし `cargo test` を実行することで、コンパイルできたかどうかはチェックされ"
+"ます。\n"
+"ですから、このパターンは `no_run` が必要なときに便利です。このパターンを使う"
+"場合、（実行されないため） `no_run` を追加する必要はありません。"
 
 #: src/idioms/rustdoc-init.md:89
-#, fuzzy
 msgid "If assertions are not required this pattern works well."
 msgstr "アサーションが必要ない場合は、このパターンがうまく機能します。"
 
 #: src/idioms/rustdoc-init.md:91
-#, fuzzy
 msgid ""
 "If they are, an alternative can be to create a public method to create a "
 "helper\n"
@@ -3764,19 +3740,17 @@ msgid ""
 "Then this method can be called inside of rustdoc because it is part of the\n"
 "crate's public API."
 msgstr ""
-"もしそうであれば、別の方法として、`#[doc(hidden)]`でアノテーションされたヘル"
-"パーのインスタンスを作成するパブリックメソッドを作成することができます。\n"
-"インスタンスを作成するためのパブリックメソッドを作成することです。\n"
-"このメソッドはrustdocの内部で呼び出すことができます。\n"
-"crateのパブリックAPIの一部だからです。"
+"もしアサーションが必要であるなら、別の方法として、ヘルパーインスタンスを作成"
+"するpublicメソッドを `#[doc(hidden)]` でアノテーションして作成する方法があり"
+"ます。\n"
+"これにより、このメソッドはcrateのパブリックAPIの一部として、 rustdoc の内部で"
+"呼び出すことが可能になります。"
 
 #: src/idioms/temporary-mutability.md:1
-#, fuzzy
 msgid "# Temporary mutability"
-msgstr "# 一時的な変更可能性"
+msgstr "# 一時的なミュータビリティ"
 
 #: src/idioms/temporary-mutability.md:5
-#, fuzzy
 msgid ""
 "Often it is necessary to prepare and process some data, but after that data "
 "are\n"
@@ -3784,35 +3758,29 @@ msgid ""
 "redefining\n"
 "the mutable variable as immutable."
 msgstr ""
-"多くの場合、いくつかのデータを準備し、処理する必要がありますが、その後、デー"
-"タは検査されるだけで、変更されることはありません。\n"
-"は検査されるだけで、変更されることはありません。このような場合は\n"
-"をイミュータブル変数として再定義することで、その意図を明示することができま"
-"す。"
+"あるデータを準備・処理する必要があり、いったんそれが済めば、データは参照され"
+"るだけであり、変更されることはない、という状況がよくあります。\n"
+"このような状況では、ミュータブル変数をイミュータブル変数として再定義すること"
+"で、その意図を明示することができます。"
 
 #: src/idioms/temporary-mutability.md:9
-#, fuzzy
 msgid ""
 "It can be done either by processing data within a nested block or by "
 "redefining\n"
 "the variable."
 msgstr ""
-"これは、ネストされたブロック内でデータを処理するか、変数を再定義することで可"
-"能です。\n"
-"変数を再定義することです。"
+"これは、ネストされたブロック内でデータを処理することか、変数を再束縛すること"
+"で実現できます。"
 
 #: src/idioms/temporary-mutability.md:14
-#, fuzzy
 msgid "Say, vector must be sorted before usage."
-msgstr "つまり、ベクトルは使用する前にソートする必要があります。"
+msgstr "ベクタが使用される前にソートする必要がある、という状況を考えましょう。"
 
 #: src/idioms/temporary-mutability.md:16
-#, fuzzy
 msgid "Using nested block:"
-msgstr "ネストされたブロックの使用"
+msgstr "ネストされたブロックを使う場合："
 
 #: src/idioms/temporary-mutability.md:18
-#, fuzzy
 msgid ""
 "```rust,ignore\n"
 "let data = {\n"
@@ -3824,23 +3792,21 @@ msgid ""
 "// Here `data` is immutable.\n"
 "```"
 msgstr ""
-"錆、無視\n"
+"```rust,ignore\n"
 "let data = {\n"
-"    mut data = get_vec()；\n"
-"    data.sort()；\n"
-"    データ\n"
+"    let mut data = get_vec();\n"
+"    data.sort();\n"
+"    data\n"
 "};\n"
 "\n"
 "// ここで `data` はイミュータブルです。\n"
 "```"
 
 #: src/idioms/temporary-mutability.md:28
-#, fuzzy
 msgid "Using variable rebinding:"
-msgstr "変数の再バインドの使用"
+msgstr "変数の再束縛を使う場合："
 
 #: src/idioms/temporary-mutability.md:30
-#, fuzzy
 msgid ""
 "```rust,ignore\n"
 "let mut data = get_vec();\n"
@@ -3850,48 +3816,42 @@ msgid ""
 "// Here `data` is immutable.\n"
 "```"
 msgstr ""
-"錆、無視\n"
-"mut data = get_vec()；\n"
-"data.sort()；\n"
-"let data = data；\n"
+"```rust,ignore\n"
+"let mut data = get_vec();\n"
+"data.sort();\n"
+"let data = data;\n"
 "\n"
 "// ここで `data` はイミュータブルです。\n"
 "```"
 
 #: src/idioms/temporary-mutability.md:40
-#, fuzzy
 msgid ""
 "Compiler ensures that you don't accidentally mutate data after some point."
-msgstr "コンパイラーは、ある時点以降に誤ってデータを変異させないようにします。"
+msgstr ""
+"ある時点以降にデータを誤って変更してしまうことを、コンパイラが防ぎます。"
 
 #: src/idioms/temporary-mutability.md:44
-#, fuzzy
 msgid ""
 "Nested block requires additional indentation of block body.\n"
 "One more line to return data from block or redefine variable."
 msgstr ""
-"ネストされたブロックでは、ブロック本体のインデントを追加する必要がありま"
-"す。\n"
-"ブロックからデータを返したり、変数を再定義するには、もう1行必要です。"
+"ネストされたブロックは、ブロックの本体に追加のインデントが必要になります。\n"
+"ブロックからデータを返したり、変数を再定義するに、追加の1行が必要です。"
 
 #: src/idioms/return-consumed-arg-on-error.md:1
-#, fuzzy
 msgid "# Return consumed argument on error"
-msgstr "# エラー時には消費された引数を返します。"
+msgstr "# エラー時に消費した引数を返す"
 
 #: src/idioms/return-consumed-arg-on-error.md:5
-#, fuzzy
 msgid ""
 "If a fallible function consumes (moves) an argument, return that argument "
 "back inside\n"
 "an error."
 msgstr ""
-"誤りやすい関数が引数を消費（移動）した場合、その引数をエラーの中に戻してくだ"
-"さい。\n"
-"エラーを返します。"
+"失敗する可能性のある関数が引数を消費(move)した場合、その引数をエラーの中に返"
+"却しましょう。"
 
 #: src/idioms/return-consumed-arg-on-error.md:10
-#, fuzzy
 msgid ""
 "```rust\n"
 "pub fn send(value: String) -> Result<(), SendError> {\n"
@@ -3927,58 +3887,54 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
-"ラスト\n"
-"pub fn send(value: String) -> Result<(), SendError> { {.\n"
-"    println!(\"using {value} in a meaningful way\")；\n"
-"    // 非決定論的な誤りやすいアクションをシミュレートします。\n"
-"    use std::time::SystemTime；\n"
+"```rust\n"
+"pub fn send(value: String) -> Result<(), SendError> {\n"
+"    println!(\"using {value} in a meaningful way\");\n"
+"    // 非決定的に失敗し得る操作をシミュレート\n"
+"    use std::time::SystemTime;\n"
 "    let period = SystemTime::now().duration_since(SystemTime::UNIX_EPOCH)."
-"unwrap()；\n"
-"    もしperiod.subsec_nanos() % 2 == 1であれば{。\n"
+"unwrap();\n"
+"    if period.subsec_nanos() % 2 == 1 {\n"
 "        Ok(())\n"
 "    } else {\n"
-"        Err(SendError(値))\n"
+"        Err(SendError(value))\n"
 "    }\n"
 "}\n"
 "\n"
-"pub struct SendError(String)；\n"
+"pub struct SendError(String);\n"
 "\n"
 "fn main() {\n"
-"    let mut value = \"これが非常に長い文字列だと想像してください\"."
-"to_string()；\n"
+"    let mut value = \"この文字列がとても長いと考えてください\".to_string();\n"
 "\n"
-"    let success = 's：{\n"
-"        // 値を2回送ってみてください。\n"
-"        for _ in 0.\n"
+"    let success = 's: {\n"
+"        // value の send を2回まで試行\n"
+"        for _ in 0..2 {\n"
 "            value = match send(value) {\n"
-"                Ok(()) => break 's true、\n"
-"                Err(SendError(value)) => value、\n"
+"                Ok(()) => break 's true,\n"
+"                Err(SendError(value)) => value,\n"
 "            }\n"
 "        }\n"
 "        false\n"
 "    };\n"
 "\n"
-"    println!(\"success: {}\", success)；\n"
+"    println!(\"success: {}\", success);\n"
 "}\n"
 "```"
 
 #: src/idioms/return-consumed-arg-on-error.md:45
-#, fuzzy
 msgid ""
 "In case of error you may want to try some alternative way or to\n"
 "retry action in case of non-deterministic function. But if the argument\n"
 "is always consumed, you are forced to clone it on every call, which\n"
 "is not very efficient."
 msgstr ""
-"エラーの場合、別の方法を試したり、非決定的な関数の場合は動作を再試行したりす"
-"ることができます。\n"
-"非決定的な関数の場合は動作を再試行します。しかし、引数\n"
-"が常に消費されるのであれば、呼び出しのたびに引数をクローンしなければならなく"
-"なります。\n"
-"はあまり効率的ではありません。"
+"エラーが発生した際、なにか別の手段を試したり、非決定的な関数であるならリトラ"
+"イしたくなるものです。\n"
+"しかし、もし引数が常に消費されてしまうのであれば、呼び出しのたびに引数をク"
+"ローンしなければならなくなります。\n"
+"これではとても効率的とは言えません。"
 
 #: src/idioms/return-consumed-arg-on-error.md:50
-#, fuzzy
 msgid ""
 "The standard library uses this approach in e.g. `String::from_utf8` method.\n"
 "When given a vector that doesn't contain valid UTF-8, a `FromUtf8Error`\n"
@@ -3987,28 +3943,24 @@ msgid ""
 msgstr ""
 "標準ライブラリでは、このアプローチを `String::from_utf8` メソッドなどで使用し"
 "ています。\n"
-"有効な UTF-8 を含まないベクトルが与えられた場合、 `FromUtf8Error` を返しま"
+"有効な UTF-8 を含まないベクタが与えられた場合、 `FromUtf8Error` を返しま"
 "す。\n"
-"が返されます。\n"
-"元のベクトルを取得するには `FromUtf8Error::into_bytes` メソッドを使用します。"
+" `FromUtf8Error::into_bytes` メソッドを使用することで、元のベクタを取得できま"
+"す。"
 
 #: src/idioms/return-consumed-arg-on-error.md:57
-#, fuzzy
 msgid "Better performance because of moving arguments whenever possible."
-msgstr "可能な限り引数を移動させることで、パフォーマンスが向上。"
+msgstr "可能な限り引数をmoveすることで、パフォーマンスを向上させます。"
 
 #: src/idioms/return-consumed-arg-on-error.md:61
-#, fuzzy
 msgid "Slightly more complex error types."
-msgstr "少し複雑なエラータイプ。"
+msgstr "エラーの型がやや複雑になります。"
 
 #: src/patterns/index.md:1
-#, fuzzy
 msgid "# Design Patterns"
 msgstr "# デザインパターン"
 
 #: src/patterns/index.md:3
-#, fuzzy
 msgid ""
 "[Design patterns](https://en.wikipedia.org/wiki/Software_design_pattern) "
 "are\n"
@@ -4020,50 +3972,44 @@ msgid ""
 "what is a pattern in one language may be unnecessary in another due to a\n"
 "language feature, or impossible to express due to a missing feature."
 msgstr ""
-"[デザイン・パターン](https://en.wikipedia.org/wiki/Software_design_pattern)と"
+"[デザインパターン](https://en.wikipedia.org/wiki/Software_design_pattern) と"
 "は\n"
-"ソフトウェア設計において、与えられた文脈の中で一般的に発生する問題に対する一"
-"般的な再利用可能な解決策」です。\n"
-"一般的な再利用可能な解決策」です。デザインパターンは\n"
-"プログラミング言語の文化を表現する素晴らしい方法です。デザインパターンは非常"
-"に言語固有です。\n"
-"ある言語ではパターンであるものが、別の言語では言語機能によって不要になること"
-"もあります。\n"
+"「general reusable solutions to a commonly occurring problem within a given\n"
+"context in software design(ソフトウェア設計において、与えられた文脈の中で一般"
+"的に発生する問題に対する一般的で再利用可能な解決策)」です。\n"
+"デザインパターンはプログラミング言語の文化を表現する素晴らしい方法です。\n"
+"デザインパターンはとても言語固有のものです。\n"
 "ある言語ではパターンであっても、別の言語ではその言語の特徴によって不要であっ"
 "たり、欠けている機能によって表現できなかったりします。"
 
 #: src/patterns/index.md:10
-#, fuzzy
 msgid ""
 "If overused, design patterns can add unnecessary complexity to programs.\n"
 "However, they are a great way to share intermediate and advanced level "
 "knowledge\n"
 "about a programming language."
 msgstr ""
-"デザインパターンは使い過ぎると、プログラムに不必要な複雑さを加えることになり"
+"デザインパターンは使い過ぎると、プログラムに不必要な複雑さを加えることがあり"
 "ます。\n"
 "しかし、デザインパターンは、プログラミング言語に関する中級および上級レベルの"
-"知識を共有するための素晴らしい方法です。\n"
-"を共有するための素晴らしい方法です。"
+"知識を共有するための素晴らしい方法です。"
 
 #: src/patterns/index.md:16
-#, fuzzy
 msgid ""
 "Rust has many unique features. These features give us great benefit by "
 "removing\n"
 "whole classes of problems. Some of them are also patterns that are _unique_ "
 "to Rust."
 msgstr ""
-"ラストには多くのユニークな特徴があります。これらの機能は\n"
-"大きなメリットをもたらします。その中には、Rust独自のパターンもあります。"
+"Rust には多くのユニークな特徴があります。\n"
+"これらの機能は、各種問題の大半を取り除く、大きなメリットをもたらします。その"
+"中には、Rust _独自_ のパターンもあります。"
 
 #: src/patterns/index.md:19
-#, fuzzy
 msgid "## YAGNI"
-msgstr "## ♪ YAGNI"
+msgstr "## YAGNI"
 
 #: src/patterns/index.md:21
-#, fuzzy
 msgid ""
 "YAGNI is an acronym that stands for `You Aren't Going to Need It`.\n"
 "It's a vital software design principle to apply as you write code."
@@ -4072,12 +4018,10 @@ msgstr ""
 "これは、コードを書くときに適用すべき重要なソフトウェア設計の原則です。"
 
 #: src/patterns/index.md:24
-#, fuzzy
 msgid "> The best code I ever wrote was code I never wrote."
-msgstr "> 私がこれまで書いた中で最高のコードは、私が書かなかったコードです。"
+msgstr "> これまで書いた中で最高のコードは、書かなかったコードです。"
 
 #: src/patterns/index.md:26
-#, fuzzy
 msgid ""
 "If we apply YAGNI to design patterns, we see that the features of Rust allow "
 "us to\n"
@@ -4088,46 +4032,47 @@ msgid ""
 msgstr ""
 "YAGNIをデザインパターンに適用すると、Rustの機能によって多くのパターンを捨てる"
 "ことができることがわかります。\n"
-"多くのパターンを捨てることができます。例えば、Rustでは[strategyパターン]"
-"(https://en.wikipedia.org/wiki/Strategy_pattern)は不要です。\n"
-"なぜなら、[trait](https://doc.rust-lang.org/book/traits.html)を使えばいいから"
-"です。"
+"例えば、Rustでは [strategyパターン](https://en.wikipedia.org/wiki/"
+"Strategy_pattern) は不要です。\n"
+"なぜなら、単に [trait](https://doc.rust-lang.org/book/traits.html) を使えば良"
+"いためです。"
 
 #: src/patterns/behavioural/intro.md:1
-#, fuzzy
 msgid "# Behavioural Patterns"
-msgstr "# 行動パターン"
+msgstr "# 振る舞いに関するパターン"
 
 #: src/patterns/behavioural/intro.md:3
-#, fuzzy
 msgid "From [Wikipedia](https://en.wikipedia.org/wiki/Behavioral_pattern):"
-msgstr "Wikipedia](https://en.wikipedia.org/wiki/Behavioral_pattern)より："
+msgstr "[Wikipedia](https://en.wikipedia.org/wiki/Behavioral_pattern) より："
 
 #: src/patterns/behavioural/intro.md:5
-#, fuzzy
 msgid ""
 "> Design patterns that identify common communication patterns among "
 "objects.\n"
 "> By doing so, these patterns increase flexibility in carrying out "
 "communication."
 msgstr ""
-"> オブジェクト間で共通する通信パターンを特定するデザイン・パターン。\n"
-"> そうすることで、通信の柔軟性が高まります。"
+"> Design patterns that identify common communication patterns among "
+"objects.\n"
+"> By doing so, these patterns increase flexibility in carrying out "
+"communication.\n"
+"> (オブジェクト間で共通するコミュニケーションのパターンを特定するデザインパ"
+"ターン。\n"
+"> これらのパターンの実践により、コミュニケーションを実行する際の柔軟性が高ま"
+"ります。)"
 
 #: src/patterns/behavioural/command.md:1
-#, fuzzy
 msgid "# Command"
-msgstr "# コマンド"
+msgstr "# Command"
 
 #: src/patterns/behavioural/command.md:5
-#, fuzzy
 msgid ""
 "The basic idea of the Command pattern is to separate out actions into its "
 "own\n"
 "objects and pass them as parameters."
 msgstr ""
-"Commandパターンの基本的な考え方は、アクションを独自の\n"
-"オブジェクトに分離し、それらをパラメータとして渡すことです。"
+"Commandパターンの基本的な考え方は、アクションを独自のオブジェクトに分離し、\n"
+"それらをパラメータとして渡すことです。"
 
 #: src/patterns/behavioural/command.md:10
 #, fuzzy
