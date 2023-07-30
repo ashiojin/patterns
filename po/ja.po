@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-07-30 15:07+0900\n"
+"PO-Revision-Date: 2023-07-30 15:10+0900\n"
 "Last-Translator: ashiojin@gmail.com\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -117,24 +117,20 @@ msgid "Newtype"
 msgstr "NewType"
 
 #: src/SUMMARY.md:30
-#, fuzzy
 msgid "RAII Guards"
 msgstr "RAIIガード"
 
 #: src/SUMMARY.md:31
-#, fuzzy
 msgid "Strategy"
 msgstr "Strategy"
 
 #: src/SUMMARY.md:32
-#, fuzzy
 msgid "Visitor"
 msgstr "Visitor"
 
 #: src/SUMMARY.md:33
-#, fuzzy
 msgid "Creational"
-msgstr "Creational"
+msgstr "生成に関するパターン"
 
 #: src/SUMMARY.md:34
 #, fuzzy
@@ -5047,7 +5043,7 @@ msgstr ""
 "- 機能の制限(公開される関数や実装されるトレイトを減らす)、\n"
 "- コピー・セマンティクスを持つ型にムーブ・セマンティクスを持たせること、\n"
 "- より具象的な型を提供することで内部型を隠すことによる抽象化、\n"
-"  例えば"
+"  例えば、"
 
 #: src/patterns/behavioural/newtype.md:84
 msgid ""
@@ -5784,7 +5780,7 @@ msgstr ""
 
 #: src/patterns/behavioural/visitor.md:1
 msgid "# Visitor"
-msgstr "# "
+msgstr "# Visitor"
 
 #: src/patterns/behavioural/visitor.md:5
 msgid ""
