@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-08-06 12:14+0900\n"
+"PO-Revision-Date: 2023-08-08 22:15+0900\n"
 "Last-Translator: ashiojin@gmail.com\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -144,6 +144,7 @@ msgstr "Fold"
 msgid "Structural"
 msgstr "構造に関するパターン"
 
+# 英題おかしくない？
 #: src/SUMMARY.md:37
 msgid "Compose Structs"
 msgstr "構造体の構成"
@@ -7084,21 +7085,19 @@ msgstr ""
 "ト」にまとめます。"
 
 #: src/patterns/ffi/export.md:1
-#, fuzzy
 msgid "# Object-Based APIs"
 msgstr "# オブジェクトベースのAPI"
 
 #: src/patterns/ffi/export.md:5
-#, fuzzy
 msgid ""
 "When designing APIs in Rust which are exposed to other languages, there are "
 "some\n"
 "important design principles which are contrary to normal Rust API design:"
 msgstr ""
-"他の言語に公開されるAPIをRustで設計する場合、通常のRust API設計に反する重要な"
-"設計原則がいくつかあります。\n"
-"通常のRust API設計に反する重要な設計原則があります："
+"Rustにて、他の言語へ公開するAPIを設計する場合、通常のRustのAPI設計に反する重"
+"要な設計原則がいくつかあります："
 
+# 8/8もう一度訳すこと。読んだ後に。
 #: src/patterns/ffi/export.md:8
 #, fuzzy
 msgid ""
@@ -7111,18 +7110,16 @@ msgid ""
 "structure,\n"
 "   but _provenance/lifetime_."
 msgstr ""
-"1.カプセル化された型はすべてRustが所有し、ユーザーが管理すべきものです、\n"
-"   そして _opaque_ です。\n"
-"2.すべてのトランザクションデータ型は、ユーザが所有し、透過的であるべきで"
+"1. カプセル化された型はすべて、Rustが _所有_ し、ユーザーが _管理_ し、\n"
+"   また _不透過的_ であるべきです。\n"
+"2. すべてのトランザクションデータ型は、ユーザが _所有_ し、 _透過的_ であるべ"
+"きです。\n"
+"3. すべてのライブラリの操作は、カプセル化された型に作用する関数であるべきで"
 "す。\n"
-"3.すべてのライブラリの動作は、カプセル化された型に作用する関数であるべきで"
-"す。\n"
-"4.すべてのライブラリの動作は、構造に基づく型ではなく、_provenance/lifetime_型"
-"にカプセル化されるべきです、\n"
-"   ではなく、_provenance/lifetime_にカプセル化されるべきです。"
+"4. すべてのライブラリの操作は、構造に基づく型ではなく、_起源/ライフタイム_ に"
+"基づく型にカプセル化されるべきです。"
 
 #: src/patterns/ffi/export.md:17
-#, fuzzy
 msgid ""
 "Rust has built-in FFI support to other languages.\n"
 "It does this by providing a way for crate authors to provide C-compatible "
@@ -7131,12 +7128,11 @@ msgid ""
 msgstr ""
 "Rustには、他の言語へのFFIサポートが組み込まれています。\n"
 "これは、クレート作者が異なるABIを通じてC互換のAPIを提供する方法を提供すること"
-"で実現します。\n"
-"を提供する方法を提供することで、これを実現しています（この実践には重要ではあ"
-"りませんが）。"
+"で実現しています（このことは当実践には重要ではありませんが）。"
 
+# foreign API はなんと訳すとそれっぽいのだろう。
+# 試しに言語間の、と訳してみる
 #: src/patterns/ffi/export.md:21
-#, fuzzy
 msgid ""
 "Well-designed Rust FFI follows C API design principles, while compromising "
 "the\n"
@@ -7145,11 +7141,9 @@ msgid ""
 msgstr ""
 "うまく設計されたRust FFIは、C言語のAPI設計の原則に従いつつ、Rustの設計を可能"
 "な限り損なわないようにします。\n"
-"の設計を可能な限り損なわないようにします。海外のAPIには3つのゴールがありま"
-"す："
+"言語間のAPIには3つのゴールがあります："
 
 #: src/patterns/ffi/export.md:24
-#, fuzzy
 msgid ""
 "1. Make it easy to use in the target language.\n"
 "2. Avoid the API dictating internal unsafety on the Rust side as much as "
@@ -7158,11 +7152,11 @@ msgid ""
 "small\n"
 "   as possible."
 msgstr ""
-"1.ターゲット言語で使いやすいように。\n"
-"2.APIがRust側で内部的な安全性の欠如を指示することはできるだけ避けましょう。\n"
-"3.メモリの安全性やRustの`未定義な振る舞い`の可能性をできるだけ小さくするこ"
-"と。\n"
-"   をできるだけ小さくします。"
+"1. ターゲット言語にて使いやすいようにしましょう。\n"
+"2. APIが、Rust側での内部的な不安定性を左右することは可能な限り避けましょ"
+"う。\n"
+"3. メモリの不安定性やRustの `undefined behavior` の可能性をできるだけ小さく保"
+"ちましょう。"
 
 #: src/patterns/ffi/export.md:29
 #, fuzzy
