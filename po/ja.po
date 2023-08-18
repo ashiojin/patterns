@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-08-19 13:46+0900\n"
+"PO-Revision-Date: 2023-08-19 15:12+0900\n"
 "Last-Translator: ashiojin@gmail.com\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -8388,18 +8388,15 @@ msgid "# `#![deny(warnings)]`"
 msgstr "# `#![deny(warnings)]`"
 
 #: src/anti_patterns/deny-warnings.md:5
-#, fuzzy
 msgid ""
 "A well-intentioned crate author wants to ensure their code builds without\n"
 "warnings. So they annotate their crate root with the following:"
 msgstr ""
-"善意の木枠作成者は、自分たちのコードが警告なしでビルドされることを保証したい"
-"のです。\n"
-"を保証したいと考えています。そこで、彼らはcrateルートに次のような注釈を付けま"
-"す："
+"善意のあるcrate作成者は、自分たちのコードが警告なしでビルドされることを保証し"
+"たいと考えています。\n"
+"そこで、彼らはcrateのルートに次のようなアノテーションを付けます："
 
 #: src/anti_patterns/deny-warnings.md:10
-#, fuzzy
 msgid ""
 "```rust\n"
 "#![deny(warnings)]\n"
@@ -8407,24 +8404,21 @@ msgid ""
 "// All is well.\n"
 "```"
 msgstr ""
-"ラスト\n"
-"#![deny(warnings)]。\n"
+"```rust\n"
+"#![deny(warnings)]\n"
 "\n"
-"// 全て順調です。\n"
+"// すべて問題なし\n"
 "```"
 
 #: src/anti_patterns/deny-warnings.md:18
-#, fuzzy
 msgid "It is short and will stop the build if anything is amiss."
-msgstr "これは短く、何か問題があればビルドを停止します。"
+msgstr "これは簡単で、もし何か間違いがあるならビルドが止まります。"
 
 #: src/anti_patterns/deny-warnings.md:20
-#, fuzzy
 msgid "## Drawbacks"
-msgstr "#欠点"
+msgstr "## デメリット"
 
 #: src/anti_patterns/deny-warnings.md:22
-#, fuzzy
 msgid ""
 "By disallowing the compiler to build with warnings, a crate author opts out "
 "of\n"
@@ -8434,15 +8428,14 @@ msgid ""
 "grace\n"
 "period before being turned to `deny`."
 msgstr ""
-"コンパイラが警告付きでビルドするのを禁止することで、クレート作成者は\n"
-"Rustの有名な安定性から外れることになります。時には、新しい機能や古い誤動作を"
-"修正する必要があります。\n"
-"そのため、リントは `deny` になる前に一定の猶予期間 `warn` するように書かれて"
-"います。\n"
-"を`deny`にする前に、一定の猶予期間`warn`するように書かれています。"
+"コンパイラが警告付きでビルドすることを禁止することにより、\n"
+"Rustの有名な安定性から、crate作成者が切り離されてしまうことになります。\n"
+"時に、新しい機能や古い問題ある機能により、物事の進め方を変える必要がでてくる"
+"ことがあります。\n"
+"このような場合に、lintは十分な一定の期間 `warn` し、その後に `deny` に切り替"
+"えるように記述されます。"
 
 #: src/anti_patterns/deny-warnings.md:27
-#, fuzzy
 msgid ""
 "For example, it was discovered that a type could have two `impl`s with the "
 "same\n"
@@ -8454,30 +8447,27 @@ msgid ""
 msgstr ""
 "例えば、ある型が同じメソッドを持つ2つの`impl`を持つことができることが発見され"
 "ました。\n"
-"メソッドを2つ持つことができることがわかりました。これは悪いアイデアだと判断さ"
-"れましたが、スムーズに移行するために、`overlapping-inherent-impls`というlint"
-"が導入されました、\n"
-"を導入し、この事実につまずいた人に警告を与えるようにしました。\n"
-"将来のリリースでハードエラーになる前に。"
+"これは悪いアイデアだと判断されました。\n"
+"しかしスムーズに移行するために、`overlapping-inherent-impls`というlintが導入"
+"を導入し、\n"
+"将来のリリースで完全なエラーとされる前に、この事実につまずいた人に警告を与え"
+"るようにしました。"
 
 #: src/anti_patterns/deny-warnings.md:32
-#, fuzzy
 msgid ""
 "Also sometimes APIs get deprecated, so their use will emit a warning where\n"
 "before there was none."
 msgstr ""
-"また、APIが非推奨になることもあります。\n"
-"が表示されます。"
+"また、APIが非推奨になることもあります。この場合、それを使用していると、今まで"
+"無かった警告が出るようになります。"
 
 #: src/anti_patterns/deny-warnings.md:35
-#, fuzzy
 msgid ""
 "All this conspires to potentially break the build whenever something changes."
 msgstr ""
-"これらはすべて、何かが変わるたびにビルドを壊してしまう可能性があります。"
+"これらすべてが、何かが変わるたびにビルドを壊してしまう可能性を持っています。"
 
 #: src/anti_patterns/deny-warnings.md:37
-#, fuzzy
 msgid ""
 "Furthermore, crates that supply additional lints (e.g. [rust-clippy]) can "
 "no\n"
@@ -8486,21 +8476,18 @@ msgid ""
 "`deny`\n"
 "lint errors into warnings."
 msgstr ""
-"さらに、追加のリントを提供するクレート（[rust-clippy]など）は、アノテーション"
+"さらに、追加のlintを提供するcrate（[rust-clippy]など）は、このアノテーション"
 "を削除しない限り使用できなくなりました。\n"
-"アノテーションが削除されない限り使用できません。これは\n"
-"[-cap-lints]で軽減できます。cap-lints=warn`コマンドライン引数を指定すると、す"
-"べての `deny`\n"
-"lint エラーを警告に変えます。"
+"これは[--cap-lints]で緩和されます。\n"
+"コマンドライン引数に `--cap-lints=warn` を指定すると、すべての `deny` lint エ"
+"ラーを警告に変えます。"
 
 #: src/anti_patterns/deny-warnings.md:42
 #: src/functional/generics-type-classes.md:227
-#, fuzzy
 msgid "## Alternatives"
 msgstr "## 代替案"
 
 #: src/anti_patterns/deny-warnings.md:44
-#, fuzzy
 msgid ""
 "There are two ways of tackling this problem: First, we can decouple the "
 "build\n"
@@ -8508,43 +8495,37 @@ msgid ""
 "explicitly."
 msgstr ""
 "この問題に対処する方法は2つあります。\n"
-"設定をコードから切り離すことができます。\n"
-"を明示的に指定します。"
+"一つは、コードからビルド設定を切り離すことです。\n"
+"もう一つは、denyしたい lint を明示的に指定することです。"
 
 #: src/anti_patterns/deny-warnings.md:48
-#, fuzzy
 msgid "The following command line will build with all warnings set to `deny`:"
-msgstr "次のコマンドラインは、すべての警告を `deny` に設定してビルドします："
+msgstr ""
+"次のコマンドラインは、すべての警告を `deny` に設定してビルドを行います："
 
 #: src/anti_patterns/deny-warnings.md:50
-#, fuzzy
 msgid "`RUSTFLAGS=\"-D warnings\" cargo build`"
-msgstr "RUSTFLAGS=\"-D warnings\" カーゴビルド`."
+msgstr "`RUSTFLAGS=\"-D warnings\" cargo build`"
 
 #: src/anti_patterns/deny-warnings.md:52
-#, fuzzy
 msgid ""
 "This can be done by any individual developer (or be set in a CI tool like\n"
 "Travis, but remember that this may break the build when something changes)\n"
 "without requiring a change to the code."
 msgstr ""
-"これは個々の開発者が行うことができます（あるいは\n"
-"TravisのようなCIツールで設定することもできます。）\n"
-"コードに変更を加える必要はありません。"
+"これは個々の開発者が（あるいはTravisのようなCIツールでも。ただし変更があった"
+"ときビルドが壊れる可能性に注意は必要）コードに変更を加えずに行えます。"
 
 #: src/anti_patterns/deny-warnings.md:56
-#, fuzzy
 msgid ""
 "Alternatively, we can specify the lints that we want to `deny` in the code.\n"
 "Here is a list of warning lints that is (hopefully) safe to deny (as of "
 "Rustc 1.48.0):"
 msgstr ""
-"あるいは、コード中で `deny` したいリントを指定することもできます。\n"
-"以下は、(できれば) 拒否しても問題ない警告リントのリストです (Rustc 1.48.0 現"
-"在)："
+"あるいは、コード中で `deny` したいlintを指定することもできます。\n"
+"以下は、(たぶん) 安全にdenyできる警告リントのリストです (Rustc 1.48.0 時点)："
 
 #: src/anti_patterns/deny-warnings.md:59
-#, fuzzy
 msgid ""
 "```rust,ignore\n"
 "#![deny(bad_style,\n"
@@ -8565,33 +8546,31 @@ msgid ""
 "       while_true)]\n"
 "```"
 msgstr ""
-"錆、無視\n"
-"#![deny(bad_style、\n"
-"       const_err、\n"
-"       dead_code、\n"
-"       improper_ctypes、\n"
-"       non_shorthand_field_patterns、\n"
-"       no_mangle_generic_items、\n"
-"       overflowing_literals、\n"
-"       path_statements、\n"
-"       pattern_in_fns_without_body、\n"
-"       private_in_public、\n"
-"       無条件再帰、\n"
-"       unused、\n"
-"       unused_allocation、\n"
-"       unused_comparisons、\n"
-"       unused_parens、\n"
-"       while_true)] を参照してください。\n"
+"```rust,ignore\n"
+"#![deny(bad_style,\n"
+"       const_err,\n"
+"       dead_code,\n"
+"       improper_ctypes,\n"
+"       non_shorthand_field_patterns,\n"
+"       no_mangle_generic_items,\n"
+"       overflowing_literals,\n"
+"       path_statements,\n"
+"       patterns_in_fns_without_body,\n"
+"       private_in_public,\n"
+"       unconditional_recursion,\n"
+"       unused,\n"
+"       unused_allocation,\n"
+"       unused_comparisons,\n"
+"       unused_parens,\n"
+"       while_true)]\n"
 "```"
 
 #: src/anti_patterns/deny-warnings.md:78
-#, fuzzy
 msgid ""
 "In addition, the following `allow`ed lints may be a good idea to `deny`:"
-msgstr "さらに、以下の`allow`されたリントは`deny`するのがよいでしょう："
+msgstr "さらに、以下の`allow`されたリントを`deny`するのはよい考えでしょう："
 
 #: src/anti_patterns/deny-warnings.md:80
-#, fuzzy
 msgid ""
 "```rust,ignore\n"
 "#![deny(missing_debug_implementations,\n"
@@ -8604,34 +8583,31 @@ msgid ""
 "       unused_results)]\n"
 "```"
 msgstr ""
-"``rust,ignore\n"
-"#![deny(missing_debug_implementations、\n"
-"       missing_docs、\n"
-"       trivial_casts、\n"
-"       trivial_numeric_casts、\n"
-"       unused_extern_crates、\n"
-"       unused_import_braces、\n"
-"       unused_qualifications、\n"
-"       unused_results)] を参照してください。\n"
+"```rust,ignore\n"
+"#![deny(missing_debug_implementations,\n"
+"       missing_docs,\n"
+"       trivial_casts,\n"
+"       trivial_numeric_casts,\n"
+"       unused_extern_crates,\n"
+"       unused_import_braces,\n"
+"       unused_qualifications,\n"
+"       unused_results)]\n"
 "```"
 
 #: src/anti_patterns/deny-warnings.md:91
-#, fuzzy
 msgid "Some may also want to add `missing-copy-implementations` to their list."
 msgstr ""
-"また、`missing-copy-implementations`をリストに加えたい人もいるでしょう。"
+"また、`missing-copy-implementations` をリストに加えたい人もいるでしょう。"
 
 #: src/anti_patterns/deny-warnings.md:93
-#, fuzzy
 msgid ""
 "Note that we explicitly did not add the `deprecated` lint, as it is fairly\n"
 "certain that there will be more deprecated APIs in the future."
 msgstr ""
-"deprecated`のlintを明示的に追加していないことに注意してください。\n"
+"`deprecated`のlintを明示的に追加していないことに注意してください。\n"
 "将来的に非推奨のAPIが増えることは確実だからです。"
 
 #: src/anti_patterns/deny-warnings.md:98
-#, fuzzy
 msgid ""
 "- [A collection of all clippy lints](https://rust-lang.github.io/rust-clippy/"
 "master)\n"
@@ -8640,13 +8616,12 @@ msgid ""
 "  `rustc --help` for a general list of options\n"
 "- [rust-clippy] is a collection of lints for better Rust code"
 msgstr ""
-"- [すべてのクリッピーリントのコレクション](https://rust-lang.github.io/rust-"
-"clippy/master)\n"
-"- [非推奨属性] ドキュメント\n"
-"- rustc -W help` と入力するとシステム上の lints のリストが表示されます。ま"
-"た\n"
-"  rustc --help` と入力すると一般的なオプションのリストが表示されます。\n"
-"- [rust-clippy] はより良い Rust コードのための lints のコレクションです。"
+"- [すべての crippy lint](https://rust-lang.github.io/rust-clippy/master)\n"
+"- [deprecated属性] のドキュメント\n"
+"- `rustc -W help` と入力するとあなたのシステム上の lint のリストが表示されま"
+"す。\n"
+"  また`rustc --help` と入力すると一般的なオプションのリストが表示されます\n"
+"- [rust-clippy] はより良い Rust コードのための lint のコレクションです"
 
 #: src/anti_patterns/deref.md:1
 #, fuzzy
