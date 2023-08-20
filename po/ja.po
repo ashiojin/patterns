@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-08-19 15:12+0900\n"
+"PO-Revision-Date: 2023-08-20 17:12+0900\n"
 "Last-Translator: ashiojin@gmail.com\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -170,22 +170,18 @@ msgid "Anti-patterns"
 msgstr "アンチパターン"
 
 #: src/SUMMARY.md:45
-#, fuzzy
 msgid "Clone to satisfy the borrow checker"
-msgstr "借り手チェッカーを満足させるクローン"
+msgstr "借用チェッカーを満足させるためのクローン"
 
 #: src/SUMMARY.md:46
-#, fuzzy
 msgid "#[deny(warnings)]"
 msgstr "#[deny(warnings)]"
 
 #: src/SUMMARY.md:47
-#, fuzzy
 msgid "Deref Polymorphism"
-msgstr "デレフ・ポリモーフィズム"
+msgstr "Deref ポリモーフィズム"
 
 #: src/SUMMARY.md:49
-#, fuzzy
 msgid "Functional Programming"
 msgstr "関数型プログラミング"
 
@@ -8624,34 +8620,28 @@ msgstr ""
 "- [rust-clippy] はより良い Rust コードのための lint のコレクションです"
 
 #: src/anti_patterns/deref.md:1
-#, fuzzy
 msgid "# `Deref` polymorphism"
 msgstr "# `Deref` ポリモーフィズム"
 
 #: src/anti_patterns/deref.md:5
-#, fuzzy
 msgid ""
 "Misuse the `Deref` trait to emulate inheritance between structs, and thus "
 "reuse\n"
 "methods."
 msgstr ""
-"構造体間の継承をエミュレートするために `Deref` 特性を悪用して、メソッドを再利"
-"用しています。\n"
-"メソッドを再利用します。"
+"構造体間の継承をエミュレートする目的での `Deref` トレイトの悪用。これによりメ"
+"ソッドを再利用しようとすること。"
 
 #: src/anti_patterns/deref.md:10
-#, fuzzy
 msgid ""
 "Sometimes we want to emulate the following common pattern from OO languages "
 "such\n"
 "as Java:"
 msgstr ""
 "JavaのようなOO言語から、次のような一般的なパターンをエミュレートしたいことが"
-"あります。\n"
-"をエミュレートしたいことがあります："
+"あります："
 
 #: src/anti_patterns/deref.md:13
-#, fuzzy
 msgid ""
 "```java\n"
 "class Foo {\n"
@@ -8666,26 +8656,24 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
-"java\n"
-"クラス Foo {\n"
-"    void m() { ...}\n"
+"```java\n"
+"class Foo {\n"
+"    void m() { ... }\n"
 "}\n"
 "\n"
-"クラス Bar extends Foo [0］\n"
+"class Bar extends Foo {}\n"
 "\n"
 "public static void main(String[] args) {\n"
-"    Bar b = new Bar()；\n"
-"    b.m()；\n"
+"    Bar b = new Bar();\n"
+"    b.m();\n"
 "}\n"
 "```"
 
 #: src/anti_patterns/deref.md:26
-#, fuzzy
 msgid "We can use the deref polymorphism anti-pattern to do so:"
-msgstr "そのためにderefポリモーフィズムのアンチパターンを使うことができます："
+msgstr "deref ポリモーフィズムのアンチパターンを使い、これを行います："
 
 #: src/anti_patterns/deref.md:28
-#, fuzzy
 msgid ""
 "```rust\n"
 "use std::ops::Deref;\n"
@@ -8715,10 +8703,10 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
-"ラスト\n"
-"std::ops::Derefを使用します；\n"
+"```rust\n"
+"use std::ops::Deref;\n"
 "\n"
-"struct Foo [0］\n"
+"struct Foo {}\n"
 "\n"
 "impl Foo {\n"
 "    fn m(&self) {\n"
@@ -8727,24 +8715,23 @@ msgstr ""
 "}\n"
 "\n"
 "struct Bar {\n"
-"    f: Foo、\n"
+"    f: Foo,\n"
 "}\n"
 "\n"
-"impl Deref for Bar { 以下のようになります。\n"
-"    型 Target = Foo；\n"
-"    fn deref(&self) -> &Foo { 以下のようになります。\n"
+"impl Deref for Bar {\n"
+"    type Target = Foo;\n"
+"    fn deref(&self) -> &Foo {\n"
 "        &self.f\n"
 "    }\n"
 "}\n"
 "\n"
 "fn main() {\n"
-"    let b = Bar { f: Foo {} }；\n"
-"    b.m()；\n"
+"    let b = Bar { f: Foo {} };\n"
+"    b.m();\n"
 "}\n"
 "```"
 
 #: src/anti_patterns/deref.md:56
-#, fuzzy
 msgid ""
 "There is no struct inheritance in Rust. Instead we use composition and "
 "include\n"
@@ -8754,14 +8741,15 @@ msgid ""
 "Java\n"
 "version (probably, you should use `#[repr(C)]` if you want to be sure))."
 msgstr ""
-"Rustには構造体の継承はありません。代わりにコンポジションを使用し\n"
-"フィールドは値なので、インラインで格納されます、\n"
-"フィールドがあったとしても、Javaバージョンと同じメモリレイアウトになりま"
-"す。\n"
-"おそらく、念のため `#[repr(C)]` を使うべきです）。"
+"Rustには構造体の継承はありません。\n"
+"代わりにコンポジションを使用し、 `Foo` のインスタンスを `Bar` の持ち物にしま"
+"す(\n"
+"フィールドは値なのでインラインに保持されます。\n"
+"したがってフィールドがあるのであれば、それらはJavaのバージョンと同じメモリレ"
+"イアウトとなるでしょう(おそらくは。確実にそうしたいなら\n"
+"`#[repr(C)]` を使うべきです))。"
 
 #: src/anti_patterns/deref.md:61
-#, fuzzy
 msgid ""
 "In order to make the method call work we implement `Deref` for `Bar` with "
 "`Foo`\n"
@@ -8775,24 +8763,22 @@ msgid ""
 "`Foo` as\n"
 "well as `Bar`."
 msgstr ""
-"メソッドコールを動作させるために、`Bar` に対して `Foo` をターゲットとして "
+"メソッドコールを機能させるために、`Bar` に対して `Foo` をターゲットとして "
 "`Deref` を実装します（埋め込まれた `Foo` フィールドを返します）。\n"
-"をターゲットとして実装します（埋め込まれた `Foo` フィールドを返します）。つま"
-"り\n"
-"例えば、`*` を使って）`Bar` を参照解除すると、`Foo` が返されるということで"
-"す。これは\n"
-"はかなり奇妙です。デリファレンスは通常 `T` への参照から `T` を返します。\n"
-"への参照から `T` を返します。しかし、ドット演算子は暗黙的に\n"
-"のメソッドを検索することになります。\n"
-"のメソッドを検索することになります。"
+"これは (例えば `*` を使い) `Bar` を参照外しすると、 `Foo` が返されるというこ"
+"とになります。\n"
+"これはかなり奇怪なことです。\n"
+"参照外しは通常 `T` の参照に対して `T` を返します。\n"
+"例で扱っているのは２つの関連しない型です。\n"
+"しかしながら、ドット演算子は暗黙的な参照外しを行うため、\n"
+"メソッド呼び出しは `Bar` に対してと同様に `Foo` のメソッドを検索することにな"
+"ります。"
 
 #: src/anti_patterns/deref.md:71
-#, fuzzy
 msgid "You save a little boilerplate, e.g.,"
-msgstr "ちょっとした定型文を節約できます、"
+msgstr "ちょっとしたボイラーテンプレートを省けます。例えは、"
 
 #: src/anti_patterns/deref.md:73
-#, fuzzy
 msgid ""
 "```rust,ignore\n"
 "impl Bar {\n"
@@ -8802,7 +8788,7 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
-"錆、無視\n"
+"```rust,ignore\n"
 "impl Bar {\n"
 "    fn m(&self) {\n"
 "        self.f.m()\n"
@@ -8811,7 +8797,6 @@ msgstr ""
 "```"
 
 #: src/anti_patterns/deref.md:83
-#, fuzzy
 msgid ""
 "Most importantly this is a surprising idiom - future programmers reading "
 "this in\n"
@@ -8821,14 +8806,14 @@ msgid ""
 "because\n"
 "the mechanism here is completely implicit."
 msgstr ""
-"最も重要なことは、これは驚くべきイディオムであるということです。\n"
-"コードでこれを読む将来のプログラマーは、このようなことが起こるとは思わないで"
-"しょう。それは、私たちが `Deref`\n"
-"の特性を間違って使っているからです。また\n"
-"このメカニズムは完全に暗黙的なものだからです。"
+"最も重要なことは、これは人を驚かせるイディオムであるということです - \n"
+"コードのこれを読む後のプログラマーは、このようなことが起こるとは思わないで"
+"しょう。\n"
+"これは私たちが `Deref` トレイトを、その意図(およびドキュメント等)に反して、誤"
+"用しているからです。\n"
+"またこのメカニズムは完全に暗黙的なものだからです。"
 
 #: src/anti_patterns/deref.md:88
-#, fuzzy
 msgid ""
 "This pattern does not introduce subtyping between `Foo` and `Bar` like\n"
 "inheritance in Java or C++ does. Furthermore, traits implemented by `Foo` "
@@ -8837,18 +8822,30 @@ msgid ""
 "with\n"
 "bounds checking and thus generic programming."
 msgstr ""
-"このパターンでは、JavaやC++の継承のように`Foo`と`Bar`の間にサブタイプは導入さ"
-"れません。\n"
-"や C++ の継承のように、`Foo` と `Bar` の間に部分型を導入することはありませ"
-"ん。さらに、 `Foo` で実装された trait は自動的に `Bar` で実装されるわけではあ"
-"りません。\n"
-"で実装された trait は自動的に `Bar` に実装されるわけではないので、このパター"
-"ンは境界チェックや\n"
-"そのため、このパターンは境界チェックやジェネリックプログラミングとの相互作用"
-"が悪くなります。"
+"このパターンでは、JavaやC++の継承のように`Foo` と `Bar` の間に部分型を導入す"
+"ることはありません。\n"
+"さらに、 `Foo` で実装された trait は自動的に `Bar` で実装されるわけではありま"
+"せん。\n"
+"そのため、このパターンは境界チェックと相性が悪くなり、それゆえにジェネリック"
+"プログラミングとの相性も悪くなります。"
 
+# 2023/8/20 訳中思考メモ：
+# いまいち意味がとれていない。どういうこと？
+# (A)ほとんどのOO言語では：
+# self (java なら this) は
+# 「サブクラスへの参照」？そう？・・・うーん。
+# 定義されているクラス、およびそのサブクラスへの参照というならわかる気はする。
+# (B)このパターンでは：
+# 「メソッドが定義されているクラス」。
+# implしたstructで、ここではstructをクラスのように扱おうとしているのだから、ここだけなら、まぁ理解はできるような。
+# (A)との対比を考える。
+# `Foo` の impl 時の self は あくまで `Foo` である。
+# これはパターンの意図するサブタイプ（を deref で模倣したもの)、これを含めた表現になっていない、という感じかな。
+# `Bar` が `Foo` のサブタイプもどきのつもりだが、`Foo` の impl 内の self はサブタイプを含めた表現でない。
+# これが表にでてくる状況はまずそうそうないんだろう。リフレクションとか出てくると影響しそうではある。
+# いずれにせよ、動きだけ模倣して、意味的には異なる状態といのは、危うい。
+# 言語仕様的なものと異なる意味を持たせると、理解しにくいだけでなく、言語仕様上の意味を前提にした言語拡張や第三者のライブラリ等々と組み合わせられなくなる。
 #: src/anti_patterns/deref.md:93
-#, fuzzy
 msgid ""
 "Using this pattern gives subtly different semantics from most OO languages "
 "with\n"
@@ -8856,14 +8853,12 @@ msgid ""
 "this\n"
 "pattern it will be the 'class' where the method is defined."
 msgstr ""
-"このパターンを使うと、`self`に関して、ほとんどのOO言語とは微妙に異なるセマン"
-"ティクスが得られます。\n"
-"self`に関して、ほとんどのOO言語とは微妙に異なるセマンティクスを与えます。通常"
-"はサブクラスへの参照のままです。\n"
-"パターンではメソッドが定義されている 'クラス' になります。"
+"このパターンを使うことは、`self`に関して、ほとんどのOO言語とは微妙に異なるセ"
+"マンティクスを与えます。\n"
+"通常はこれはサブクラスに対する参照のままですが、このパターンではメソッドが定"
+"義されている「クラス」に対するものになります。"
 
 #: src/anti_patterns/deref.md:97
-#, fuzzy
 msgid ""
 "Finally, this pattern only supports single inheritance, and has no notion "
 "of\n"
@@ -8873,17 +8868,13 @@ msgid ""
 "Java\n"
 "inheritance, etc."
 msgstr ""
-"最後に、このパターンは単一継承のみをサポートし、インターフェイスの概念はあり"
-"ません。\n"
-"インターフェイス、クラスベースのプライバシー、その他の継承に関連する機能はあ"
-"りません。そのため\n"
-"Javaの継承などに慣れているプログラマにとっては、微妙に驚くような体験になるで"
-"しょう。\n"
-"継承などに慣れているプログラマにとっては、微妙に驚くような経験をすることにな"
-"ります。"
+"最後に、このパターンは単一継承のみをサポートし、インターフェイス、クラスベー"
+"スのプライバシー、\n"
+"その他の継承に関連する機能はありません。\n"
+"そのためJavaの継承などに慣れているプログラマにとっては、微妙に驚くような経験"
+"をすることになります。"
 
 #: src/anti_patterns/deref.md:104
-#, fuzzy
 msgid ""
 "There is no one good alternative. Depending on the exact circumstances it "
 "might\n"
@@ -8898,21 +8889,19 @@ msgid ""
 "and this [RFC issue](https://github.com/rust-lang/rfcs/issues/349) for more "
 "details."
 msgstr ""
-"良い選択肢は一つもありません。状況によっては\n"
-"にディスパッチするためのファサードメソッドを手作業で書き出すほうがよいかもし"
-"れません。\n"
-"にディスパッチするためのファサードメソッドを手作業で書き出す方が良いかもしれ"
-"ません。このような継承の仕組みをRustに追加する予定です。\n"
-"に似た継承の仕組みをRustに追加する予定です。\n"
-"に到達するまでにはまだ時間がかかりそうです。ブログ](http://aturon.github.io/"
-"blog/2015/09/18/reuse/)\n"
-"[投稿](http://smallcultfollowing.com/babysteps/blog/2015/10/08/virtual-"
+"唯一の良い代替案はありません。\n"
+"それぞれの状況によっては\n"
+"トレイトを再実装するのがよいかもしれませんし、または手動で `Foo` にディスパッ"
+"チするファサードメソッドを書くのがよいかもしれません。\n"
+"このような継承の仕組みがRustに追加されようとしていますが、しかし安定版の "
+"Rust に至るまでに時間がかかりそうです。\n"
+"詳細は [blog](http://aturon.github.io/blog/2015/09/18/reuse/)\n"
+"[posts](http://smallcultfollowing.com/babysteps/blog/2015/10/08/virtual-"
 "structs-part-4-extended-enums-and-thin-traits/)\n"
-"およびこの [RFC issue](https://github.com/rust-lang/rfcs/issues/349) を参照し"
-"てください。"
+"や [RFC issue](https://github.com/rust-lang/rfcs/issues/349) \n"
+"を参照してください。"
 
 #: src/anti_patterns/deref.md:112
-#, fuzzy
 msgid ""
 "The `Deref` trait is designed for the implementation of custom pointer "
 "types.\n"
@@ -8920,15 +8909,13 @@ msgid ""
 "between different types. It is a shame that this isn't (probably cannot be)\n"
 "enforced by the trait definition."
 msgstr ""
-"Deref` 特性はカスタムポインタ型の実装のために設計されています。\n"
-"これは、ポインタから `T` を `T` に変換するもので、異なる型間の変換を行うもの"
-"ではありません。\n"
-"へのポインタを `T` に変換することを意図しています。これが（おそらくできない）"
-"のは残念です。\n"
-"によって強制されないのは残念です。"
+"`Deref` トレイトはカスタムポインタ型の実装のために設計されています。\n"
+"これは、`T` へのポインタを `T` に変換するもので、異なる型間の変換を行うもので"
+"はありません。\n"
+"このことをトレイトの定義により強制されない（おそらくはできない）のは残念で"
+"す。"
 
 #: src/anti_patterns/deref.md:117
-#, fuzzy
 msgid ""
 "Rust tries to strike a careful balance between explicit and implicit "
 "mechanisms,\n"
@@ -8940,15 +8927,14 @@ msgid ""
 "conversion between arbitrary types."
 msgstr ""
 "Rustは、明示的なメカニズムと暗黙的なメカニズムのバランスを慎重に取ろうとして"
-"います、\n"
-"型間の明示的な変換を優先します。ドット\n"
-"演算子での自動再参照は、人間工学的に暗黙的な機構を強く支持するケースです、\n"
-"しかし、これは間接的なものに限定されており、任意の型間の変換を行うものではあ"
-"りません。\n"
-"任意の型間の変換ではありません。"
+"います。\n"
+"そして型間の変換では明示的な変換を支持しています。\n"
+"ドット演算子での自動参照外しは、人間工学的に暗黙的なメカニズムを強く支持する"
+"ケースですが、\n"
+"これは間接的な程度に限定されており、任意の型間の変換を行うものではありませ"
+"ん。"
 
 #: src/anti_patterns/deref.md:125
-#, fuzzy
 msgid ""
 "- [Collections are smart pointers idiom](../idioms/deref.md).\n"
 "- Delegation crates for less boilerplate like [delegate](https://crates.io/"
@@ -8957,17 +8943,16 @@ msgid ""
 "- [Documentation for `Deref` trait](https://doc.rust-lang.org/std/ops/trait."
 "Deref.html)."
 msgstr ""
-"- [Collections are smart pointers idiom](../idioms/deref.md).\n"
-"- delegate](https://crates.io/crates/delegate)のような、より定型的でないデリ"
-"ゲーション・クレート。\n"
-"  または [ambassador](https://crates.io/crates/ambassador)\n"
-"- [Deref` 特性のドキュメント](https://doc.rust-lang.org/std/ops/trait.Deref."
-"html)."
+"- イディオムの [スマートポインタとしてのコレクション](../idioms/deref.md)。\n"
+"- [delegate](https://crates.io/crates/delegate)や[ambassador](https://crates."
+"io/crates/ambassador)ような、ボイラーテンプレートを減らすデリゲーション"
+"crate。\n"
+"- [`Deref` トレイトのドキュメント](https://doc.rust-lang.org/std/ops/trait."
+"Deref.html)."
 
 #: src/functional/index.md:1
-#, fuzzy
 msgid "# Functional Usage of Rust"
-msgstr "# ラストの機能的使用法"
+msgstr "# Rustの関数型の使用法"
 
 #: src/functional/index.md:3
 #, fuzzy
