@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-09-02 17:33+0900\n"
+"PO-Revision-Date: 2023-09-03 20:10+0900\n"
 "Last-Translator: ashiojin@gmail.com\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -10101,8 +10101,8 @@ msgid ""
 "Rather than implementing a trait on each type, all matching structures can\n"
 "simply be accessed the same way."
 msgstr ""
-"しかし、Lens は、顧客IDをサポートするコードを、_型_ から_アクセッサ関数_ に移"
-"すことを可能にします。\n"
+"しかし、Lens は、顧客IDをサポートするコードを、_型_ から _アクセッサ関数_ に"
+"移すことを可能にします。\n"
 "それぞれの型に trait を実装するのではなく、すべてのマッチする構造体に同じ方法"
 "でアクセスすることができるようになります。"
 
@@ -10401,8 +10401,8 @@ msgid ""
 "model,\n"
 "which are represented by its associated `Value` type."
 msgstr ""
-"`Visitor`型の仕事は_Serde_データモデルの中に、関連付けられた `Value` 型によっ"
-"て表現される値を構築することです。"
+"`Visitor` 型の仕事は _Serde_ データモデルの中に、関連付けられた `Value` 型に"
+"よって表現される値を構築することです。"
 
 #: src/functional/lenses.md:235
 msgid ""
@@ -10414,8 +10414,9 @@ msgstr ""
 "失敗した場合は `Error` 型を返します。\n"
 "`Deserializer` によって、メソッドが呼び出されたときに決定されたエラー型です。"
 
+# 最後の `Value` トレイトって、 `Visitor` トレイトの誤記じゃない？ `Value` はトレイトじゃない・・・よね？
+# うーん保留。
 #: src/functional/lenses.md:239
-#, fuzzy
 msgid ""
 "This highlights that `Deserializer` is similar to `CustomerId` from "
 "earlier,\n"
@@ -10425,52 +10426,44 @@ msgid ""
 "The `Value` trait is acting like a lens in functional programming languages."
 msgstr ""
 "これは `Deserializer` が先ほどの `CustomerId` と似ていることを強調していま"
-"す、\n"
-"を実装したフォーマットパーサであれば、そのパーサがパースした内容に基づいて "
-"`Value` を作成することができます。\n"
-"を生成することができます。\n"
-"Value` 特性は関数型プログラミング言語におけるレンズのようなものです。"
+"す。\n"
+"つまり、このトレイトを実装するあらゆるフォーマットのパーサは、それが何をパー"
+"スするかに基づいて `Value` を作成することが可能です。\n"
+"`Value` トレイトは関数型プログラミング言語における lens のように振舞います。"
 
 #: src/functional/lenses.md:244
-#, fuzzy
 msgid ""
 "But unlike the `CustomerId` trait, the return types of `Visitor` methods "
 "are\n"
 "_generic_, and the concrete `Value` type is _determined by the Visitor "
 "itself_."
 msgstr ""
-"しかし、 `CustomerId` 特性と異なり、 `Visitor` メソッドの戻り値の型は "
+"しかし、 `CustomerId` トレイトと異なり、 `Visitor` メソッドの戻り値の型は "
 "_generic_ です。\n"
-"一般的なもので、具体的な `Value` の型は Visitor 自身によって決まります。"
+"そして、具体的な `Value` の型は _Visitor 自身によって決定_ します。"
 
 #: src/functional/lenses.md:247
-#, fuzzy
 msgid ""
 "Instead of acting as one lens, it effectively acts as a family of\n"
 "lenses, one for each concrete type of `Visitor`."
 msgstr ""
-"つのレンズとして機能するのではなく、事実上、レンズのファミリーとして機能しま"
-"す。\n"
-"レンズのファミリーとして機能します。"
+"1つの lens として機能するのではなく、 `Visitor` の具体的な型すべてのための、"
+"lens のファミリーとして実質的には機能します。"
 
 #: src/functional/lenses.md:250
-#, fuzzy
 msgid ""
 "The `Deserializer` API is based on having a generic set of \"lenses\" work "
 "across\n"
 "a set of other generic types for \"observation\".\n"
 "It is a _prism_."
 msgstr ""
-"デシリアライザーのAPIは、\"レンズ \"の一般的なセットが、\"観察 \"のために他の"
-"一般的なタイプ\n"
-"観察 \"のために他の一般的な型のセットをまたいで動作させることに基づいていま"
-"す。\n"
-"これは_prism_です。"
+"`Deserializer` のAPIは、「観察」のために、ジェネリックな「lens」の集合を\n"
+"他のジェネリックな型の集合に対して動作させることに基づいています。\n"
+"これが _prism_ です。"
 
 #: src/functional/lenses.md:254
-#, fuzzy
 msgid "For example, consider the identity record from earlier but simplified:"
-msgstr "例えば、先ほどのID記録を単純化して考えてみましょう："
+msgstr "例えば、先ほどのIDレコードを単純化して考えてみましょう："
 
 #: src/functional/lenses.md:256
 #, fuzzy
