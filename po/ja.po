@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2023-09-03 20:10+0900\n"
+"PO-Revision-Date: 2023-09-10 17:37+0900\n"
 "Last-Translator: ashiojin@gmail.com\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -186,26 +186,22 @@ msgid "Functional Programming"
 msgstr "関数型プログラミング"
 
 #: src/SUMMARY.md:50
-#, fuzzy
 msgid "Programming paradigms"
-msgstr "プログラミング・パラダイム"
+msgstr "プログラミングパラダイム"
 
 #: src/SUMMARY.md:51
-#, fuzzy
 msgid "Generics as Type Classes"
 msgstr "型クラスとしてのジェネリック"
 
 #: src/SUMMARY.md:52
-#, fuzzy
 msgid "Lenses and Prisms"
-msgstr "レンズとプリズム"
+msgstr "Lens と Prism"
 
 #: src/SUMMARY.md:54
 msgid "Additional Resources"
 msgstr "追加リソース"
 
 #: src/SUMMARY.md:55
-#, fuzzy
 msgid "Design principles"
 msgstr "設計原則"
 
@@ -9628,7 +9624,7 @@ msgstr ""
 msgid ""
 "With this approach, if the user were to make a mistake and use the wrong\n"
 "type;"
-msgstr "このアプローチでは、もしユーザが間違えて異なる型を使ってしまったとき："
+msgstr "このアプローチでは、もしユーザが間違えて異なる型を使ってしまったとき；"
 
 #: src/functional/generics-type-classes.md:193
 msgid ""
@@ -9866,7 +9862,7 @@ msgstr ""
 
 #: src/functional/lenses.md:1
 msgid "# Lenses and Prisms"
-msgstr "# Lenses と Prisms"
+msgstr "# Lens と Prism"
 
 #: src/functional/lenses.md:3
 msgid ""
@@ -9977,7 +9973,7 @@ msgid ""
 msgstr ""
 "どちらの型も、個人に対応する顧客ID番号を持っていることに注目してください。\n"
 "1つの関数が、異なる型である両レコードを処理するには、どうすればよいでしょう"
-"か。"
+"か？"
 
 #: src/functional/lenses.md:50
 msgid ""
@@ -10466,7 +10462,6 @@ msgid "For example, consider the identity record from earlier but simplified:"
 msgstr "例えば、先ほどのIDレコードを単純化して考えてみましょう："
 
 #: src/functional/lenses.md:256
-#, fuzzy
 msgid ""
 "```json\n"
 "{ \"name\": \"Jane Doe\",\n"
@@ -10474,23 +10469,21 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
-"``json\n"
-"{ \"name\"：\"Jane Doe\"、\n"
-"  \"customer_id\"：1048576332,\n"
+"```json\n"
+"{ \"name\": \"Jane Doe\",\n"
+"  \"customer_id\": 1048576332,\n"
 "}\n"
 "```"
 
 #: src/functional/lenses.md:262
-#, fuzzy
 msgid ""
 "How would the _Serde_ library deserialize this JSON into `struct "
 "CreditRecord`?"
 msgstr ""
-"Serde_ライブラリはこのJSONをどのように`struct CreditRecord`にデシリアライズし"
-"ますか？"
+"_Serde_ ライブラリはこのJSONをどのように `struct CreditRecord` にデシリアライ"
+"ズするでしょうか？"
 
 #: src/functional/lenses.md:264
-#, fuzzy
 msgid ""
 "1. The user would call a library function to deserialize the data. This "
 "would\n"
@@ -10503,24 +10496,22 @@ msgid ""
 "not,\n"
 "   raise an error to indicate deserialization has failed."
 msgstr ""
-"1.ユーザーはライブラリ関数を呼び出してデータをデシリアライズします。これは\n"
-"   JSON フォーマットに基づいた `Deserializer` を作成します。\n"
-"1.構造体のフィールドに基づいて、一般的なデータ型の各データ型を作成する方法を"
-"知っている `Visitor` が作成されます。\n"
-"   を作成することになります。\n"
-"   型（`u64` と `String`）を作成する方法を知っています。\n"
-"1.デシリアライザはアイテムをパースするときに `Visitor` を呼び出します。\n"
-"1.Visitor` は見つかったアイテムが期待されたものであるかどうかを示し、期待され"
-"たものでない場合はエラーを発生させます、\n"
-"   デシリアライズに失敗したことを示すエラーを発生させます。"
+"1. ユーザーはライブラリ関数を呼び出してデータをデシリアライズします。これは\n"
+"   JSON のフォーマットに基づいた `Deserializer` を作成します。\n"
+"1. 構造体のフィールドに基づいてそれを表現するのに必要となる汎用データモデルの"
+"各型(`u64` と `String`)の作成方法を知っている `Visitor` が作成(詳細は後述)さ"
+"れます。\n"
+"1. デシリアライザはアイテムをパースする際に `Visitor` を呼び出します。\n"
+"1. `Visitor` は見つかったアイテムが期待されたものであるかどうかを判定し、\n"
+"   期待されたものでない場合はデシリアライズに失敗したことを示すエラーを発生さ"
+"せます。"
 
 #: src/functional/lenses.md:273
-#, fuzzy
 msgid "For our very simple structure above, the expected pattern would be:"
-msgstr "上記の非常に単純な構造の場合、予想されるパターンは次のようになります："
+msgstr ""
+"上記の非常に単純な構造体の場合、期待されるパターンは次のようになります："
 
 #: src/functional/lenses.md:275
-#, fuzzy
 msgid ""
 "1. Visit a map (_Serde_'s equvialent to `HashMap` or JSON's dictionary).\n"
 "1. Visit a string key called \"name\".\n"
@@ -10529,43 +10520,36 @@ msgid ""
 "1. Visit a string value, which will go into the `customer_id` field.\n"
 "1. Visit the end of the map."
 msgstr ""
-"1.マップ（_Serde_ の `HashMap` や JSON の辞書に相当するもの）にアクセスしま"
-"す。\n"
-"1.name \"という文字列キーにアクセスします。\n"
-"1.name`フィールドに入る文字列の値にアクセスします。\n"
-"1.customer_id \"という文字列キーにアクセスします。\n"
-"1.customer_id`フィールドに入る文字列の値にアクセスします。\n"
-"1.マップの最後にアクセスします。"
+"1. map（ _Serde_ の `HashMap` や JSON のディクショナリに相当するもの）を訪問"
+"します。\n"
+"1. \"name\" という文字列キーを訪問します。\n"
+"1. `name` フィールドに入る文字列の値を訪問します。\n"
+"1. \"customer_id\" という文字列キーを訪問します。\n"
+"1. `customer_id` フィールドに入る文字列の値を訪問します。\n"
+"1. map の終端を訪問します。"
 
 #: src/functional/lenses.md:282
-#, fuzzy
 msgid "But what determines which \"observation\" pattern is expected?"
 msgstr ""
-"しかし、どの \"観測 \"パターンが期待されるかは、何によって決まるのでしょう"
-"か？"
+"しかし、どの「観察」パターンが期待されるかは、何によって決まるのでしょうか？"
 
 #: src/functional/lenses.md:284
-#, fuzzy
 msgid ""
 "A functional programming language would be able to use currying to create\n"
 "reflection of each type based on the type itself.\n"
 "Rust does not support that, so every single type would need to have its own\n"
 "code written based on its fields and their properties."
 msgstr ""
-"関数型プログラミング言語であれば、カリー（currying）を使って、型自体に基づい"
-"た各型の\n"
-"を作成することができます。\n"
+"関数型プログラミング言語であれば、カリー化を使って、型自体に基づいた各型のリ"
+"フレクションを作成できるでしょう。\n"
 "Rustはそれをサポートしていないため、すべての型が、そのフィールドとプロパティ"
-"に基づいて独自の\n"
-"コードを書く必要があります。"
+"に基づいて独自のコードを書く必要があります。"
 
 #: src/functional/lenses.md:289
-#, fuzzy
 msgid "_Serde_ solves this usability challenge with a derive macro:"
-msgstr "Serde_はderiveマクロでこの使い勝手の問題を解決します："
+msgstr "_Serde_ はderiveマクロでこの使い勝手の問題を解決します："
 
 #: src/functional/lenses.md:291
-#, fuzzy
 msgid ""
 "```rust,ignore\n"
 "use serde::Deserialize;\n"
@@ -10577,33 +10561,29 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
-"錆、無視\n"
-"serde::Deserialize を使用します；\n"
+"```rust,ignore\n"
+"use serde::Deserialize;\n"
 "\n"
-"#[derive(Deserialize)] を参照してください。\n"
+"#[derive(Deserialize)]\n"
 "struct IdRecord {\n"
-"    name: 文字列、\n"
-"    customer_id：文字列、\n"
+"    name: String,\n"
+"    customer_id: String,\n"
 "}\n"
 "```"
 
 #: src/functional/lenses.md:301
-#, fuzzy
 msgid ""
 "That macro simply generates an impl block causing the struct to implement a\n"
 "trait called `Deserialize`."
 msgstr ""
-"このマクロは、単に struct に `Deserialize` という trait を実装させる impl ブ"
-"ロックを生成します。\n"
-"という trait を実装させます。"
+"このマクロは単に、構造体に `Deserialize` と呼ばれるトレイトを実装させる impl"
+"ブロックを生成します。"
 
 #: src/functional/lenses.md:304
-#, fuzzy
 msgid "It is defined this way:"
-msgstr "このように定義されています："
+msgstr "それはこのように定義されています："
 
 #: src/functional/lenses.md:306
-#, fuzzy
 msgid ""
 "```rust,ignore\n"
 "pub trait Deserialize<'de>: Sized {\n"
@@ -10613,16 +10593,15 @@ msgid ""
 "}\n"
 "```"
 msgstr ""
-"錆、無視\n"
+"```rust,ignore\n"
 "pub trait Deserialize<'de>: Sized {\n"
 "    fn deserialize<D>(deserializer: D) -> Result<Self, D::Error>\n"
 "    where\n"
-"        D: Deserializer<'de> ；\n"
+"        D: Deserializer<'de>;\n"
 "}\n"
 "```"
 
 #: src/functional/lenses.md:314
-#, fuzzy
 msgid ""
 "This is the function that determines how to create the struct itself.\n"
 "Code is generated based on the struct's fields.\n"
@@ -10633,15 +10612,11 @@ msgid ""
 msgstr ""
 "これは、構造体自体の作成方法を決定する関数です。\n"
 "コードは構造体のフィールドに基づいて生成されます。\n"
-"構文解析ライブラリが呼び出されると（この例では JSON 構文解析ライブラリ）、"
-"`Deserializer` が作成され、それを使用して `Type::deserialize` が呼び出されま"
-"す。\n"
-"が呼び出されると、`Deserializer` が作成され、それをパラメータとして `Type::"
-"deserialize` が呼び出されます。\n"
-"を呼び出します。"
+"構文解析ライブラリが呼び出されると(この例では JSON 構文解析ライブラリ)、\n"
+"`Deserializer` が作成され、それをパラメータとして `Type::deserialize` が呼び"
+"出されます。"
 
 #: src/functional/lenses.md:320
-#, fuzzy
 msgid ""
 "The `deserialize` code will then create a `Visitor` which will have its "
 "calls\n"
@@ -10650,14 +10625,11 @@ msgid ""
 "corresponding to the type being parsed and return it."
 msgstr ""
 "そして `deserialize` コードは `Visitor` を作成し、その呼び出しは "
-"`Deserializer` によって \"refract\" されます。\n"
-"その呼び出しは `Deserializer` によって \"refracted\" されます。\n"
+"`Deserializer` によって 「屈折」 されます。\n"
 "すべてがうまくいけば、最終的に `Visitor` はパースされた型に対応する値を構築"
-"し、それを返します。\n"
-"を作成し、それを返します。"
+"し、それを返します。"
 
 #: src/functional/lenses.md:325
-#, fuzzy
 msgid ""
 "For a complete example, see the [_Serde_ documentation](https://serde.rs/"
 "deserialize-struct.html)."
@@ -10666,12 +10638,10 @@ msgstr ""
 "struct.html) を参照してください。"
 
 #: src/functional/lenses.md:327
-#, fuzzy
 msgid "To wrap up, this is the power of _Serde_:"
-msgstr "最後に、これがセルデの力です："
+msgstr "最後に、これが _Serde_ の力です："
 
 #: src/functional/lenses.md:329
-#, fuzzy
 msgid ""
 "1. The structure being parsed is represented by an `impl` block for "
 "`Deserialize`\n"
@@ -10682,15 +10652,13 @@ msgid ""
 "`Visitor`\n"
 "   calls which actually build the data value"
 msgstr ""
-"1.パースされる構造は `Deserialize` 用の `impl` ブロックで表現されます。\n"
-"1.入力データフォーマット（例えば JSON）は `Deserializer` の\n"
-"   によって呼び出されます。\n"
-"1.この `Deserializer` はプリズムのように動作し、レンズのような `Visitor` 呼び"
-"出しを \"屈折\" させます。\n"
-"   を呼び出します。"
+"1. パースされる構造体は `Deserialize` 用の `impl` ブロックで表現されます。\n"
+"1. 入力データのフォーマット (例えば JSON) は、`Deserialize` によって呼び出さ"
+"れる `Deserializer` によって表現されます。\n"
+"1. `Deserializer` は prism のように動作します。これは lens ライクな "
+"`Visitor` 呼び出しを \"屈折\" させます。これが実際にデータ値を構築します。"
 
 #: src/functional/lenses.md:335
-#, fuzzy
 msgid ""
 "The result is that types to be deserialized only implement the \"top layer\" "
 "of\n"
@@ -10699,17 +10667,12 @@ msgid ""
 "generic\n"
 "types will bridge them."
 msgstr ""
-"その結果、デシリアライズされる型はAPIの \"トップ・レイヤー \"のみを実装し、"
-"ファイル・フォーマットは \"ボトム・レイヤー \"のみを実装すればよいことになり"
-"ます。\n"
-"デシリアライズされる型はAPIの \"トップレイヤー \"のみを実装し、ファイルフォー"
-"マットは \"ボトムレイヤー \"のみを実装すればよいということです。\n"
-"その結果、デシリアライズされる型はAPIの \"最上層 \"のみを実装し、ファイル"
-"フォーマットは \"最下層 \"のみを実装すればよくなります。\n"
-"型がそれらの橋渡しをしてくれるからです。"
+"その結果、デシリアライズされる型はAPIの 「トップレイヤー」 のみを実装し、ファ"
+"イルフォーマットは 「ボトムレイヤー」 のみを実装すればよいことになります。\n"
+"各ピースは残りのエコシステムと、ジェネリック型がそれらの橋渡しをするために、"
+"「ただそれだけで動作する」ことができる。"
 
 #: src/functional/lenses.md:340
-#, fuzzy
 msgid ""
 "To emphasize, the only reason this model works on any format and any type "
 "is\n"
@@ -10720,34 +10683,29 @@ msgid ""
 "This was not true in the account example earlier."
 msgstr ""
 "強調しておきますが、このモデルがどのようなフォーマットでもどのような型でも動"
-"作する唯一の理由は\n"
-"なぜなら `Deserializer` 特性の出力型は **渡される `Visitor` の実装者によって"
-"指定されるからです。\n"
-"の実装者によって指定されるからです。\n"
-"の実装者によって指定されるからです。\n"
-"これは先ほどの口座の例では当てはまりませんでした。"
+"作する唯一の理由は、\n"
+"`Deserializer` トレイトのアウトプット型が、\n"
+"ある特定の型に縛れれるのではなく、\n"
+" **渡される `Visitor` の実装によって特定される** からです。\n"
+"これは前述の口座の例では当てはまりませんでした。"
 
 #: src/functional/lenses.md:346
-#, fuzzy
 msgid ""
 "Rust's generic-inspired type system can bring it close to these concepts "
 "and\n"
 "use their power, as shown in this API design.\n"
 "But it may also need procedural macros to create bridges for its generics."
 msgstr ""
-"Rustのジェネリックにインスパイアされた型システムは、このAPI設計に示されている"
-"ように、これらの概念に近づけ、その力を利用することができます。\n"
-"このAPI設計で示されているように、その力を利用することができます。\n"
-"しかし、ジェネリックのためのブリッジを作成するための手続き型マクロも必要かも"
-"しれません。"
+"Rustのもつジェネリックにインスパイアされた型システムは、このAPI設計にて示され"
+"ているように、これら概念に近づき、その力を利用することを可能にします\n"
+"ただし、このジェネリックの橋渡しをするために、手続き型マクロも必要になる場合"
+"があります。"
 
 #: src/functional/lenses.md:350
-#, fuzzy
 msgid "## See Also"
 msgstr "## See Also"
 
 #: src/functional/lenses.md:352
-#, fuzzy
 msgid ""
 "- [lens-rs crate](https://crates.io/crates/lens-rs) for a pre-built lenses\n"
 "  implementation, with a cleaner interface than these examples\n"
@@ -10769,54 +10727,45 @@ msgid ""
 "  Accessors](https://web.archive.org/web/20220701102832/https://arxiv.org/"
 "ftp/arxiv/papers/1703/1703.10857.pdf)"
 msgstr ""
-"- [lens-rs crate](https://crates.io/crates/lens-rs)は、これらの例よりもすっき"
-"りとしたインターフェイスを持つ、あらかじめ組み込まれたレンズの実装です。\n"
-"  を実装しています。\n"
-"- [serde](https://serde.rs)そのものです。\n"
-"  を理解することなく、エンドユーザー (構造体の定義など) がこれらの概念を直感"
-"的に理解できるようにします。\n"
-"  詳細\n"
+"- [lens-rs クレート](https://crates.io/crates/lens-rs)は、これらの例よりも"
+"すっきりとしたインターフェイスを持つ、プレビルドなlensの実装です。\n"
+"- [serde](https://serde.rs)、これらのコンセプトをエンドユーザが、詳細を知るこ"
+"となく、直感的に理解可能にします(構造体の定義など)。\n"
 "- [luminance](https://github.com/phaazon/luminance-rs)は、レンズAPIの設計を使"
-"用した、コンピュータグラフィックスを描画するためのクレートです。\n"
-"  レンズ API デザインを使用するコンピュータグラフィックス用のクレートです。\n"
-"  汎用のまま、異なるピクセルタイプのバッファのための完全なプリズムを作成しま"
-"す。\n"
-"- [Scala におけるレンズについての記事](https://web.archive.org/"
+"用した、コンピュータグラフィックスを描画するためのクレートです。手続き型マク"
+"ロを持ちます。マクロは、汎用的なまま、異なるピクセルタイプのバッファに対し"
+"て、完全なprismを作成します。\n"
+"- [Scala における lens についての記事](https://web.archive.org/"
 "web/20221128185849/https://medium.com/zyseme-technology/functional-"
 "references-lens-and-other-optics-in-scala-e5f7e2fdafe)\n"
-"  Scalaの専門知識がなくても非常に読みやすいものです。\n"
-"- 論文プロファンクタ光学系．モジュラーデータ\n"
-"  アクセサ](https://web.archive.org/web/20220701102832/https://arxiv.org/ftp/"
-"arxiv/papers/1703/1703.10857.pdf)"
+"  はScalaの専門知識がなくても非常に読みやすいものです。\n"
+"- [論文： Profunctor Optics: Modular Data\n"
+"  Accessors](https://web.archive.org/web/20220701102832/https://arxiv.org/"
+"ftp/arxiv/papers/1703/1703.10857.pdf)"
 
 #: src/functional/lenses.md:365
-#, fuzzy
 msgid ""
 "[School of Haskell: A Little Lens Starter Tutorial](https://web.archive.org/"
 "web/20221128190041/https://www.schoolofhaskell.com/school/to-infinity-and-"
 "beyond/pick-of-the-week/a-little-lens-starter-tutorial)"
 msgstr ""
-"[Haskellの学校：小さなレンズ・スターター・チュートリアル](https://web."
-"archive.org/web/20221128190041/https://www.schoolofhaskell.com/school/to-"
-"infinity-and-beyond/pick-of-the-week/a-little-lens-starter-tutorial)"
+"(https://web.archive.org/web/20221128190041/https://www.schoolofhaskell.com/"
+"school/to-infinity-and-beyond/pick-of-the-week/a-little-lens-starter-"
+"tutorial)"
 
 #: src/additional_resources/index.md:1
-#, fuzzy
 msgid "# Additional resources"
-msgstr "# その他のリソース"
+msgstr "# 追加リソース"
 
 #: src/additional_resources/index.md:3
-#, fuzzy
 msgid "A collection of complementary helpful content"
 msgstr "補完的なお役立ちコンテンツ集"
 
 #: src/additional_resources/index.md:5
-#, fuzzy
 msgid "## Talks"
-msgstr "## Talks"
+msgstr "## トーク"
 
 #: src/additional_resources/index.md:7
-#, fuzzy
 msgid ""
 "- [Design Patterns in Rust](https://www.youtube.com/watch?v=Pm_oO0N5B9k) by\n"
 "  Nicholas Cameron at the PDRust (2016)\n"
@@ -10827,42 +10776,37 @@ msgid ""
 "by\n"
 "  Nicholas Cameron at LinuxConfAu (2018)"
 msgstr ""
-"- [Rustのデザインパターン](https://www.youtube.com/watch?v=Pm_oO0N5B9k) by\n"
-"  ニコラス・キャメロン＠PDRust (2016)\n"
-"- [Rustでイディオマティックなライブラリを書く](https://www.youtube.com/watch?"
+"- [Design Patterns in Rust](https://www.youtube.com/watch?v=Pm_oO0N5B9k) by\n"
+"  Nicholas Cameron at the PDRust (2016)\n"
+"- [Writing Idiomatic Libraries in Rust](https://www.youtube.com/watch?"
 "v=0zOg8_B71gE)\n"
 "  by Pascal Hertleif at RustFest (2017)\n"
-"- [Rustプログラミングテクニック](https://www.youtube.com/watch?"
-"v=vqavdUGKeb4)\n"
-"  ニコラス・キャメロン at LinuxConfAu (2018)"
+"- [Rust Programming Techniques](https://www.youtube.com/watch?v=vqavdUGKeb4) "
+"by\n"
+"  Nicholas Cameron at LinuxConfAu (2018)"
 
 #: src/additional_resources/index.md:14
-#, fuzzy
 msgid "## Books (Online)"
 msgstr "## 書籍（オンライン）"
 
 #: src/additional_resources/index.md:16
-#, fuzzy
 msgid "- [The Rust API Guidelines](https://rust-lang.github.io/api-guidelines)"
-msgstr "- [Rust APIガイドライン](https://rust-lang.github.io/api-guidelines)"
+msgstr ""
+"- [The Rust API Guidelines](https://rust-lang.github.io/api-guidelines)"
 
 #: src/additional_resources/design-principles.md:1
-#, fuzzy
 msgid "# Design principles"
-msgstr "# デザインの原則"
+msgstr "# 設計原則"
 
 #: src/additional_resources/design-principles.md:3
-#, fuzzy
 msgid "## A brief overview over common design principles"
 msgstr "## 一般的な設計原則の概要"
 
 #: src/additional_resources/design-principles.md:7
-#, fuzzy
 msgid "## [SOLID](https://en.wikipedia.org/wiki/SOLID)"
-msgstr "## ♪ [SOLID](https://en.wikipedia.org/wiki/SOLID)"
+msgstr "## [SOLID](https://en.wikipedia.org/wiki/SOLID)"
 
 #: src/additional_resources/design-principles.md:9
-#, fuzzy
 msgid ""
 "- [Single Responsibility Principle (SRP)](https://en.wikipedia.org/wiki/"
 "Single-responsibility_principle):\n"
@@ -10887,32 +10831,34 @@ msgid ""
 "Dependency_inversion_principle):\n"
 "  One should \"depend upon abstractions, [not] concretions.\""
 msgstr ""
-"- [単一責任原則(SRP)](https://en.wikipedia.org/wiki/Single-"
+"- [単一責任の原則(SRP)](https://en.wikipedia.org/wiki/Single-"
 "responsibility_principle)：\n"
 "  クラスは単一の責任だけを持つべきです。\n"
-"  ソフトウェアの仕様の一部分の変更だけが、クラスの仕様に影響を与えることがで"
-"きます。\n"
-"  クラスの仕様に影響を与えることができるべきです。\n"
-"- [オープン/クローズド原則(OCP)](https://en.wikipedia.org/wiki/"
+"  すなわち、ソフトウェアの仕様の一部分の変更のみが、クラスの仕様に影響を与え"
+"ることができるべきです。\n"
+"- [開放/閉鎖原則(OCP)](https://en.wikipedia.org/wiki/"
 "Open%E2%80%93closed_principle)：\n"
-"  「ソフトウェア・エンティティは......拡張に対してはオープンであるべきです"
-"が、変更に対してはクローズドであるべきです。\n"
-"  \"。\n"
-"- [リスコフ置換原則(LSP)](https://en.wikipedia.org/wiki/"
+"  \"Software entities ... should be open for extension, but closed for\n"
+"  modification.(ソフトウェアエンティティは ... 拡張に対して開放され、変更に対"
+"して閉鎖されているべきです)\"\n"
+"- [リスコフの置換原則(LSP)](https://en.wikipedia.org/wiki/"
 "Liskov_substitution_principle)：\n"
-"  「プログラム中のオブジェクトは、そのサブタイプのインスタンスと置き換え可能"
-"であるべきです。\n"
-"  そのプログラムの正しさを変えることなく。\"\n"
+"  \"Objects in a program should be replaceable with instances of their "
+"subtypes\n"
+"  without altering the correctness of that program.(プログラム中のオブジェク"
+"トは、プログラムを修正することなく、\n"
+"  そのサブタイプのインスタンスと置き換え可能であるべきです。\"\n"
 "- [インタフェース分離の原則(ISP)](https://en.wikipedia.org/wiki/"
 "Interface_segregation_principle)：\n"
-"  \"多くのクライアント固有のインタフェースは、1つの汎用インタフェースより\n"
-"  インタフェースよりも優れている\" [Dependency Inversion Principle (ISP)]()\n"
+"  \"Many client-specific interfaces are better than one general-purpose\n"
+"  interface.(多くのクライアント固有のインタフェースは、1つの汎用インタフェー"
+"スよりも優れている)\"\n"
 "- [依存関係逆転の原則(DIP)](https://en.wikipedia.org/wiki/"
 "Dependency_inversion_principle)：\n"
-"  人は \"抽象的なものに依存すべきであり、具体的なものに依存すべきではない\"。"
+"  \"depend upon abstractions, [not] concretions.(抽象的なものに依存すべきであ"
+"り、具体的なものに依存すべきではない)\"。"
 
 #: src/additional_resources/design-principles.md:25
-#, fuzzy
 msgid ""
 "## [DRY (Don’t Repeat Yourself)](https://en.wikipedia.org/wiki/"
 "Don%27t_repeat_yourself)"
@@ -10921,22 +10867,19 @@ msgstr ""
 "Don%27t_repeat_yourself)"
 
 #: src/additional_resources/design-principles.md:27
-#, fuzzy
 msgid ""
 "\"Every piece of knowledge must have a single, unambiguous, authoritative\n"
 "representation within a system\""
 msgstr ""
-"「すべての知識は、システム内で単一の、曖昧さのない、権威ある表現を持たなけれ"
-"ばなりません。\n"
-"システム内で表現されなければならない\""
+"\"Every piece of knowledge must have a single, unambiguous, authoritative\n"
+"representation within a system(すべての知識は、システム内で単一の、曖昧さのな"
+"い、権威ある表現を持たなければなりません)\""
 
 #: src/additional_resources/design-principles.md:30
-#, fuzzy
 msgid "## [KISS principle](https://en.wikipedia.org/wiki/KISS_principle)"
 msgstr "## [KISSの原則](https://en.wikipedia.org/wiki/KISS_principle)"
 
 #: src/additional_resources/design-principles.md:32
-#, fuzzy
 msgid ""
 "most systems work best if they are kept simple rather than made "
 "complicated;\n"
@@ -10945,29 +10888,24 @@ msgid ""
 msgstr ""
 "ほとんどのシステムは、複雑にするよりもシンプルにした方がうまく機能します；\n"
 "したがって、シンプルであることが設計の重要な目標であり、不必要な複雑さは避け"
-"るべきです。\n"
-"を避けるべきです。"
+"るべきです"
 
 #: src/additional_resources/design-principles.md:36
-#, fuzzy
 msgid "## [Law of Demeter (LoD)](https://en.wikipedia.org/wiki/Law_of_Demeter)"
 msgstr "## [デメテルの法則(LoD)](https://en.wikipedia.org/wiki/Law_of_Demeter)"
 
 #: src/additional_resources/design-principles.md:38
-#, fuzzy
 msgid ""
 "a given object should assume as little as possible about the structure or\n"
 "properties of anything else (including its subcomponents), in accordance "
 "with\n"
 "the principle of \"information hiding\""
 msgstr ""
-"あるオブジェクトは、他のもの（そのサブコンポーネントを含む）の構造や特性につ"
-"いて、できる限り推測しないようにすべきです。\n"
-"情報隠蔽」の原則に従い\n"
-"\"情報隠蔽 \"の原則に従って"
+"あるオブジェクトは、（そのサブコンポーネントを含む）他のものの構造や特性につ"
+"いて、できる限り仮定を持たないようにすべきです。\n"
+"「情報隠蔽」"
 
 #: src/additional_resources/design-principles.md:42
-#, fuzzy
 msgid ""
 "## [Design by contract (DbC)](https://en.wikipedia.org/wiki/"
 "Design_by_contract)"
@@ -10975,30 +10913,25 @@ msgstr ""
 "## [契約による設計（DbC）](https://en.wikipedia.org/wiki/Design_by_contract)"
 
 #: src/additional_resources/design-principles.md:44
-#, fuzzy
 msgid ""
 "software designers should define formal, precise and verifiable interface\n"
 "specifications for software components, which extend the ordinary definition "
 "of\n"
 "abstract data types with preconditions, postconditions and invariants"
 msgstr ""
-"ソフトウエア設計者は、ソフトウエア・コンポーネントのインターフェイス仕様につ"
-"いて、通常の定義を拡張した、形式的で正確かつ検証可能なものを定義する必要があ"
-"ります。\n"
-"ソフトウェア・コンポーネントのインターフェイス仕様を定義すべきです。\n"
-"抽象データ型の定義を拡張し、前提条件、後件条件、不変条件"
+"ソフトウエア設計者は、ソフトウエア構成要素のインターフェイス仕様について、形"
+"式的で正確かつ検証可能なものを定義する必要があります。これは抽象データ型の定"
+"義を前提条件、後件条件、不変条件により拡張します。"
 
 #: src/additional_resources/design-principles.md:48
-#, fuzzy
 msgid ""
 "## [Encapsulation](https://en.wikipedia.org/wiki/"
 "Encapsulation_(computer_programming))"
 msgstr ""
-"## [Encapsulation](https://en.wikipedia.org/wiki/"
+"## [カプセル化](https://en.wikipedia.org/wiki/"
 "Encapsulation_(computer_programming))"
 
 #: src/additional_resources/design-principles.md:50
-#, fuzzy
 msgid ""
 "bundling of data with the methods that operate on that data, or the "
 "restricting\n"
@@ -11008,119 +10941,105 @@ msgid ""
 "preventing\n"
 "unauthorized parties' direct access to them."
 msgstr ""
-"データとそのデータを操作するメソッドのバンドルや、オブジェクトのコンポーネン"
-"トの一部への直接アクセスの制限。\n"
-"オブジェクトのコンポーネントの一部への直接アクセスを制限します。カプセル化"
-"は\n"
-"構造化されたデータオブジェクトの値や状態をクラス内に隠すことで、 許可されてい"
-"ない人がオブジェクトに直接アクセスできないようにします。\n"
-"構造化されたデータオブジェクトの値や状態をクラス内に隠し、 許可されていない人"
-"が直接アクセスできないようにします。"
+"データとそれを操作するメソッドをひとまとめにしたり、オブジェクトの構成要素へ"
+"の直接的なアクセスを制限すること。\n"
+"カプセル化はクラス内の構造化されたデータオブジェクトの値や状態を隠蔽し、許可"
+"されないものが直接アクセスすることを防ぎます。"
 
 #: src/additional_resources/design-principles.md:55
-#, fuzzy
 msgid ""
 "## [Command-Query-Separation(CQS)](https://en.wikipedia.org/wiki/"
 "Command%E2%80%93query_separation)"
 msgstr ""
-"## [コマンドクエリ分離(CQS)](https://en.wikipedia.org/wiki/"
+"## [コマンド-クエリの分離(CQS)](https://en.wikipedia.org/wiki/"
 "Command%E2%80%93query_separation)"
 
 #: src/additional_resources/design-principles.md:57
-#, fuzzy
 msgid ""
 "“Functions should not produce abstract side effects...only commands\n"
 "(procedures) will be permitted to produce side effects.” - Bertrand Meyer:\n"
 "Object-Oriented Software Construction"
 msgstr ""
-"\"関数は抽象的な副作用を発生させるべきではありません。\n"
-"(手続き）のみが副作用を生成することを許されます。\" - バートランド・マイ"
-"ヤー\n"
-"オブジェクト指向ソフトウェア構築"
+"“Functions should not produce abstract side effects...only commands\n"
+"(procedures) will be permitted to produce side effects.\n"
+"(関数は副作用を発生されてはいけません ... \n"
+"コマンド(プロシージャ)だけが副作用を発生することを許容されます)”  - Bertrand "
+"Meyer: Object-Oriented Software Construction"
 
 #: src/additional_resources/design-principles.md:61
-#, fuzzy
 msgid ""
 "## [Principle of least astonishment (POLA)](https://en.wikipedia.org/wiki/"
 "Principle_of_least_astonishment)"
 msgstr ""
-"## [最小驚嘆の原則(POLA)](https://en.wikipedia.org/wiki/"
+"## [驚き最小の原則(POLA)](https://en.wikipedia.org/wiki/"
 "Principle_of_least_astonishment)"
 
 #: src/additional_resources/design-principles.md:63
-#, fuzzy
 msgid ""
 "a component of a system should behave in a way that most users will expect "
 "it\n"
 "to behave. The behavior should not astonish or surprise users"
 msgstr ""
-"システムのコンポーネントは、ほとんどのユーザーが期待するような振る舞いをする"
-"ものでなければなりません。\n"
-"であるべきです。その振る舞いは、ユーザーを驚かせたり、驚かせたりするもので"
-"あってはなりません。"
+"システムの構成要素はそのユーザが期待するように振舞わねばならず、\n"
+"その振る舞いはユーザを驚かせるものであってはなりません"
 
 #: src/additional_resources/design-principles.md:66
-#, fuzzy
 msgid "## Linguistic-Modular-Units"
-msgstr "## 言語モジュール単位"
+msgstr "## 言語モジュール単位(Linguistic-Modular-Units)"
 
 #: src/additional_resources/design-principles.md:68
-#, fuzzy
 msgid ""
 "“Modules must correspond to syntactic units in the language used.” - "
 "Bertrand\n"
 "Meyer: Object-Oriented Software Construction"
 msgstr ""
-"\"モジュールは使用言語の構文単位に対応しなければならない\" - バートランド\n"
-"マイヤーオブジェクト指向ソフトウェア構築"
+"\"Modules must correspond to syntactic units in the language used.\n"
+"(モジュールは使用言語の構文単位に対応しなければならない)\" - Bertrand\n"
+"Meyer: Object-Oriented Software Construction"
 
 #: src/additional_resources/design-principles.md:71
-#, fuzzy
 msgid "## Self-Documentation"
-msgstr "#自己文書化"
+msgstr "##自己文書化(Self-Documentation)"
 
 #: src/additional_resources/design-principles.md:73
-#, fuzzy
 msgid ""
 "“The designer of a module should strive to make all information about the\n"
 "module part of the module itself.” - Bertrand Meyer: Object-Oriented "
 "Software\n"
 "Construction"
 msgstr ""
-"「モジュールの設計者は、モジュールに関するすべての情報をモジュール自体の一部"
-"とするよう努めるべきです。\n"
-"モジュールの設計者は、モジュールに関するすべての情報をモジュール自体の一部と"
-"するよう努めるべきです。\" - バートランド・マイヤーオブジェクト指向ソフトウェ"
-"ア\n"
-"構築"
+"“The designer of a module should strive to make all information about the\n"
+"module part of the module itself.\n"
+"(モジュールの設計者は、そのモジュールに関するすべての\n"
+"情報をモジュールの一部とするよう努めるべきです)” - Bertrand Meyer: Object-"
+"Oriented Software Construction"
 
 #: src/additional_resources/design-principles.md:77
-#, fuzzy
 msgid "## Uniform-Access"
-msgstr "## ♪ユニフォーム・アクセス"
+msgstr "## 統一的アクセス(Uniform-Access)"
 
 #: src/additional_resources/design-principles.md:79
-#, fuzzy
 msgid ""
 "“All services offered by a module should be available through a uniform\n"
 "notation, which does not betray whether they are implemented through storage "
 "or\n"
 "through computation.” - Bertrand Meyer: Object-Oriented Software Construction"
 msgstr ""
-"「モジュールによって提供されるすべてのサービスは、統一された表記法によって利"
-"用可能であるべきです。\n"
-"モジュールによって提供されるすべてのサービスは、統一された記法によって利用可"
-"能であるべきです。\n"
-"計算によって実装されているかどうかを裏切ることはありません。\" - バートラン"
-"ド・メイヤーオブジェクト指向ソフトウェア構築"
+"“All services offered by a module should be available through a uniform\n"
+"notation, which does not betray whether they are implemented through storage "
+"or\n"
+"through computation.\n"
+"(モジュールにより提供されるすべてのサービスは、\n"
+"統一された表記法により利用可能であるべきです。\n"
+"それがストレージによって実装されるのか、計算により実装されるのかを裏切っては"
+"いけません)” - Bertrand\n"
+"Meyer: Object-Oriented Software Construction"
 
 #: src/additional_resources/design-principles.md:83
-#, fuzzy
 msgid "## Single-Choice"
-msgstr "## シングルチョイス"
+msgstr "## 単一選択(Single-Choice)"
 
 #: src/additional_resources/design-principles.md:85
-#, fuzzy
 msgid ""
 "“Whenever a software system must support a set of alternatives, one and "
 "only\n"
@@ -11128,20 +11047,19 @@ msgid ""
 "Meyer:\n"
 "Object-Oriented Software Construction"
 msgstr ""
-"\"ソフトウェアシステムが一連の選択肢をサポートしなければならないときはいつで"
-"も、システム内の1つのモジュールだけが、その選択肢の網羅的なリストを知っていな"
-"ければなりません。\n"
-"つのモジュールだけが、その選択肢の網羅的なリストを知っていなければなりませ"
-"ん。\" - バートランド・マイヤー\n"
-"オブジェクト指向ソフトウェア構築"
+"“Whenever a software system must support a set of alternatives, one and "
+"only\n"
+"one module in the system should know their exhaustive list.\n"
+"(ソフトウェアシステムが複数の選択肢をサポートしなければならないときは常に、\n"
+"その網羅的なリストを知っているのはシステム内の単一のモジュールのみであるべき"
+"です)” - Bertrand Meyer:\n"
+"Object-Oriented Software Construction"
 
 #: src/additional_resources/design-principles.md:89
-#, fuzzy
 msgid "## Persistence-Closure"
-msgstr "#永続性-閉鎖"
+msgstr "## 永続的クロージャ(Persistence-Closure)"
 
 #: src/additional_resources/design-principles.md:91
-#, fuzzy
 msgid ""
 "“Whenever a storage mechanism stores an object, it must store with it the\n"
 "dependents of that object. Whenever a retrieval mechanism retrieves a\n"
@@ -11151,15 +11069,17 @@ msgid ""
 "Software\n"
 "Construction"
 msgstr ""
-"\"ストレージメカニズムがオブジェクトを格納するときは、必ずそのオブジェクトの"
-"従属オブジェクトも一緒に格納しなければなりません。\n"
-"を格納しなければなりません。検索機構が以前に格納されたオブジェクトを検索する"
-"ときは常に\n"
-"検索機構が以前に格納されたオブジェクトを検索するときは常に、そのオブジェクト"
-"の依存関係も検索しなければなりません。\n"
-"を取り出す必要があります。\" - バートランド・マイヤーオブジェクト指向ソフト"
-"ウェア\n"
-"構築"
+"“Whenever a storage mechanism stores an object, it must store with it the\n"
+"dependents of that object. Whenever a retrieval mechanism retrieves a\n"
+"previously stored object, it must also retrieve any dependent of that "
+"object\n"
+"that has not yet been retrieved.\n"
+"(格納メカニズムがオブジェクトを格納するときは常に、\n"
+"そのオブジェクトに従属するものを一緒に格納しなければなりません。\n"
+"また、取出メカニズムが以前に格納されたオブジェクトを取り出すときは常に、\n"
+"オブジェクトに従属する、また取り出されていないものを取り出さねばなりませ"
+"ん。)” - Bertrand\n"
+" Meyer: Object-Oriented Software Construction"
 
 #, fuzzy
 #~ msgid ""
