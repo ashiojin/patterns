@@ -16,6 +16,9 @@ after = ["links"]
 [rust]
 edition = "2021"
 
+[output.xgettext]
+pot-file = "messages.pot"
+
 [output.html]
 curly-quotes = true
 default-theme = "rust"
