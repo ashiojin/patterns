@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-04-23 14:22+0900\n"
+"PO-Revision-Date: 2024-04-24 17:35+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -46,7 +46,7 @@ msgstr "Default トレイト"
 
 #: src/SUMMARY.md:10
 msgid "Collections Are Smart Pointers"
-msgstr "スマートポインタとしてのコレクション"
+msgstr "コレクションはスマートポインタ"
 
 #: src/SUMMARY.md:11
 msgid "Finalisation in Destructors"
@@ -349,9 +349,8 @@ msgid ""
 "happening."
 msgstr ""
 "[イディオム](https://en.wikipedia.org/wiki/Programming_idiom)は、一般的に使わ"
-"れているスタイル、ガイドライン、パターンです。\n"
-"慣用的なコードを書くことで、他の開発者は何が起こっているのかをよりよく理解す"
-"ることができます。"
+"れているスタイル、ガイドライン、パターンです。慣用的なコードを書くことで、他"
+"の開発者は何が起こっているのかをよりよく理解することができます。"
 
 #: src/idioms/index.md:7
 msgid ""
@@ -381,8 +380,8 @@ msgstr ""
 #: src/idioms/index.md:16
 msgid "Code is there for humans, not computers, to understand."
 msgstr ""
-"> コードは人間が理解するものであって、コンピューターが理解するものではありま"
-"せん。"
+"コードは人間が理解するものであって、コンピューターが理解するものではありませ"
+"ん。"
 
 #: src/idioms/coercion-arguments.md:3 src/idioms/concat-format.md:3
 #: src/idioms/ctor.md:3 src/idioms/default.md:3 src/idioms/deref.md:3
@@ -753,8 +752,9 @@ msgid ""
 "an object:"
 msgstr ""
 "Rustには、言語の構成要素としてコンストラクタというものを持っていません。代わ"
-"りに [関連関数][associated function] の `new` を使ってオブジェクトを生成する"
-"のが一般的です："
+"りに [関連関数](https://doc.rust-lang.org/stable/book/ch05-03-method-syntax."
+"html#associated-functions) の `new` を使ってオブジェクトを生成するのが一般的"
+"です："
 
 #: src/idioms/ctor.md:10
 msgid ""
@@ -878,12 +878,10 @@ msgstr ""
 "html#types-eagerly-implement-common-traits-c-common-traits)。"
 
 #: src/idioms/default.md:1
-#, fuzzy
 msgid "The `Default` Trait"
-msgstr "# `Default` トレイト"
+msgstr "`Default` トレイト"
 
 #: src/idioms/default.md:5
-#, fuzzy
 msgid ""
 "Many types in Rust have a [constructor](ctor.md). However, this is "
 "_specific_ to the type; Rust cannot abstract over \"everything that has a "
@@ -894,129 +892,111 @@ msgid ""
 "Option.html#method.unwrap_or_default)). Notably, some containers already "
 "implement it where applicable."
 msgstr ""
-"Rustの多くの型には [コンストラクタ][constructor] があります。しかし、これはそ"
-"の型 _固有_ のものです。\n"
-"Rustは「 `new()` メソッドを持つものすべて」を抽象化することはできません。\n"
-"これを可能にするために、[`Default`] 特性が考案されました。\n"
-"コンテナや他のジェネリック型と一緒に使うことができます (例えば、[`Option::"
-"unwrap_or_default()`] を参照してください)。\n"
-"注目すべきことに、いくつかのコンテナはすでにこれを実装しています。"
+"Rustの多くの型には [コンストラクタ](ctor.md) があります。しかし、これはその"
+"型 _固有_ のものです。Rustは「 `new()` メソッドを持つものすべて」を抽象化する"
+"ことはできません。これを可能にするために、[`Default`](https://doc.rust-lang."
+"org/stable/std/default/trait.Default.html) 特性が考案され、コンテナや他のジェ"
+"ネリック型と一緒に使用できます(例えば、[`Option::unwrap_or_default()`]"
+"(https://doc.rust-lang.org/stable/std/option/enum.Option.html#method."
+"unwrap_or_default) を参照してください)。注目すべきは、いくつかのコンテナは、"
+"適用可能な場合、すでにこれを実装していることです。"
 
 #: src/idioms/default.md:11
-#, fuzzy
 msgid ""
 "Not only do one-element containers like `Cow`, `Box` or `Arc` implement "
 "`Default` for contained `Default` types, one can automatically "
 "`#[derive(Default)]` for structs whose fields all implement it, so the more "
 "types implement `Default`, the more useful it becomes."
 msgstr ""
-"`Cow`、`Box`、`Arc` のような 1要素のコンテナが内包する `Default` 型に対して "
-"`Default` を実装しているだけではありません。 すべてのフィールドが `Default` "
-"を実装している構造体に対して自動的に `#[derive(Default)]` が適用できます。\n"
-"型が `Default` を実装すればするほど便利になります。"
+"`Cow`、`Box`、`Arc` のような1要素のコンテナが、その内包する型が `Default` で"
+"あるなら、 `Default` を実装する、というだけではありません。すべてのフィールド"
+"が `Default` を実装している構造体に対して `#[derive(Default)]` が自動導出可能"
+"です。より多くの型が `Default` を実装すればするほどより便利になります。"
 
 #: src/idioms/default.md:16
-#, fuzzy
 msgid ""
 "On the other hand, constructors can take multiple arguments, while the "
 "`default()` method does not. There can even be multiple constructors with "
 "different names, but there can only be one `Default` implementation per type."
 msgstr ""
-"コンストラクタは複数の引数を取ることができます。対して `default()` メソッドで"
-"はできません。\n"
-"また異なる名称の複数のコンストラクタを定義することもできます。\n"
-"対して `Default` の実装は1つの型につき1つだけです。"
+"コンストラクタは複数の引数を取ることができる一方、 `default()` メソッドではで"
+"きません。またコンストラクタは異なる名称のものを複数定義することもできます"
+"が、 `Default` の実装は1つの型につき1つだけです。"
 
 #: src/idioms/default.md:24
-#, fuzzy
 msgid "// note that we can simply auto-derive Default here.\n"
-msgstr "// ここでは単にデフォルトを自動導出できることに注意。\n"
+msgstr "// ここでは単に Default を自動導出できることに注意。\n"
 
 #: src/idioms/default.md:28
-#, fuzzy
 msgid "// Option defaults to None\n"
-msgstr "// オプションのデフォルトは「なし\n"
+msgstr "// Option のデフォルトは None\n"
 
 #: src/idioms/default.md:30
-#, fuzzy
 msgid "// Vecs default to empty vector\n"
-msgstr "// Vecs のデフォルトは空のベクトル\n"
+msgstr "// Vec のデフォルトは空のベクトル\n"
 
 #: src/idioms/default.md:32
-#, fuzzy
 msgid "// Duration defaults to zero time\n"
-msgstr "// 期間はデフォルトでゼロ時間\n"
+msgstr "// Duration のデフォルトはゼロ時間\n"
 
 #: src/idioms/default.md:34
-#, fuzzy
 msgid "// bool defaults to false\n"
-msgstr "// デフォルトはfalse\n"
+msgstr "// bool のデフォルトは false\n"
 
 #: src/idioms/default.md:39
-#, fuzzy
 msgid "// add setters here\n"
 msgstr "// ここにセッターを追加する\n"
 
 #: src/idioms/default.md:43
-#, fuzzy
 msgid "// construct a new instance with default values\n"
 msgstr "// デフォルト値で新しいインスタンスを作成する\n"
 
 #: src/idioms/default.md:45
-#, fuzzy
 msgid "// do something with conf here\n"
 msgstr "// ここでconfを使って何かをする\n"
 
 #: src/idioms/default.md:47
-#, fuzzy
 msgid "\"conf = {conf:#?}\""
-msgstr "「conf = {conf:#?}\""
+msgstr "\"conf = {conf:#?}\""
 
 #: src/idioms/default.md:49
-#, fuzzy
 msgid ""
 "// partial initialization with default values, creates the same instance\n"
-msgstr "// デフォルト値で部分的に初期化し、同じインスタンスを作成する。\n"
+msgstr "// デフォルト値の上に部分的な初期化、同値のインスタンスを作成\n"
 
 #: src/idioms/default.md:60
-#, fuzzy
 msgid ""
 "The [constructor](ctor.md) idiom is another way to generate instances that "
 "may or may not be \"default\""
 msgstr ""
-"コンストラクタ](ctor.md)イディオムは、\"デフォルト \"かもしれないし、そうでな"
-"いかもしれないインスタンスを生成する別の方法である。"
+"[constructor](ctor.md) イディオムは、インスタンスを生成する別の方法だが、その"
+"インスタンスは「デフォルト」かそうでないかを問わない。"
 
 #: src/idioms/default.md:62
-#, fuzzy
 msgid ""
 "The [`Default`](https://doc.rust-lang.org/stable/std/default/trait.Default."
 "html) documentation (scroll down for the list of implementors)"
 msgstr ""
-"Default`](https://doc.rust-lang.org/stable/std/default/trait.Default.html)の"
-"ドキュメント（実装者のリストは下にスクロールしてください。"
+"[`Default`](https://doc.rust-lang.org/stable/std/default/trait.Default.html) "
+"のドキュメント(実装しているもののリストは下にスクロールしてください)。"
 
 #: src/idioms/default.md:63
-#, fuzzy
 msgid ""
 "[`Option::unwrap_or_default()`](https://doc.rust-lang.org/stable/std/option/"
 "enum.Option.html#method.unwrap_or_default)"
 msgstr ""
-"[オプション::unwrap_or_default()`](https://doc.rust-lang.org/stable/std/"
-"option/enum.Option.html#method.unwrap_or_default)"
+"[`Option::unwrap_or_default()`](https://doc.rust-lang.org/stable/std/option/"
+"enum.Option.html#method.unwrap_or_default)"
 
 #: src/idioms/default.md:64
-#, fuzzy
 msgid "[`derive(new)`](https://crates.io/crates/derive-new/)"
-msgstr "[derive(new)`](https://crates.io/crates/derive-new/)"
+msgstr "[`derive(new)`](https://crates.io/crates/derive-new/)"
 
 #: src/idioms/deref.md:1
-#, fuzzy
 msgid "Collections are smart pointers"
-msgstr "スマートポインタとしてのコレクション"
+msgstr "コレクションはスマートポインタ"
 
 #: src/idioms/deref.md:5
-#, fuzzy
 msgid ""
 "Use the [`Deref`](https://doc.rust-lang.org/std/ops/trait.Deref.html) trait "
 "to treat collections like smart pointers, offering owning and borrowed views "
@@ -1029,12 +1009,10 @@ msgstr ""
 #: src/idioms/deref.md:16 src/idioms/deref.md:23
 #: src/patterns/behavioural/RAII.md:29 src/patterns/behavioural/RAII.md:41
 #: src/patterns/behavioural/RAII.md:100 src/anti_patterns/deref.md:35
-#, fuzzy
 msgid "//..\n"
 msgstr "//..\n"
 
 #: src/idioms/deref.md:28
-#, fuzzy
 msgid ""
 "A `Vec<T>` is an owning collection of `T`s, while a slice (`&[T]`) is a "
 "borrowed collection of `T`s. Implementing `Deref` for `Vec` allows implicit "
@@ -1042,13 +1020,11 @@ msgid ""
 "dereferencing searches. Most methods you might expect to be implemented for "
 "`Vec`s are instead implemented for slices."
 msgstr ""
-"スライス(`&[T]`)が `T` の借用のコレクションであるのに対し、 `Vec<T>` は`T` の"
-"所有のコレクションです。\n"
-"`Vec` に `Deref` を実装することで、 `&Vec<T>` から `&[T]` への暗黙的な参照外"
-"しが可能になるとともに、\n"
-"自動参照外しの検索対象に組み込まれます。\n"
-"`Vec` に実装されることが期待されるほとんどのメソッドは、代わりにスライスのそ"
-"れとして実装されます。"
+"`Vec<T>` は`T` の所有のコレクションであり、対して、スライス(`&[T]`)は `T` の"
+"借用のコレクションです。`Vec` に `Deref` を実装することで、 `&Vec<T>` から "
+"`&[T]` への暗黙的な参照外しが可能になるとともに、自動参照外しの検索対象に組み"
+"込まれます。`Vec` に実装されることが期待されるほとんどのメソッドは、代わりに"
+"スライスのそれとして実装されます。"
 
 #: src/idioms/deref.md:34
 msgid "Also `String` and `&str` have a similar relation."
@@ -1070,7 +1046,6 @@ msgid "Motivation"
 msgstr "動機形成"
 
 #: src/idioms/deref.md:38
-#, fuzzy
 msgid ""
 "Ownership and borrowing are key aspects of the Rust language. Data "
 "structures must account for these semantics properly to give a good user "
@@ -1078,12 +1053,11 @@ msgid ""
 "a borrowed view of that data allows for more flexible APIs."
 msgstr ""
 "所有権と借用はRust言語の重要な側面です。データ構造は、よりよいユーザエクスペ"
-"リエンスのため、これらのセマンティクスに則る必要があります。\n"
-"データを所有するデータ構造を実装する場合、そのデータへの借用のビューを提供す"
-"ることで、よりフレキシブルなAPIを提供することが可能になります。"
+"リエンスのため、これらのセマンティクスに則る必要があります。データを所有する"
+"データ構造を実装する場合、そのデータへの借用のビューを提供することで、よりフ"
+"レキシブルなAPIを提供することが可能になります。"
 
 #: src/idioms/deref.md:45
-#, fuzzy
 msgid ""
 "Most methods can be implemented only for the borrowed view, they are then "
 "implicitly available for the owning view."
@@ -1097,7 +1071,6 @@ msgstr ""
 "データの借用を行うか、所有権を取るか、利用者が選択できるようにしましょう。"
 
 #: src/idioms/deref.md:52
-#, fuzzy
 msgid ""
 "Methods and traits only available via dereferencing are not taken into "
 "account when bounds checking, so generic programming with data structures "
@@ -1120,10 +1093,15 @@ msgstr ""
 #: src/patterns/structural/compose-structs.md:107
 #: src/anti_patterns/deref.md:102
 msgid "Discussion"
-msgstr "ディスカッション"
+msgstr "議論"
 
+# 第3文がちょっと解釈しがたいが、第1+2文の流れからすると、コレクションとスマートポインタとの相似的な部分に言及していると思われる。
+# つまり、コレクションもスマートポインタ同様、その中身について「所有」しているのだ！といいたいと判断する。
+# 第4文の、「（スマートポインタ同様）データを所有しているなら、データの借用ビューを提供するといいよ！」という結論につなぐものだと思う。
+# 括弧内は、例外的なこと（データが共有されていた場合）について触れていて、
+# その場合でも、部分的に同じことが言えるはずだと主張しようとしていると思われる。
+# ただ、この段落での「借用のビュー」への言及は第４文が初なので、話が前後してしまっているため、わかりにくい部分が出ていると思われる。
 #: src/idioms/deref.md:58
-#, fuzzy
 msgid ""
 "Smart pointers and collections are analogous: a smart pointer points to a "
 "single object, whereas a collection points to many objects. From the point "
@@ -1135,16 +1113,15 @@ msgid ""
 "data as borrowed so that it can be referenced multiple times."
 msgstr ""
 "スマート・ポインタとコレクションは相似です。スマートポインタは単一のオブジェ"
-"クトを指すのに対し、コレクションは多数のオブジェクトを指します。\n"
-"型システムの観点からは、両者にほとんど違いはありません。\n"
-"各データへのコレクション経由でのみアクセス可能なとき、コレクションはそれら"
-"データを所有するとともに削除の責任を持ちます(所有権をを共有している場合でも、"
-"一部の借用のビューでは当てはまります)。\n"
-"コレクションがそのデータを所有する場合に、そのデータへの借用のビューを提供し"
-"複数回参照可能にすることは、一般に有用です。"
+"クトを指すのに対し、コレクションは多数のオブジェクトを指します。型システムの"
+"観点からは、両者にほとんど違いはありません。各データへアクセスする唯一の方法"
+"がコレクション経由であるなら、コレクションはそれらデータを所有しており、また"
+"そのコレクションはデータを削除する責任を持ちます(共有された所有権の場合でも、"
+"何らかの借用のビューは適切な場合があります)。コレクションがそのデータを所有す"
+"る場合に、そのデータへの借用のビューを提供し複数回参照可能にすることは、一般"
+"に有用です。"
 
 #: src/idioms/deref.md:67
-#, fuzzy
 msgid ""
 "Most smart pointers (e.g., `Foo<T>`) implement `Deref<Target=T>`. However, "
 "collections will usually dereference to a custom type. `[T]` and `str` have "
@@ -1153,106 +1130,70 @@ msgid ""
 "sized type and `&Bar<T>` is a borrowed view of the data in `Foo<T>`."
 msgstr ""
 "ほとんどのスマートポインタ(例えば `Foo<T>`)は `Deref<Target=T>` を実装しま"
-"す。\n"
-"しかしコレクションは通常、カスタム型に参照外しされます。 `[T]`と `str` にはい"
-"くつかの言語サポートがありますが、一般的なケースでは、その必要はありませ"
-"ん。\n"
-"`Foo<T>` が `Deref<Target=Bar<T>>` を実装することがあります。ここで `Bar` は"
-"動的なサイズの型であり、`&Bar<T>` は `Foo<T>` のデータの借用のビューです。"
+"す。しかしコレクションは通常、カスタム型に参照外しされます。 `[T]`と `str` に"
+"はいくつかの言語サポートがありますが、一般的なケースでは、その必要はありませ"
+"ん。`Foo<T>` が `Deref<Target=Bar<T>>` を実装してかまいません。ここで `Bar` "
+"は動的なサイズの型であり、`&Bar<T>` は `Foo<T>` のデータの借用のビューです。"
 
 #: src/idioms/deref.md:73
-#, fuzzy
 msgid ""
 "Commonly, ordered collections will implement `Index` for `Range`s to provide "
 "slicing syntax. The target will be the borrowed view."
 msgstr ""
 "一般的に、順序付きコレクションは `Range` に対して `Index` を実装し、スライス"
-"構文を提供します。このターゲットは借用のビューになります。"
+"構文を提供します。その対象は借用のビューになります。"
 
 #: src/idioms/deref.md:78
-#, fuzzy
 msgid "[Deref polymorphism anti-pattern](../anti_patterns/deref.md)."
-msgstr "[Deref polymorphismアンチパターン](../anti_patterns/deref.md)。"
+msgstr "[Deref ポリモーフィズムのアンチパターン](../anti_patterns/deref.md)。"
 
 #: src/idioms/deref.md:79 src/anti_patterns/deref.md:130
-#, fuzzy
 msgid ""
 "[Documentation for `Deref` trait](https://doc.rust-lang.org/std/ops/trait."
 "Deref.html)."
 msgstr ""
-"- [Deref ポリモーフィズムのアンチパターン](../anti_patterns/deref.md).\n"
-"- [`Deref` トレイトのドキュメント](https://doc.rust-lang.org/std/ops/trait."
+"[`Deref` トレイトのドキュメント](https://doc.rust-lang.org/std/ops/trait."
 "Deref.html)."
 
 #: src/idioms/dtor-finally.md:1
-#, fuzzy
 msgid "Finalisation in destructors"
 msgstr "デストラクタでのファイナライズ"
 
 #: src/idioms/dtor-finally.md:5
-#, fuzzy
 msgid ""
 "Rust does not provide the equivalent to `finally` blocks - code that will be "
 "executed no matter how a function is exited. Instead, an object's destructor "
 "can be used to run code that must be run before exit."
 msgstr ""
-"Rust には `finally` ブロック（関数の終了の仕方を問わずに実行されるコード）に"
-"相当するものがありません。\n"
-"その代わりに、オブジェクトのデストラクタを使用して、終了前に実行しなければな"
-"らないコードを実行させることができます。"
+"Rust には `finally` ブロック (関数の終了の仕方を問わずに実行されるコード) に"
+"相当するものがありません。その代わりに、オブジェクトのデストラクタを使用し"
+"て、終了前に実行しなければならないコードを実行させることができます。"
 
 #: src/idioms/dtor-finally.md:13
-#, fuzzy
 msgid "// These don't need to be defined inside the function.\n"
 msgstr "// これらは関数内部で定義する必要はない。\n"
 
 #: src/idioms/dtor-finally.md:16
-#, fuzzy
 msgid "// Implement a destructor for Foo.\n"
 msgstr "// Foo のデストラクタを実装する。\n"
 
 #: src/idioms/dtor-finally.md:19
-#, fuzzy
 msgid "\"exit\""
-msgstr ""
-"```rust,ignore\n"
-"fn bar() -> Result<(), ()> {\n"
-"    // 関数内で定義する必要はありません。\n"
-"    struct Foo;\n"
-"\n"
-"    // Fooのデストラクタを実装。\n"
-"    impl Drop for Foo {\n"
-"        fn drop(&mut self) {\n"
-"            println!(\"exit\");\n"
-"        }\n"
-"    }\n"
-"\n"
-"    // _exit のデストラクタは `bar` の抜け方にかかわらず実行されます。\n"
-"    let _exit = Foo;\n"
-"    // `?` による暗黙的な return。\n"
-"    baz()?;\n"
-"    // 通常の return。\n"
-"    Ok(())\n"
-"}\n"
-"```"
+msgstr "\"exit\""
 
 #: src/idioms/dtor-finally.md:23
-#, fuzzy
 msgid "// The dtor of _exit will run however the function `bar` is exited.\n"
-msgstr "// exitのdtorは、関数`bar`が終了しても実行される。\n"
+msgstr "// _exit のデストラクタは、関数`bar`が終了しても実行される。\n"
 
 #: src/idioms/dtor-finally.md:25
-#, fuzzy
 msgid "// Implicit return with `?` operator.\n"
-msgstr "// 演算子 `?\n"
+msgstr "// 演算子 `?` による暗黙的なリターン 。\n"
 
 #: src/idioms/dtor-finally.md:27
-#, fuzzy
 msgid "// Normal return.\n"
 msgstr "// 通常のリターン。\n"
 
 #: src/idioms/dtor-finally.md:34
-#, fuzzy
 msgid ""
 "If a function has multiple return points, then executing code on exit "
 "becomes difficult and repetitive (and thus bug-prone). This is especially "
@@ -1263,25 +1204,22 @@ msgid ""
 "and exceptional cases. Panicking will also exit a function early."
 msgstr ""
 "関数に複数のリターン・ポイントがある場合、関数終了時にコードを実行するのは難"
-"しく、繰り返し的になり（またそれゆえにバグの原因になり）ます。特にreturnがマ"
-"クロによって暗黙的に行われる場合です。\n"
-"よくあるケースが `?` 演算子で、これは結果が `Err` なら戻り、`Ok` なら続行する"
-"ものです。 `?` は例外処理のメカニズムとして使用されますすが、(`finally`を持"
-"つ) Javaとは異なり、通常と例外の両方のケースで実行されるコードを実装する方法"
-"はありません。\n"
-"また、パニックが起きると関数は早期に終了します。"
+"しく、繰り返し的になります(またそれゆえにバグの原因になります)。リターンがマ"
+"クロによって暗黙的に行われる場合、特にそうなります。よくあるケースが `?` 演算"
+"子で、これは結果が `Err` なら戻り、`Ok` なら続行するものです。 `?` は例外処理"
+"のメカニズムとして使用されますが、(`finally`を持つ) Javaとは異なり、通常と例"
+"外の両方のケースで実行されるコードを実装する方法はありません。また、パニック"
+"が起きると関数は早期に終了します。"
 
 #: src/idioms/dtor-finally.md:44
-#, fuzzy
 msgid ""
 "Code in destructors will (nearly) always be run - copes with panics, early "
 "returns, etc."
 msgstr ""
-"デストラクタ内のコードは（ほぼ）常に実行されます。パニックや早期returnなどに"
-"も対処できます。"
+"デストラクタ内のコードは (ほぼ) 常に実行されます。パニックや早期リターンなど"
+"にも対処できます。"
 
 #: src/idioms/dtor-finally.md:49
-#, fuzzy
 msgid ""
 "It is not guaranteed that destructors will run. For example, if there is an "
 "infinite loop in a function or if running a function crashes before exit. "
@@ -1289,23 +1227,20 @@ msgid ""
 "thread. Therefore, destructors cannot be relied on as finalizers where it is "
 "absolutely essential that finalisation happens."
 msgstr ""
-"デストラクタの実行は保証されていません。\n"
-"例えば関数の無限ループがある場合や、関数の実行が終了前にクラッシュした場合な"
-"どです。\n"
-"また、すでにパニックになっているスレッドでパニックが発生した場合にも、デスト"
-"ラクタは実行されません。\n"
-"したがって、絶対的かつ本質的にファイナライズを行うファイナライザとしては、デ"
-"ストラクタを頼ることはできません。"
+"デストラクタの実行は保証されていません。例えば関数の無限ループがある場合や、"
+"関数の実行が終了前にクラッシュした場合などです。また、すでにパニックになって"
+"いるスレッドでパニックが発生した場合にも、デストラクタは実行されません。した"
+"がって、絶対的かつ本質的にファイナライズを行うファイナライザとしては、デスト"
+"ラクタを頼ることはできません。"
 
 #: src/idioms/dtor-finally.md:55
-#, fuzzy
 msgid ""
 "This pattern introduces some hard to notice, implicit code. Reading a "
 "function gives no clear indication of destructors to be run on exit. This "
 "can make debugging tricky."
 msgstr ""
 "このパターンは、気づきにくい暗黙のコードを導入することになります。関数を読ん"
-"でも、 終了時にデストラクタが実行されることについて、明らかな兆候が得られませ"
+"でも、 終了時にデストラクタが実行されることについて、明確な兆候は得られませ"
 "ん。これはデバッグを厄介なものにする可能性があります。"
 
 #: src/idioms/dtor-finally.md:59
@@ -1317,7 +1252,6 @@ msgstr ""
 "テンプレートが多くなります。"
 
 #: src/idioms/dtor-finally.md:64
-#, fuzzy
 msgid ""
 "There is some subtlety about how exactly to store the object used as a "
 "finalizer. It must be kept alive until the end of the function and must then "
@@ -1327,17 +1261,14 @@ msgid ""
 "reasons, the finalizer should not be moved or returned."
 msgstr ""
 "ファイナライザとして使用されるオブジェクトの正確な格納方法については、繊細な"
-"点があります。\n"
-"このオブジェクトは関数が終了するまで存続しなければならず、また終了時に破棄さ"
-"れなければなりません。\n"
-"このオブジェクトは常に値か一意に所有されるポインタでなければなりません (例 "
-"`Box<Foo>` など) 。もし共有ポインタ(`Rc`など)を使用した場合、ファイナライザが"
-"関数のライフタイムを超えて存続してしまう可能性があります。\n"
-"同様の理由でファイナライザの所有権を移動したり、ファイナライザを戻り値として"
-"はいけません。"
+"点があります。このオブジェクトは関数が終了するまで存続しなければならず、また"
+"終了時に破棄されなければなりません。このオブジェクトは常に値かユニークに所有"
+"されるポインタでなければなりません (例 `Box<Foo>` など) 。もし共有ポインタ"
+"(`Rc`など)を使用した場合、ファイナライザが関数のライフタイムを超えて存続して"
+"しまう可能性があります。同様の理由でファイナライザの所有権を移動したり、ファ"
+"イナライザを戻り値としてはいけません。"
 
 #: src/idioms/dtor-finally.md:71
-#, fuzzy
 msgid ""
 "The finalizer must be assigned into a variable, otherwise it will be "
 "destroyed immediately, rather than when it goes out of scope. The variable "
@@ -1347,14 +1278,11 @@ msgid ""
 "destroyed immediately."
 msgstr ""
 "ファイナライザは変数に代入しなければなりません。そうでないとスコープを外れる"
-"前に即座に破棄されます。\n"
-"変数名は `_` で始まらなければなりません。そうでないとコンパイラは変数が利用さ"
-"れていない旨の警告を出します。\n"
-"しかし変数をサフィックスなしの `_` としてはいけません。そうすると、即座に破棄"
-"されてしまいます。"
+"前に即座に破棄されます。変数名は `_` で始まらなければなりません。そうでないと"
+"コンパイラは変数が利用されていない旨の警告を出します。しかし変数をサフィック"
+"スなしの `_` としてはいけません。そうすると、即座に破棄されてしまいます。"
 
 #: src/idioms/dtor-finally.md:77
-#, fuzzy
 msgid ""
 "In Rust, destructors are run when an object goes out of scope. This happens "
 "whether we reach the end of block, there is an early return, or the program "
@@ -1362,16 +1290,13 @@ msgid ""
 "object in each stack frame. So, destructors get called even if the panic "
 "happens in a function being called."
 msgstr ""
-"Rustでは、デストラクタはオブジェクトがスコープ外に出たときに実行されます。\n"
-"これが起こるのは、ブロックの終了に到達したとき、早期returnのとき、パニックが"
-"発生したときです。\n"
-"パニックが起きると、Rustはスタックフレームの各オブジェクトのデストラクタを実"
-"行しつつスタックを巻き戻します。\n"
-"そのため、呼び出し中の関数内にてパニックが発生した場合でも、デストラクタが呼"
-"び出されます。"
+"Rustでは、デストラクタはオブジェクトがスコープ外に出たときに実行されます。こ"
+"れが起こるのは、ブロックの終了に到達したとき、早期リターンのとき、パニックが"
+"発生したときです。パニックが起きると、Rustはスタックフレームの各オブジェクト"
+"のデストラクタを実行しつつスタックを巻き戻します。そのため、呼び出し中の関数"
+"内にてパニックが発生した場合でも、デストラクタが呼び出されます。"
 
 #: src/idioms/dtor-finally.md:83
-#, fuzzy
 msgid ""
 "If a destructor panics while unwinding, there is no good action to take, so "
 "Rust aborts the thread immediately, without running further destructors. "
@@ -1379,84 +1304,60 @@ msgid ""
 "means that you must take extra care in your destructors not to panic, since "
 "it could leave resources in an unexpected state."
 msgstr ""
-"デストラクタが巻き戻し中にパニックを起こした場合、取るべき良いアクションはあ"
-"りません。\n"
-"よってRustはそれ以上デストラクタを実行せずに、スレッドを即座に終了させま"
-"す。\n"
-"これは、デストラクタの実行が絶対に保証されているわけではないということで"
-"す。\n"
+"デストラクタが巻き戻し中にパニックを起こした場合、取るべき良いアクションはな"
+"いため、Rustはそれ以上デストラクタを実行せずにスレッドを即座に終了させます。"
+"これは、デストラクタの実行が絶対に保証されているわけではないということです。"
 "また、デストラクタがパニックに陥らないように細心の注意を払う必要があるという"
-"ことでもあります。\n"
-"リソースを想定されない状態にする可能性があるからです。"
+"ことでもあります。リソースを想定されない状態にする可能性があるからです。"
 
 #: src/idioms/dtor-finally.md:91
 msgid "[RAII guards](../patterns/behavioural/RAII.md)."
 msgstr "[RAIIガード](../patterns/behavioural/RAII.md)。"
 
 #: src/idioms/mem-replace.md:1
-#, fuzzy
 msgid "`mem::{take(_), replace(_)}` to keep owned values in changed enums"
-msgstr "# `mem::{take(_), replace(_)}` による値を所有したままの列挙値の変換"
+msgstr "`mem::{take(_), replace(_)}` による値を所有したままの列挙値の変換"
 
 #: src/idioms/mem-replace.md:5
-#, fuzzy
 msgid ""
 "Say we have a `&mut MyEnum` which has (at least) two variants, `A { name: "
 "String, x: u8 }` and `B { name: String }`. Now we want to change `MyEnum::A` "
 "to a `B` if `x` is zero, while keeping `MyEnum::B` intact."
 msgstr ""
 "`A { name: String, x: u8 }` と `B { name: String }` という(少なくとも) 2つの"
-"バリアントを持つ `&mut MyEnum` があるとします。\n"
-"`MyEnum::A` をその `x` が 0 の場合に `B` に変更したいとします。このとき "
-"`MyEnum::B` に手を入れたくないとします。"
+"バリアントを持つ `&mut MyEnum` があるとします。`MyEnum::A` をその `x` が 0 の"
+"場合に `B` に変更したいとします。このとき `MyEnum::B` に手を入れたくないとし"
+"ます。"
 
 #: src/idioms/mem-replace.md:9
 msgid "We can do this without cloning the `name`."
 msgstr "`name` をクローンすることなく、これを実行できます。"
 
 #: src/idioms/mem-replace.md:23
-#, fuzzy
 msgid ""
 "// This takes out our `name` and puts in an empty String instead\n"
 "        // (note that empty strings don't allocate).\n"
 "        // Then, construct the new enum variant (which will\n"
 "        // be assigned to `*e`).\n"
 msgstr ""
-"```rust\n"
-"use std::mem;\n"
-"\n"
-"enum MyEnum {\n"
-"    A { name: String, x: u8 },\n"
-"    B { name: String }\n"
-"}\n"
-"\n"
-"fn a_to_b(e: &mut MyEnum) {\n"
-"    if let MyEnum::A { name, x: 0 } = e {\n"
-"        // これは `name` を取り出し、その代わりに空文字列を置きます。\n"
+"// これは `name` を取り出し、その代わりに空文字列を置きます。\n"
 "        // (空文字列はメモリが割り当てが発生しないことに注意)\n"
 "        // そして、新しい列挙型のバリアントを作成します( `*e` に代入しま"
 "す)。\n"
-"        *e = MyEnum::B { name: mem::take(name) }\n"
-"    }\n"
-"}\n"
-"```"
 
 #: src/idioms/mem-replace.md:34
 msgid "This also works with more variants:"
 msgstr "より多くのバリアントでも同様です："
 
 #: src/idioms/mem-replace.md:49
-#, fuzzy
 msgid ""
 "// Ownership rules do not allow taking `name` by value, but we cannot\n"
 "        // take the value out of a mutable reference, unless we replace it:\n"
 msgstr ""
-"// オーナーシップ・ルールでは `name` を値で取ることはできない。\n"
-"        しかし、値を置き換えない限り、 // 変数参照から値を取り出すことはでき"
-"ない：\n"
+"// 所有権ルールでは `name` を値として取り出すことはできず、        // 値を"
+"置き換えない限り、可変参照から値を取り出すことはできない：\n"
 
 #: src/idioms/mem-replace.md:65
-#, fuzzy
 msgid ""
 "When working with enums, we may want to change an enum value in place, "
 "perhaps to another variant. This is usually done in two phases to keep the "
@@ -1465,13 +1366,11 @@ msgid ""
 "conditionally change the value (as in the example above)."
 msgstr ""
 "列挙型を扱うとき、ある列挙型の値を別のバリアントに置き換えたいことがありま"
-"す。\n"
-"通常これは、借用チェッカーを満足させるために、二段階に分けて行われます。\n"
-"第一段階では、既存の値を参照し、その一部を見て次の処理を決めます。\n"
-"第二段階では、(上の例のように) 条件付きで値を変更することができます。"
+"す。通常これは、借用チェッカーを満足させるために、二段階に分けて行われます。"
+"第一段階では、既存の値を参照し、その一部を見て次の処理を決めます。第二段階で"
+"は、(上の例のように) 条件付きで値を変更することができます。"
 
 #: src/idioms/mem-replace.md:71
-#, fuzzy
 msgid ""
 "The borrow checker won't allow us to take out `name` of the enum (because "
 "_something_ must be there.) We could of course `.clone()` name and put the "
@@ -1481,16 +1380,13 @@ msgid ""
 "mutable borrow."
 msgstr ""
 "借用チェッカーは列挙型の `name` を取り出すことを許可しません (そこに _何か_ "
-"がなければならないため)。\n"
-"もちろん、 `name` を `.clone()` して、そのクローンを `MyEnum::B` に入れること"
-"はできますが、\n"
-"それは [借用チェッカーを満足させるためのClone](../anti_patterns/borrow_clone."
-"md) アンチパターンのインスタンスになってしまいます。\n"
-"いずれにせよ、 可変借用のみ使用し ‘e‘ を変更することで余分なアロケーションを"
-"避けることができます。"
+"がなければならないため)。もちろん、 `name` を `.clone()` して、そのクローン"
+"を `MyEnum::B` に入れることはできますが、それは [借用チェッカーを満足させるた"
+"めのClone](../anti_patterns/borrow_clone.md) アンチパターンの実例になってしま"
+"います。いずれにせよ、 可変借用のみで ‘e‘ を変更することで余分なアロケーショ"
+"ンを避けることができます。"
 
 #: src/idioms/mem-replace.md:78
-#, fuzzy
 msgid ""
 "`mem::take` lets us swap out the value, replacing it with its default value, "
 "and returning the previous value. For `String`, the default value is an "
@@ -1498,25 +1394,22 @@ msgid ""
 "original `name` _as an owned value_. We can then wrap this in another enum."
 msgstr ""
 "`mem::take` は、値をそのデフォルト値に置き換えるとともに、元の値を返します。"
-"これにより値を入れ替える形で取り出せます。\n"
-"`String`の場合、デフォルト値は空の `String` であり、アロケートの必要がありま"
-"せん。\n"
-"結果として、元の `name` を _所有した値として_ 取得できます。そしてこれを別の"
-"列挙型にラップすることができます。"
+"これにより値を入れ替える形で取り出せます。`String`の場合、デフォルト値は空の "
+"`String` であり、アロケートの必要がありません。結果として、元の `name` を _所"
+"有した値として_ 取得できます。そしてこれを別の列挙型にラップすることができま"
+"す。"
 
 #: src/idioms/mem-replace.md:83
-#, fuzzy
 msgid ""
 "**NOTE:** `mem::replace` is very similar, but allows us to specify what to "
 "replace the value with. An equivalent to our `mem::take` line would be `mem::"
 "replace(name, String::new())`."
 msgstr ""
 "**NOTE:** `mem::replace` は非常に似ていますが、値を何に置き換えるかを指定でき"
-"ます。\n"
-"例示の `mem::take` は `mem::replace(name, String::new())` に相当します。"
+"ます。例示の `mem::take` は `mem::replace(name, String::new())` に相当しま"
+"す。"
 
 #: src/idioms/mem-replace.md:87
-#, fuzzy
 msgid ""
 "Note, however, that if we are using an `Option` and want to replace its "
 "value with a `None`, `Option`’s `take()` method provides a shorter and more "
@@ -1531,60 +1424,51 @@ msgstr ""
 msgid ""
 "Look ma, no allocation! Also you may feel like Indiana Jones while doing it."
 msgstr ""
-"アロケーションが発生しません！インディ・ジョーンズがそうするような気分になれ"
-"るかもしれません。"
+"見て！アロケーション無し！インディ・ジョーンズのような気分も味わえるかも。"
 
 #: src/idioms/mem-replace.md:97
-#, fuzzy
 msgid ""
 "This gets a bit wordy. Getting it wrong repeatedly will make you hate the "
 "borrow checker. The compiler may fail to optimize away the double store, "
 "resulting in reduced performance as opposed to what you'd do in unsafe "
 "languages."
 msgstr ""
-"少しくどい表現になります。\n"
-"何度も間違えると借用チェッカーが憎くなるかもしれません。\n"
-"コンパイラはダブルストアの最適化に失敗するかもしれません、\n"
-"その結果、 unsafe で行うのとは対照的に、パフォーマンスが低下します。"
+"少しくどい表現になります。何度も間違えると借用チェッカーが憎くなるかもしれま"
+"せん。コンパイラはダブルストアの最適化に失敗するかもしれず、そうすると "
+"unsafe な言語で行うのと比べてパフォーマンスが低下する結果となります。"
 
 #: src/idioms/mem-replace.md:101
-#, fuzzy
 msgid ""
 "Furthermore, the type you are taking needs to implement the [`Default` trait]"
 "(./default.md). However, if the type you're working with doesn't implement "
 "this, you can instead use `mem::replace`."
 msgstr ""
 "さらに、扱う型は [`Default` trait](./default.md) を実装している必要がありま"
-"す。\n"
-"もし実装していない場合は、代わりに `mem::replace` を使用することができます。"
+"す。しかしながら、もし実装していない場合は、代わりに `mem::replace` を使用す"
+"ることができます。"
 
 #: src/idioms/mem-replace.md:107
-#, fuzzy
 msgid ""
 "This pattern is only of interest in Rust. In GC'd languages, you'd take the "
 "reference to the value by default (and the GC would keep track of refs), and "
 "in other low-level languages like C you'd simply alias the pointer and fix "
 "things later."
 msgstr ""
-"このパターンが注目されるのはRustだけです。\n"
-"GCのある言語では、デフォルトで値への参照を取ります（そしてGCは参照を追跡しま"
-"す）。\n"
-"Cのような低レベル言語では、単にポインタをエイリアスして後から修正します。"
+"このパターンが注目されるのはRustだけです。GCのある言語では、デフォルトで値へ"
+"の参照を取ります（そしてGCは参照を追跡します）。Cのような低レベル言語では、単"
+"にポインタをエイリアスして後から修正します。"
 
 #: src/idioms/mem-replace.md:112
-#, fuzzy
 msgid ""
 "However, in Rust, we have to do a little more work to do this. An owned "
 "value may only have one owner, so to take it out, we need to put something "
 "back in – like Indiana Jones, replacing the artifact with a bag of sand."
 msgstr ""
-"しかしRustでは、これを行うにはもう少し工夫が必要です。\n"
-"所有された値には所有者が1人しかいないので、それを取り出すには、何かを戻す必要"
-"があります。\n"
-"インディ・ジョーンズのように、アーティファクトを砂袋に置き換えるのです。"
+"しかしRustでは、これを行うにはもう少し工夫が必要です。所有された値には所有者"
+"が1人しかいないので、それを取り出すには、何かを戻す必要があります。インディ・"
+"ジョーンズのように、アーティファクトを砂袋に置き換えるのです。"
 
 #: src/idioms/mem-replace.md:118
-#, fuzzy
 msgid ""
 "This gets rid of the [Clone to satisfy the borrow checker](../anti_patterns/"
 "borrow_clone.md) anti-pattern in a specific case."
@@ -1593,23 +1477,19 @@ msgstr ""
 "md) アンチパターンを特定のケースで取り除くものです。"
 
 #: src/idioms/on-stack-dyn-dispatch.md:5
-#, fuzzy
 msgid ""
 "We can dynamically dispatch over multiple values, however, to do so, we need "
 "to declare multiple variables to bind differently-typed objects. To extend "
 "the lifetime as necessary, we can use deferred conditional initialization, "
 "as seen below:"
 msgstr ""
-"複数の値を動的にディスパッチすることは可能ですが、\n"
-"そうするためには、異なる型のオブジェクトに束縛するため複数の変数を宣言する必"
-"要があります。\n"
-"ライフタイムを必要に応じて延長するために、遅延条件付き初期化を使うことができ"
-"ます："
+"複数の値を動的にディスパッチすることは可能ですが、そうするためには、異なる型"
+"のオブジェクトに束縛するため複数の変数を宣言する必要があります。ライフタイム"
+"を必要に応じて延長するために、遅延条件付き初期化を使うことができます："
 
 #: src/idioms/on-stack-dyn-dispatch.md:17
 #: src/idioms/on-stack-dyn-dispatch.md:23
 #: src/idioms/on-stack-dyn-dispatch.md:60
-#, fuzzy
 msgid "\"-\""
 msgstr "\"-\""
 
