@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-04-24 17:35+0900\n"
+"PO-Revision-Date: 2024-04-25 14:11+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -1354,8 +1354,8 @@ msgid ""
 "// Ownership rules do not allow taking `name` by value, but we cannot\n"
 "        // take the value out of a mutable reference, unless we replace it:\n"
 msgstr ""
-"// 所有権ルールでは `name` を値として取り出すことはできず、        // 値を"
-"置き換えない限り、可変参照から値を取り出すことはできない：\n"
+"// 所有権ルールでは `name` を値として取り出すことはできず、        // 値を置"
+"き換えない限り、可変参照から値を取り出すことはできない：\n"
 
 #: src/idioms/mem-replace.md:65
 msgid ""
@@ -1494,27 +1494,21 @@ msgid "\"-\""
 msgstr "\"-\""
 
 #: src/idioms/on-stack-dyn-dispatch.md:18
-#, fuzzy
 msgid ""
 "// These must live longer than `readable`, and thus are declared first:\n"
 msgstr ""
-"// これらは `readable` よりも長く生きなければならないので、最初に宣言され"
-"る：\n"
+"// これらは `readable` よりも長く生きなければならないため、最初に宣言する：\n"
 
 #: src/idioms/on-stack-dyn-dispatch.md:21
-#, fuzzy
 msgid "// We need to describe the type to get dynamic dispatch.\n"
-msgstr ""
-"// ダイナミック・ディスパッチを得るためには、型を記述する必要がある。\n"
+msgstr "// 動的ディスパッチを得るためには、型を記述する必要がある。\n"
 
 #: src/idioms/on-stack-dyn-dispatch.md:30
 #: src/idioms/on-stack-dyn-dispatch.md:64
-#, fuzzy
 msgid "// Read from `readable` here.\n"
 msgstr "// ここで `readable` から読み込む。\n"
 
 #: src/idioms/on-stack-dyn-dispatch.md:39
-#, fuzzy
 msgid ""
 "Rust monomorphises code by default. This means a copy of the code will be "
 "generated for each type it is used with and optimized independently. While "
@@ -1523,13 +1517,12 @@ msgid ""
 "and cache usage."
 msgstr ""
 "Rustはデフォルトでコードを単相化します。これは、使用する型毎にコードのコピー"
-"が生成され、別個に最適化されることを意味します。\n"
-"これはホットパスにおける非常に高速なコードを実現しますが、\n"
-"パフォーマンスが重要でない場所においてコードが肥大化することにもなります。そ"
-"の結果コンパイル時間やキャッシュの使用量が犠牲になります。"
+"が生成され、別個に最適化されることを意味します。これはホットパスにおける非常"
+"に高速なコードを実現しますが、パフォーマンスが重要でない場所においてコードが"
+"肥大化することにもなります。その結果コンパイル時間やキャッシュの使用量が犠牲"
+"になります。"
 
 #: src/idioms/on-stack-dyn-dispatch.md:45
-#, fuzzy
 msgid ""
 "Luckily, Rust allows us to use dynamic dispatch, but we have to explicitly "
 "ask for it."
@@ -1538,28 +1531,24 @@ msgstr ""
 "ります。"
 
 #: src/idioms/on-stack-dyn-dispatch.md:50
-#, fuzzy
 msgid ""
 "We do not need to allocate anything on the heap. Neither do we need to "
 "initialize something we won't use later, nor do we need to monomorphize the "
 "whole code that follows to work with both `File` or `Stdin`."
 msgstr ""
-"ヒープ上に何もアロケートする必要がありません。\n"
-"後で使わないものを初期化する必要もなく、 `File` と `Stdin` の両方で動作するよ"
-"うに、続くコード全体を単相化する必要もありません。"
+"ヒープ上に何もアロケートする必要がありません。後で使わないものを初期化する必"
+"要もなく、 `File` と `Stdin` の両方で動作するように、続くコード全体を単相化す"
+"る必要もありません。"
 
 #: src/idioms/on-stack-dyn-dispatch.md:56
-#, fuzzy
 msgid "The code needs more moving parts than the `Box`\\-based version:"
-msgstr "このコードは、 `Box` ベースのバージョンよりも多くの変動部があります："
+msgstr "このコードは、 `Box` ベースのバージョンよりも多くの変動部があります:"
 
 #: src/idioms/on-stack-dyn-dispatch.md:59
-#, fuzzy
 msgid "// We still need to ascribe the type for dynamic dispatch.\n"
 msgstr "// 動的なディスパッチには、型を指定する必要がある。\n"
 
 #: src/idioms/on-stack-dyn-dispatch.md:70
-#, fuzzy
 msgid ""
 "Rust newcomers will usually learn that Rust requires all variables to be "
 "initialized _before use_, so it's easy to overlook the fact that _unused_ "
@@ -1568,82 +1557,64 @@ msgid ""
 "of their scope."
 msgstr ""
 "Rustの初心者は通常、Rustはすべての変数を _使用前に_ 初期化する必要があること"
-"を学びます。\n"
-"そのため、 _未使用_ 変数が初期化されていないという事実を見落としがちです。\n"
-"変数が初期化されていないという事実を見落としがちです。\n"
-"Rust は、これが問題なく動作するよう相当な努力を払って保証しており、スコープの"
-"最後には初期化済みの値のみがdropされます。"
+"を学びます。そのため、 _未使用_ 変数が初期化されていなくともよいという事実を"
+"見落としがちです。Rust は、これが問題なく動作するよう相当な努力を払って保証し"
+"ており、スコープの最後には初期化済みの値のみがdropされます。"
 
 #: src/idioms/on-stack-dyn-dispatch.md:76
 msgid "The example meets all the constraints Rust places on us:"
-msgstr "この例は、Rust が私たちに課しているすべての制約を満たしています："
+msgstr "この例は、Rust が私たちに課しているすべての制約を満たしています:"
 
 #: src/idioms/on-stack-dyn-dispatch.md:78
-#, fuzzy
 msgid ""
 "All variables are initialized before using (in this case borrowing) them"
-msgstr "すべての変数は、使用する（この場合は借りる）前に初期化される。"
+msgstr "すべての変数は、使用する（この場合は借用される）前に初期化されます"
 
 #: src/idioms/on-stack-dyn-dispatch.md:79
-#, fuzzy
 msgid ""
 "Each variable only holds values of a single type. In our example, `stdin` is "
 "of type `Stdin`, `file` is of type `File` and `readable` is of type `&mut "
 "dyn Read`"
 msgstr ""
-"- すべての変数は、使用する（この場合は借用される）前に初期化されます。\n"
-"- 各変数は単一の型の値のみを保持します。\n"
-"  この例では、 `stdin_read` は `Stdin` 型、`file_read` は `File` 型、"
-"`readable` は `&mut dyn Read` 型です。\n"
-"- 借用された各値は、それから借用されたすべての参照よりも長生きします。"
+"各変数は単一の型の値のみを保持します。この例では、 `stdin_read` は `Stdin` "
+"型、`file_read` は `File` 型、`readable` は `&mut dyn Read` 型です"
 
 #: src/idioms/on-stack-dyn-dispatch.md:82
-#, fuzzy
 msgid "Each borrowed value outlives all the references borrowed from it"
-msgstr "借用した各値は、そこから借用したすべての参照より長生きする"
+msgstr "借用された各値は、それから借用されたすべての参照よりも長生きします"
 
 #: src/idioms/on-stack-dyn-dispatch.md:86
-#, fuzzy
 msgid ""
 "[Finalisation in destructors](dtor-finally.md) and [RAII guards](../patterns/"
 "behavioural/RAII.md) can benefit from tight control over lifetimes."
 msgstr ""
-"- [デストラクタでのファイナライズ](dtor-finally.md) と\n"
-"  [RAIIガード](../patterns/behavioural/RAII.md)は、ライフタイムの厳密な制御か"
-"ら恩恵を得ます。\n"
-"- 条件により中身が決まる参照 (可変のもの含む) の `Option<&T>` などに対して"
-"は、次のようにします。\n"
-"  `Option<T>` を直接初期化し、その [`.as_ref()`] メソッドを使用することで"
-"Optionにくるまれた参照を取得できます。"
+"[デストラクタでのファイナライズ](dtor-finally.md) と[RAIIガード](../patterns/"
+"behavioural/RAII.md)は、ライフタイムの厳密な制御から恩恵を得ます。"
 
 #: src/idioms/on-stack-dyn-dispatch.md:89
-#, fuzzy
 msgid ""
 "For conditionally filled `Option<&T>`s of (mutable) references, one can "
 "initialize an `Option<T>` directly and use its [`.as_ref()`](https://doc."
 "rust-lang.org/std/option/enum.Option.html#method.as_ref) method to get an "
 "optional reference."
 msgstr ""
-"(変更可能な)参照の `Option<&T>`s を条件付きで埋める場合、 `Option<T>` を直接"
-"初期化し、その [`.as_ref()`](https://doc.rust-lang.org/std/option/enum."
-"Option.html#method.as_ref) メソッドを使ってオプション参照を取得することができ"
-"る。"
+"条件により中身が決まる参照 (可変のもの含む) の `Option<&T>` などに対しては、"
+"次のようにします。 `Option<T>` を直接初期化し、その [`.as_ref()`] メソッドを"
+"使用することでOptionにくるまれた参照を取得できます。"
 
 #: src/idioms/ffi/intro.md:1
-#, fuzzy
 msgid "FFI Idioms"
-msgstr "# FFIのイディオム"
+msgstr "FFIのイディオム"
 
 #: src/idioms/ffi/intro.md:3
-#, fuzzy
 msgid ""
 "Writing FFI code is an entire course in itself. However, there are several "
 "idioms here that can act as pointers, and avoid traps for inexperienced "
 "users of `unsafe` Rust."
 msgstr ""
-"FFIコードを書くことは、それ自体が1つの課程です。\n"
-"しかしながら、ポインタの役割を担い、`unsafe` Rustの経験の浅いユーザーが陥る罠"
-"を回避する、いくつかのイディオムがあります。"
+"FFIコードを書くことは、それ自体が1つの課程です。しかしながら、ポインタの役割"
+"を担い、`unsafe` Rustの経験の浅いユーザーが陥る罠を回避する、いくつかのイディ"
+"オムがあります。"
 
 #: src/idioms/ffi/intro.md:7
 msgid "This section contains idioms that may be useful when doing FFI."
@@ -1651,73 +1622,60 @@ msgstr "このセクションでは、FFIを行う際に役立つイディオム
 
 # タイトル名は要見直し。目次見直しの時でもいいが・・・
 #: src/idioms/ffi/intro.md:9
-#, fuzzy
 msgid ""
 "[Idiomatic Errors](./errors.md) - Error handling with integer codes and "
 "sentinel return values (such as `NULL` pointers)"
 msgstr ""
-"1. [慣習的なエラー](./errors.md) - 整数コードと番人戻り値（`NULL`ポインタな"
-"ど）によるエラー処理\n"
-"\n"
-"2. 最小の `unsafe` コードでの [文字列の受け入れ](./accepting-strings.md) \n"
-"\n"
-"3. FFI関数への[文字列の受け渡し](./passing-strings.md)"
+"[慣習的なエラー](./errors.md) - 整数コードと番人戻り値（`NULL`ポインタなど）"
+"によるエラー処理"
 
 #: src/idioms/ffi/intro.md:12
-#, fuzzy
 msgid "[Accepting Strings](./accepting-strings.md) with minimal unsafe code"
-msgstr "[文字列の受け入れ](./accepting-strings.md)と最小限の安全でないコード"
+msgstr "最小の `unsafe` コードでの [文字列の受け入れ](./accepting-strings.md)"
 
 #: src/idioms/ffi/intro.md:14
-#, fuzzy
 msgid "[Passing Strings](./passing-strings.md) to FFI functions"
 msgstr "FFI関数への[文字列の受け渡し](./passing-strings.md)"
 
 #: src/idioms/ffi/errors.md:1
-#, fuzzy
 msgid "Error Handling in FFI"
-msgstr "# FFI のエラー処理"
+msgstr "FFI のエラー処理"
 
 #: src/idioms/ffi/errors.md:5
-#, fuzzy
 msgid ""
 "In foreign languages like C, errors are represented by return codes. "
 "However, Rust's type system allows much more rich error information to be "
 "captured and propagated through a full type."
 msgstr ""
-"C言語のような言語では、エラーはリターンコードで表されます。\n"
-"しかしRustの型システムは、よりリッチなエラー情報を完全な型を通して捕捉、伝播"
-"することが可能です。"
+"C言語のような言語では、エラーはリターンコードで表されます。しかしRustの型シス"
+"テムは、よりリッチなエラー情報を完全な型を通して捕捉、伝播することが可能で"
+"す。"
 
 #: src/idioms/ffi/errors.md:9
-#, fuzzy
 msgid ""
 "This best practice shows different kinds of error codes, and how to expose "
 "them in a usable way:"
 msgstr ""
 "このベストプラクティスでは、さまざまな種類のエラーコードを示し、どのようにそ"
-"れらを扱いやすい方法で公開するかを示します："
+"れらを扱いやすい方法で公開するかを示します:"
 
 #: src/idioms/ffi/errors.md:12
-#, fuzzy
 msgid "Flat Enums should be converted to integers and returned as codes."
-msgstr "フラットな列挙型は整数に変換してコードとして返す。"
+msgstr "フラットな列挙型は整数に変換してコードとして返します。"
 
 #: src/idioms/ffi/errors.md:13
-#, fuzzy
 msgid ""
 "Structured Enums should be converted to an integer code with a string error "
 "message for detail."
 msgstr ""
-"構造化列挙型は、詳細については文字列のエラーメッセージとともに整数コードに変"
-"換されるべきである。"
+"構造化された列挙型は、詳細についての文字列のエラーメッセージとともに、整数"
+"コードに変換されるべきです。"
 
 #: src/idioms/ffi/errors.md:15
-#, fuzzy
 msgid ""
 "Custom Error Types should become \"transparent\", with a C representation."
 msgstr ""
-"カスタム・エラー・タイプは、C言語で表現され、\"透過的 \"になるべきである。"
+"カスタムエラー型は、C言語で表現された、\"透過的 \"なものになるべきです。"
 
 #: src/idioms/ffi/errors.md:17 src/idioms/ffi/accepting-strings.md:29
 #: src/idioms/ffi/passing-strings.md:26 src/patterns/ffi/export.md:44
@@ -1726,32 +1684,26 @@ msgid "Code Example"
 msgstr "コードの例"
 
 #: src/idioms/ffi/errors.md:19
-#, fuzzy
 msgid "Flat Enums"
-msgstr "### フラットな Enum"
+msgstr "フラットな列挙型"
 
 #: src/idioms/ffi/errors.md:23
-#, fuzzy
 msgid "// user attempted a write operation\n"
 msgstr "// ユーザーが書き込み操作を試みた\n"
 
 #: src/idioms/ffi/errors.md:24
-#, fuzzy
 msgid "// user should read the C errno() for what it was\n"
-msgstr "// ユーザーは C の errno() が何であったかを読むべきである。\n"
+msgstr "// ユーザーは C の errno() が何であったかを確認すべきである\n"
 
 #: src/idioms/ffi/errors.md:25
-#, fuzzy
 msgid "// user should run a repair tool to recover it\n"
-msgstr "// ユーザーは修復ツールを実行して回復する必要があります。\n"
+msgstr "// ユーザーは修復ツールを実行して回復する必要がある\n"
 
 #: src/idioms/ffi/errors.md:35
-#, fuzzy
 msgid "Structured Enums"
-msgstr "### 構造化された Enum"
+msgstr "構造化された列挙型"
 
 #: src/idioms/ffi/errors.md:42
-#, fuzzy
 msgid "// message describing the issue\n"
 msgstr "// 問題を説明するメッセージ\n"
 
@@ -1759,63 +1711,48 @@ msgstr "// 問題を説明するメッセージ\n"
 #: src/idioms/ffi/accepting-strings.md:79 src/idioms/ffi/passing-strings.md:33
 #: src/patterns/ffi/export.md:154 src/patterns/ffi/export.md:158
 #: src/patterns/ffi/export.md:165
-#, fuzzy
 msgid "\"C\""
-msgstr ""
-"```rust,ignore\n"
-"macro_rules! multiply_add {\n"
-"    ($a:expr, $b:expr, $c:expr) => { $a * ($b + $c) };\n"
-"}\n"
-"```"
+msgstr "\"C\""
 
 #: src/idioms/ffi/errors.md:62
-#, fuzzy
 msgid "// SAFETY: pointer lifetime is greater than the current stack frame\n"
-msgstr "// 安全性：ポインタの寿命が現在のスタックフレームより大きい。\n"
+msgstr "// SAFETY: ポインタの寿命が現在のスタックフレームより大きい\n"
 
 #: src/idioms/ffi/errors.md:68
-#, fuzzy
 msgid "\"cannot write to read-only database\""
-msgstr "「読み取り専用データベースへの書き込みができない"
+msgstr "\"cannot write to read-only database\""
 
 #: src/idioms/ffi/errors.md:71
-#, fuzzy
 msgid "\"I/O Error: {e}\""
-msgstr "「I/Oエラー：{e}\""
+msgstr "\"I/O Error: {e}\""
 
 #: src/idioms/ffi/errors.md:74
-#, fuzzy
 msgid "\"File corrupted, run repair: {}\""
-msgstr "「ファイルが破損しています：{}\""
+msgstr "\"File corrupted, run repair: {}\""
 
 #: src/idioms/ffi/errors.md:79
-#, fuzzy
 msgid ""
 "// SAFETY: copying error_str to an allocated buffer with a NUL\n"
 "            // character at the end\n"
 msgstr ""
-"// 安全性：error_strを確保されたバッファにコピーする。\n"
-"            // 文字で確保されたバッファにコピーする。\n"
+"// SAFETY: error_strを、アローケートしたバッファに\n"
+"            // NUL文字終端を付けてコピーする\n"
 
 #: src/idioms/ffi/errors.md:101
-#, fuzzy
 msgid "Custom Error Types"
-msgstr "### カスタムエラー型"
+msgstr "カスタムエラー型"
 
 #: src/idioms/ffi/errors.md:111 src/idioms/ffi/accepting-strings.md:48
 #: src/idioms/ffi/accepting-strings.md:83 src/patterns/creational/builder.md:30
 #: src/patterns/ffi/export.md:137 src/patterns/ffi/export.md:139
-#, fuzzy
 msgid "/* ... */"
 msgstr "/* ... */"
 
 #: src/idioms/ffi/errors.md:113
-#, fuzzy
 msgid "/* Create a second version which is exposed as a C structure */"
-msgstr "/* C構造体として公開される2番目のバージョンを作成する。"
+msgstr "/* C構造体として公開される2つめのバージョンを作成する */"
 
 #: src/idioms/ffi/errors.md:132
-#, fuzzy
 msgid ""
 "This ensures that the foreign language has clear access to error information "
 "while not compromising the Rust code's API at all."
@@ -1824,35 +1761,31 @@ msgstr ""
 "クセスできるようになります。"
 
 #: src/idioms/ffi/errors.md:137
-#, fuzzy
 msgid ""
 "It's a lot of typing, and some types may not be able to be converted easily "
 "to C."
 msgstr "タイピングが多くなります。またC言語に簡単に変換できない型もあります。"
 
 #: src/idioms/ffi/accepting-strings.md:5
-#, fuzzy
 msgid ""
 "When accepting strings via FFI through pointers, there are two principles "
 "that should be followed:"
 msgstr ""
 "FFIから文字列をポインタを通して受け取る場合、次の2つの原則に従う必要がありま"
-"す："
+"す:"
 
 #: src/idioms/ffi/accepting-strings.md:8
-#, fuzzy
 msgid "Keep foreign strings \"borrowed\", rather than copying them directly."
-msgstr "外国の文字列を直接コピーするのではなく、「借用」しておく。"
+msgstr ""
+"外部からの文字列を直接コピーするのではなく、「借用」しておいてください。"
 
 #: src/idioms/ffi/accepting-strings.md:9
-#, fuzzy
 msgid ""
 "Minimize the amount of complexity and `unsafe` code involved in converting "
 "from a C-style string to native Rust strings."
 msgstr ""
-"1. 外部からの文字列を直接コピーするのではなく、「借用」しておいてください。\n"
-"2. Cスタイルの文字列から Rust ネイティブの文字列への変換に伴う複雑さと"
-"`unsafe` コードの量を最小限にしてください。"
+"Cスタイルの文字列から Rust ネイティブの文字列への変換に伴う複雑さと`unsafe` "
+"コードの量を最小限にしてください。"
 
 #: src/idioms/ffi/accepting-strings.md:14
 msgid ""
@@ -1863,33 +1796,26 @@ msgstr ""
 "ち："
 
 #: src/idioms/ffi/accepting-strings.md:16
-#, fuzzy
 msgid "C strings are null-terminated while Rust strings store their length"
-msgstr "C言語の文字列はヌル終端であるのに対し、Rustの文字列は長さを格納する。"
+msgstr "C言語の文字列はヌル終端であるのに対し、Rustの文字列は長さを保存します"
 
 #: src/idioms/ffi/accepting-strings.md:17
-#, fuzzy
 msgid ""
 "C strings can contain any arbitrary non-zero byte while Rust strings must be "
 "UTF-8"
 msgstr ""
-"C言語の文字列は0以外の任意のバイトを含むことができるが、Rustの文字列はUTF-8で"
-"なければならない。"
+"C言語の文字列は0以外の任意のバイトを含むことができますが、Rust の文字列は "
+"UTF-8 でなければなりません"
 
 #: src/idioms/ffi/accepting-strings.md:19
-#, fuzzy
 msgid ""
 "C strings are accessed and manipulated using `unsafe` pointer operations "
 "while interactions with Rust strings go through safe methods"
 msgstr ""
-"- C言語の文字列はヌル終端であるのに対し、Rustの文字列は長さを保存します。\n"
-"- C言語の文字列は0以外の任意のバイトを含むことができますが、Rust の文字列は "
-"UTF-8 でなければなりません。\n"
-"- C の文字列は `unsafe` ポインタ操作を使ってアクセスおよび操作されます。\n"
-"  一方、Rust の文字列とのやり取りは安全なメソッドを使用します。"
+"C の文字列は `unsafe` ポインタ操作を使ってアクセスおよび操作されます。一方、"
+"Rust の文字列とのやり取りは安全なメソッドを使用します"
 
 #: src/idioms/ffi/accepting-strings.md:22
-#, fuzzy
 msgid ""
 "The Rust standard library comes with C equivalents of Rust's `String` and "
 "`&str` called `CString` and `&CStr`, that allow us to avoid a lot of the "
@@ -1902,51 +1828,20 @@ msgstr ""
 "ことができます。"
 
 #: src/idioms/ffi/accepting-strings.md:26
-#, fuzzy
 msgid ""
 "The `&CStr` type also allows us to work with borrowed data, meaning passing "
 "strings between Rust and C is a zero-cost operation."
 msgstr ""
-"また、 `&CStr` 型は、借用データを扱うことを可能とします。\n"
-"これは Rust とC言語の間での文字列の受け渡しがゼロコストで行えるということで"
-"す。"
+"また、 `&CStr` 型は、借用データを扱うことを可能とします。これは Rust とC言語"
+"の間での文字列の受け渡しがゼロコストで行えるということです。"
 
 #: src/idioms/ffi/accepting-strings.md:34
 #: src/idioms/ffi/accepting-strings.md:77 src/idioms/ffi/passing-strings.md:31
 #: src/idioms/ffi/passing-strings.md:80 src/patterns/ffi/wrappers.md:114
-#, fuzzy
 msgid "// other module content\n"
-msgstr ""
-"```rust,ignore\n"
-"pub mod unsafe_module {\n"
-"\n"
-"    // モジュールの他のコンテンツ\n"
-"\n"
-"    pub fn myset_store(\n"
-"        myset: *mut MySetWrapper,\n"
-"        key: datum,\n"
-"        value: datum) -> libc::c_int {\n"
-"\n"
-"        // このコードを使用しないでください。不具合を実証することは危険で"
-"す。\n"
-"\n"
-"        let myset: &mut MySet = unsafe { // SAFETY: あぁ・・・ここで UB が発"
-"生します！\n"
-"            &mut (*myset).myset\n"
-"        };\n"
-"\n"
-"        /* ...キーと値のデータをチェックし、キャスト... */\n"
-"\n"
-"        match myset.store(casted_key, casted_value) {\n"
-"            Ok(_) => 0,\n"
-"            Err(e) => e.into()\n"
-"        }\n"
-"    }\n"
-"}\n"
-"```"
+msgstr "// モジュールの他のコンテンツ\n"
 
 #: src/idioms/ffi/accepting-strings.md:36
-#, fuzzy
 msgid ""
 "/// Log a message at the specified level.\n"
 "    ///\n"
@@ -1961,100 +1856,47 @@ msgid ""
 msgstr ""
 "/// 指定されたレベルでメッセージをログに記録する。\n"
 "    ///\n"
-"    /// 安全\n"
+"    /// # Safety\n"
 "    ///\n"
-"    /// `msg` を保証するのは呼び出し側である：\n"
+"    /// 呼び出し側は `msg` について以下を保証する:\n"
 "    ///\n"
-"    /// null ポインタではないこと。\n"
-"    /// 有効で初期化されたデータを指す。\n"
-"    /// null バイトで終わるメモリを指す。\n"
-"    /// - この関数呼び出しの間、変異されない。\n"
+"    /// - null ポインタではない\n"
+"    /// - 有効で初期化されたデータを指す\n"
+"    /// - null バイトで終わるメモリを指す\n"
+"    /// - この関数呼び出しの間、変更されない\n"
 
 #: src/idioms/ffi/accepting-strings.md:50
-#, fuzzy
 msgid ""
 "// SAFETY: The caller has already guaranteed this is okay (see the\n"
 "        // `# Safety` section of the doc-comment).\n"
 msgstr ""
-"安全性: 呼び出し側は、これが問題ないことを既に保証している（doc-commentの // "
-"`#安全性` セクションを参照）。\n"
-"        // doc-comment の `# Safety` セクションを参照）。\n"
+"// SAFETY: 呼び出し側は、これが問題ないことを既に保証している\n"
+"        // (この doc-comment の `# Safety` セクションを参照)。\n"
 
 #: src/idioms/ffi/accepting-strings.md:55
 #: src/idioms/ffi/accepting-strings.md:105
-#, fuzzy
 msgid "\"FFI string conversion failed\""
-msgstr ""
-"```rust,ignore\n"
-"pub mod unsafe_module {\n"
-"\n"
-"    // モジュールのその他の内容・・・\n"
-"\n"
-"    pub extern \"C\" fn mylib_log(msg: *const libc::c_char, level: libc::"
-"c_int) {\n"
-"        // このコードは使用しないでください！\n"
-"        // このコードは醜く、冗長で、微妙なバグを含んでいます！\n"
-"\n"
-"        let level: crate::LogLevel = match level { /* ... */ };\n"
-"\n"
-"        let msg_len = unsafe { /* SAFETY: strlen って何だろう？ */\n"
-"            libc::strlen(msg)\n"
-"        };\n"
-"\n"
-"        let mut msg_data = Vec::with_capacity(msg_len + 1);\n"
-"\n"
-"        let msg_cstr: std::ffi::CString = unsafe {\n"
-"            // SAFETY: スタックフレーム全体が生存していると期待される外部のポ"
-"インタから、所有メモリへコピー。\n"
-"            std::ptr::copy_nonoverlapping(msg, msg_data.as_mut(), msg_len);\n"
-"\n"
-"            msg_data.set_len(msg_len + 1);\n"
-"\n"
-"            std::ffi::CString::from_vec_with_nul(msg_data).unwrap()\n"
-"        }\n"
-"\n"
-"        let msg_str: String = unsafe {\n"
-"            match msg_cstr.into_string() {\n"
-"                Ok(s) => s,\n"
-"                Err(e) => {\n"
-"                    crate::log_error(\"FFI string conversion failed\");\n"
-"                    return;\n"
-"                }\n"
-"            }\n"
-"        };\n"
-"\n"
-"        crate::log(&msg_str, level);\n"
-"    }\n"
-"}\n"
-"```"
+msgstr "\"FFI string conversion failed\""
 
 #: src/idioms/ffi/accepting-strings.md:67
 msgid "The example is is written to ensure that:"
-msgstr "この例は、以下のことを確実にするために書かれています："
+msgstr "この例は、以下のことを担保するように記述されています:"
 
 #: src/idioms/ffi/accepting-strings.md:69 src/idioms/ffi/passing-strings.md:70
-#, fuzzy
 msgid "The `unsafe` block is as small as possible."
-msgstr ""
-"1. `unsafe` ブロックは可能な限り小さくします。\n"
-"2. `CString` は十分生存します。\n"
-"3. 型キャストによるエラーは可能であれば常に伝播されます。"
+msgstr "`unsafe` ブロックは可能な限り小さくします。"
 
 #: src/idioms/ffi/accepting-strings.md:70
-#, fuzzy
 msgid ""
 "The pointer with an \"untracked\" lifetime becomes a \"tracked\" shared "
 "reference"
-msgstr ""
-"1. `unsafe`ブロックを可能な限り小さくします。\n"
-"2. 「追跡されない」ライフタイムのポインタを「追跡される」共有参照にします。"
+msgstr "「追跡されない」ライフタイムのポインタを「追跡される」共有参照にします"
 
 #: src/idioms/ffi/accepting-strings.md:72
 msgid "Consider an alternative, where the string is actually copied:"
-msgstr "別の方法として、文字列を実際にコピーする方法を考えてみましょう："
+msgstr "別の方法として、文字列を実際にコピーする方法を考えてみましょう:"
 
 #: src/idioms/ffi/accepting-strings.md:80
-#, fuzzy
 msgid ""
 "// DO NOT USE THIS CODE.\n"
 "        // IT IS UGLY, VERBOSE, AND CONTAINS A SUBTLE BUG.\n"
@@ -2063,56 +1905,48 @@ msgstr ""
 "        // このコードは醜く、冗長で、微妙なバグを含んでいます。\n"
 
 #: src/idioms/ffi/accepting-strings.md:85
-#, fuzzy
 msgid "/* SAFETY: strlen is what it is, I guess? */"
-msgstr "/* セーフティ：strlenはその通りだと思うが？ */"
+msgstr "/* SAFETY: strlenはその通りのものだ、と思った？ */"
 
 #: src/idioms/ffi/accepting-strings.md:92
-#, fuzzy
 msgid ""
 "// SAFETY: copying from a foreign pointer expected to live\n"
 "            // for the entire stack frame into owned memory\n"
 msgstr ""
-"安全性：スタック・フレーム全体が生きていると期待される外部ポインタから、 // "
-"所有メモリへのコピー。\n"
-"            // スタックフレーム全体から所有メモリへのコピー\n"
+"// SAFETY: スタックフレーム全体が生きていると\n"
+"           // 期待される外部ポインタから、所有メモリへのコピー\n"
+"\n"
 
 #: src/idioms/ffi/accepting-strings.md:116
 msgid "This code in inferior to the original in two respects:"
-msgstr "このコードは2つの点でオリジナルより劣っています："
+msgstr "このコードは2つの点で元のものより劣っています:"
 
 #: src/idioms/ffi/accepting-strings.md:118
-#, fuzzy
 msgid ""
 "There is much more `unsafe` code, and more importantly, more invariants it "
 "must uphold."
 msgstr ""
-"より多くの「安全でない」コードがあり、さらに重要なのは、それが守らなければな"
-"らない不変条件が増えることだ。"
+"`unsafe` コードがより多くあり、さらに重要なこととして、維持する必要のある不変"
+"性がより多くあります。"
 
 #: src/idioms/ffi/accepting-strings.md:120
-#, fuzzy
 msgid ""
 "Due to the extensive arithmetic required, there is a bug in this version "
 "that cases Rust `undefined behaviour`."
 msgstr ""
-"1. より多くの `unsafe` コードがあり、より重要なことは、そのコードが守らなけれ"
-"ばならない不変性がより多いということです。\n"
-"2. 広範な演算が必要なため、このバージョンには Rust の `undefined behavior` を"
-"引き起こすバグがあります。"
+"追加の計算が必要となったことにより、このバージョンには Rust の `undefined "
+"behavior` を引き起こすバグがあります。"
 
 #: src/idioms/ffi/accepting-strings.md:123
-#, fuzzy
 msgid ""
 "The bug here is a simple mistake in pointer arithmetic: the string was "
 "copied, all `msg_len` bytes of it. However, the `NUL` terminator at the end "
 "was not."
 msgstr ""
-"このバグはポインタ演算の単純なミスです：文字列は `msg_len` バイトすべてをコ"
+"このバグはポインタ演算の単純なミスです: 文字列は `msg_len` バイトすべてをコ"
 "ピーされましたが、末尾の `NUL` 終端がコピーされませんでした。"
 
 #: src/idioms/ffi/accepting-strings.md:126
-#, fuzzy
 msgid ""
 "The Vector then had its size _set_ to the length of the _zero padded string_ "
 "-- rather than _resized_ to it, which could have added a zero at the end. As "
@@ -2121,14 +1955,11 @@ msgid ""
 "cause `undefined behaviour`!"
 msgstr ""
 "ベクタのサイズは、 _ゼロパディングされた文字列_ の長さに _設定_ されています "
-"--\n"
-"終端に 0 を追加できるよう、 _リサイズ_ するのではなく。\n"
-"その結果、ベクタの最後のバイトは未初期化のメモリになります。\n"
-"ブロックの最後にて `CString` を作成する際、\n"
-"このベクタの読み出しが `undefined behaviour` を引き起こします！"
+"-- 終端に 0 を追加できるよう、 _リサイズ_ されるのではなく。その結果、ベクタ"
+"の最後のバイトは未初期化のメモリになります。ブロックの最後にて `CString` を作"
+"成する際、このベクタの読み出しが `undefined behaviour` を引き起こします!"
 
 #: src/idioms/ffi/accepting-strings.md:132
-#, fuzzy
 msgid ""
 "Like many such issues, this would be difficult issue to track down. "
 "Sometimes it would panic because the string was not `UTF-8`, sometimes it "
@@ -2136,10 +1967,9 @@ msgid ""
 "just completely crash."
 msgstr ""
 "このような問題の多くがそうであるように、これは突き止めることが難しい問題とな"
-"るでしょう。\n"
-"ときには文字列が `UTF-8` でなかったためにパニックが発生したり、またときには文"
-"字列の末尾に変な文字が置かれたり、または完全にクラッシュしたりすることでしょ"
-"う。"
+"るでしょう。ときには文字列が `UTF-8` でなかったためにパニックが発生したり、ま"
+"たときには文字列の末尾に変な文字が置かれたり、または完全にクラッシュしたりす"
+"ることでしょう。"
 
 #: src/idioms/ffi/accepting-strings.md:138
 #: src/idioms/ffi/passing-strings.md:103
