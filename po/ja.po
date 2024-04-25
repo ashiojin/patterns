@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-04-25 14:11+0900\n"
+"PO-Revision-Date: 2024-04-25 16:08+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -1977,52 +1977,45 @@ msgid "None?"
 msgstr "なし？"
 
 #: src/idioms/ffi/passing-strings.md:5
-#, fuzzy
 msgid ""
 "When passing strings to FFI functions, there are four principles that should "
 "be followed:"
-msgstr "FFI関数に文字列を渡す場合、次の4つの原則に従う必要があります："
+msgstr "FFI関数に文字列を渡す場合、次の4つの原則に従う必要があります:"
 
 #: src/idioms/ffi/passing-strings.md:8
-#, fuzzy
 msgid "Make the lifetime of owned strings as long as possible."
-msgstr "所有する弦の寿命をできるだけ長くする。"
+msgstr "所有している文字列のライフタイムを可能な限り長くします。"
 
 #: src/idioms/ffi/passing-strings.md:9
-#, fuzzy
 msgid "Minimize `unsafe` code during the conversion."
-msgstr "変換中の`安全でない`コードを最小限に抑える。"
+msgstr "変換の間の `unsafe` コードを最小限に抑えます。"
 
 #: src/idioms/ffi/passing-strings.md:10
-#, fuzzy
 msgid ""
 "If the C code can modify the string data, use `Vec` instead of `CString`."
 msgstr ""
-"C コードが文字列データを変更できる場合は、`CString` の代わりに `Vec` を使用す"
-"る。"
+"Cのコードが文字列データを変更し得る場合は、`CString` の代わりに `Vec` を使用"
+"します。"
 
 #: src/idioms/ffi/passing-strings.md:11
-#, fuzzy
 msgid ""
 "Unless the Foreign Function API requires it, the ownership of the string "
 "should not transfer to the callee."
 msgstr ""
-"外部関数APIがそれを要求しない限り、文字列の所有権は着呼側に移るべきではない。"
+"外部関数APIがそれを要求しない限り、文字列の所有権は呼び出し側に移してはいけま"
+"せん。"
 
 #: src/idioms/ffi/passing-strings.md:16
-#, fuzzy
 msgid ""
 "Rust has built-in support for C-style strings with its `CString` and `CStr` "
 "types. However, there are different approaches one can take with strings "
 "that are being sent to a foreign function call from a Rust function."
 msgstr ""
 "Rust は `CString` 型と `CStr` 型により C スタイルの文字列をビルトインでサポー"
-"トしています。\n"
-"しかしながら、Rust 関数から外部関数を呼び出す際に受け渡す文字列には、さまざま"
-"なアプローチがあります。"
+"トしています。しかしながら、Rust 関数から外部関数を呼び出す際に受け渡す文字列"
+"に関しては、さまざまなアプローチがありえます。"
 
 #: src/idioms/ffi/passing-strings.md:20
-#, fuzzy
 msgid ""
 "The best practice is simple: use `CString` in such a way as to minimize "
 "`unsafe` code. However, a secondary caveat is that _the object must live "
@@ -2030,78 +2023,68 @@ msgid ""
 "documentation explains that \"round-tripping\" a `CString` after "
 "modification is UB, so additional work is necessary in that case."
 msgstr ""
-"ベストプラクティスは単純です：安全でないコードを最小限にするように `CString` "
-"を使うことです。\n"
-"ただし、二次的な注意点は _オブジェクトは十分に長く生存する必要がある_ です。"
-"これはライフタイムを最大化すべきという意味です。\n"
-"加えてドキュメントでは、変更後の `CString` を \"ラウンドトリップ\" することは"
-"未定義動作であると説明されており、このようなケースでは追加の対応が必要です。"
+"ベストプラクティスは単純です: `unsafe` コードを最小限にするように `CString` "
+"を使うことです。ただし、次いでの注意点があり、それは _オブジェクトは十分に長"
+"く生存する必要がある_ ことです。これはライフタイムを最大化すべきという意味で"
+"す。加えてドキュメントでは、変更後の `CString` を 「ラウンドトリップ」 するこ"
+"とは未定義動作であると説明されており、このようなケースでは追加の対応が必要で"
+"す。"
 
 #: src/idioms/ffi/passing-strings.md:42
-#, fuzzy
 msgid ""
 "// SAFETY: calling an FFI whose documentation says the pointer is\n"
 "            // const, so no modification should occur\n"
 msgstr ""
-"安全性：ポインタがconstであるとドキュメントに記述されているFFIを呼び出すこと"
-"は、 // 安全である。\n"
-"            // を呼び出す。\n"
+"// SAFETY: ポインタがconstであるとドキュメントに記述されているFFIの呼び出"
+"し、\n"
+"            // すなわち変更されることはない\n"
 
 #: src/idioms/ffi/passing-strings.md:48
-#, fuzzy
 msgid "// The lifetime of c_err continues until here\n"
-msgstr "// c_errの寿命はここまで続く。\n"
+msgstr "// c_err のライフタイムはここまで続く\n"
 
 #: src/idioms/ffi/passing-strings.md:54
-#, fuzzy
 msgid ""
 "// SAFETY: calling an FFI whose documentation implies\n"
 "            // that the input need only live as long as the call\n"
 msgstr ""
-"// 安全性: ドキュメントに以下のように記述されているFFIを呼び出す。\n"
-"            // を呼び出す。\n"
+"// SAFETY: 入力値が呼び出しよりも長く生きる必要があることを\n"
+"            // ドキュメントが示唆するFFIの呼び出し\n"
 
 #: src/idioms/ffi/passing-strings.md:68
 msgid "The example is written in a way to ensure that:"
-msgstr "この例は、以下のことを守るように記述されています："
+msgstr "この例は、以下のことを担保するように記述されています:"
 
 #: src/idioms/ffi/passing-strings.md:71
-#, fuzzy
 msgid "The `CString` lives long enough."
-msgstr "CString`は十分に長生きする。"
+msgstr "`CString`は十分に長生きします。"
 
 #: src/idioms/ffi/passing-strings.md:72
-#, fuzzy
 msgid "Errors with typecasts are always propagated when possible."
-msgstr "タイプキャストによるエラーは、可能な限り常に伝播される。"
+msgstr "型キャストによるエラーは、可能な限り常に伝播されます。"
 
 #: src/idioms/ffi/passing-strings.md:74
-#, fuzzy
 msgid ""
 "A common mistake (so common it's in the documentation) is to not use the "
 "variable in the first block:"
 msgstr ""
 "よくある間違い（ドキュメントにも載っているほど）は、最初のブロックで変数を使"
-"わないことです："
+"わないことです:"
 
 #: src/idioms/ffi/passing-strings.md:84
-#, fuzzy
 msgid "// SAFETY: whoops, this contains a dangling pointer!\n"
-msgstr "// 安全：おっと、これはぶら下がりポインタを含んでいる！\n"
+msgstr "// SAFETY: おっと、これはダングリングポインタを含んでいる！\n"
 
 #: src/idioms/ffi/passing-strings.md:92
-#, fuzzy
 msgid ""
 "This code will result in a dangling pointer, because the lifetime of the "
 "`CString` is not extended by the pointer creation, unlike if a reference "
 "were created."
 msgstr ""
-"このコードではダングリングポインタが発生します。\n"
-"参照の作成とは異なり、ポインタの作成によって `CString` の寿命が延長されること"
-"はないからです。"
+"このコードではダングリングポインタが発生します。参照の作成とは異なり、ポイン"
+"タの作成によって `CString` の寿命が延長されることはないからです。"
 
 #: src/idioms/ffi/passing-strings.md:96
-#, fuzzy
 msgid ""
 "Another issue frequently raised is that the initialization of a 1k vector of "
 "zeroes is \"slow\". However, recent versions of Rust actually optimize that "
@@ -2109,11 +2092,10 @@ msgid ""
 "operating system's ability to return zeroed memory (which is quite fast)."
 msgstr ""
 "もうひとつよく挙げられる問題は、1kのゼロ埋めベクトルの初期化が「遅い」という"
-"ことです。\n"
-"しかし、Rustの最近のバージョンでは、この特定のマクロはなんと `zmalloc` の呼び"
-"出しに最適化されています。\n"
-"これは、オペレーティングシステムのゼロ埋めしたメモリを返す機能（これはかなり"
-"高速です）と同じ速さであることを意味します。"
+"ことです。しかし、Rustの最近のバージョンでは、この特定のマクロはなんと "
+"`zmalloc` の呼び出しに最適化されています。これは、オペレーティングシステムの"
+"ゼロ埋めしたメモリを返す機能 (これはかなり高速です) と同じ速さであることを意"
+"味します。"
 
 #: src/idioms/option-iter.md:1
 #, fuzzy
