@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-04-25 16:08+0900\n"
+"PO-Revision-Date: 2024-04-29 13:05+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -2098,20 +2098,18 @@ msgstr ""
 "味します。"
 
 #: src/idioms/option-iter.md:1
-#, fuzzy
 msgid "Iterating over an `Option`"
-msgstr "# `Option` に対する反復処理"
+msgstr "`Option` に対する反復処理"
 
 #: src/idioms/option-iter.md:5
-#, fuzzy
 msgid ""
 "`Option` can be viewed as a container that contains either zero or one "
 "element. In particular, it implements the `IntoIterator` trait, and as such "
 "can be used with generic code that needs such a type."
 msgstr ""
-"`Option` は、0個または1個の要素を含むコンテナとみなすことができます。\n"
-"特にこれは `IntoIterator` トレイトを実装しているため、そのような型を必要とす"
-"るジェネリックなコードにて利用できます。"
+"`Option` は、0個または1個の要素を含むコンテナとみなすことができます。特にこれ"
+"は `IntoIterator` トレイトを実装しています。よってそのような型を必要とする"
+"ジェネリックなコードにて利用できます。"
 
 #: src/idioms/option-iter.md:9 src/patterns/structural/small-crates.md:34
 #: src/patterns/structural/unsafe-mods.md:23
@@ -2119,7 +2117,6 @@ msgid "Examples"
 msgstr "例"
 
 #: src/idioms/option-iter.md:11
-#, fuzzy
 msgid ""
 "Since `Option` implements `IntoIterator`, it can be used as an argument to "
 "[`.extend()`](https://doc.rust-lang.org/std/iter/trait.Extend.html#tymethod."
@@ -2127,148 +2124,99 @@ msgid ""
 msgstr ""
 "`Option` は `IntoIterator` を実装しているので、[`.extend()`](https://doc."
 "rust-lang.org/std/iter/trait.Extend.html#tymethod.extend)の引数として使用でき"
-"ます："
+"ます:"
 
 #: src/idioms/option-iter.md:15 src/idioms/option-iter.md:31
-#, fuzzy
 msgid "\"Turing\""
-msgstr "「チューリング"
+msgstr "\"Turing\""
 
 #: src/idioms/option-iter.md:16 src/idioms/option-iter.md:32
-#, fuzzy
 msgid "\"Curry\""
-msgstr ""
-"```rust\n"
-"let turing = Some(\"Turing\");\n"
-"let mut logicians = vec![\"Curry\", \"Kleene\", \"Markov\"];\n"
-"\n"
-"logicians.extend(turing);\n"
-"\n"
-"// 以下と等価\n"
-"if let Some(turing_inner) = turing {\n"
-"    logicians.push(turing_inner);\n"
-"}\n"
-"```"
+msgstr "\"Curry\""
 
 #: src/idioms/option-iter.md:16 src/idioms/option-iter.md:32
-#, fuzzy
 msgid "\"Kleene\""
-msgstr ""
-"```rust\n"
-"let turing = Some(\"Turing\");\n"
-"let mut logicians = vec![\"Curry\", \"Kleene\", \"Markov\"];\n"
-"\n"
-"logicians.extend(turing);\n"
-"\n"
-"// 以下と等価\n"
-"if let Some(turing_inner) = turing {\n"
-"    logicians.push(turing_inner);\n"
-"}\n"
-"```"
+msgstr "\"Kleene\""
 
 #: src/idioms/option-iter.md:16 src/idioms/option-iter.md:32
-#, fuzzy
 msgid "\"Markov\""
-msgstr ""
-"```rust\n"
-"let turing = Some(\"Turing\");\n"
-"let mut logicians = vec![\"Curry\", \"Kleene\", \"Markov\"];\n"
-"\n"
-"logicians.extend(turing);\n"
-"\n"
-"// 以下と等価\n"
-"if let Some(turing_inner) = turing {\n"
-"    logicians.push(turing_inner);\n"
-"}\n"
-"```"
+msgstr "\"Markov\""
 
 #: src/idioms/option-iter.md:19
-#, fuzzy
 msgid "// equivalent to\n"
-msgstr ""
-"`${count(ident)}`: 一番内側の反復で `$ident` が反復される合計回数。これは "
-"`${count(ident, 0)}` と同じです。"
+msgstr "// 以下と等しい\n"
 
 #: src/idioms/option-iter.md:26
-#, fuzzy
 msgid ""
 "If you need to tack an `Option` to the end of an existing iterator, you can "
 "pass it to [`.chain()`](https://doc.rust-lang.org/std/iter/trait.Iterator."
 "html#method.chain):"
 msgstr ""
-"既存のイテレータの末尾に `Option` を追加する必要がある場合、それを/ [`."
-"chain()`](https://doc.rust-lang.org/std/iter/trait.Iterator.html#method."
-"chain) に渡せます："
+"既存のイテレータの末尾に `Option` を追加する必要がある場合、 [`.chain()`]"
+"(https://doc.rust-lang.org/std/iter/trait.Iterator.html#method.chain) に渡せ"
+"ます:"
 
 #: src/idioms/option-iter.md:35
-#, fuzzy
 msgid "\"{logician} is a logician\""
-msgstr "\"【0】は論理学者\""
+msgstr "\"{logician} is a logician\""
 
 #: src/idioms/option-iter.md:39
-#, fuzzy
 msgid ""
 "Note that if the `Option` is always `Some`, then it is more idiomatic to use "
 "[`std::iter::once`](https://doc.rust-lang.org/std/iter/fn.once.html) on the "
 "element instead."
 msgstr ""
-"もし `Option` が常に `Some` である場合は、代わりに、その要素に対して [`std::"
-"iter::once`](https://doc.rust-lang.org/std/iter/fn.once.html) を使用する方が"
-"より慣習的であることに注意してください。"
+"もし `Option` が常に `Some` である場合は、その要素に対して [`std::iter::"
+"once`](https://doc.rust-lang.org/std/iter/fn.once.html) を使用する方がより慣"
+"習的であることに注意してください。"
 
 #: src/idioms/option-iter.md:43
-#, fuzzy
 msgid ""
 "Also, since `Option` implements `IntoIterator`, it's possible to iterate "
 "over it using a `for` loop. This is equivalent to matching it with `if let "
 "Some(..)`, and in most cases you should prefer the latter."
 msgstr ""
 "また、`Option` は `IntoIterator` を実装しているので、`for` ループを使って繰り"
-"返し処理を行うことができます。\n"
-"これは `if let Some(...)` とマッチさせるのと同じです。\n"
-"ほとんどの場合、後者の方がよいでしょう。"
+"返し処理を行うことができます。これは `if let Some(...)` とマッチさせるのと同"
+"じです。ほとんどの場合、後者の方がよいでしょう。"
 
 #: src/idioms/option-iter.md:49
-#, fuzzy
 msgid ""
 "[`std::iter::once`](https://doc.rust-lang.org/std/iter/fn.once.html) is an "
 "iterator which yields exactly one element. It's a more readable alternative "
 "to `Some(foo).into_iter()`."
 msgstr ""
-"[std::iter::once`](https://doc.rust-lang.org/std/iter/fn.once.html)は、正確に"
-"1つの要素を返すイテレータです。Some(foo).into_iter()`に代わる、より読みやすい"
-"イテレータです。"
+"[std::iter::once`](https://doc.rust-lang.org/std/iter/fn.once.html)は、厳密に"
+"1つの要素を返すイテレータです。Some(foo).into_iter()`に代わる、よりわかりやす"
+"いイテレータです。"
 
 #: src/idioms/option-iter.md:53
-#, fuzzy
 msgid ""
 "[`Iterator::filter_map`](https://doc.rust-lang.org/std/iter/trait.Iterator."
 "html#method.filter_map) is a version of [`Iterator::map`](https://doc.rust-"
 "lang.org/std/iter/trait.Iterator.html#method.map), specialized to mapping "
 "functions which return `Option`."
 msgstr ""
-"[Iterator::filter_map`](https://doc.rust-lang.org/std/iter/trait.Iterator."
+"[`Iterator::filter_map`](https://doc.rust-lang.org/std/iter/trait.Iterator."
 "html#method.filter_map)は[`Iterator::map`](https://doc.rust-lang.org/std/"
 "iter/trait.Iterator.html#method.map)のバージョンで、`Option`を返すマッピング"
 "関数に特化したものです。"
 
 #: src/idioms/option-iter.md:58
-#, fuzzy
 msgid ""
 "The [`ref_slice`](https://crates.io/crates/ref_slice) crate provides "
 "functions for converting an `Option` to a zero- or one-element slice."
 msgstr ""
-"[`ref_slice`](https://crates.io/crates/ref_slice) crate は `&T` を `&[T]` に"
-"変換する関数を提供します(歴史的な例)。"
+"[`ref_slice`](https://crates.io/crates/ref_slice) は `Option` を 0 要素また"
+"は 1 要素のスライスに変換する関数を提供します。"
 
 #: src/idioms/option-iter.md:61
-#, fuzzy
 msgid ""
 "[Documentation for `Option<T>`](https://doc.rust-lang.org/std/option/enum."
 "Option.html)"
 msgstr ""
-"[<T> オプションに関する文書](https://doc.rust-lang.org/std/option/enum."
-"Option.html)"
+"[`Option<T>` に関する文書](https://doc.rust-lang.org/std/option/enum.Option."
+"html)"
 
 #: src/idioms/pass-var-to-closure.md:1
 #, fuzzy
