@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-04-29 13:05+0900\n"
+"PO-Revision-Date: 2024-05-03 14:53+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -2219,26 +2219,22 @@ msgstr ""
 "html)"
 
 #: src/idioms/pass-var-to-closure.md:1
-#, fuzzy
 msgid "Pass variables to closure"
 msgstr "変数をクロージャに渡す"
 
 #: src/idioms/pass-var-to-closure.md:5
-#, fuzzy
 msgid ""
 "By default, closures capture their environment by borrowing. Or you can use "
 "a `move`\\-closure to move the whole environment. However, often you want to "
 "move just some variables to the closure, give it a copy of some data, pass "
 "by reference, or perform some other transformation."
 msgstr ""
-"デフォルトでは、クロージャは借用する形で環境をキャプチャします。\n"
-"あるいは環境全体をムーブする `move` クロージャを使うこともできます。\n"
-"しかしながら、クロージャへ一部の変数のみを対象に、ムーブさせる／データのコ"
-"ピーを与える／参照渡しをする／その他の変換を行う、といったことをしたいことが"
-"よくあります。"
+"デフォルトでは、クロージャは借用する形で環境をキャプチャします。あるいは環境"
+"全体をムーブする `move` クロージャを使うこともできます。しかしながら、クロー"
+"ジャへ一部の変数のみを対象に、ムーブさせる／データのコピーを与える／参照渡し"
+"をする／その他の変換を行う、といったことをしたいことがよくあります。"
 
 #: src/idioms/pass-var-to-closure.md:10
-#, fuzzy
 msgid "Use variable rebinding in a separate scope for that."
 msgstr "そのためには、別のスコープで変数の再バインディングを使用します。"
 
@@ -2247,38 +2243,32 @@ msgid "Use"
 msgstr "次の例のようにしましょう"
 
 #: src/idioms/pass-var-to-closure.md:23
-#, fuzzy
 msgid "// `num1` is moved\n"
-msgstr "// num1` が移動する\n"
+msgstr "// num1` はムーブされる\n"
 
 #: src/idioms/pass-var-to-closure.md:24
-#, fuzzy
 msgid "// `num2` is cloned\n"
 msgstr "// num2` がクローンされる\n"
 
 #: src/idioms/pass-var-to-closure.md:25
-#, fuzzy
 msgid "// `num3` is borrowed\n"
-msgstr "// num3` は借り物である。\n"
+msgstr "// num3` は借用される\n"
 
 #: src/idioms/pass-var-to-closure.md:32
 msgid "instead of"
 msgstr "上の例は下の例と同等の意味となります"
 
 #: src/idioms/pass-var-to-closure.md:50
-#, fuzzy
 msgid ""
 "Copied data are grouped together with the closure definition, so their "
 "purpose is more clear, and they will be dropped immediately even if they are "
 "not consumed by the closure."
 msgstr ""
 "コピーされたデータは、クロージャの定義と一緒にグループ化されるため、その目的"
-"がより明確になります。\n"
-"また、もしそれらがクロージャによって消費されない場合でも、即座に削除されるこ"
-"とになります。"
+"がより明確になります。また、もしそれらがクロージャによって消費されない場合で"
+"も、即座に削除されることになります。"
 
 #: src/idioms/pass-var-to-closure.md:54
-#, fuzzy
 msgid ""
 "The closure uses the same variable names as the surrounding code, whether "
 "data are copied or moved."
@@ -2287,127 +2277,100 @@ msgstr ""
 "数名を使用します。"
 
 #: src/idioms/pass-var-to-closure.md:59
-#, fuzzy
 msgid "Additional indentation of the closure body."
 msgstr "クロージャの本体のインデントが増えます。"
 
 #: src/idioms/priv-extend.md:1
-#, fuzzy
 msgid "`#[non_exhaustive]` and private fields for extensibility"
-msgstr "# 拡張性のための `#[non_exhaustive]` と private なフィールド"
+msgstr "拡張性のための `#[non_exhaustive]` と private なフィールド"
 
 #: src/idioms/priv-extend.md:5
-#, fuzzy
 msgid ""
 "A small set of scenarios exist where a library author may want to add public "
 "fields to a public struct or new variants to an enum without breaking "
 "backwards compatibility."
 msgstr ""
 "ライブラリの作者が後方互換性を破壊することなく、publicな構造体へpublicな"
-"フィールドを追加したり、\n"
-"enumへ新しいバリアントを追加したりしたい、といったいくつかのシナリオがありま"
-"す。"
+"フィールドを追加したり、enumへ新しいバリアントを追加したりしたい、といったい"
+"くつかのシナリオがあります。"
 
 #: src/idioms/priv-extend.md:9
 msgid "Rust offers two solutions to this problem:"
-msgstr "Rust はこの問題に対して2つの解決策を提供します："
+msgstr "Rust はこの問題に対して2つの解決策を提供します:"
 
 #: src/idioms/priv-extend.md:11
-#, fuzzy
 msgid ""
 "Use `#[non_exhaustive]` on `struct`s, `enum`s, and `enum` variants. For "
 "extensive documentation on all the places where `#[non_exhaustive]` can be "
 "used, see [the docs](https://doc.rust-lang.org/reference/attributes/"
 "type_system.html#the-non_exhaustive-attribute)."
 msgstr ""
-"-  `struct` や `enum` 、 `enum` バリアントに対して `#[non_exhaustive]` を使用"
-"する。\n"
-"  [`non_exhaustive]`が使用できるすべての場所に関する詳細なドキュメントは "
-"[the docs](https://doc.rust-lang.org/reference/attributes/type_system."
-"html#the-non_exhaustive-attribute). を参照してください。\n"
-"\n"
-"- 構造体が直接インスタンス化されたり、マッチングされたりしないようにするため"
-"に、\n"
-"  構造体に private なフィールドを追加することができます（Alternative 参照）。"
+"`struct` や `enum` 、 `enum` バリアントに対して `#[non_exhaustive]` を使用す"
+"る。 `#[non_exhaustive]` が使用できるすべての場所に関する詳細なドキュメント"
+"は [the docs](https://doc.rust-lang.org/reference/attributes/type_system."
+"html#the-non_exhaustive-attribute). を参照してください。"
 
 #: src/idioms/priv-extend.md:16
-#, fuzzy
 msgid ""
 "You may add a private field to a struct to prevent it from being directly "
 "instantiated or matched against (see Alternative)"
 msgstr ""
-"構造体に private フィールドを追加して、直接インスタンス化されたりマッチングさ"
-"れたりしないようにすることもできます (代替手段を参照)。"
+"構造体が直接インスタンス化されたり、マッチングされたりしないようにするため"
+"に、構造体に private なフィールドを追加することができます（Alternative 参照）"
 
 #: src/idioms/priv-extend.md:23
-#, fuzzy
 msgid "// Public struct.\n"
-msgstr "// 公開構造体。\n"
+msgstr "// public な構造体\n"
 
 #: src/idioms/priv-extend.md:41
-#, fuzzy
 msgid ""
 "// Because S is `#[non_exhaustive]`, it cannot be named here and\n"
 "    // we must use `..` in the pattern.\n"
 msgstr ""
-"// S は `#[non_exhaustive]` なので、ここで名前を付けることはできない。\n"
+"// S は `#[non_exhaustive]` なので、ここで名前を付けることはできず、\n"
 "    // パターンの中で `..` を使わなければならない。\n"
 
 #: src/idioms/priv-extend.md:47
-#, fuzzy
 msgid "\"it's an A\""
-msgstr "Aだ"
+msgstr "\"it's an A\""
 
 #: src/idioms/priv-extend.md:48
-#, fuzzy
 msgid "\"it's a b\""
-msgstr "`$name ! $arg`; _e.g._ `println!(\"Hi!\")`, `concat!(\"a\", \"b\")`, …"
+msgstr "\"it's a b\""
 
 #: src/idioms/priv-extend.md:50
-#, fuzzy
 msgid "// .. required because this variant is non-exhaustive as well\n"
-msgstr "// ... このバリアントも非網羅的であるため必須\n"
+msgstr "// このバリアントも非網羅的であるため .. が必須\n"
 
 #: src/idioms/priv-extend.md:51
-#, fuzzy
 msgid "\"it's a c\""
-msgstr ""
-"```rust,ignore\n"
-"macro_rules! multiply_add {\n"
-"    ($a:expr, $b:expr, $c:expr) => { $a * ($b + $c) };\n"
-"}\n"
-"```"
+msgstr "\"it's a c\""
 
 #: src/idioms/priv-extend.md:53
-#, fuzzy
 msgid ""
 "// The wildcard match is required because more variants may be\n"
 "        // added in the future\n"
 msgstr ""
-"// ワイルドカードによるマッチは必須である。\n"
-"        // 将来的に追加される可能性があるからです。\n"
+"// 将来的にバリアントが追加される可能性があるため、\n"
+"        // ワイルドカードによるマッチが必須\n"
 
 #: src/idioms/priv-extend.md:55
-#, fuzzy
 msgid "\"it's a new variant\""
-msgstr "\"新しいバリエーション\""
+msgstr "\"it's a new variant\""
 
 #: src/idioms/priv-extend.md:60
-#, fuzzy
 msgid "Alternative: `Private fields` for structs"
-msgstr "## Alternative： 構造体の private なフィールド"
+msgstr "Alternative： 構造体の private なフィールド"
 
 #: src/idioms/priv-extend.md:62
-#, fuzzy
 msgid ""
 "`#[non_exhaustive]` only works across crate boundaries. Within a crate, the "
 "private field method may be used."
 msgstr ""
-"`[non_exhaustive]` が機能するのは、crate の境界を越えるときのみです。\n"
-"クレート内部では、private なフィールドによる手法を使用できます。"
+"`#[non_exhaustive]` が機能するのは、crate の境界を越えるときのみです。クレー"
+"ト内部では、private なフィールドによる手法を使用できます。"
 
 #: src/idioms/priv-extend.md:65
-#, fuzzy
 msgid ""
 "Adding a field to a struct is a mostly backwards compatible change. However, "
 "if a client uses a pattern to deconstruct a struct instance, they might name "
@@ -2417,21 +2380,17 @@ msgid ""
 "struct's fields private forces clients to use the latter form of patterns, "
 "ensuring that the struct is future-proof."
 msgstr ""
-"構造体にフィールドを追加することはだいたいの場合、後方互換性のある変更で"
-"す。\n"
+"構造体にフィールドを追加することはだいたいの場合、後方互換性のある変更です。"
 "ただし、構造体のクライアントが、パターンを使用して構造体のインスタンスをデコ"
 "ンストラクトする際に、構造体内のすべてのフィールドに名前を付けている可能性が"
 "あります。この状況で構造体に新しいフィールドを追加することは、そのパターンを"
-"壊すことになります。\n"
-"クライアントは、パターンの中でいくつかのフィールドに名前を付けるとともに `.."
-"` を使うことが可能であり、この場合はフィールドの追加に対して後方互換性があり"
-"ます。\n"
-"構造体のフィールドの1つ以上を private なものにすることで、クライアントに後者"
-"のパターンを使用することを強制することが可能であり、構造体の将来性を確保でき"
-"ます。"
+"壊すことになります。クライアントは、パターンの中でいくつかのフィールドに名前"
+"を付けるとともに `..` を使うことが可能であり、この場合はフィールドの追加に対"
+"して後方互換性があります。構造体のフィールドの1つ以上を private なものにする"
+"ことで、クライアントに後者のパターンを使用することを強制することが可能であ"
+"り、構造体の将来性を確保できます。"
 
 #: src/idioms/priv-extend.md:73
-#, fuzzy
 msgid ""
 "The downside of this approach is that you might need to add an otherwise "
 "unneeded field to the struct. You can use the `()` type so that there is no "
@@ -2439,31 +2398,21 @@ msgid ""
 "warning."
 msgstr ""
 "この方法の欠点は、構造体に本来不要なフィールドを追加する必要がある可能性があ"
-"ることです。\n"
-"`()` 型を使うことでランタイムのオーバーヘッドを回避できます。\n"
-"またフィールド名の頭に `_` を付けることで未使用フィールドの警告を回避できま"
-"す。"
+"ることです。`()` 型を使うことでランタイムのオーバーヘッドを回避できます。また"
+"フィールド名の頭に `_` を付けることで未使用フィールドの警告を回避できます。"
 
 #: src/idioms/priv-extend.md:81
-#, fuzzy
 msgid ""
 "// Because `b` is private, you cannot match on `S` without using `..` and "
 "`S`\n"
 "    //  cannot be directly instantiated or matched against\n"
 msgstr ""
-"```rust\n"
-"pub struct S {\n"
-"    pub a: i32,\n"
-"    // `b` は private です。 `S` に対して `..` を使用せずにパターンマッチする"
-"ことは不可能であり、 \n"
+"// `b` は private です。 `S` に対して `..` を使用せずにパターンマッチすること"
+"は不可能であり、 \n"
 "    // `S` を直接インスタンス化したり、マッチ対象としたりすること不可能で"
 "す。\n"
-"    _b: ()\n"
-"}\n"
-"```"
 
 #: src/idioms/priv-extend.md:89
-#, fuzzy
 msgid ""
 "On `struct`s, `#[non_exhaustive]` allows adding additional fields in a "
 "backwards compatible way. It will also prevent clients from using the struct "
@@ -2473,54 +2422,47 @@ msgid ""
 "undiscovered."
 msgstr ""
 "`struct` に対しては `#[non_exhaustive]` は、後方互換性のある形でフィールドを"
-"追加可能にします。\n"
-"また、すべてのフィールドがpublicであっても、クライアントは構造体のコンストラ"
-"クタを使用できなくなります。\n"
-"これは便利ではあります。しかしながら、フィールドの追加がコンパイルエラーを起"
-"こすようにすることで、エラーを見たクライアントがフィールドが追加されたことに"
-"気づけるようにする形が (フィールドの追加をクライアントに隠す形よりも) _期待_ "
-"されることもあります。"
+"追加可能にします。また、すべてのフィールドがpublicであっても、クライアントは"
+"構造体のコンストラクタを使用できなくなります。これは便利ではあります。しかし"
+"ながら、フィールドの追加がコンパイルエラーを起こすようにすることで、エラーを"
+"見たクライアントがフィールドが追加されたことに気づけるようにする形が (フィー"
+"ルドの追加をクライアントに隠す形よりも) _期待_ されることもあります。"
 
 #: src/idioms/priv-extend.md:95
-#, fuzzy
 msgid ""
 "`#[non_exhaustive]` can be applied to enum variants as well. A "
 "`#[non_exhaustive]` variant behaves in the same way as a `#[non_exhaustive]` "
 "struct."
 msgstr ""
-"`#[non_exhaustive]` は列挙型のバリアントにも適用できます。\n"
+"`#[non_exhaustive]` は列挙型のバリアントにも適用できます。"
 "`#[non_exhaustive]` なバリアントは、`#[non_exhaustive]` な構造体と同様に振舞"
 "います。"
 
 #: src/idioms/priv-extend.md:99
-#, fuzzy
 msgid ""
 "Use this deliberately and with caution: incrementing the major version when "
 "adding fields or variants is often a better option. `#[non_exhaustive]` may "
 "be appropriate in scenarios where you're modeling an external resource that "
 "may change out-of-sync with your library, but is not a general purpose tool."
 msgstr ""
-"この方法は計画的かつ注意深く使用してください：フィールドやバリアントを追加す"
-"るときは、 メジャーバージョンをインクリメントした方が良いことが多いのです。\n"
+"この方法は計画的かつ注意深く使用してください: フィールドやバリアントを追加す"
+"るときは、 メジャーバージョンをインクリメントした方が良いことが多いのです。"
 "`#[non_exhaustive]`は、あなたのライブラリが、ライブラリに同期させることができ"
 "ない外部のリソースをモデリングする場合に適切かもしれませんが、汎用目的のツー"
 "ルではありません。"
 
 #: src/idioms/priv-extend.md:106
-#, fuzzy
 msgid ""
 "`#[non_exhaustive]` can make your code much less ergonomic to use, "
 "especially when forced to handle unknown enum variants. It should only be "
 "used when these sorts of evolutions are required **without** incrementing "
 "the major version."
 msgstr ""
-"`#[non_exhaustive]`はコードを人間工学的に使いにくくします。\n"
-"特に未知の列挙型の変種を扱わなければならない場合は顕著です。\n"
-"この種の開発を、メジャーバージョンをインクリメント **せずに** 行う必要な場合"
-"にのみ使うべきです。"
+"`#[non_exhaustive]`はコードを人間工学的に使いにくくします。特に未知の列挙型の"
+"バリアントを扱わなければならない場合は顕著です。この種の開発を、メジャーバー"
+"ジョンをインクリメント **せずに** 行う必要がある場合のみ使うべきです。"
 
 #: src/idioms/priv-extend.md:110
-#, fuzzy
 msgid ""
 "When `#[non_exhaustive]` is applied to `enum`s, it forces clients to handle "
 "a wildcard variant. If there is no sensible action to take in this case, "
@@ -2531,51 +2473,44 @@ msgid ""
 "case; there is rarely a sensible action to take in this scenario."
 msgstr ""
 "`enum` に `#[non_exhaustive]` を適用することは、クライアントにワイルドカード"
-"の使用を強制します。\n"
-"この場合に取るべき賢明なアクションがなければ、厄介なコードや、極めて稀な状況"
-"でのみ実行されるコードパスを生み出しかねません。\n"
-"クライアントがこのシナリオで `panic!()` を選択するようなら、コンパイル時エ"
-"ラーとして公開された方がよかったかもしれません。\n"
-"実際、`#[non_exhaustive]`はクライアントに 「その他の何か」 に対するケースを処"
-"理するように強制します。そして、このシナリオで取るべき賢明なアクションはまず"
-"ありません。"
+"の使用を強制します。この場合に取るべき賢明なアクションがなければ、厄介なコー"
+"ドや、極めて稀な状況でのみ実行されるコードパスを生み出しかねません。クライア"
+"ントがこのシナリオで `panic!()` を選択するようなら、コンパイル時エラーとして"
+"公開された方がよかったかもしれません。実際、`#[non_exhaustive]`はクライアント"
+"に 「その他の何か」 に対するケースを処理するように強制します。そして、このシ"
+"ナリオで取るべき賢明なアクションはまずありません。"
 
 #: src/idioms/priv-extend.md:120
-#, fuzzy
 msgid ""
 "[RFC introducing #\\[non_exhaustive\\] attribute for enums and structs]"
 "(https://github.com/rust-lang/rfcs/blob/master/text/2008-non-exhaustive.md)"
 msgstr ""
-"- [`enum` と `struct` に `#[non_exhaustive]` 属性を導入するRFC](https://"
-"github.com/rust-lang/rfcs/blob/master/text/2008-non-exhaustive.md)"
+"[`enum` と `struct` に `#[non_exhaustive]` 属性を導入するRFC](https://github."
+"com/rust-lang/rfcs/blob/master/text/2008-non-exhaustive.md)"
 
 #: src/idioms/rustdoc-init.md:5
-#, fuzzy
 msgid ""
 "If a struct takes significant effort to initialize when writing docs, it can "
 "be quicker to wrap your example with a helper function which takes the "
 "struct as an argument."
 msgstr ""
-"docコメントを書く際に、構造体を初期化するのに多大な労力がかかる場合は、\n"
-"構造体を引数に取るヘルパー関数でコード例をラップした方が手っ取り早いかもしれ"
-"ません。"
+"docコメントを書く際に、構造体を初期化するのに多大な労力がかかる場合は、構造体"
+"を引数に取るヘルパー関数でコード例をラップした方が手っ取り早いかもしれませ"
+"ん。"
 
 #: src/idioms/rustdoc-init.md:11
-#, fuzzy
 msgid ""
 "Sometimes there is a struct with multiple or complicated parameters and "
 "several methods. Each of these methods should have examples."
 msgstr ""
 "多数の、または複雑なパラメータや複数のメソッドが、構造体に存在するとしましょ"
-"う。\n"
-"これらのメソッドにはそれぞれコード例があるはずです。"
+"う。これらのメソッドにはそれぞれコード例があるはずです。"
 
 #: src/idioms/rustdoc-init.md:14
 msgid "For example:"
 msgstr "例:"
 
 #: src/idioms/rustdoc-init.md:23
-#, fuzzy
 msgid ""
 "/// Sends a request over the connection.\n"
 "    ///\n"
@@ -2590,14 +2525,7 @@ msgid ""
 "    /// assert!(response.is_ok());\n"
 "    /// ```\n"
 msgstr ""
-"````rust,ignore\n"
-"struct Connection {\n"
-"    name: String,\n"
-"    stream: TcpStream,\n"
-"}\n"
-"\n"
-"impl Connection {\n"
-"    /// 接続を介してリクエストを送信\n"
+"/// 接続を介してリクエストを送信\n"
 "    ///\n"
 "    /// # Example\n"
 "    /// ```no_run\n"
@@ -2609,41 +2537,27 @@ msgstr ""
 "    /// let response = connection.send_request(request);\n"
 "    /// assert!(response.is_ok());\n"
 "    /// ```\n"
-"    fn send_request(&self, request: Request) -> Result<Status, SendErr> {\n"
-"        // ...\n"
-"    }\n"
-"\n"
-"    /// なんと、ここでも同じボイラーテンプレートが必要です！\n"
-"    fn check_status(&self) -> Status {\n"
-"        // ...\n"
-"    }\n"
-"}\n"
-"````"
 
 #: src/idioms/rustdoc-init.md:35 src/idioms/rustdoc-init.md:40
 #: src/idioms/rustdoc-init.md:68
-#, fuzzy
 msgid "// ...\n"
 msgstr "// ...\n"
 
 #: src/idioms/rustdoc-init.md:38
-#, fuzzy
 msgid "/// Oh no, all that boilerplate needs to be repeated here!\n"
-msgstr "/// いやあ、この定型文はすべてここで繰り返す必要がある！\n"
+msgstr "/// なんと、ここでも同じボイラーテンプレートが必要です！\n"
 
 #: src/idioms/rustdoc-init.md:47
-#, fuzzy
 msgid ""
 "Instead of typing all of this boilerplate to create a `Connection` and "
 "`Request`, it is easier to just create a wrapping helper function which "
 "takes them as arguments:"
 msgstr ""
 "このような `Connection` や `Request` を生成するボイラーテンプレートすべてをタ"
-"イピングする代わりに、\n"
-"それらを引数として受け取るヘルパー関数をラッパーとして作成する方が簡単です："
+"イピングする代わりに、それらを引数として受け取るヘルパー関数をラッパーとして"
+"作成する方が簡単です："
 
 #: src/idioms/rustdoc-init.md:58
-#, fuzzy
 msgid ""
 "/// Sends a request over the connection.\n"
 "    ///\n"
@@ -2655,14 +2569,7 @@ msgid ""
 "    /// # }\n"
 "    /// ```\n"
 msgstr ""
-"````rust,ignore\n"
-"struct Connection {\n"
-"    name: String,\n"
-"    stream: TcpStream,\n"
-"}\n"
-"\n"
-"impl Connection {\n"
-"    /// 接続を介してリクエストを送信\n"
+"/// 接続を介してリクエストを送信\n"
 "    ///\n"
 "    /// # Example\n"
 "    /// ```\n"
@@ -2671,21 +2578,15 @@ msgstr ""
 "    /// assert!(response.is_ok());\n"
 "    /// # }\n"
 "    /// ```\n"
-"    fn send_request(&self, request: Request) {\n"
-"        // ...\n"
-"    }\n"
-"}\n"
-"````"
 
 #: src/idioms/rustdoc-init.md:73
-#, fuzzy
 msgid ""
 "**Note** in the above example the line `assert!(response.is_ok());` will not "
 "actually run while testing because it is inside a function which is never "
 "invoked."
 msgstr ""
-"**注意** 上記の例における、 `assert!(response.is_ok());` という行は、\n"
-"呼び出されない関数内にあるため、実際にはテスト中に実行されません。"
+"**注意** 上記の例における、 `assert!(response.is_ok());` という行は、呼び出さ"
+"れない関数内にあるため、実際にはテスト中に実行されません。"
 
 #: src/idioms/rustdoc-init.md:79
 msgid "This is much more concise and avoids repetitive code in examples."
@@ -2693,25 +2594,22 @@ msgstr ""
 "この方がはるかに簡潔で、コード例中のコードの繰り返しを避けることができます。"
 
 #: src/idioms/rustdoc-init.md:83
-#, fuzzy
 msgid ""
 "As example is in a function, the code will not be tested. Though it will "
 "still be checked to make sure it compiles when running a `cargo test`. So "
 "this pattern is most useful when you need `no_run`. With this, you do not "
 "need to add `no_run`."
 msgstr ""
-"コード例が関数定義の中にあるので、コードはテストされません。\n"
-"しかし `cargo test` を実行することで、コンパイルできたかどうかはチェックされ"
-"ます。\n"
-"ですから、このパターンは `no_run` が必要なときに便利です。このパターンを使う"
-"場合、（実行されないため） `no_run` を追加する必要はありません。"
+"コード例が関数定義の中にあるので、コードはテストされません。しかし `cargo "
+"test` を実行することで、コンパイルできたかどうかはチェックされます。ですか"
+"ら、このパターンは `no_run` が必要なときに便利です。このパターンを使う場合、 "
+"(実行されないため) `no_run` を追加する必要はありません。"
 
 #: src/idioms/rustdoc-init.md:90
 msgid "If assertions are not required this pattern works well."
 msgstr "アサーションが必要ない場合は、このパターンがうまく機能します。"
 
 #: src/idioms/rustdoc-init.md:92
-#, fuzzy
 msgid ""
 "If they are, an alternative can be to create a public method to create a "
 "helper instance which is annotated with `#[doc(hidden)]` (so that users "
@@ -2720,24 +2618,21 @@ msgid ""
 msgstr ""
 "もしアサーションが必要であるなら、別の方法として、ヘルパーインスタンスを作成"
 "するpublicメソッドを `#[doc(hidden)]` でアノテーションして作成する方法があり"
-"ます。\n"
-"これにより、このメソッドはcrateのパブリックAPIの一部として、 rustdoc の内部で"
-"呼び出すことが可能になります。"
+"ます。これにより、このメソッドはcrateのパブリックAPIの一部として、 rustdoc の"
+"内部で呼び出すことが可能になります。"
 
 #: src/idioms/temporary-mutability.md:5
-#, fuzzy
 msgid ""
 "Often it is necessary to prepare and process some data, but after that data "
 "are only inspected and never modified. The intention can be made explicit by "
 "redefining the mutable variable as immutable."
 msgstr ""
 "あるデータを準備・処理する必要があり、いったんそれが済めば、データは参照され"
-"るだけであり、変更されることはない、という状況がよくあります。\n"
-"このような状況では、可変変数を不変変数として再定義することで、その意図を明示"
-"することができます。"
+"るだけであり、変更されることはない、という状況がよくあります。このような状況"
+"では、可変変数を不変変数として再定義することで、その意図を明示することができ"
+"ます。"
 
 #: src/idioms/temporary-mutability.md:9
-#, fuzzy
 msgid ""
 "It can be done either by processing data within a nested block or by "
 "redefining the variable."
@@ -2751,16 +2646,15 @@ msgstr "ベクタが使用される前にソートする必要がある、とい
 
 #: src/idioms/temporary-mutability.md:16
 msgid "Using nested block:"
-msgstr "ネストされたブロックを使う場合："
+msgstr "ネストされたブロックを使う場合:"
 
 #: src/idioms/temporary-mutability.md:24 src/idioms/temporary-mutability.md:34
-#, fuzzy
 msgid "// Here `data` is immutable.\n"
 msgstr "// ここで `data` は不変である。\n"
 
 #: src/idioms/temporary-mutability.md:28
 msgid "Using variable rebinding:"
-msgstr "変数の再束縛を使う場合："
+msgstr "変数の再束縛を使う場合:"
 
 #: src/idioms/temporary-mutability.md:40
 msgid ""
@@ -2769,21 +2663,18 @@ msgstr ""
 "ある時点以降にデータを誤って変更してしまうことを、コンパイラが防ぎます。"
 
 #: src/idioms/temporary-mutability.md:44
-#, fuzzy
 msgid ""
 "Nested block requires additional indentation of block body. One more line to "
 "return data from block or redefine variable."
 msgstr ""
-"ネストされたブロックは、ブロックの本体に追加のインデントが必要になります。\n"
-"ブロックからデータを返したり、変数を再定義するに、追加の1行が必要です。"
+"ネストされたブロックは、ブロックの本体に追加のインデントが必要になります。ブ"
+"ロックからデータを返したり、変数を再定義するに、追加の1行が必要です。"
 
 #: src/idioms/return-consumed-arg-on-error.md:1
-#, fuzzy
 msgid "Return consumed argument on error"
-msgstr "# エラー時に消費した引数を返す"
+msgstr "エラー時に消費した引数を返す"
 
 #: src/idioms/return-consumed-arg-on-error.md:5
-#, fuzzy
 msgid ""
 "If a fallible function consumes (moves) an argument, return that argument "
 "back inside an error."
@@ -2792,32 +2683,26 @@ msgstr ""
 "却しましょう。"
 
 #: src/idioms/return-consumed-arg-on-error.md:12
-#, fuzzy
 msgid "\"using {value} in a meaningful way\""
-msgstr "\"【0】を有意義に使う\""
+msgstr "\"using {value} in a meaningful way\""
 
 #: src/idioms/return-consumed-arg-on-error.md:13
-#, fuzzy
 msgid "// Simulate non-deterministic fallible action.\n"
-msgstr "// 非決定論的な誤りやすい行動をシミュレートする。\n"
+msgstr "// 非決定的な失敗し得るアクションをシミュレート。\n"
 
 #: src/idioms/return-consumed-arg-on-error.md:28
-#, fuzzy
 msgid "\"imagine this is very long string\""
-msgstr "\"これはとても長い紐だと想像してください\""
+msgstr "\"imagine this is very long string\""
 
 #: src/idioms/return-consumed-arg-on-error.md:31
-#, fuzzy
 msgid "// Try to send value two times.\n"
-msgstr "// 値を2回送信してみる。\n"
+msgstr "// value を2回送信してみる。\n"
 
 #: src/idioms/return-consumed-arg-on-error.md:41
-#, fuzzy
 msgid "\"success: {success}\""
-msgstr "\"成功：{success}\""
+msgstr "\"success: {success}\""
 
 #: src/idioms/return-consumed-arg-on-error.md:47
-#, fuzzy
 msgid ""
 "In case of error you may want to try some alternative way or to retry action "
 "in case of non-deterministic function. But if the argument is always "
@@ -2825,13 +2710,11 @@ msgid ""
 "efficient."
 msgstr ""
 "エラーが発生した際、なにか別の手段を試したり、非決定的な関数であるならリトラ"
-"イしたくなるものです。\n"
-"しかし、もし引数が常に消費されてしまうのであれば、呼び出しのたびに引数をク"
-"ローンしなければならなくなります。\n"
-"これではとても効率的とは言えません。"
+"イしたくなるものです。しかし、もし引数が常に消費されてしまうのであれば、呼び"
+"出しのたびに引数をクローンしなければならなくなります。これではとても効率的と"
+"は言えません。"
 
 #: src/idioms/return-consumed-arg-on-error.md:51
-#, fuzzy
 msgid ""
 "The standard library uses this approach in e.g. `String::from_utf8` method. "
 "When given a vector that doesn't contain valid UTF-8, a `FromUtf8Error` is "
@@ -2839,11 +2722,9 @@ msgid ""
 "method."
 msgstr ""
 "標準ライブラリでは、このアプローチを `String::from_utf8` メソッドなどで使用し"
-"ています。\n"
-"有効な UTF-8 を含まないベクタが与えられた場合、 `FromUtf8Error` を返しま"
-"す。\n"
-" `FromUtf8Error::into_bytes` メソッドを使用することで、元のベクタを取得できま"
-"す。"
+"ています。有効な UTF-8 を含まないベクタが与えられた場合、 `FromUtf8Error` を"
+"返します。 `FromUtf8Error::into_bytes` メソッドを使用することで、元のベクタを"
+"取得できます。"
 
 #: src/idioms/return-consumed-arg-on-error.md:57
 msgid "Better performance because of moving arguments whenever possible."
@@ -2854,7 +2735,6 @@ msgid "Slightly more complex error types."
 msgstr "エラーの型がやや複雑になります。"
 
 #: src/patterns/index.md:3
-#, fuzzy
 msgid ""
 "[Design patterns](https://en.wikipedia.org/wiki/Software_design_pattern) are "
 "\"general reusable solutions to a commonly occurring problem within a given "
@@ -2864,59 +2744,51 @@ msgid ""
 "due to a language feature, or impossible to express due to a missing feature."
 msgstr ""
 "[デザインパターン](https://en.wikipedia.org/wiki/Software_design_pattern) と"
-"は\n"
-"「general reusable solutions to a commonly occurring problem within a given\n"
-"context in software design(ソフトウェア設計において、与えられた文脈の中で一般"
-"的に発生する問題に対する一般的で再利用可能な解決策)」です。\n"
-"デザインパターンはプログラミング言語の文化を表現する素晴らしい方法です。\n"
-"デザインパターンはとても言語固有のものです。\n"
-"ある言語ではパターンであっても、別の言語ではその言語の特徴によって不要であっ"
-"たり、欠けている機能によって表現できなかったりします。"
+"は「general reusable solutions to a commonly occurring problem within a "
+"given context in software design(ソフトウェア設計において、与えられた文脈の中"
+"で一般的に発生する問題に対する一般的で再利用可能な解決策)」です。デザインパ"
+"ターンはプログラミング言語の文化を表現する素晴らしい方法です。デザインパター"
+"ンはかなり言語固有のもので - ある言語ではパターンであっても、別の言語ではその"
+"言語の特徴によって不要であったり、欠けている機能によって表現できなかったりし"
+"ます。"
 
 #: src/patterns/index.md:10
-#, fuzzy
 msgid ""
 "If overused, design patterns can add unnecessary complexity to programs. "
 "However, they are a great way to share intermediate and advanced level "
 "knowledge about a programming language."
 msgstr ""
 "デザインパターンは使い過ぎると、プログラムに不必要な複雑さを加えることがあり"
-"ます。\n"
-"しかし、デザインパターンは、プログラミング言語に関する中級および上級レベルの"
-"知識を共有するための素晴らしい方法です。"
+"ます。しかし、デザインパターンは、プログラミング言語に関する中級および上級レ"
+"ベルの知識を共有するための素晴らしい方法です。"
 
 #: src/patterns/index.md:16
-#, fuzzy
 msgid ""
 "Rust has many unique features. These features give us great benefit by "
 "removing whole classes of problems. Some of them are also patterns that are "
 "_unique_ to Rust."
 msgstr ""
-"Rust には多くのユニークな特徴があります。\n"
-"これらの機能は、各種問題の大半を取り除く、大きなメリットをもたらします。その"
-"中には、Rust _独自_ のパターンもあります。"
+"Rust には多くのユニークな特徴があります。これらの機能は、各種問題の大半を取り"
+"除く、大きなメリットをもたらします。その中には、Rust _独自_ のパターンもあり"
+"ます。"
 
 #: src/patterns/index.md:20
-#, fuzzy
 msgid "YAGNI"
-msgstr "## YAGNI"
+msgstr "YAGNI"
 
 #: src/patterns/index.md:22
-#, fuzzy
 msgid ""
 "YAGNI is an acronym that stands for `You Aren't Going to Need It`. It's a "
 "vital software design principle to apply as you write code."
 msgstr ""
-"YAGNIとは「You Aren't Going to Need It」の頭文字をとったものです。\n"
-"これは、コードを書くときに適用すべき重要なソフトウェア設計の原則です。"
+"YAGNIとは「You Aren't Going to Need It」の頭文字をとったものです。これは、"
+"コードを書くときに適用すべき重要なソフトウェア設計の原則です。"
 
 #: src/patterns/index.md:25
-#, fuzzy
 msgid "The best code I ever wrote was code I never wrote."
-msgstr "> これまで書いた中で最高のコードは、書かなかったコードです。"
+msgstr "これまで私が書いた中で最高のコードは、書かなかったコードです。"
 
 #: src/patterns/index.md:27
-#, fuzzy
 msgid ""
 "If we apply YAGNI to design patterns, we see that the features of Rust allow "
 "us to throw out many patterns. For instance, there is no need for the "
@@ -2924,48 +2796,39 @@ msgid ""
 "because we can just use [traits](https://doc.rust-lang.org/book/traits.html)."
 msgstr ""
 "YAGNIをデザインパターンに適用すると、Rustの機能によって多くのパターンを捨てる"
-"ことができることがわかります。\n"
-"例えば、Rustでは [strategyパターン](https://en.wikipedia.org/wiki/"
-"Strategy_pattern) は不要です。\n"
-"なぜなら、単に [trait](https://doc.rust-lang.org/book/traits.html) を使えば良"
-"いためです。"
+"ことができることがわかります。例えば、Rustでは [strategyパターン](https://en."
+"wikipedia.org/wiki/Strategy_pattern) は不要です。なぜなら、単に [trait]"
+"(https://doc.rust-lang.org/book/traits.html) を使えば良いためです。"
 
 #: src/patterns/behavioural/intro.md:1
-#, fuzzy
 msgid "Behavioural Patterns"
-msgstr "# 振る舞いに関するパターン"
+msgstr "振る舞いに関するパターン"
 
 #: src/patterns/behavioural/intro.md:3
 msgid "From [Wikipedia](https://en.wikipedia.org/wiki/Behavioral_pattern):"
 msgstr "[Wikipedia](https://en.wikipedia.org/wiki/Behavioral_pattern) より："
 
 #: src/patterns/behavioural/intro.md:5
-#, fuzzy
 msgid ""
 "Design patterns that identify common communication patterns among objects. "
 "By doing so, these patterns increase flexibility in carrying out "
 "communication."
 msgstr ""
-"> Design patterns that identify common communication patterns among "
-"objects.\n"
-"> By doing so, these patterns increase flexibility in carrying out "
-"communication.\n"
-"> (オブジェクト間で共通するコミュニケーションのパターンを特定するデザインパ"
-"ターン。\n"
-"> これらのパターンの実践により、コミュニケーションを実行する際の柔軟性が高ま"
-"ります。)"
+"Design patterns that identify common communication patterns among objects. "
+"By doing so, these patterns increase flexibility in carrying out "
+"communication. (オブジェクト間で共通するコミュニケーションのパターンを特定す"
+"るデザインパターン。これらのパターンの実践により、コミュニケーションを実行す"
+"る際の柔軟性が高まります。)"
 
 #: src/patterns/behavioural/command.md:5
-#, fuzzy
 msgid ""
 "The basic idea of the Command pattern is to separate out actions into its "
 "own objects and pass them as parameters."
 msgstr ""
-"Commandパターンの基本的な考え方は、アクションを独自のオブジェクトに分離し、\n"
-"それらをパラメータとして渡すことです。"
+"Commandパターンの基本的な考え方は、アクションを独自のオブジェクトに分離し、そ"
+"れらをパラメータとして渡すことです。"
 
 #: src/patterns/behavioural/command.md:10
-#, fuzzy
 msgid ""
 "Suppose we have a sequence of actions or transactions encapsulated as "
 "objects. We want these actions or commands to be executed or invoked in some "
@@ -2977,20 +2840,15 @@ msgid ""
 "system crashes."
 msgstr ""
 "オブジェクトとしてカプセル化された一連のアクションやトランザクションがあると"
-"します。\n"
-"これらのアクションやコマンドを、ある順序で、別の時間に実行したり呼び出したり"
-"したいとします。\n"
-"これらのコマンドは、何らかのイベントの結果としてトリガーされることもあるで"
-"しょう。\n"
-"例えば、ユーザーがボタンを押した時や、データパケットが到着した時などのよう"
-"に。\n"
-"また他に、これらのコマンドはアンドゥ可能であるかもしれません。これはエディ"
-"ターの操作などに役立つでしょう。\n"
-"また実行したコマンドのログを保存しておき、後でシステムがクラッシュしたときに"
-"その変更を再適用できるようにしておきたいこともあるでしょう。"
+"します。これらのアクションやコマンドを、ある順序で、後の時間に実行したり呼び"
+"出したりしたいとします。これらのコマンドは、何らかのイベントの結果としてトリ"
+"ガーされることもあるでしょう。例えば、ユーザーがボタンを押した時や、データパ"
+"ケットが到着した時などのように。また他に、これらのコマンドはアンドゥ可能であ"
+"るかもしれません。これはエディターの操作などに役立つでしょう。また実行したコ"
+"マンドのログを保存しておき、後でシステムがクラッシュしたときにその変更を再適"
+"用できるようにしておきたいこともあるでしょう。"
 
 #: src/patterns/behavioural/command.md:20
-#, fuzzy
 msgid ""
 "Define two database operations `create table` and `add field`. Each of these "
 "operations is a command which knows how to undo the command, e.g., `drop "
@@ -3000,27 +2858,23 @@ msgid ""
 "invoked in reverse order."
 msgstr ""
 "`create table` と `add field` の2つのデータベース操作を定義します。これらの操"
-"作はそれぞれ\n"
-"これらの操作はそれぞれ、そのコマンドをアンドゥする方法(例えば `drop table` "
-"と `remove field` )が分かっているコマンドです。\n"
-"ユーザがデータベースの移行操作を実行すると、各コマンドが定義された順序で実行"
-"され、\n"
-"またロールバック操作を実行すると、コマンド一式が逆の順序で実行されます。"
+"作はそれぞれこれらの操作はそれぞれ、そのコマンドをアンドゥする方法(例えば "
+"`drop table` と `remove field` )が分かっているコマンドです。ユーザがデータ"
+"ベースの移行操作を実行すると、各コマンドが定義された順序で実行され、またロー"
+"ルバック操作を実行すると、コマンド一式が逆の順序で実行されます。"
 
 #: src/patterns/behavioural/command.md:26
-#, fuzzy
 msgid "Approach: Using trait objects"
-msgstr "## アプローチ：トレイトオブジェクトの使用"
+msgstr "アプローチ：トレイトオブジェクトの使用"
 
 #: src/patterns/behavioural/command.md:28
-#, fuzzy
 msgid ""
 "We define a common trait which encapsulates our command with two operations "
 "`execute` and `rollback`. All command `structs` must implement this trait."
 msgstr ""
 "`execute` と `rollback` の2つの操作を持つコマンドをカプセル化する共通のトレイ"
-"トを定義します。\n"
-"すべてのコマンドの `struct` はこのトレイトを実装しなければなりません。"
+"トを定義します。すべてのコマンドの `struct` はこのトレイトを実装しなければな"
+"りません。"
 
 #: src/patterns/behavioural/command.md:40
 #: src/patterns/behavioural/command.md:90
@@ -3028,16 +2882,8 @@ msgstr ""
 #: src/patterns/behavioural/command.md:145
 #: src/patterns/behavioural/command.md:196
 #: src/patterns/behavioural/command.md:198
-#, fuzzy
 msgid "\"create table\""
-msgstr ""
-"`create table` と `add field` の2つのデータベース操作を定義します。これらの操"
-"作はそれぞれ\n"
-"これらの操作はそれぞれ、そのコマンドをアンドゥする方法(例えば `drop table` "
-"と `remove field` )が分かっているコマンドです。\n"
-"ユーザがデータベースの移行操作を実行すると、各コマンドが定義された順序で実行"
-"され、\n"
-"またロールバック操作を実行すると、コマンド一式が逆の順序で実行されます。"
+msgstr "\"create table\""
 
 #: src/patterns/behavioural/command.md:43
 #: src/patterns/behavioural/command.md:91
@@ -3045,16 +2891,8 @@ msgstr ""
 #: src/patterns/behavioural/command.md:146
 #: src/patterns/behavioural/command.md:196
 #: src/patterns/behavioural/command.md:199
-#, fuzzy
 msgid "\"drop table\""
-msgstr ""
-"`create table` と `add field` の2つのデータベース操作を定義します。これらの操"
-"作はそれぞれ\n"
-"これらの操作はそれぞれ、そのコマンドをアンドゥする方法(例えば `drop table` "
-"と `remove field` )が分かっているコマンドです。\n"
-"ユーザがデータベースの移行操作を実行すると、各コマンドが定義された順序で実行"
-"され、\n"
-"またロールバック操作を実行すると、コマンド一式が逆の順序で実行されます。"
+msgstr "\"drop table\""
 
 #: src/patterns/behavioural/command.md:50
 #: src/patterns/behavioural/command.md:90
@@ -3062,56 +2900,8 @@ msgstr ""
 #: src/patterns/behavioural/command.md:145
 #: src/patterns/behavioural/command.md:187
 #: src/patterns/behavioural/command.md:198
-#, fuzzy
 msgid "\"add field\""
-msgstr ""
-"```rust\n"
-"type Migration<'a> = Box<dyn Fn() -> &'a str>;\n"
-"\n"
-"struct Schema<'a> {\n"
-"    executes: Vec<Migration<'a>>,\n"
-"    rollbacks: Vec<Migration<'a>>,\n"
-"}\n"
-"\n"
-"impl<'a> Schema<'a> {\n"
-"    fn new() -> Self {\n"
-"        Self {\n"
-"            executes: vec![],\n"
-"            rollbacks: vec![],\n"
-"        }\n"
-"    }\n"
-"    fn add_migration<E, R>(&mut self, execute: E, rollback: R)\n"
-"    where\n"
-"        E: Fn() -> &'a str + 'static,\n"
-"        R: Fn() -> &'a str + 'static,\n"
-"    {\n"
-"        self.executes.push(Box::new(execute));\n"
-"        self.rollbacks.push(Box::new(rollback));\n"
-"    }\n"
-"    fn execute(&self) -> Vec<&str> {\n"
-"        self.executes.iter().map(|cmd| cmd()).collect()\n"
-"    }\n"
-"    fn rollback(&self) -> Vec<&str> {\n"
-"        self.rollbacks.iter().rev().map(|cmd| cmd()).collect()\n"
-"    }\n"
-"}\n"
-"\n"
-"fn add_field() -> &'static str {\n"
-"    \"add field\"\n"
-"}\n"
-"\n"
-"fn remove_field() -> &'static str {\n"
-"    \"remove field\"\n"
-"}\n"
-"\n"
-"fn main() {\n"
-"    let mut schema = Schema::new();\n"
-"    schema.add_migration(|| \"create table\", || \"drop table\");\n"
-"    schema.add_migration(add_field, remove_field);\n"
-"    assert_eq!(vec![\"create table\", \"add field\"], schema.execute());\n"
-"    assert_eq!(vec![\"remove field\", \"drop table\"], schema.rollback());\n"
-"}\n"
-"```"
+msgstr "\"add field\""
 
 #: src/patterns/behavioural/command.md:53
 #: src/patterns/behavioural/command.md:91
@@ -3119,69 +2909,18 @@ msgstr ""
 #: src/patterns/behavioural/command.md:146
 #: src/patterns/behavioural/command.md:191
 #: src/patterns/behavioural/command.md:199
-#, fuzzy
 msgid "\"remove field\""
-msgstr ""
-"```rust\n"
-"type Migration<'a> = Box<dyn Fn() -> &'a str>;\n"
-"\n"
-"struct Schema<'a> {\n"
-"    executes: Vec<Migration<'a>>,\n"
-"    rollbacks: Vec<Migration<'a>>,\n"
-"}\n"
-"\n"
-"impl<'a> Schema<'a> {\n"
-"    fn new() -> Self {\n"
-"        Self {\n"
-"            executes: vec![],\n"
-"            rollbacks: vec![],\n"
-"        }\n"
-"    }\n"
-"    fn add_migration<E, R>(&mut self, execute: E, rollback: R)\n"
-"    where\n"
-"        E: Fn() -> &'a str + 'static,\n"
-"        R: Fn() -> &'a str + 'static,\n"
-"    {\n"
-"        self.executes.push(Box::new(execute));\n"
-"        self.rollbacks.push(Box::new(rollback));\n"
-"    }\n"
-"    fn execute(&self) -> Vec<&str> {\n"
-"        self.executes.iter().map(|cmd| cmd()).collect()\n"
-"    }\n"
-"    fn rollback(&self) -> Vec<&str> {\n"
-"        self.rollbacks.iter().rev().map(|cmd| cmd()).collect()\n"
-"    }\n"
-"}\n"
-"\n"
-"fn add_field() -> &'static str {\n"
-"    \"add field\"\n"
-"}\n"
-"\n"
-"fn remove_field() -> &'static str {\n"
-"    \"remove field\"\n"
-"}\n"
-"\n"
-"fn main() {\n"
-"    let mut schema = Schema::new();\n"
-"    schema.add_migration(|| \"create table\", || \"drop table\");\n"
-"    schema.add_migration(add_field, remove_field);\n"
-"    assert_eq!(vec![\"create table\", \"add field\"], schema.execute());\n"
-"    assert_eq!(vec![\"remove field\", \"drop table\"], schema.rollback());\n"
-"}\n"
-"```"
+msgstr "\"remove field\""
 
 #: src/patterns/behavioural/command.md:76
-#, fuzzy
 msgid "// reverse iterator's direction\n"
 msgstr "// イテレータの方向を逆にする\n"
 
 #: src/patterns/behavioural/command.md:95
-#, fuzzy
 msgid "Approach: Using function pointers"
-msgstr "## アプローチ：関数ポインタの使用"
+msgstr "アプローチ：関数ポインタの使用"
 
 #: src/patterns/behavioural/command.md:97
-#, fuzzy
 msgid ""
 "We could follow another approach by creating each individual command as a "
 "different function and store function pointers to invoke these functions "
@@ -3190,17 +2929,15 @@ msgid ""
 "instead of function pointers."
 msgstr ""
 "他のアプローチとして、個々のコマンドを別個の関数として作成し、関数ポインタを"
-"格納、後でこれらの関数を別の時間に呼び出す方法があります。\n"
-"関数ポインタは `Fn` 、 `FnMut` 、 `FnOnce` の3つのトレイトを実装しているの"
-"で、関数ポインタの代わりにクロージャを渡して格納することもできます。"
+"格納、後でこれらの関数を別の時間に呼び出す方法があります。関数ポインタは "
+"`Fn` 、 `FnMut` 、 `FnOnce` の3つのトレイトすべてを実装しているので、関数ポイ"
+"ンタの代わりにクロージャを渡して格納することもできます。"
 
 #: src/patterns/behavioural/command.md:150
-#, fuzzy
 msgid "Approach: Using `Fn` trait objects"
-msgstr "## アプローチ： `Fn` トレイトオブジェクトの使用"
+msgstr "アプローチ： `Fn` トレイトオブジェクトの使用"
 
 #: src/patterns/behavioural/command.md:152
-#, fuzzy
 msgid ""
 "Finally, instead of defining a common command trait we could store each "
 "command implementing the `Fn` trait separately in vectors."
@@ -3209,7 +2946,6 @@ msgstr ""
 "装した各コマンドをベクタに格納することができます。"
 
 #: src/patterns/behavioural/command.md:205
-#, fuzzy
 msgid ""
 "If our commands are small and may be defined as functions or passed as a "
 "closure then using function pointers might be preferable since it does not "
@@ -3222,82 +2958,67 @@ msgid ""
 "pointers."
 msgstr ""
 "コマンドが小さく、関数として定義されたり、クロージャとして渡されたりするので"
-"あれば、関数ポインタを使うのが望ましいでしょう。\n"
-"動的ディスパッチを濫用せずに済みます。\n"
-"しかし、コマンドが、別のモジュールに定義されている関数や変数の多い構造体全体"
-"である場合は、 トレイトオブジェクトを使用するのが望ましいでしょう。\n"
+"あれば、関数ポインタを使うのが望ましいでしょう。動的ディスパッチを濫用せずに"
+"済みます。しかし、コマンドが、別のモジュールに定義されている関数や変数の多い"
+"構造体全体である場合は、 トレイトオブジェクトを使用するのが望ましいでしょう。"
 "その応用例が [`actix`](https://actix.rs/) です。これは、ルート用のハンドラ関"
-"数を登録するときにトレイトオブジェクトを使用しています。\n"
-"`Fn` トレイトオブジェクトを使用する場合、関数ポインタを使用するの場合と同じよ"
-"うにコマンドを作成して使用することができます。"
+"数を登録するときにトレイトオブジェクトを使用しています。`Fn` トレイトオブジェ"
+"クトを使用する場合、関数ポインタを使用するの場合と同じようにコマンドを作成し"
+"て使用することができます。"
 
 #: src/patterns/behavioural/command.md:214
-#, fuzzy
 msgid ""
 "As performance, there is always a trade-off between performance and code "
 "simplicity and organisation. Static dispatch gives faster performance, while "
 "dynamic dispatch provides flexibility when we structure our application."
 msgstr ""
-"パフォーマンスとコードのシンプルさと秩序の間には常にトレードオフがありま"
-"す。\n"
-"静的ディスパッチはより高速なパフォーマンスをもたらしますが、\n"
-"動的ディスパッチはアプリケーションを構成する際に柔軟性をもたらします。"
+"パフォーマンスとコードのシンプルさと秩序の間には常にトレードオフがあります。"
+"静的ディスパッチはより高速なパフォーマンスをもたらしますが、動的ディスパッチ"
+"はアプリケーションを構成する際に柔軟性をもたらします。"
 
 #: src/patterns/behavioural/command.md:220
-#, fuzzy
 msgid "[Command pattern](https://en.wikipedia.org/wiki/Command_pattern)"
-msgstr "[Wikipedia](https://en.wikipedia.org/wiki/Creational_pattern)より："
+msgstr "[Command pattern](https://en.wikipedia.org/wiki/Command_pattern)"
 
 #: src/patterns/behavioural/command.md:222
-#, fuzzy
 msgid ""
 "[Another example for the `command` pattern](https://web.archive.org/"
 "web/20210223131236/https://chercher.tech/rust/command-design-pattern-rust)"
 msgstr ""
-"- [Command pattern](https://en.wikipedia.org/wiki/Command_pattern)\n"
-"\n"
-"- [`command` パターンのもう一つの例](https://web.archive.org/"
+"[`command` パターンのもう一つの例](https://web.archive.org/"
 "web/20210223131236/https://chercher.tech/rust/command-design-pattern-rust)"
 
 #: src/patterns/behavioural/interpreter.md:5
-#, fuzzy
 msgid ""
 "If a problem occurs very often and requires long and repetitive steps to "
 "solve it, then the problem instances might be expressed in a simple language "
 "and an interpreter object could solve it by interpreting the sentences "
 "written in this simple language."
 msgstr ""
-"ある問題が非常に頻繁に発生し、その解決に長く反復的な手順を必要とする場合、\n"
-"その問題のインスタンスは単純な言語で表現可能であり、インタープリタ・オブジェ"
-"クトがこの言語による記述を解釈するという形で解決可能であるかもしれません。"
+"ある問題が非常に頻繁に発生し、その解決に長く反復的な手順を必要とする場合、そ"
+"の問題のインスタンスは単純な言語で表現可能であり、インタープリタ・オブジェク"
+"トがこの言語による記述を解釈するという形で解決可能であるかもしれません。"
 
 #: src/patterns/behavioural/interpreter.md:10
 msgid "Basically, for any kind of problems we define:"
-msgstr "基本的に、あらゆる種類の問題に対して、以下定義します："
+msgstr "基本的に、あらゆる種類の問題に対して、以下を定義します:"
 
 #: src/patterns/behavioural/interpreter.md:12
-#, fuzzy
 msgid ""
 "A [domain specific language](https://en.wikipedia.org/wiki/Domain-"
 "specific_language),"
 msgstr ""
-"- [ドメイン固有言語](https://en.wikipedia.org/wiki/Domain-"
-"specific_language)、\n"
-"- この言語のための文法、\n"
-"- 問題インスタンスを解決するインタプリタ。"
+"[ドメイン固有言語](https://en.wikipedia.org/wiki/Domain-specific_language)、"
 
 #: src/patterns/behavioural/interpreter.md:14
-#, fuzzy
 msgid "A grammar for this language,"
-msgstr "この言語の文法、"
+msgstr "この言語のための文法、"
 
 #: src/patterns/behavioural/interpreter.md:15
-#, fuzzy
 msgid "An interpreter that solves the problem instances."
-msgstr "問題インスタンスを解決するインタープリター。"
+msgstr "問題インスタンスを解決するインタプリタ。"
 
 #: src/patterns/behavioural/interpreter.md:19
-#, fuzzy
 msgid ""
 "Our goal is to translate simple mathematical expressions into postfix "
 "expressions (or [Reverse Polish notation](https://en.wikipedia.org/wiki/"
@@ -3305,50 +3026,41 @@ msgid ""
 "digits `0`, ..., `9` and two operations `+`, `-`. For example, the "
 "expression `2 + 4` is translated into `2 4 +`."
 msgstr ""
-"私たちの目標は、簡単な数式を後置記法([逆ポーランド記法](https://en.wikipedia."
-"org/wiki/Reverse_Polish_notation)ともに変換することです。\n"
-"簡略にするため、式は10桁の数字 `0`, ..., `9` と2つの演算 `+`, `-` で構成され"
-"るとします。\n"
-"例えば `2 + 4` という式は `2 4 +` に変換されます。"
+"私たちの目標は、簡単な数式を後置記法 ([逆ポーランド記法](https://en."
+"wikipedia.org/wiki/Reverse_Polish_notationとも) に変換することです。簡略にす"
+"るため、式は10桁の数字 `0`, ..., `9` と2つの演算 `+`, `-` で構成されるとしま"
+"す。例えば `2 + 4` という式は `2 4 +` に変換されます。"
 
 #: src/patterns/behavioural/interpreter.md:26
-#, fuzzy
 msgid "Context Free Grammar for our problem"
-msgstr "## 私たちの問題に対する文脈自由文法"
+msgstr "私たちの問題に対する文脈自由文法"
 
 #: src/patterns/behavioural/interpreter.md:28
-#, fuzzy
 msgid ""
 "Our task is translating infix expressions into postfix ones. Let's define a "
 "context free grammar for a set of infix expressions over `0`, ..., `9`, `+`, "
 "and `-`, where:"
 msgstr ""
-"私たちのタスクは中置記法を後置記法に変換することです。\n"
-"`0`, ..., `9`, `+`, `-` に対応する中置記法の式の集合に対して文脈自由文法を以"
-"下に定義します："
+"私たちのタスクは中置記法を後置記法に変換することです。`0`, ..., `9`, `+`, `-"
+"` に対応する中置記法の式の集合に対して文脈自由文法を以下に定義します:"
 
 #: src/patterns/behavioural/interpreter.md:32
-#, fuzzy
 msgid "Terminal symbols: `0`, `...`, `9`, `+`, `-`"
 msgstr "終端記号：`0`, `...`, `9`, `+`, `-`"
 
 #: src/patterns/behavioural/interpreter.md:33
-#, fuzzy
 msgid "Non-terminal symbols: `exp`, `term`"
-msgstr "非終端記号：exp`、`term`。"
+msgstr "非終端記号：exp`、`term`"
 
 #: src/patterns/behavioural/interpreter.md:34
-#, fuzzy
 msgid "Start symbol is `exp`"
-msgstr "開始記号は `exp` である。"
+msgstr "開始記号は `exp`"
 
 #: src/patterns/behavioural/interpreter.md:35
-#, fuzzy
 msgid "And the following are production rules"
-msgstr "そして、以下はプロダクション・ルールである。"
+msgstr "そして、以下が生成ルール"
 
 #: src/patterns/behavioural/interpreter.md:44
-#, fuzzy
 msgid ""
 "**NOTE:** This grammar should be further transformed depending on what we "
 "are going to do with it. For example, we might need to remove left "
@@ -3357,87 +3069,62 @@ msgid ""
 "_and_Tools) (aka Dragon Book)."
 msgstr ""
 "**注：** この文法は、これによって私たちが何をしようとしているかによって、さら"
-"に変形されるべきです。\n"
-"例えば、左再帰を削除する必要があるかもしれません。詳しくは[Compilers: "
-"Principles,Techniques, and Tools](https://en.wikipedia.org/wiki/Compilers:"
-"_Principles,_Techniques,_and_Tools) (別名 Dragon Book)を参照してください。"
+"に変形されるべきです。例えば、左再帰を削除する必要があるかもしれません。詳し"
+"くは[Compilers: Principles,Techniques, and Tools](https://en.wikipedia.org/"
+"wiki/Compilers:_Principles,_Techniques,_and_Tools) (別名 Dragon Book)を参照し"
+"てください。"
 
 #: src/patterns/behavioural/interpreter.md:50
 msgid "Solution"
 msgstr "解決方法"
 
 #: src/patterns/behavioural/interpreter.md:52
-#, fuzzy
 msgid ""
 "We simply implement a recursive descent parser. For simplicity's sake, the "
 "code panics when an expression is syntactically wrong (for example `2-34` or "
 "`2+5-` are wrong according to the grammar definition)."
 msgstr ""
-"再帰降下パーサを実装するだけです。\n"
-"簡略にするために、構文的に誤った式があればコードはパニックします(例えば、 "
-"`2-34` や `2+5-` は文法定義に照らすと誤りです)。"
+"再帰降下パーサを実装するだけです。簡略にするために、構文的に誤った式があれば"
+"コードはパニックします(例えば、 `2-34` や `2+5-` は文法定義に照らすと誤りで"
+"す)。"
 
 #: src/patterns/behavioural/interpreter.md:74
-#, fuzzy
 msgid "'+'"
 msgstr "'+'"
 
 #: src/patterns/behavioural/interpreter.md:74
-#, fuzzy
 msgid "'-'"
 msgstr "'-'"
 
 #: src/patterns/behavioural/interpreter.md:78
-#, fuzzy
 msgid "\"Unexpected symbol '{op}'\""
-msgstr "「予期せぬ記号 '{op}'\""
+msgstr "\"Unexpected symbol '{op}'\""
 
 #: src/patterns/behavioural/interpreter.md:86
-#, fuzzy
 msgid "\"Unexpected symbol '{ch}'\""
-msgstr "「予期せぬ記号 '{ch}'\""
+msgstr "\"Unexpected symbol '{ch}'\""
 
 #: src/patterns/behavioural/interpreter.md:87
-#, fuzzy
 msgid "\"Unexpected end of string\""
-msgstr "「予期せぬ文字列の終わり"
+msgstr "\"Unexpected end of string\""
 
 #: src/patterns/behavioural/interpreter.md:93
-#, fuzzy
 msgid "\"2+3\""
-msgstr ""
-"```rust\n"
-"macro_rules! patterns {\n"
-"    ($( $( $pat:pat_param )|+ )*) => ();\n"
-"}\n"
-"\n"
-"patterns! {\n"
-"    \"literal\"\n"
-"    _\n"
-"    0..5\n"
-"    ref mut PatternsAreNice\n"
-"    0 | 1 | 2 | 3\n"
-"}\n"
-"# fn main() {}\n"
-"```"
+msgstr "\"2+3\""
 
 #: src/patterns/behavioural/interpreter.md:96
-#, fuzzy
 msgid "\"23+\""
 msgstr "\"23+\""
 
 #: src/patterns/behavioural/interpreter.md:98
-#, fuzzy
 msgid "\"1-2+3-4\""
 msgstr "\"1-2+3-4\""
 
 #: src/patterns/behavioural/interpreter.md:101
-#, fuzzy
 msgid "\"12-3+4-\""
 msgstr "\"12-3+4-\""
 
 #: src/patterns/behavioural/interpreter.md:107
-#, fuzzy
 msgid ""
 "There may be a wrong perception that the Interpreter design pattern is about "
 "design grammars for formal languages and implementation of parsers for these "
@@ -3448,14 +3135,13 @@ msgid ""
 "code."
 msgstr ""
 "Interpreter デザインパターンに対して「形式言語の文法を設計し、その文法に対応"
-"したパーサの実装することである」という誤った認識があるかもしれません。\n"
-"実際には、このパターンは問題インスタンスをより具体的に表現し、その問題インス"
-"タンスを解決する関数/クラス/構造を実装するというものです。\n"
-"Rust には `macro_rules!` があり、これにより特別な構文と、この構文をソースコー"
-"ドへ展開するためのルールを定義することができます。"
+"したパーサの実装することである」という誤った認識があるかもしれません。実際に"
+"は、このパターンは問題インスタンスをより具体的に表現し、その問題インスタンス"
+"を解決する関数/クラス/構造を実装するというものです。Rust には `macro_rules!` "
+"があり、これにより特別な構文と、この構文をソースコードへ展開するためのルール"
+"を定義することができます。"
 
 #: src/patterns/behavioural/interpreter.md:114
-#, fuzzy
 msgid ""
 "In the following example we create a simple `macro_rules!` that computes "
 "[Euclidean length](https://en.wikipedia.org/wiki/Euclidean_distance) of `n` "
@@ -3464,41 +3150,36 @@ msgid ""
 "computing the length."
 msgstr ""
 "次の例では、 `n` 次元ベクタの[ユークリッド距離](https://en.wikipedia.org/"
-"wiki/Euclidean_distance) を計算する、単純な `macro_rules!` を作成します。\n"
+"wiki/Euclidean_distance) を計算する、単純な `macro_rules!` を作成します。"
 "`norm!(x,1,2)` と記述するのは、 `x,1,2` を `Vec` に詰め込んで、距離を計算する"
 "関数を呼び出すよりも表現が簡単で効率的です。"
 
 #: src/patterns/behavioural/interpreter.md:146
-#, fuzzy
 msgid ""
 "[Interpreter pattern](https://en.wikipedia.org/wiki/Interpreter_pattern)"
-msgstr "[ウィキペディア記事](https://en.wikipedia.org/wiki/Visitor_pattern)"
+msgstr ""
+"[Interpreter パターン](https://en.wikipedia.org/wiki/Interpreter_pattern)"
 
 #: src/patterns/behavioural/interpreter.md:147
-#, fuzzy
 msgid ""
 "[Context free grammar](https://en.wikipedia.org/wiki/Context-free_grammar)"
-msgstr "[Wikipedia](https://en.wikipedia.org/wiki/Creational_pattern)より："
+msgstr "[文脈自由文法](https://en.wikipedia.org/wiki/Context-free_grammar)"
 
 #: src/patterns/behavioural/interpreter.md:148
-#, fuzzy
 msgid "[macro_rules!](https://doc.rust-lang.org/rust-by-example/macros.html)"
-msgstr ""
-"[マクロ_ルール！](https://doc.rust-lang.org/rust-by-example/macros.html)"
+msgstr "[macro_rules!](https://doc.rust-lang.org/rust-by-example/macros.html)"
 
 #: src/patterns/behavioural/newtype.md:3
-#, fuzzy
 msgid ""
 "What if in some cases we want a type to behave similar to another type or "
 "enforce some behaviour at compile time when using only type aliases would "
 "not be enough?"
 msgstr ""
 "ある型に別の型と似たような振る舞いをさせたり、コンパイル時にある振る舞いを強"
-"制させたりしたいが、\n"
-"型エイリアスだけでは不十分な場合どのようにすればよいでしょうか？"
+"制させたりしたいが、型エイリアスだけでは不十分な場合どのようにすればよいで"
+"しょうか？"
 
 #: src/patterns/behavioural/newtype.md:7
-#, fuzzy
 msgid ""
 "For example, if we want to create a custom `Display` implementation for "
 "`String` due to security considerations (e.g. passwords)."
@@ -3507,7 +3188,6 @@ msgstr ""
 "`Display` の実装を作成したい場合があります。"
 
 #: src/patterns/behavioural/newtype.md:10
-#, fuzzy
 msgid ""
 "For such cases we could use the `Newtype` pattern to provide **type safety** "
 "and **encapsulation**."
@@ -3516,43 +3196,37 @@ msgstr ""
 "ル化** を提供できます。"
 
 #: src/patterns/behavioural/newtype.md:15
-#, fuzzy
 msgid ""
 "Use a tuple struct with a single field to make an opaque wrapper for a type. "
 "This creates a new type, rather than an alias to a type (`type` items)."
 msgstr ""
 "単一のフィールドを持つタプル構造体を使用して、型の不透明なラッパーを作成しま"
-"す。\n"
-"これは、型のエイリアス (`type` によるもの) ではなく、新しい型を作成します。"
+"す。これは、型のエイリアス (`type` によるもの) ではなく、新しい型を作成しま"
+"す。"
 
 #: src/patterns/behavioural/newtype.md:22
-#, fuzzy
 msgid "// Create Newtype Password to override the Display trait for String\n"
 msgstr ""
-"// 文字列の Display 特性をオーバーライドする Newtype Password を作成する。\n"
+"// String に対し、 Display トレイトをオーバーライドする ニュータイプ "
+"Password を作成する\n"
 
 #: src/patterns/behavioural/newtype.md:28
-#, fuzzy
 msgid "\"****************\""
 msgstr "\"****************\""
 
 #: src/patterns/behavioural/newtype.md:33
-#, fuzzy
 msgid "\"ThisIsMyPassword\""
 msgstr "\"ThisIsMyPassword\""
 
 #: src/patterns/behavioural/newtype.md:35
-#, fuzzy
 msgid "\"unsecured_password: {unsecured_password}\""
 msgstr "\"unsecured_password: {unsecured_password}\""
 
 #: src/patterns/behavioural/newtype.md:36
-#, fuzzy
 msgid "\"secured_password: {secured_password}\""
 msgstr "\"secured_password: {secured_password}\""
 
 #: src/patterns/behavioural/newtype.md:47
-#, fuzzy
 msgid ""
 "The primary motivation for newtypes is abstraction. It allows you to share "
 "implementation details between types while precisely controlling the "
@@ -3561,45 +3235,42 @@ msgid ""
 "compatibly."
 msgstr ""
 "ニュータイプの主な動機は抽象化です。これによってインタフェースを正確に制御し"
-"ながら、型間で実装の詳細を共有することができます。\n"
-"実装型をAPIの一部としてさらけ出すのではなく、 newtype を使うことで、後方互換"
-"性を保ったまま実装を変更することができます。"
+"ながら、型間で実装の詳細を共有することができます。実装型をAPIの一部としてさら"
+"け出すのではなく、 ニュータイプを使うことで、後方互換性を保ったまま実装を変更"
+"することができます。"
 
 #: src/patterns/behavioural/newtype.md:52
-#, fuzzy
 msgid ""
 "Newtypes can be used for distinguishing units, e.g., wrapping `f64` to give "
 "distinguishable `Miles` and `Kilometres`."
 msgstr ""
-"newtype は単位を区別するために使用できます。\n"
-"例えば `f64` をラップすることで、`Miles` と `Kilometers` を区別します。"
+"ニュータイプは単位を区別するために使用できます。例えば `f64` をラップすること"
+"で、`Miles` と `Kilometers` を区別します。"
 
 #: src/patterns/behavioural/newtype.md:57
-#, fuzzy
 msgid ""
 "The wrapped and wrapper types are not type compatible (as opposed to using "
 "`type`), so users of the newtype will never 'confuse' the wrapped and "
 "wrapper types."
 msgstr ""
-"ラップ対象の型とラップする側の型の間には、(`type` を使うのとは対照的に)型互換"
-"性はありません。\n"
-"そのため、 newtype のユーザがこれらの型を「混同」することはありません。"
+"ラップ対象の型とラップする側の型の間には、(`type` を使うのとは対照的に) 型互"
+"換性はありません。そのため、 ニュータイプのユーザがこれらの型を「混同」するこ"
+"とはありません。"
 
 #: src/patterns/behavioural/newtype.md:61
 msgid "Newtypes are a zero-cost abstraction - there is no runtime overhead."
-msgstr "newtype はゼロコスト抽象化です。実行時のオーバーヘッドはありません。"
+msgstr ""
+"ニュータイプはゼロコスト抽象化です。実行時のオーバーヘッドはありません。"
 
 #: src/patterns/behavioural/newtype.md:63
-#, fuzzy
 msgid ""
 "The privacy system ensures that users cannot access the wrapped type (if the "
 "field is private, which it is by default)."
 msgstr ""
 "プライバシーシステムは、 ユーザがラップされた型にアクセスできないことを保証し"
-"ます(フィールドがprivateである場合。既定では private)。"
+"ます (フィールドがprivateである場合。既定では private)。"
 
 #: src/patterns/behavioural/newtype.md:68
-#, fuzzy
 msgid ""
 "The downside of newtypes (especially compared with type aliases), is that "
 "there is no special language support. This means there can be _a lot_ of "
@@ -3607,105 +3278,90 @@ msgid ""
 "expose on the wrapped type, and an impl for every trait you want to also be "
 "implemented for the wrapper type."
 msgstr ""
-"newtype の欠点は（特に型のエイリアスと比べて）、特別な言語サポートがないこと"
-"です。\n"
-"特別な言語サポートがないことです。つまり、 _多くのボイラーテンプレート_ が必"
-"要になります。\n"
-"ラップされた型にて公開したいメソッドには「パススルー」メソッドが必要です。ま"
-"たラップされた型に実装したいトレイトについても同様です。"
+"newtype の欠点は (特に型のエイリアスと比べて)、特別な言語サポートがないことで"
+"す。つまり、 _多くの_ ボイラーテンプレートが必要になります。ラップされた型の"
+"持つメソッドを公開するには「パススルー」メソッドが必要です。またラッパー型に"
+"対し実装したいトレイトについても同様です。"
 
 #: src/patterns/behavioural/newtype.md:76
-#, fuzzy
 msgid ""
 "Newtypes are very common in Rust code. Abstraction or representing units are "
 "the most common uses, but they can be used for other reasons:"
 msgstr ""
-"Rustのコードでは、newtype がよく使われます。\n"
-"抽象化や単位の表現が最も一般的な使用法ですが、その他の理由でも使用できます："
+"Rustのコードでは、ニュータイプがよく使われます。抽象化や単位の表現が最も一般"
+"的な使用法ですが、その他の理由でも使用できます:"
 
 #: src/patterns/behavioural/newtype.md:79
-#, fuzzy
 msgid ""
 "restricting functionality (reduce the functions exposed or traits "
 "implemented),"
 msgstr "機能を制限する（公開される関数や実装される特性を減らす）、"
 
 #: src/patterns/behavioural/newtype.md:81
-#, fuzzy
 msgid "making a type with copy semantics have move semantics,"
 msgstr "コピー・セマンティクスを持つ型にムーブ・セマンティクスを持たせる、"
 
 #: src/patterns/behavioural/newtype.md:82
-#, fuzzy
 msgid ""
 "abstraction by providing a more concrete type and thus hiding internal "
 "types, e.g.,"
-msgstr "より具象的な型を提供することで抽象化し、内部型を隠蔽する、"
+msgstr "より具象的な型を提供することで抽象化し、内部型を隠蔽する、例えば…"
 
 #: src/patterns/behavioural/newtype.md:89
-#, fuzzy
 msgid ""
 "Here, `Bar` might be some public, generic type and `T1` and `T2` are some "
 "internal types. Users of our module shouldn't know that we implement `Foo` "
 "by using a `Bar`, but what we're really hiding here is the types `T1` and "
 "`T2`, and how they are used with `Bar`."
 msgstr ""
-"ここで、`Bar` は public な汎用型であり、`T1` と `T2` は内部型です。\n"
-"このモジュールのユーザは `Bar` を使って `Foo` を実装していることを知るべきで"
-"はないはずです。\n"
-"しかし、ここで本当に隠しているのは `T1` と `T2` という型であり、それらが "
-"`Bar` でどのように使われているかということです。"
+"ここで、`Bar` は public なジェネリック型であり、`T1` と `T2` は内部型です。こ"
+"のモジュールのユーザは `Bar` を使って `Foo` を実装していることを知るべきでは"
+"ないはずです。しかし、ここで本当に隠しているのは `T1` と `T2` という型であ"
+"り、それらが `Bar` でどのように使われているかということです。"
 
 #: src/patterns/behavioural/newtype.md:96
-#, fuzzy
 msgid ""
 "[Advanced Types in the book](https://doc.rust-lang.org/book/ch19-04-advanced-"
 "types.html?highlight=newtype#using-the-newtype-pattern-for-type-safety-and-"
 "abstraction)"
 msgstr ""
-"[本の中の上級タイプ](https://doc.rust-lang.org/book/ch19-04-advanced-types."
-"html?highlight=newtype#using-the-newtype-pattern-for-type-safety-and-"
+"[the book の Advanced Types](https://doc.rust-lang.org/book/ch19-04-advanced-"
+"types.html?highlight=newtype#using-the-newtype-pattern-for-type-safety-and-"
 "abstraction)"
 
 #: src/patterns/behavioural/newtype.md:97
-#, fuzzy
 msgid "[Newtypes in Haskell](https://wiki.haskell.org/Newtype)"
-msgstr "[ハスケルの新型](https://wiki.haskell.org/Newtype)"
+msgstr "[Haskell でのニュータイプ](https://wiki.haskell.org/Newtype)"
 
 #: src/patterns/behavioural/newtype.md:98
-#, fuzzy
 msgid ""
 "[Type aliases](https://doc.rust-lang.org/stable/book/ch19-04-advanced-types."
 "html#creating-type-synonyms-with-type-aliases)"
 msgstr ""
-"[タイプ別エイリアス](https://doc.rust-lang.org/stable/book/ch19-04-advanced-"
+"[タイプエイリアス](https://doc.rust-lang.org/stable/book/ch19-04-advanced-"
 "types.html#creating-type-synonyms-with-type-aliases)"
 
 #: src/patterns/behavioural/newtype.md:99
-#, fuzzy
 msgid ""
 "[derive_more](https://crates.io/crates/derive_more), a crate for deriving "
 "many builtin traits on newtypes."
 msgstr ""
-"[derive_more](https://crates.io/crates/derive_more)は、newtypesに多くの組み込"
-"み特性を派生させるためのクレートです。"
+"[derive_more](https://crates.io/crates/derive_more)は、ニュータイプに多くの組"
+"み込み特性を派生させるためのクレートです。"
 
 #: src/patterns/behavioural/newtype.md:101
-#, fuzzy
 msgid ""
 "[The Newtype Pattern In Rust](https://web.archive.org/web/20230519162111/"
 "https://www.worthe-it.co.za/blog/2020-10-31-newtype-pattern-in-rust.html)"
 msgstr ""
-"[RustのNewtypeパターン](https://web.archive.org/web/20230519162111/https://"
+"[RustでのNewtypeパターン](https://web.archive.org/web/20230519162111/https://"
 "www.worthe-it.co.za/blog/2020-10-31-newtype-pattern-in-rust.html)"
 
 #: src/patterns/behavioural/RAII.md:1
-#, fuzzy
 msgid "RAII with guards"
-msgstr "# ガード付きRAII"
+msgstr "ガード付きRAII"
 
 #: src/patterns/behavioural/RAII.md:5
-#, fuzzy
 msgid ""
 "[RAII](https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization) "
 "stands for \"Resource Acquisition is Initialisation\" which is a terrible "
@@ -3715,39 +3371,34 @@ msgid ""
 "resource and relying on the type system to ensure that access is always "
 "mediated by the guard object."
 msgstr ""
-"[RAII][wikipedia]は「Resource Acquisition is Initialisation」の略です。・・・"
-"ひどい名前です。\n"
-"このパターンの本質は、リソースの初期化をオブジェクトのコンストラクタで行い、"
-"ファイナライズをデストラクタで行うというものです。\n"
-"RAIIオブジェクトをリソースのガードとして使い、またアクセスが常にガードオブ"
-"ジェクトを介することを保証するために型システムに依存することで、Rustではこの"
-"パターンが拡張されます。"
+"[RAII](https://en.wikipedia.org/wiki/Resource_Acquisition_Is_Initialization)"
+"は「Resource Acquisition is Initialisation」（すごい名称です）の略です。この"
+"パターンの本質は、リソースの初期化をオブジェクトのコンストラクタで行い、ファ"
+"イナライズをデストラクタで行うというものです。RAIIオブジェクトをリソースの"
+"ガードとして使い、またアクセスが常にガードオブジェクトに仲介されることの保証"
+"を型システムに任せることで、このパターンはRustにて拡張されます。"
 
 #: src/patterns/behavioural/RAII.md:14
-#, fuzzy
 msgid ""
 "Mutex guards are the classic example of this pattern from the std library "
 "(this is a simplified version of the real implementation):"
 msgstr ""
-"ミューテックスのガードは、stdライブラリにあるこのパターンの典型的な例です（こ"
-"れは実際の実装を簡略化したものです）："
+"ミューテックスのガードは、stdライブラリにあるこのパターンの典型的な例です (こ"
+"れは実際の実装を簡略化したものです) :"
 
 #: src/patterns/behavioural/RAII.md:23
-#, fuzzy
 msgid ""
 "// We keep a reference to our data: T here.\n"
 "    //..\n"
 msgstr ""
-"// データへの参照を保持する：Tはここにある。\n"
+"// データ: T への参照をここで保持する。\n"
 "    //..\n"
 
 #: src/patterns/behavioural/RAII.md:31
-#, fuzzy
 msgid "// Locking the mutex is explicit.\n"
 msgstr "// ミューテックスのロックは明示的に行う。\n"
 
 #: src/patterns/behavioural/RAII.md:35
-#, fuzzy
 msgid ""
 "// Lock the underlying OS mutex.\n"
 "        //..\n"
@@ -3756,17 +3407,14 @@ msgstr ""
 "        //..\n"
 
 #: src/patterns/behavioural/RAII.md:38
-#, fuzzy
 msgid "// MutexGuard keeps a reference to self\n"
 msgstr "// MutexGuardはselfへの参照を保持する。\n"
 
 #: src/patterns/behavioural/RAII.md:45
-#, fuzzy
 msgid "// Destructor for unlocking the mutex.\n"
 msgstr "// ミューテックスのロックを解除するためのデストラクタ。\n"
 
 #: src/patterns/behavioural/RAII.md:49
-#, fuzzy
 msgid ""
 "// Unlock the underlying OS mutex.\n"
 "        //..\n"
@@ -3775,7 +3423,6 @@ msgstr ""
 "        //..\n"
 
 #: src/patterns/behavioural/RAII.md:53
-#, fuzzy
 msgid ""
 "// Implementing Deref means we can treat MutexGuard like a pointer to T.\n"
 msgstr ""
@@ -3783,41 +3430,35 @@ msgstr ""
 "きるということだ。\n"
 
 #: src/patterns/behavioural/RAII.md:65
-#, fuzzy
 msgid ""
 "// foo is a method on Foo.\n"
 "              // The borrow checker ensures we can't store a reference to "
 "the underlying\n"
 "              // Foo which will outlive the guard xx.\n"
 msgstr ""
-"// fooはFooのメソッドです。\n"
-"              借用チェッカーは、 // ガード xx よりも長い Foo への参照を保存で"
-"きないことを保証する。\n"
-"              // への参照を保存できないことを保証します。\n"
+"// fooはFooのメソッド。\n"
+"              // 借用チェッカーは、ガード xx よりも長い Foo への参照を\n"
+"              // 保持できないことを保証する。\n"
 
 #: src/patterns/behavioural/RAII.md:69
-#, fuzzy
 msgid ""
 "// x is unlocked when we exit this function and xx's destructor is "
 "executed.\n"
 msgstr ""
-"// この関数を終了し、xxのデストラクタが実行されると、xのロックは解除され"
+"// この関数を終了し、xxのデストラクタが実行されるとき、xのロックは解除され"
 "る。\n"
 
 #: src/patterns/behavioural/RAII.md:75
-#, fuzzy
 msgid ""
 "Where a resource must be finalised after use, RAII can be used to do this "
 "finalisation. If it is an error to access that resource after finalisation, "
 "then this pattern can be used to prevent such errors."
 msgstr ""
 "リソースの使用後にファイナライズが必要な場合、RAIIを使用してファイナライズを"
-"行うことができます。\n"
-"ファイナライズ後にリソースにアクセスすることがエラーとなる場合、このパターン"
-"はそのようなエラーを防ぐことに使用できます。"
+"行うことができます。ファイナライズ後にリソースにアクセスすることがエラーとな"
+"る場合、このパターンはそのようなエラーを防ぐことに使用できます。"
 
 #: src/patterns/behavioural/RAII.md:81
-#, fuzzy
 msgid ""
 "Prevents errors where a resource is not finalised and where a resource is "
 "used after finalisation."
@@ -3826,19 +3467,16 @@ msgstr ""
 "使用されてしまう、といったエラーを防ぎます。"
 
 #: src/patterns/behavioural/RAII.md:86
-#, fuzzy
 msgid ""
 "RAII is a useful pattern for ensuring resources are properly deallocated or "
 "finalised. We can make use of the borrow checker in Rust to statically "
 "prevent errors stemming from using resources after finalisation takes place."
 msgstr ""
 "RAIIは、リソースが適切に解放またはファイナライズされることを保証するための有"
-"用なパターンです。\n"
-"Rustの借用チェッカーを使用することで、ファイナライズ後にリソースを使用するこ"
-"とにより生じるエラーを静的に防ぐことが可能です。"
+"用なパターンです。Rustの借用チェッカーを使用することで、ファイナライズ後にリ"
+"ソースを使用することにより生じるエラーを静的に防ぐことが可能です。"
 
 #: src/patterns/behavioural/RAII.md:90
-#, fuzzy
 msgid ""
 "The core aim of the borrow checker is to ensure that references to data do "
 "not outlive that data. The RAII guard pattern works because the guard object "
@@ -3849,71 +3487,59 @@ msgid ""
 "signature of `deref` without lifetime elision:"
 msgstr ""
 "借用チェッカーの主な目的は、データへの参照がそのデータ自体より長く生存しない"
-"ことを保証することです。\n"
-"RAIIガードパターンが機能するのは、\n"
-"ガードオブジェクトが基のリソースへの参照を保持し、その参照のみを公開するから"
-"です。\n"
-"Rustは、ガードが、基のリソースより長く生存しないことを保証するとともに、\n"
-"ガードが介するそのリソースへの参照がガードよりも長く生存しないことを保証しま"
-"す。\n"
-"これがどのように機能するかを見るために、ライフタイムを省略せずに `deref`のシ"
-"グネチャを確かめることが助けになるでしょう："
+"ことを保証することです。RAIIガードパターンが機能するのは、ガードオブジェクト"
+"が裏のリソースへの参照を保持し、その参照のみを公開するからです。Rustは、ガー"
+"ドが裏のリソースより長く生存しないことを保証するとともに、ガードの仲介するリ"
+"ソースへの参照がガードよりも長く生存しないことを保証します。これがどのように"
+"機能するかを見るために、ライフタイムを省略せずに `deref`のシグネチャを確かめ"
+"ることが助けになるでしょう:"
 
 #: src/patterns/behavioural/RAII.md:104
-#, fuzzy
 msgid ""
 "The returned reference to the resource has the same lifetime as `self` "
 "(`'a`). The borrow checker therefore ensures that the lifetime of the "
 "reference to `T` is shorter than the lifetime of `self`."
 msgstr ""
-"戻り値であるリソースへの参照は `self` (`'a`) と同じライフタイムを持ちます。\n"
+"戻り値であるリソースへの参照は `self` と同じライフタイム (`'a`) を持ちます。"
 "したがって、借用チェッカーは `T` への参照のライフタイムが `self` のライフタイ"
 "ムよりも短いことを保証します。"
 
 #: src/patterns/behavioural/RAII.md:108
-#, fuzzy
 msgid ""
 "Note that implementing `Deref` is not a core part of this pattern, it only "
 "makes using the guard object more ergonomic. Implementing a `get` method on "
 "the guard works just as well."
 msgstr ""
-"`Deref` を実装することがこのパターンの核心部分でないことに注意してくださ"
-"い。\n"
-"ガードオブジェクトをより人間工学的に使えるようにするだけです。\n"
-"ガードに `get` メソッドを実装しても同じように動作します。"
+"`Deref` を実装することはこのパターンの核心部分でなく、ガードオブジェクトをよ"
+"り人間工学的に使えるようにするだけであることに注意してください。ガードに "
+"`get` メソッドを実装しても同じように動作します。"
 
 #: src/patterns/behavioural/RAII.md:114
 msgid "[Finalisation in destructors idiom](../../idioms/dtor-finally.md)"
 msgstr "[デストラクタでのファイナライズ](../../idioms/dtor-finally.md)"
 
 #: src/patterns/behavioural/RAII.md:116
-#, fuzzy
 msgid ""
 "RAII is a common pattern in C++: [cppreference.com](http://en.cppreference."
 "com/w/cpp/language/raii), [wikipedia](https://en.wikipedia.org/wiki/"
 "Resource_Acquisition_Is_Initialization)."
 msgstr ""
 "C++ではRAIIは一般的なパターン： [cppreference.com](http://en.cppreference."
-"com/w/cpp/language/raii)、\n"
-"[wikipedia][ウィキペディア]。"
+"com/w/cpp/language/raii)、[wikipedia][ウィキペディア]。"
 
 #: src/patterns/behavioural/RAII.md:122
-#, fuzzy
 msgid ""
 "[Style guide entry](https://doc.rust-lang.org/1.0.0/style/ownership/raii."
 "html) (currently just a placeholder)."
 msgstr ""
 "[Style Guidelines のエントリ](https://doc.rust-lang.org/1.0.0/style/"
-"ownership/raii.html)\n"
-"(現在は単なるプレースホルダ）。"
+"ownership/raii.html) (現在は単なるプレースホルダ）。"
 
 #: src/patterns/behavioural/strategy.md:1
-#, fuzzy
 msgid "Strategy (aka Policy)"
-msgstr "# Strategy (Polich とも)"
+msgstr "Strategy (Policy とも)"
 
 #: src/patterns/behavioural/strategy.md:5
-#, fuzzy
 msgid ""
 "The [Strategy design pattern](https://en.wikipedia.org/wiki/"
 "Strategy_pattern) is a technique that enables separation of concerns. It "
@@ -3921,26 +3547,22 @@ msgid ""
 "(https://en.wikipedia.org/wiki/Dependency_inversion_principle)."
 msgstr ""
 "[Strategy デザインパターン](https://en.wikipedia.org/wiki/Strategy_pattern)"
-"は、関心事の分離を可能にするテクニックです。\n"
-"また、[依存関係逆転の原則](https://en.wikipedia.org/wiki/"
-"Dependency_inversion_principle)によって、ソフトウェアモジュールを分離すること"
-"も可能になります。"
+"は、関心事の分離を可能にするテクニックです。また、[依存関係逆転の原則]"
+"(https://en.wikipedia.org/wiki/Dependency_inversion_principle)によって、ソフ"
+"トウェアモジュールを分離することも可能になります。"
 
 #: src/patterns/behavioural/strategy.md:10
-#, fuzzy
 msgid ""
 "The basic idea behind the Strategy pattern is that, given an algorithm "
 "solving a particular problem, we define only the skeleton of the algorithm "
 "at an abstract level, and we separate the specific algorithm’s "
 "implementation into different parts."
 msgstr ""
-"Strategyパターンの基本的な考え方は、\n"
-"ある特定の問題を解決するアルゴリズムが与えられたとき、\n"
-"抽象的なレベルではアルゴリズムの骨組みだけを定義し、\n"
-"具体的なアルゴリズムの実装は別の部分に分離する、というものです。"
+"Strategyパターンの基本的な考え方は、ある特定の問題を解決するアルゴリズムが与"
+"えられたとき、抽象的なレベルではアルゴリズムの骨組みだけを定義し、具体的なア"
+"ルゴリズムの実装は別の部分に分離する、というものです。"
 
 #: src/patterns/behavioural/strategy.md:15
-#, fuzzy
 msgid ""
 "In this way, a client using the algorithm may choose a specific "
 "implementation, while the general algorithm workflow remains the same. In "
@@ -3950,14 +3572,12 @@ msgid ""
 "\"Dependency Inversion\"."
 msgstr ""
 "この方法では、アルゴリズムを使用するクライアントは、アルゴリズムの共通のワー"
-"クフローをそのままに、具体的な実装を選択することが可能です。\n"
-"言い換えれば、クラスの抽象的な仕様が派生クラスの具体的な実装に依存するのでは"
-"なく、\n"
-"具体的な実装が抽象的な仕様に従う必要があります。\n"
-"これが「依存関係逆転」と呼ばれる理由です。"
+"クフローをそのままに、具体的な実装を選択することが可能です。言い換えれば、ク"
+"ラスの抽象的な仕様は派生クラスの具体的な実装に依存せず、具体的な実装が抽象的"
+"な仕様に従わなければならない、ということです。これが「依存性逆転」と呼ばれる"
+"理由です。"
 
 #: src/patterns/behavioural/strategy.md:23
-#, fuzzy
 msgid ""
 "Imagine we are working on a project that generates reports every month. We "
 "need the reports to be generated in different formats (strategies), e.g., in "
@@ -3966,176 +3586,94 @@ msgid ""
 "to generate our report in a completely new format, or just modify one of the "
 "existing formats."
 msgstr ""
-"私たちは毎月レポートを生成するプロジェクトに取り組んでいるとしましょう。\n"
-"このレポートはさまざまな形式(ストラテジ)、例えば `JSON` や `Plain Text` な"
-"ど、で生成される必要があります。\n"
-"しかし、物事は時間の経過とともに変化するもので、将来どんな要求が来るかわかり"
-"ません。\n"
-"例えば、まったく新しい形式でレポートを生成する必要があるかもしれませんし、\n"
-"あるいは既存のフォーマットの1つを変更するだけかもしれません。"
+"私たちは毎月レポートを生成するプロジェクトに取り組んでいるとしましょう。この"
+"レポートはさまざまな形式 (ストラテジ)、例えば `JSON` や `Plain Text` など、で"
+"生成される必要があります。しかし、物事は時間の経過とともに変化するもので、将"
+"来どんな要求が来るかわかりません。例えば、まったく新しい形式でレポートを生成"
+"する必要があるかもしれませんし、あるいは既存のフォーマットの1つを変更するだけ"
+"かもしれません。"
 
 #: src/patterns/behavioural/strategy.md:32
-#, fuzzy
 msgid ""
 "In this example our invariants (or abstractions) are `Formatter` and "
 "`Report`, while `Text` and `Json` are our strategy structs. These strategies "
 "have to implement the `Formatter` trait."
 msgstr ""
 "この例では、 `Formatter` と `Report` が不変（または抽象）な部分であり、対し"
-"て `Text` と `Json` がストラテジの構造体です。\n"
-"これらのストラテジは `Formatter` トレイトを実装する必要があります。"
+"て `Text` と `Json` がストラテジの構造体です。これらのストラテジは "
+"`Formatter` トレイトを実装する必要があります。"
 
 #: src/patterns/behavioural/strategy.md:48
-#, fuzzy
 msgid ""
 "// Write should be used but we kept it as String to ignore error handling\n"
 msgstr ""
-"// Writeを使うべきだが、エラー処理を無視するためにStringのままにしている。\n"
+"// Writeを使うべきだが、エラー処理をサボるためにStringのままにしている。\n"
 
 #: src/patterns/behavioural/strategy.md:50
-#, fuzzy
 msgid "// backend operations...\n"
 msgstr "// バックエンドの操作...\n"
 
 #: src/patterns/behavioural/strategy.md:52
-#, fuzzy
 msgid "\"one\""
-msgstr "これを以下のように呼び出せるように:"
+msgstr "\"one\""
 
 #: src/patterns/behavioural/strategy.md:53
-#, fuzzy
 msgid "\"two\""
-msgstr "2つ？"
+msgstr "\"two\""
 
 #: src/patterns/behavioural/strategy.md:54
-#, fuzzy
 msgid "// generate report\n"
-msgstr "// レポートを生成する\n"
+msgstr "// レポートの生成\n"
 
 #: src/patterns/behavioural/strategy.md:63
-#, fuzzy
 msgid "\"{k} {v}\\n\""
 msgstr "\"{k} {v}\\n\""
 
 #: src/patterns/behavioural/strategy.md:72
-#, fuzzy
 msgid "'['"
 msgstr "'['"
 
 #: src/patterns/behavioural/strategy.md:74
-#, fuzzy
 msgid "r#\"{{\"{}\":\"{}\"}}\"#"
-msgstr ""
-"```rust\n"
-"use std::collections::HashMap;\n"
-"\n"
-"type Data = HashMap<String, u32>;\n"
-"\n"
-"trait Formatter {\n"
-"    fn format(&self, data: &Data, buf: &mut String);\n"
-"}\n"
-"\n"
-"struct Report;\n"
-"\n"
-"impl Report {\n"
-"    // Write を使用すべきですが、エラーハンドリングを無視するため String のま"
-"まとしています\n"
-"    fn generate<T: Formatter>(g: T, s: &mut String) {\n"
-"        // バックエンド処理...\n"
-"        let mut data = HashMap::new();\n"
-"        data.insert(\"one\".to_string(), 1);\n"
-"        data.insert(\"two\".to_string(), 2);\n"
-"        // レポート生成\n"
-"        g.format(&data, s);\n"
-"    }\n"
-"}\n"
-"\n"
-"struct Text;\n"
-"impl Formatter for Text {\n"
-"    fn format(&self, data: &Data, buf: &mut String) {\n"
-"        for (k, v) in data {\n"
-"            let entry = format!(\"{} {}\\n\", k, v);\n"
-"            buf.push_str(&entry);\n"
-"        }\n"
-"    }\n"
-"}\n"
-"\n"
-"struct Json;\n"
-"impl Formatter for Json {\n"
-"    fn format(&self, data: &Data, buf: &mut String) {\n"
-"        buf.push('[');\n"
-"        for (k, v) in data.into_iter() {\n"
-"            let entry = format!(r#\"{{\"{}\":\"{}\"}}\"#, k, v);\n"
-"            buf.push_str(&entry);\n"
-"            buf.push(',');\n"
-"        }\n"
-"        if !data.is_empty() {\n"
-"            buf.pop(); // 最後の余分な , を削除\n"
-"        }\n"
-"        buf.push(']');\n"
-"    }\n"
-"}\n"
-"\n"
-"fn main() {\n"
-"    let mut s = String::from(\"\");\n"
-"    Report::generate(Text, &mut s);\n"
-"    assert!(s.contains(\"one 1\"));\n"
-"    assert!(s.contains(\"two 2\"));\n"
-"\n"
-"    s.clear(); // バッファ再利用\n"
-"    Report::generate(Json, &mut s);\n"
-"    assert!(s.contains(r#\"{\"one\":\"1\"}\"#));\n"
-"    assert!(s.contains(r#\"{\"two\":\"2\"}\"#));\n"
-"}\n"
-"```"
+msgstr "r#\"{{\"{}\":\"{}\"}}\"#"
 
 #: src/patterns/behavioural/strategy.md:76
-#, fuzzy
 msgid "','"
 msgstr "','"
 
 #: src/patterns/behavioural/strategy.md:79
-#, fuzzy
 msgid "// remove extra , at the end\n"
 msgstr "// 最後の余分な , を取り除く\n"
 
 #: src/patterns/behavioural/strategy.md:81
-#, fuzzy
 msgid "']'"
 msgstr "']'"
 
 #: src/patterns/behavioural/strategy.md:86
-#, fuzzy
 msgid "\"\""
 msgstr "\"\""
 
 #: src/patterns/behavioural/strategy.md:88
-#, fuzzy
 msgid "\"one 1\""
 msgstr "\"one 1\""
 
 #: src/patterns/behavioural/strategy.md:89
-#, fuzzy
 msgid "\"two 2\""
 msgstr "\"two 2\""
 
 #: src/patterns/behavioural/strategy.md:91
-#, fuzzy
 msgid "// reuse the same buffer\n"
 msgstr "// 同じバッファを再利用する\n"
 
 #: src/patterns/behavioural/strategy.md:93
-#, fuzzy
 msgid "r#\"{\"one\":\"1\"}\"#"
 msgstr "r#\"{\"one\":\"1\"}\"#"
 
 #: src/patterns/behavioural/strategy.md:94
-#, fuzzy
 msgid "r#\"{\"two\":\"2\"}\"#"
 msgstr "r#\"{\"two\":\"2\"}\"#"
 
 #: src/patterns/behavioural/strategy.md:100
-#, fuzzy
 msgid ""
 "The main advantage is separation of concerns. For example, in this case "
 "`Report` does not know anything about specific implementations of `Json` and "
@@ -4144,17 +3682,14 @@ msgid ""
 "specific trait to implement and its method defining the concrete algorithm "
 "implementation processing the result, i.e., `Formatter` and `format(...)`."
 msgstr ""
-"主な利点は関心の分離です。\n"
-"例えば、この例の `Report` は、 `Json` と `Text` の具体的な実装については何も"
-"知りません。\n"
-"その一方では、出力の実装はデータがどのように前処理され、保存され、フェッチさ"
-"れるのか気にしません。\n"
-"それらが知っていなければならないのは、実装すべき「特定のトレイト」と、結果の"
-"処理を行うアルゴリズムの具体的な実装を定義している「そのメソッド」、つまり "
-"`Formatter` と `format(...)` 、のみです。"
+"主な利点は関心の分離です。例えば、この例の `Report` は、 `Json` と `Text` の"
+"具体的な実装については何も知りません。その一方では、出力の実装はデータがどの"
+"ように前処理され、保存され、フェッチされるのか気にしません。それらが知ってい"
+"なければならないのは、実装すべき「特定のトレイト」と、結果の処理を行うアルゴ"
+"リズムの具体的な実装を定義している「そのメソッド」、つまり `Formatter` と "
+"`format(...)` 、のみです。"
 
 #: src/patterns/behavioural/strategy.md:109
-#, fuzzy
 msgid ""
 "For each strategy there must be implemented at least one module, so number "
 "of modules increases with number of strategies. If there are many strategies "
@@ -4162,46 +3697,42 @@ msgid ""
 "another."
 msgstr ""
 "各ストラテジ毎に少なくとも1つのモジュールが実装されることになるため、ストラテ"
-"ジの数だけモジュールの数が増えます。\n"
-"選択できるストラテジーがたくさんある場合、ユーザーはあるストラテジと別のスト"
-"ラテジとの違いを知らなければなりません。"
+"ジの数だけモジュールの数が増えます。選択できるストラテジーがたくさんある場"
+"合、ユーザーはあるストラテジと別のストラテジとの違いを知らなければなりませ"
+"ん。"
 
 #: src/patterns/behavioural/strategy.md:115
-#, fuzzy
 msgid ""
 "In the previous example all strategies are implemented in a single file. "
 "Ways of providing different strategies includes:"
 msgstr ""
-"前の例では、すべてのストラテジは1つのファイルに実装されていました。\n"
-"個々のストラテジーを提供する方法には次のようなものがあります："
+"前の例では、すべてのストラテジは1つのファイルに実装されていました。個々のスト"
+"ラテジーを提供する方法には次のようなものがあります:"
 
 #: src/patterns/behavioural/strategy.md:118
-#, fuzzy
 msgid ""
 "All in one file (as shown in this example, similar to being separated as "
 "modules)"
 msgstr ""
-"すべて1つのファイル（この例のように、モジュールとして分離されているのと似てい"
-"る）"
+"1つのファイルにオールインワン (上例で示したもの、モジュールとして分離されてい"
+"るのと似ている)"
 
 #: src/patterns/behavioural/strategy.md:120
-#, fuzzy
 msgid ""
 "Separated as modules, E.g. `formatter::json` module, `formatter::text` module"
-msgstr "例：`formatter::json` モジュール、`formatter::text` モジュール"
+msgstr ""
+"モジュールとして分離、例えば `formatter::json` モジュールと `formatter::"
+"text` モジュール"
 
 #: src/patterns/behavioural/strategy.md:121
-#, fuzzy
 msgid "Use compiler feature flags, E.g. `json` feature, `text` feature"
-msgstr "コンパイラの機能フラグを使う（例：`json`機能、`text`機能"
+msgstr "コンパイラのfeatureフラグを利用 (例：`json` feature、`text` feature)"
 
 #: src/patterns/behavioural/strategy.md:122
-#, fuzzy
 msgid "Separated as crates, E.g. `json` crate, `text` crate"
-msgstr "json`クレート、`text`クレートなど。"
+msgstr "クレートとして分離、例えば `json` クレート、`text` クレートなど"
 
 #: src/patterns/behavioural/strategy.md:124
-#, fuzzy
 msgid ""
 "Serde crate is a good example of the `Strategy` pattern in action. Serde "
 "allows [full customization](https://serde.rs/custom-serialization.html) of "
@@ -4210,14 +3741,12 @@ msgid ""
 "`serde_json` with `serde_cbor` since they expose similar methods. Having "
 "this makes the helper crate `serde_transcode` much more useful and ergonomic."
 msgstr ""
-"Serde crateは `Strategy` パターンが実際に使われている良い例です。\n"
-"Serdeでは、型に `Serialize` と `Deserialize` を手動で実装することで、シリアラ"
-"イズ動作の [フルカスタマイズ](https://serde.rs/custom-serialization.html) が"
-"可能です。\n"
-"例えば、似たようなメソッドを公開している `serde_json` と `serde_cbor` を簡単"
-"に入れ替えることができます。\n"
-"これにより、ヘルパー crate `serde_transcode` がより便利で人間工学的なものにな"
-"ります。"
+"Serde crateは `Strategy` パターンが実際に使われている良い例です。Serdeでは、"
+"型に `Serialize` と `Deserialize` を手動で実装することで、シリアライズ動作の "
+"[フルカスタマイズ](https://serde.rs/custom-serialization.html) が可能です。例"
+"えば、 `serde_json` と `serde_cbor` は似たようなメソッドを公開しているため、"
+"これらを簡単に入れ替えることができます。これにより、ヘルパークレート "
+"`serde_transcode` がより便利で人間工学的なものになります。"
 
 #: src/patterns/behavioural/strategy.md:131
 msgid ""
@@ -4227,13 +3756,12 @@ msgstr ""
 "ありません。"
 
 #: src/patterns/behavioural/strategy.md:133
-#, fuzzy
 msgid ""
 "The following toy example demonstrates the idea of the Strategy pattern "
 "using Rust `closures`:"
 msgstr ""
 "次の単純化した例は、Rustの `closure` を使った Strategy パターンのアイデアを示"
-"しています："
+"しています:"
 
 #: src/patterns/behavioural/strategy.md:164
 msgid "In fact, Rust already uses this idea for `Options`'s `map` method:"
@@ -4241,39 +3769,28 @@ msgstr ""
 "実際、Rust はすでに `Options` の `map` メソッドでこのアイデアを使っています："
 
 #: src/patterns/behavioural/strategy.md:168
-#, fuzzy
 msgid "\"Rust\""
-msgstr "The Little Book of Rust Macros"
+msgstr "\"Rust\""
 
 #: src/patterns/behavioural/strategy.md:180
-#, fuzzy
 msgid "[Strategy Pattern](https://en.wikipedia.org/wiki/Strategy_pattern)"
-msgstr ""
-"YAGNIをデザインパターンに適用すると、Rustの機能によって多くのパターンを捨てる"
-"ことができることがわかります。\n"
-"例えば、Rustでは [strategyパターン](https://en.wikipedia.org/wiki/"
-"Strategy_pattern) は不要です。\n"
-"なぜなら、単に [trait](https://doc.rust-lang.org/book/traits.html) を使えば良"
-"いためです。"
+msgstr "[Strategy Pattern](https://en.wikipedia.org/wiki/Strategy_pattern)"
 
 #: src/patterns/behavioural/strategy.md:181
-#, fuzzy
 msgid ""
 "[Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection)"
 msgstr ""
-"## [契約による設計（DbC）](https://en.wikipedia.org/wiki/Design_by_contract)"
+"[Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection)"
 
 #: src/patterns/behavioural/strategy.md:182
-#, fuzzy
 msgid ""
 "[Policy Based Design](https://en.wikipedia.org/wiki/Modern_C++_Design#Policy-"
 "based_design)"
 msgstr ""
-"[ポリシー・ベース・デザイン](https://en.wikipedia.org/wiki/Modern_C+"
-"+_Design#Policy-based_design)"
+"[Policy Based Design](https://en.wikipedia.org/wiki/Modern_C++_Design#Policy-"
+"based_design)"
 
 #: src/patterns/behavioural/strategy.md:183
-#, fuzzy
 msgid ""
 "[Implementing a TCP server for Space Applications in Rust using the Strategy "
 "Pattern](https://web.archive.org/web/20231003171500/https://robamu.github.io/"
@@ -4284,46 +3801,39 @@ msgstr ""
 "rust-strategy-pattern/)"
 
 #: src/patterns/behavioural/visitor.md:5
-#, fuzzy
 msgid ""
 "A visitor encapsulates an algorithm that operates over a heterogeneous "
 "collection of objects. It allows multiple different algorithms to be written "
 "over the same data without having to modify the data (or their primary "
 "behaviour)."
 msgstr ""
-"visitor は、異種のオブジェクトのコレクションを操作するアルゴリズムをカプセル"
-"化します。\n"
-"これにより、データ(またはその主要な振る舞い)を変更する必要なしに、同じデータ"
-"に対して複数の異なるアルゴリズムを書くことができます。"
+"Visitor は、異種のオブジェクトのコレクションを操作するアルゴリズムをカプセル"
+"化します。これにより、データ(またはその主要な振る舞い)を変更する必要なしに、"
+"同じデータに対して複数の異なるアルゴリズムを書くことができます。"
 
 #: src/patterns/behavioural/visitor.md:10
-#, fuzzy
 msgid ""
 "Furthermore, the visitor pattern allows separating the traversal of a "
 "collection of objects from the operations performed on each object."
 msgstr ""
-"さらに、Visitor パターンでは、オブジェクトの集合の走査を、\n"
-"各オブジェクトに対し実行される操作から分離することができます。"
+"さらに、Visitor パターンでは、オブジェクトの集合の走査を、各オブジェクトに対"
+"し実行される操作から分離することができます。"
 
 #: src/patterns/behavioural/visitor.md:16
-#, fuzzy
 msgid "// The data we will visit\n"
 msgstr "// 訪問するデータ\n"
 
 #: src/patterns/behavioural/visitor.md:33
-#, fuzzy
 msgid "// The abstract visitor\n"
-msgstr "// 抽象的な訪問者\n"
+msgstr "// 抽象的な visitor\n"
 
 #: src/patterns/behavioural/visitor.md:47
-#, fuzzy
 msgid ""
 "// An example concrete implementation - walks the AST interpreting it as "
 "code.\n"
-msgstr "// ASTをコードとして解釈して歩く。\n"
+msgstr "// 具体的な実装の1例 - ASTをコードとして解釈して歩く。\n"
 
 #: src/patterns/behavioural/visitor.md:71
-#, fuzzy
 msgid ""
 "One could implement further visitors, for example a type checker, without "
 "having to modify the AST data."
@@ -4332,21 +3842,18 @@ msgstr ""
 "装可能です。"
 
 #: src/patterns/behavioural/visitor.md:76
-#, fuzzy
 msgid ""
 "The visitor pattern is useful anywhere that you want to apply an algorithm "
 "to heterogeneous data. If data is homogeneous, you can use an iterator-like "
 "pattern. Using a visitor object (rather than a functional approach) allows "
 "the visitor to be stateful and thus communicate information between nodes."
 msgstr ""
-"ビジター・パターンは、異種データにアルゴリズムを適用したい場合に便利です。\n"
-"データが同種であれば、イテレータのようなパターンを使うことができます。\n"
-"(関数型アプローチと比較して) visitor オブジェクトを使用することにより、\n"
-"visitor はステートフルになり、そのためノード間で情報を伝達することができま"
-"す。"
+"Visitor パターンは、異種データにアルゴリズムを適用したい場合に便利です。デー"
+"タが同種であれば、イテレータのようなパターンを使うことができます。 (関数型ア"
+"プローチと比較して) visitor オブジェクトを使用することにより、visitor はス"
+"テートフルになり、そのためノード間で情報を伝達することができます。"
 
 #: src/patterns/behavioural/visitor.md:83
-#, fuzzy
 msgid ""
 "It is common for the `visit_*` methods to return void (as opposed to in the "
 "example). In that case it is possible to factor out the traversal code and "
@@ -4354,19 +3861,17 @@ msgid ""
 "Rust, the common way to do this is to provide `walk_*` functions for each "
 "datum. For example,"
 msgstr ""
-"`visit_*` メソッドが void を返すのは(例とは異なり)一般的です。\n"
-"この場合、走査コードを分離してアルゴリズム間で共有することが可能です(また、"
-"noopデフォルトメソッドを提供することも可能です)。\n"
-"Rustでは、データ各個に対して `walk_*` 関数を提供するのが一般的です。\n"
-"例えば、"
+"`visit_*` メソッドが void を返すのは(例とは異なり)一般的です。この場合、走査"
+"コードを分離してアルゴリズム間で共有することが可能です(また、なにもしないデ"
+"フォルトメソッドを提供することも可能です)。Rustでは、データ各個に対して "
+"`walk_*` 関数を提供するのが一般的です。例えば、"
 
 #: src/patterns/behavioural/visitor.md:105
-#, fuzzy
 msgid ""
 "In other languages (e.g., Java) it is common for data to have an `accept` "
 "method which performs the same duty."
 msgstr ""
-"他の言語（例えばJava）では、データに対し同様の責務を担う `accept` メソッドが"
+"他の言語 (例えばJava) では、データに対し同様の責務を担う `accept` メソッドが"
 "あるのが普通です。"
 
 #: src/patterns/behavioural/visitor.md:110
@@ -4376,10 +3881,9 @@ msgstr ""
 
 #: src/patterns/behavioural/visitor.md:112
 msgid "[Wikipedia article](https://en.wikipedia.org/wiki/Visitor_pattern)"
-msgstr "[ウィキペディア記事](https://en.wikipedia.org/wiki/Visitor_pattern)"
+msgstr "[Wikipedia記事](https://en.wikipedia.org/wiki/Visitor_pattern)"
 
 #: src/patterns/behavioural/visitor.md:114
-#, fuzzy
 msgid ""
 "The [fold](../creational/fold.md) pattern is similar to visitor but produces "
 "a new version of the visited data structure."
@@ -4388,16 +3892,14 @@ msgstr ""
 "タ構造の新しいバージョンを生成する点が異なります。"
 
 #: src/patterns/creational/intro.md:1
-#, fuzzy
 msgid "Creational Patterns"
-msgstr "# 生成に関するパターン"
+msgstr "生成に関するパターン"
 
 #: src/patterns/creational/intro.md:3
 msgid "From [Wikipedia](https://en.wikipedia.org/wiki/Creational_pattern):"
 msgstr "[Wikipedia](https://en.wikipedia.org/wiki/Creational_pattern)より："
 
 #: src/patterns/creational/intro.md:5
-#, fuzzy
 msgid ""
 "Design patterns that deal with object creation mechanisms, trying to create "
 "objects in a manner suitable to the situation. The basic form of object "
@@ -4405,19 +3907,15 @@ msgid ""
 "design. Creational design patterns solve this problem by somehow controlling "
 "this object creation."
 msgstr ""
-"> Design patterns that deal with object creation mechanisms, trying to "
-"create objects\n"
-"> in a manner suitable to the situation. The basic form of object creation "
-"could\n"
-"> result in design problems or in added complexity to the design. Creational "
-"design\n"
-"> patterns solve this problem by somehow controlling this object creation.\n"
-"> (オブジェクト生成のメカニズムを扱う、状況に適した方法でオブジェクトを生成し"
-"ようとするデザインパターン。\n"
-"> 状況に適した方法でオブジェクト生成の基本形は設計上の問題が発生したり、設計"
-"が複雑になったりします。\n"
-">  生成に関するデザインパターンは、オブジェクト生成を何らかの方法で制御するこ"
-"とで、この問題を解決します。)"
+"Design patterns that deal with object creation mechanisms, trying to create "
+"objects in a manner suitable to the situation. The basic form of object "
+"creation could result in design problems or in added complexity to the "
+"design. Creational design patterns solve this problem by somehow controlling "
+"this object creation. (オブジェクト生成のメカニズムを扱う、状況に適した方法で"
+"オブジェクトを生成しようとするデザインパターン。状況に適した方法でオブジェク"
+"ト生成の基本形は設計上の問題が発生したり、設計が複雑になったりします。生成に"
+"関するデザインパターンは、オブジェクト生成を何らかの方法で制御することで、こ"
+"の問題を解決します。)"
 
 #: src/patterns/creational/builder.md:5
 msgid "Construct an object with calls to a builder helper."
