@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-05-07 18:29+0900\n"
+"PO-Revision-Date: 2024-05-12 14:53+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -10,7 +10,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: src/SUMMARY.md:1
 msgid "Summary"
@@ -155,7 +155,7 @@ msgstr "構造体の構成"
 
 #: src/SUMMARY.md:38
 msgid "Prefer Small Crates"
-msgstr "小さなクレートを好む"
+msgstr "小さなクレートを選好する"
 
 #: src/SUMMARY.md:39 src/patterns/structural/unsafe-mods.md:1
 msgid "Contain unsafety in small modules"
@@ -4037,7 +4037,7 @@ msgstr ""
 "例ではbuilderを値として引数に受け、return しています。可変参照として引数に受"
 "け、return する形式が、多くの場合、より人間工学的(かつ効率的)です。借用チェッ"
 "カーはこれを自然に動作させます。このアプローチには下記のようなコードを書ける"
-"ようになるメリットがあります。"
+"ようになるメリットがあります"
 
 #: src/patterns/creational/builder.md:107
 msgid "as well as the `FooBuilder::new().a().b().build()` style."
@@ -4280,12 +4280,10 @@ msgstr ""
 "特定することで、設計を容易にするデザインパターン。)"
 
 #: src/patterns/structural/compose-structs.md:1
-#, fuzzy
 msgid "Struct decomposition for independent borrowing"
-msgstr "# 個別借用のための構造体の分解"
+msgstr "個別借用のための構造体の分解"
 
 #: src/patterns/structural/compose-structs.md:5
-#, fuzzy
 msgid ""
 "Sometimes a large struct will cause issues with the borrow checker - "
 "although fields can be borrowed independently, sometimes the whole struct "
@@ -4294,182 +4292,118 @@ msgid ""
 "together into the original struct. Then each struct can be borrowed "
 "separately and have more flexible behaviour."
 msgstr ""
-"大きな構造体では、借用チェッカーにて問題が発生することがあります - \n"
-"フィールドを個別に借用できますが、同時に構造体全体が使用されてしまうことにな"
-"り、他の使用を妨げることがあります。\n"
-"解決策としては、構造体を複数の小さな構造体に分解することです。それから、これ"
-"らを元の構造体にまとめます。\n"
-"そうすれば、各構造体を個別に借用でき、より柔軟な操作が可能になります。"
+"大きな構造体では、借用チェッカーにて問題が発生することがあります - フィールド"
+"を個別に借用することが可能なのですが、同時に構造体全体が使用されてしまうこと"
+"になり、別の利用を妨げることがあります。解決策としては、構造体を複数の小さな"
+"構造体に分解することです。それから、これらを元の構造体にまとめます。そうすれ"
+"ば、各構造体を個別に借用でき、より柔軟な操作が可能になります。"
 
 #: src/patterns/structural/compose-structs.md:12
-#, fuzzy
 msgid ""
 "This will often lead to a better design in other ways: applying this design "
 "pattern often reveals smaller units of functionality."
 msgstr ""
-"これは、別の形でより良い設計につながることがあります：このデザインパターンを"
+"これは、別の形でより良い設計につながることがあります: このデザインパターンを"
 "適用することにより、より小さな機能の単位の存在が明らかになることがあります。"
 
 #: src/patterns/structural/compose-structs.md:17
-#, fuzzy
 msgid ""
 "Here is a contrived example of where the borrow checker foils us in our plan "
 "to use a struct:"
-msgstr "以下は、借用チェッカーが構造体の利用を妨げ失敗させる、作為的な例です："
+msgstr "以下は、借用チェッカーが構造体の利用を妨げ失敗させる、作為的な例です:"
 
 #: src/patterns/structural/compose-structs.md:28
-#, fuzzy
 msgid "\"Connection string: {}\""
-msgstr "「接続文字列：{}\""
+msgstr "\"Connection string: {}\""
 
 #: src/patterns/structural/compose-structs.md:29
-#, fuzzy
 msgid "\"Timeout: {}\""
-msgstr "「タイムアウト{}\""
+msgstr "\"Timeout: {}\""
 
 #: src/patterns/structural/compose-structs.md:30
-#, fuzzy
 msgid "\"Pool size: {}\""
-msgstr ""
-"```rust\n"
-"// Databaseを3つの構造体 ConnectionStringとTimeout、PoolSize として構成しま"
-"す。\n"
-"// まず、より小さな構造体へ分解します。\n"
-"#[derive(Debug, Clone)]\n"
-"struct ConnectionString(String);\n"
-"\n"
-"#[derive(Debug, Clone, Copy)]\n"
-"struct Timeout(u32);\n"
-"\n"
-"#[derive(Debug, Clone, Copy)]\n"
-"struct PoolSize(u32);\n"
-"\n"
-"// そして `Database` を 3つのより小さな構造体により構成し直します。\n"
-"struct Database {\n"
-"    connection_string: ConnectionString,\n"
-"    timeout: Timeout,\n"
-"    pool_size: PoolSize,\n"
-"}\n"
-"\n"
-"// print_database は ConnectionString と Timeout 、 Poolsize を代わりに引き受"
-"けることが可能になります。\n"
-"fn print_database(connection_str: ConnectionString, \n"
-"                  timeout: Timeout, \n"
-"                  pool_size: PoolSize) {\n"
-"    println!(\"Connection string: {:?}\", connection_str);\n"
-"    println!(\"Timeout: {:?}\", timeout);\n"
-"    println!(\"Pool size: {:?}\", pool_size);\n"
-"}\n"
-"\n"
-"fn main() {\n"
-"    // Database を 3つの構造体にて初期化します。\n"
-"    let mut db = Database {\n"
-"        connection_string: ConnectionString(\"localhost\".to_string()),\n"
-"        timeout: Timeout(30),\n"
-"        pool_size: PoolSize(100),\n"
-"    };\n"
-"\n"
-"    let connection_string = &mut db.connection_string;\n"
-"    print_database(connection_string.clone(), db.timeout, db.pool_size);\n"
-"    *connection_string = ConnectionString(\"new string\".to_string());\n"
-"}\n"
-"```"
+msgstr "\"Pool size: {}\""
 
 #: src/patterns/structural/compose-structs.md:35
-#, fuzzy
 msgid "\"initial string\""
-msgstr "\"初期文字列\""
+msgstr "\"initial string\""
 
 #: src/patterns/structural/compose-structs.md:41
-#, fuzzy
 msgid ""
 "// Immutable borrow of `db` happens here\n"
 "                         // *connection_string = \"new string\"."
 "to_string();  // Mutable borrow is used\n"
 "                         // here\n"
 msgstr ""
-"// ここでは `db` の不変借用が行われる。\n"
-"                         // *connection_string = \"新しい文字列\"."
-"to_string(); // Mutable borrow が使用される\n"
-"                         // ここで\n"
+"// `db` の不変借用が発生\n"
+"\n"
+"                         // *connection_string = \"new string\"."
+"to_string(); // ここで可変借用を使用\n"
 
 #: src/patterns/structural/compose-structs.md:47
-#, fuzzy
 msgid ""
 "We can apply this design pattern and refactor `Database` into three smaller "
 "structs, thus solving the borrow checking issue:"
 msgstr ""
-"このデザインパターンを適用し、`Database`を3つの小さな構造体にリファクタリング"
-"します。これにより借用チェッカーの問題を解決します："
+"当デザインパターンを適用し、`Database`を3つの小さな構造体にリファクタリングし"
+"ます。これにより借用チェッカーの問題を解決します:"
 
 #: src/patterns/structural/compose-structs.md:51
-#, fuzzy
 msgid ""
 "// Database is now composed of three structs - ConnectionString, Timeout and "
 "PoolSize.\n"
 "// Let's decompose it into smaller structs\n"
 msgstr ""
-"// データベースは現在、ConnectionString、Timeout、PoolSizeの3つの構造体で構成"
-"されている。\n"
-"// これをより小さな構造体に分解してみよう。\n"
+"// Database is now composed of three structs - ConnectionString, Timeout and "
+"PoolSize.\n"
+"// Let's decompose it into smaller structs\n"
 
 #: src/patterns/structural/compose-structs.md:61
-#, fuzzy
 msgid "// We then compose these smaller structs back into `Database`\n"
-msgstr "// 次に、これらの小さな構造体を `Database` にまとめる。\n"
+msgstr "// We then compose these smaller structs back into `Database`\n"
 
 #: src/patterns/structural/compose-structs.md:68
-#, fuzzy
 msgid ""
 "// print_database can then take ConnectionString, Timeout and Poolsize "
 "struct instead\n"
 msgstr ""
-"// print_database は、代わりに ConnectionString、Timeout、Poolsize 構造体を受"
-"け取ることができる。\n"
+"// print_database can then take ConnectionString, Timeout and Poolsize "
+"struct instead\n"
 
 #: src/patterns/structural/compose-structs.md:71
-#, fuzzy
 msgid "\"Connection string: {connection_str:?}\""
-msgstr "「接続文字列：{connection_str:?}\""
+msgstr "\"Connection string: {connection_str:?}\""
 
 #: src/patterns/structural/compose-structs.md:72
-#, fuzzy
 msgid "\"Timeout: {timeout:?}\""
-msgstr "「タイムアウト{timeout:?}\""
+msgstr "\"Timeout: {timeout:?}\""
 
 #: src/patterns/structural/compose-structs.md:73
-#, fuzzy
 msgid "\"Pool size: {pool_size:?}\""
-msgstr "「プールサイズ：{pool_size:?}\""
+msgstr "\"Pool size: {pool_size:?}\""
 
 #: src/patterns/structural/compose-structs.md:77
-#, fuzzy
 msgid "// Initialize the Database with the three structs\n"
 msgstr "// 以下の3つの構造体でデータベースを初期化する。\n"
 
 #: src/patterns/structural/compose-structs.md:79
-#, fuzzy
 msgid "\"localhost\""
-msgstr "「ローカルホスト"
+msgstr "\"localhost\""
 
 #: src/patterns/structural/compose-structs.md:86
-#, fuzzy
 msgid "\"new string\""
-msgstr "「新しい文字列"
+msgstr "\"new string\""
 
 #: src/patterns/structural/compose-structs.md:92
-#, fuzzy
 msgid ""
 "This pattern is most useful, when you have a struct that ended up with a lot "
 "of fields that you want to borrow independently. Thus having a more flexible "
 "behaviour in the end."
 msgstr ""
-"このパターンは、独立して借用したいフィールドがたくさんある構造体を持っている"
-"場合に、最も便利です。\n"
-"結果として、最終的にはより柔軟な操作が可能になります。"
+"このパターンは特に便利なのは、構造体に個別に借用したいフィールドがたくさんあ"
+"る場合です。これにより、最終的により柔軟な操作が可能になります。"
 
 #: src/patterns/structural/compose-structs.md:98
-#, fuzzy
 msgid ""
 "Decomposition of structs lets you work around limitations in the borrow "
 "checker. And it often produces a better design."
@@ -4478,32 +4412,28 @@ msgstr ""
 "計を生み出すこともあります。"
 
 #: src/patterns/structural/compose-structs.md:103
-#, fuzzy
 msgid ""
 "It can lead to more verbose code. And sometimes, the smaller structs are not "
 "good abstractions, and so we end up with a worse design. That is probably a "
 "'code smell', indicating that the program should be refactored in some way."
 msgstr ""
 "冗長なコードにつながる可能性があります。またときに、より小さな構造体が良い抽"
-"象でなく、より悪い設計になってしまうことがあります。\n"
-"これはおそらく「コードの臭い」であり、プログラムを何らかの方法でリファクタす"
-"べきことを示しています。"
+"象でなく、より悪い設計になってしまうことがあります。これはおそらく「コードの"
+"臭い」であり、プログラムを何らかの方法でリファクタすべきことを示しています。"
 
 #: src/patterns/structural/compose-structs.md:109
-#, fuzzy
 msgid ""
 "This pattern is not required in languages that don't have a borrow checker, "
 "so in that sense is unique to Rust. However, making smaller units of "
 "functionality often leads to cleaner code: a widely acknowledged principle "
 "of software engineering, independent of the language."
 msgstr ""
-"このパターンは、借用チェッカーを持たない言語では必要ありません。\n"
-"その意味ではRust独自のものです。\n"
-"しかし、機能の単位を小さくすることがクリーンなコードにつながることは、\n"
-"ソフトウェア工学の原則として、言語とは関係なく広く認められています。"
+"このパターンは、借用チェッカーを持たない言語では必要ありません。その意味では"
+"Rust独自のものです。しかし、機能の単位を小さくすることがクリーンなコードにつ"
+"ながることは、ソフトウェア工学の原則として、言語とは関係なく広く認められてい"
+"ます。"
 
 #: src/patterns/structural/compose-structs.md:114
-#, fuzzy
 msgid ""
 "This pattern relies on Rust's borrow checker to be able to borrow fields "
 "independently of each other. In the example, the borrow checker knows that "
@@ -4511,23 +4441,19 @@ msgid ""
 "try to borrow all of `a`, which would make this pattern useless."
 msgstr ""
 "このパターンは、Rustの借用チェッカーがフィールドを互いに独立して借用できるこ"
-"とに依存しています。\n"
-"この例では、借用チェッカーは `a.b` と `a.c` が別個のものであり、独立して借用"
-"できることを知っており、\n"
-"`a` のすべてを借用しようとはしません。そうでなければ、このパターンは役に立た"
-"ないところでした。"
+"とに依存しています。この例では、借用チェッカーは `a.b` と `a.c` が別個のもの"
+"であり、独立して借用できることを知っており、`a` のすべてを借用しようとはしま"
+"せん。そうでなければ、このパターンは役に立たないところでした。"
 
 #: src/patterns/structural/small-crates.md:1
-#, fuzzy
 msgid "Prefer small crates"
-msgstr "小さなクレートを好む"
+msgstr "小さなクレートを選好する"
 
 #: src/patterns/structural/small-crates.md:5
 msgid "Prefer small crates that do one thing well."
-msgstr "1つのことをよく熟す小さな crate をより好みましょう。"
+msgstr "1つのことをよく熟す小さなクレートであることを選好しましょう。"
 
 #: src/patterns/structural/small-crates.md:7
-#, fuzzy
 msgid ""
 "Cargo and crates.io make it easy to add third-party libraries, much more so "
 "than in say C or C++. Moreover, since packages on crates.io cannot be edited "
@@ -4536,43 +4462,34 @@ msgid ""
 "smaller, more fine-grained dependencies."
 msgstr ""
 "cargo と crates.io は、サードパーティーライブラリの追加を、CやC++よりもはるか"
-"に簡単なものにします。\n"
-"また、crates.io上のパッケージは公開後に編集・削除不可能なため、現在機能してい"
-"るビルドは将来も機能し続けるはずです。\n"
-"私たちはこのツールを活用し、より小さく、細かな依存関係を使うべきです。"
+"に簡単なものにします。また、crates.io上のパッケージは公開後に編集・削除不可能"
+"なため、現在機能しているビルドは将来も機能し続けるはずです。私たちはこのツー"
+"ルを活用し、より小さく、細かな依存関係を使うべきです。"
 
 #: src/patterns/structural/small-crates.md:15
-#, fuzzy
 msgid "Small crates are easier to understand, and encourage more modular code."
-msgstr "小さなクレートは理解しやすく、よりモジュール化されたコードを促進する。"
+msgstr ""
+"小さなクレートは理解しやすく、よりモジュール化されたコードを促進します。"
 
 #: src/patterns/structural/small-crates.md:16
-#, fuzzy
 msgid ""
 "Crates allow for re-using code between projects. For example, the `url` "
 "crate was developed as part of the Servo browser engine, but has since found "
 "wide use outside the project."
 msgstr ""
-"- 小さな crate は理解しやすく、よりモジュール化されたコードを促進します。\n"
-"- crate はプロジェクト間でのコードの再利用を可能にします。\n"
-"  例えば、`url` クレートは Servo ブラウザエンジンの一部として開発されました"
-"が、\n"
-"  その後プロジェクト外で広く使用されるようになりました。\n"
-"- Rustのコンパイル単位は crate であるため、\n"
-"  プロジェクトを複数の crate に分割することで、より多くのコードを並列にビルド"
-"できるようになります。"
+"クレートはプロジェクト間でのコードの再利用を可能にします。例えば、`url` ク"
+"レートは Servo ブラウザエンジンの一部として開発されましたが、その後プロジェク"
+"ト外で広く使用されるようになりました。"
 
 #: src/patterns/structural/small-crates.md:19
-#, fuzzy
 msgid ""
 "Since the compilation unit of Rust is the crate, splitting a project into "
 "multiple crates can allow more of the code to be built in parallel."
 msgstr ""
-"Rustのコンパイル単位はクレートなので、プロジェクトを複数のクレートに分割すれ"
-"ば、より多くのコードを並行してビルドできる。"
+"Rustのコンパイル単位はクレートであるため、プロジェクトを複数のクレートに分割"
+"することで、より多くのコードを並列にビルドできるようになります。"
 
 #: src/patterns/structural/small-crates.md:24
-#, fuzzy
 msgid ""
 "This can lead to \"dependency hell\", when a project depends on multiple "
 "conflicting versions of a crate at the same time. For example, the `url` "
@@ -4580,38 +4497,30 @@ msgid ""
 "`Url` from `url:0.5` are different types, an HTTP client that uses `url:0.5` "
 "would not accept `Url` values from a web scraper that uses `url:1.0`."
 msgstr ""
-"- これはプロジェクトが競合するバージョンの複数の crate に依存しているとき、"
-"「依存性地獄」につながる可能性があります。\n"
-"  例えば、 `url` crate はバージョン 1.0 と 0.5 があります。 `url:1.0` の "
-"`Url` と `url:0.5` の `Url` は異なる型であるため、\n"
-"  `url:0.5` を使用するHTTPクライアントは、 `url:1.0` を使用するWebスクレイ"
-"パーからの `Url` を受け付けません。\n"
-"- crates.io のパッケージはキュレーションされていません。\n"
-"  crate には作りが甘かったり、ドキュメントが助けにならないものであったり、あ"
-"からさまに悪意のあるものもあります。\n"
-"- コンパイラはデフォルトでリンク時最適化(LTO)を行わないので、2つの小さなク"
-"レートは1つの大きなクレートよりも最適化されていないかもしれません。"
+"これはプロジェクトが競合するバージョンの複数のクレートに依存しているとき、"
+"「依存性地獄」につながる可能性があります。例えば、 `url` クレートはバージョ"
+"ン 1.0 と 0.5 があります。 `url:1.0` の `Url` と `url:0.5` の `Url` は異なる"
+"型であるため、`url:0.5` を使用するHTTPクライアントは、 `url:1.0` を使用する"
+"Webスクレイパーからの `Url` を受け付けません。"
 
 #: src/patterns/structural/small-crates.md:29
-#, fuzzy
 msgid ""
 "Packages on crates.io are not curated. A crate may be poorly written, have "
 "unhelpful documentation, or be outright malicious."
 msgstr ""
-"crates.ioのパッケージはキュレーションされていません。crateの書き方が悪かった"
-"り、役に立たないドキュメントがあったり、悪意があったりします。"
+"crates.io のパッケージはキュレーションされていません。クレートには作りが甘"
+"かったり、ドキュメントが助けにならないものであったり、あからさまに悪意のある"
+"ものもあります。"
 
 #: src/patterns/structural/small-crates.md:31
-#, fuzzy
 msgid ""
 "Two small crates may be less optimized than one large one, since the "
 "compiler does not perform link-time optimization (LTO) by default."
 msgstr ""
-"コンパイラーはデフォルトでリンク時最適化（LTO）を行わないため、2つの小さなク"
-"レートは1つの大きなクレートよりも最適化されない可能性がある。"
+"コンパイラはデフォルトでリンク時最適化(LTO)を行わないので、2つの小さなクレー"
+"トは1つの大きなクレートよりも最適化されていないかもしれません。"
 
 #: src/patterns/structural/small-crates.md:36
-#, fuzzy
 msgid ""
 "The [`url`](https://crates.io/crates/url) crate provides tools for working "
 "with URLs."
@@ -4619,7 +4528,6 @@ msgstr ""
 "[`url`](https://crates.io/crates/url) crateはURLを扱うツールを提供します。"
 
 #: src/patterns/structural/small-crates.md:39
-#, fuzzy
 msgid ""
 "The [`num_cpus`](https://crates.io/crates/num_cpus) crate provides a "
 "function to query the number of CPUs on a machine."
@@ -4628,7 +4536,6 @@ msgstr ""
 "わせる関数を提供します。"
 
 #: src/patterns/structural/small-crates.md:42
-#, fuzzy
 msgid ""
 "The [`ref_slice`](https://crates.io/crates/ref_slice) crate provides "
 "functions for converting `&T` to `&[T]`. (Historical example)"
@@ -4637,12 +4544,10 @@ msgstr ""
 "変換する関数を提供します(歴史的な例)。"
 
 #: src/patterns/structural/small-crates.md:47
-#, fuzzy
 msgid "[crates.io: The Rust community crate host](https://crates.io/)"
-msgstr "- [crates.io: Rustコミュニティの crate ホスト](https://crates.io/)"
+msgstr "[crates.io: Rustコミュニティのクレートホスト](https://crates.io/)"
 
 #: src/patterns/structural/unsafe-mods.md:5
-#, fuzzy
 msgid ""
 "If you have `unsafe` code, create the smallest possible module that can "
 "uphold the needed invariants to build a minimal safe interface upon the "
@@ -4653,53 +4558,40 @@ msgid ""
 msgstr ""
 "`unsafe` なコードがある場合、安全でないコードの上に最小限の安全なインタフェー"
 "スを構築するために、必要な不変性を維持できる可能な限り小さなモジュールを作り"
-"ましょう。\n"
-"これを安全なコードのみ含む大きなモジュールに組み込み、人間工学的なインタ"
-"フェースを提供してください。\n"
-"外側のモジュールには unsafe なコードを呼び出す unsafe な関数やメソッドを含め"
-"でもよいことに注意してください。\n"
-"ユーザはこれを使用して、速度の利点を得ることができます。"
+"ましょう。これを安全なコードのみ含む大きなモジュールに組み込み、人間工学的な"
+"インタフェースを提供してください。外側のモジュールには unsafe なコードを呼び"
+"出す unsafe な関数やメソッドを含めてもよいことに注意してください。ユーザはこ"
+"れを使用して、速度の利点を得ることができます。"
 
 #: src/patterns/structural/unsafe-mods.md:14
-#, fuzzy
 msgid "This restricts the unsafe code that must be audited"
-msgstr "これにより、監査されるべき安全でないコードが制限される。"
+msgstr "これにより、精査する必要のある unsafe なコードが制限されます"
 
 #: src/patterns/structural/unsafe-mods.md:15
-#, fuzzy
 msgid ""
 "Writing the outer module is much easier, since you can count on the "
 "guarantees of the inner module"
 msgstr ""
-"- これにより、検査が必要な unsafe なコードが制限されます\n"
-"- 内側のモジュールによる保証に頼ることで、外側のモジュールを書くことがずっと"
-"簡単になります"
+"内側のモジュールによる保証に頼ることで、外側のモジュールを書くことがずっと簡"
+"単になります"
 
 #: src/patterns/structural/unsafe-mods.md:20
-#, fuzzy
 msgid "Sometimes, it may be hard to find a suitable interface."
-msgstr ""
-"- 適切なインタフェースを見つけるのが難しい場合もあります。\n"
-"- 抽象化が非効率をもたらすかもしれません。"
+msgstr "適切なインタフェースを見つけるのが難しい場合もあります。"
 
 #: src/patterns/structural/unsafe-mods.md:21
-#, fuzzy
 msgid "The abstraction may introduce inefficiencies."
-msgstr ""
-"- 適切なインタフェースを見つけるのが難しい場合もあります。\n"
-"- 抽象化が非効率をもたらすかもしれません。"
+msgstr "抽象化が非効率をもたらすかもしれません。"
 
 #: src/patterns/structural/unsafe-mods.md:25
-#, fuzzy
 msgid ""
 "The [`toolshed`](https://docs.rs/toolshed) crate contains its unsafe "
 "operations in submodules, presenting a safe interface to users."
 msgstr ""
-"toolshed`](https://docs.rs/toolshed)クレートは、安全でない操作をサブモジュー"
-"ルに含み、ユーザーに安全なインターフェースを提供する。"
+"[`toolshed`](https://docs.rs/toolshed) クレートは、安全でない操作をサブモ"
+"ジュールにとじ込めることで、ユーザーに安全なインターフェイスを提供します。"
 
 #: src/patterns/structural/unsafe-mods.md:27
-#, fuzzy
 msgid ""
 "`std`'s `String` class is a wrapper over `Vec<u8>` with the added invariant "
 "that the contents must be valid UTF-8. The operations on `String` ensure "
@@ -4707,38 +4599,32 @@ msgid ""
 "create a `String`, in which case the onus is on them to guarantee the "
 "validity of the contents."
 msgstr ""
-"- [`toolshed`](https://docs.rs/toolshed) crateは、安全でない操作をサブモ"
-"ジュールにとじ込めることで、ユーザーに安全なインターフェイスを提供します。\n"
-"- `std` の `String` クラスは、その中身が妥当なUTF-8であるという不変性を追加し"
-"た `Vec<u8>` のラッパーです。\n"
-"  `String` に対する操作はこの振る舞いを保証します。\n"
-"  しかし、ユーザが、その内容の妥当性を保証する責任を持つ前提で、 `String` を"
-"作成する `unsafe` メソッドを利用する選択肢があります。"
+"`std` の `String` クラスは、その中身が妥当なUTF-8であるという不変性を追加し"
+"た `Vec<u8>` のラッパーです。`String` に対する操作はこの振る舞いを保証しま"
+"す。しかし、ユーザが、その内容の妥当性を保証する責任を持つ前提で、 `String` "
+"を作成する `unsafe` メソッドを利用する選択肢があります。"
 
 #: src/patterns/structural/unsafe-mods.md:35
-#, fuzzy
 msgid ""
 "[Ralf Jung's Blog about invariants in unsafe code](https://www.ralfj.de/"
 "blog/2018/08/22/two-kinds-of-invariants.html)"
 msgstr ""
-"- [unsafe コードにおける不変性に関する Ralf jung のブログ](https://www.ralfj."
+"[unsafe コードにおける不変性に関する Ralf jung のブログ](https://www.ralfj."
 "de/blog/2018/08/22/two-kinds-of-invariants.html)"
 
 #: src/patterns/ffi/intro.md:1
-#, fuzzy
 msgid "FFI Patterns"
-msgstr "# FFI に関するパターン"
+msgstr "FFI に関するパターン"
 
 #: src/patterns/ffi/intro.md:3
-#, fuzzy
 msgid ""
 "Writing FFI code is an entire course in itself. However, there are several "
 "idioms here that can act as pointers, and avoid traps for inexperienced "
 "users of unsafe Rust."
 msgstr ""
-"FFIコードを書くことは、それ自体が1つの課程です。\n"
-"しかしながら、ポインタの役割を担い、`unsafe` Rustの経験の浅いユーザーが陥る罠"
-"を回避する、いくつかのイディオムがあります。"
+"FFIコードを書くことは、それ自体が1つの大きな課程であると言えます。しかしなが"
+"ら、ポインタの役割を担い、unsafe Rustの経験の浅いユーザーが陥る罠を回避する、"
+"いくつかのイディオムがあります。"
 
 #: src/patterns/ffi/intro.md:7
 msgid ""
@@ -4746,22 +4632,20 @@ msgid ""
 msgstr "このセクションでは、FFIを行う際に役立つデザインパターンを紹介します。"
 
 #: src/patterns/ffi/intro.md:9
-#, fuzzy
 msgid ""
 "[Object-Based API](./export.md) design that has good memory safety "
 "characteristics, and a clean boundary of what is safe and what is unsafe"
 msgstr ""
-"オブジェクトベースのAPI設計は、メモリ安全性に優れたくさびを記述することを可能"
-"にし、`unsafe` なものと安全ななものの境界を明確にするものです。"
+"[オブジェクトベースのAPI](./export.md) は優れたメモリ安全性を設計し、何が安全"
+"で何が安全でないかの境界を明確にします"
 
 #: src/patterns/ffi/intro.md:12
-#, fuzzy
 msgid ""
 "[Type Consolidation into Wrappers](./wrappers.md) - group multiple Rust "
 "types together into an opaque \"object\""
 msgstr ""
-"[型のラッパーへの統合](./wrappers.md) - 複数のRust型を不透明な \"オブジェク"
-"ト \"にまとめる。"
+"[型のラッパーへの統合](./wrappers.md) - 複数のRust型を不透明な「オブジェク"
+"ト」にまとめます"
 
 #: src/patterns/ffi/export.md:5
 #, fuzzy
