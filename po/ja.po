@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-05-12 14:53+0900\n"
+"PO-Revision-Date: 2024-05-12 22:56+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -4648,132 +4648,116 @@ msgstr ""
 "ト」にまとめます"
 
 #: src/patterns/ffi/export.md:5
-#, fuzzy
 msgid ""
 "When designing APIs in Rust which are exposed to other languages, there are "
 "some important design principles which are contrary to normal Rust API "
 "design:"
 msgstr ""
-"Rustにて、他の言語へ公開するAPIを設計する場合、通常のRustのAPI設計に反する重"
-"要な設計原則がいくつかあります："
+"Rustにて他の言語へ公開するAPIを設計する場合、通常のRustのAPI設計にそむく重要"
+"な設計原則がいくつかあります:"
 
 #: src/patterns/ffi/export.md:8
-#, fuzzy
 msgid ""
 "All Encapsulated types should be _owned_ by Rust, _managed_ by the user, and "
 "_opaque_."
 msgstr ""
-"すべてのカプセル化された型は、Rustが所有し、ユーザーが管理し、そしてopaqueで"
-"なければならない。"
+"カプセル化された型はすべて、Rustが _所有_ し、ユーザーが _管理_ し、また _不"
+"透過的_ であるべきです。"
 
 #: src/patterns/ffi/export.md:10
-#, fuzzy
 msgid ""
 "All Transactional data types should be _owned_ by the user, and "
 "_transparent_."
 msgstr ""
-"すべてのトランザクション・データ型は、ユーザーによって所有され、透過的である"
-"べきだ。"
+"すべてのトランザクションデータ型は、ユーザが _所有_ し、 _透過的_ であるべき"
+"です。"
 
 #: src/patterns/ffi/export.md:12
-#, fuzzy
 msgid ""
 "All library behavior should be functions acting upon Encapsulated types."
 msgstr ""
-"ライブラリの動作はすべて、カプセル化された型に作用する関数でなければならな"
-"い。"
+"すべてのライブラリの操作は、カプセル化された型に作用する関数であるべきです。"
 
 #: src/patterns/ffi/export.md:13
-#, fuzzy
 msgid ""
 "All library behavior should be encapsulated into types not based on "
 "structure, but _provenance/lifetime_."
 msgstr ""
-"すべてのライブラリーの動作は、構造ではなく、_provenance/lifetime_に基づく型に"
-"カプセル化されるべきである。"
+"すべてのライブラリの操作は、構造に基づく型ではなく、_provenance(由来)/ライフ"
+"タイム_ に基づく型にカプセル化されるべきです。"
 
 #: src/patterns/ffi/export.md:18
-#, fuzzy
 msgid ""
 "Rust has built-in FFI support to other languages. It does this by providing "
 "a way for crate authors to provide C-compatible APIs through different ABIs "
 "(though that is unimportant to this practice)."
 msgstr ""
-"Rustには、他の言語へのFFIサポートが組み込まれています。\n"
-"これは、クレート作者が異なるABIを通じてC互換のAPIを提供する方法を提供すること"
-"で実現しています（このことは当実践には重要ではありませんが）。"
+"Rustには、他の言語へのFFIサポートが組み込まれています。これは、様々なABIを通"
+"してC互換のAPIを提供する方法を、クレート作者に提供することで実現しています "
+"(このことは当実践には重要ではありませんが)。"
 
 # foreign API はなんと訳すとそれっぽいのだろう。
 # 試しに言語間の、と訳してみる
 #: src/patterns/ffi/export.md:22
-#, fuzzy
 msgid ""
 "Well-designed Rust FFI follows C API design principles, while compromising "
 "the design in Rust as little as possible. There are three goals with any "
 "foreign API:"
 msgstr ""
 "うまく設計されたRust FFIは、C言語のAPI設計の原則に従いつつ、Rustの設計を可能"
-"な限り損なわないようにします。\n"
-"言語間のAPIには3つのゴールがあります："
+"な限り損なわないようにします。言語間のAPIには3つのゴールがあります:"
 
 #: src/patterns/ffi/export.md:26
-#, fuzzy
 msgid "Make it easy to use in the target language."
-msgstr "ターゲット言語で使いやすくする。"
+msgstr "ターゲット言語で利用しやすいようにします。"
 
 #: src/patterns/ffi/export.md:27
-#, fuzzy
 msgid ""
 "Avoid the API dictating internal unsafety on the Rust side as much as "
 "possible."
-msgstr "APIがRust側の内部的な安全性の欠如を指示することはできるだけ避ける。"
+msgstr "APIがRust側の内部的な不安定性を規定することを可能な限り避けましょう。"
 
 #: src/patterns/ffi/export.md:29
-#, fuzzy
 msgid ""
 "Keep the potential for memory unsafety and Rust `undefined behaviour` as "
 "small as possible."
 msgstr ""
-"メモリが安全でなくなる可能性や、Rustの`未定義の動作`を可能な限り小さくする。"
+"メモリの不安定性やRustの `undefined behavior` の可能性を可能な限り小さく保ち"
+"ましょう。"
 
 #: src/patterns/ffi/export.md:32
-#, fuzzy
 msgid ""
 "Rust code must trust the memory safety of the foreign language beyond a "
 "certain point. However, every bit of `unsafe` code on the Rust side is an "
 "opportunity for bugs, or to exacerbate `undefined behaviour`."
 msgstr ""
-"Rustコードは、外部言語のメモリ安全性を一定以上信頼しなければなりません。\n"
-"しかし、Rust側の `unsafe` コードすべては、バグを発生させたり、 `undefined "
+"Rustコードは、外部言語のメモリ安全性を一定以上信頼しなければなりません。しか"
+"し、Rust側の `unsafe` コードのすべてはバグを発生させたり、 `undefined "
 "behaviour` を悪化させるきっかけとなりえます。"
 
 # (Pointer) provenance : (ポインタの)由来
 # 同じメモリアドレスを指すポインタを識別することに使用するモノ。コンパイラのVMが認識する情報らしい。コード生成には影響する。この情報は実行時に保持されない。
 # https://rust-lang.github.io/unsafe-code-guidelines/glossary.html#pointer-provenance
 #: src/patterns/ffi/export.md:36
-#, fuzzy
 msgid ""
 "For example, if a pointer provenance is wrong, that may be a segfault due to "
 "invalid memory access. But if it is manipulated by unsafe code, it could "
 "become full-blown heap corruption."
 msgstr ""
-"例えば、ポインタの provenance が間違っている場合、それは無効なメモリアクセス"
-"が原因のセグメンテーション違反となりえます。\n"
-"しかし、それが unsafe コードによって操作された場合、本格的なヒープ破壊を起こ"
-"す可能性があります。"
+"例えば、ポインタの由来が不適切である場合、それは無効なメモリアクセスが原因の"
+"セグメンテーション違反となりえます。しかし、それが unsafe コードによって操作"
+"された場合、本格的なヒープ破壊を起こす可能性があります。"
 
 #: src/patterns/ffi/export.md:40
-#, fuzzy
 msgid ""
 "The Object-Based API design allows for writing shims that have good memory "
 "safety characteristics, and a clean boundary of what is safe and what is "
 "`unsafe`."
 msgstr ""
-"オブジェクトベースのAPI設計は、メモリ安全性に優れたくさびを記述することを可能"
-"にし、`unsafe` なものと安全ななものの境界を明確にするものです。"
+"オブジェクトベースのAPI設計は、メモリ安全性に優れた“くさび”を記述することを可"
+"能にし、また `unsafe` なものと安全なものの境界を明確にするものです。"
 
 #: src/patterns/ffi/export.md:46
-#, fuzzy
 msgid ""
 "The POSIX standard defines the API to access an on-file database, known as "
 "[DBM](https://web.archive.org/web/20210105035602/https://www.mankier.com/0p/"
@@ -4781,48 +4765,42 @@ msgid ""
 msgstr ""
 "POSIX標準では、[DBM](https://web.archive.org/web/20210105035602/https://www."
 "mankier.com/0p/ndbm.h)として知られるオンファイル・データベースにアクセスする"
-"ためのAPIを定義しています。\n"
-"これは「オブジェクトベース」APIの優れた例です。"
+"ためのAPIを定義しています。これは「オブジェクトベース」APIの優れた例です。"
 
 #: src/patterns/ffi/export.md:50
-#, fuzzy
 msgid ""
 "Here is the definition in C, which hopefully should be easy to read for "
 "those involved in FFI. The commentary below should help explain it for those "
 "who miss the subtleties."
 msgstr ""
-"以下はC言語による定義です。FFIに携わっている人には読みやすいと思います。\n"
-"以下の解説は、微妙な点を理解し損ねた人のために役立つはずです。"
+"以下はC言語による定義です。FFIに携わっている人には読みやすいと思います。以下"
+"の解説は、微妙な点を理解し損ねた人のために役立つはずです。"
 
 #: src/patterns/ffi/export.md:69
 msgid "This API defines two types: `DBM` and `datum`."
 msgstr "このAPIは2つの型を定義しています： `DBM` と `datum` です。"
 
 #: src/patterns/ffi/export.md:71
-#, fuzzy
 msgid ""
 "The `DBM` type was called an \"encapsulated\" type above. It is designed to "
 "contain internal state, and acts as an entry point for the library's "
 "behavior."
 msgstr ""
-"`DBM`型は上述した「カプセル化された」型と呼ばれるものです。\n"
-"`DBM`型は内部状態を持つように設計されており、ライブラリの操作のエントリポイン"
-"トとして振る舞います。"
+"`DBM`型は上述した「カプセル化された」型と呼ばれるものです。`DBM`型は内部状態"
+"を持つように設計されており、ライブラリの操作のエントリポイントとして振る舞い"
+"ます。"
 
 #: src/patterns/ffi/export.md:74
-#, fuzzy
 msgid ""
 "It is completely opaque to the user, who cannot create a `DBM` themselves "
 "since they don't know its size or layout. Instead, they must call "
 "`dbm_open`, and that only gives them _a pointer to one_."
 msgstr ""
 "サイズやレイアウトを知らないので、ユーザは `DBM` 直接作成することができませ"
-"ん。\n"
-"その代わりに、 `dbm_open` を呼び出す必要があります。そしてこれは _DBMへのポイ"
-"ンタ_ を与えてくれるだけです。"
+"ん。その代わりに、 `dbm_open` を呼び出す必要があります。そしてこれは _DBMへの"
+"ポインタ_ を与えてくれるだけです。"
 
 #: src/patterns/ffi/export.md:78
-#, fuzzy
 msgid ""
 "This means all `DBM`s are \"owned\" by the library in a Rust sense. The "
 "internal state of unknown size is kept in memory controlled by the library, "
@@ -4830,23 +4808,19 @@ msgid ""
 "`close`, and perform operations on it with the other functions."
 msgstr ""
 "これはRust的な感覚で言えば、ライブラリがすべての `DBM` を「所有」している、と"
-"いうことになります。\n"
-"サイズ不明の内部状態は、ユーザ側ではなく、ライブラリが管理するメモリに保持さ"
-"れます。\n"
-"ユーザが行えるのは、 `DBM` のライフサイクルを `open` と `close` によって管理"
-"し、他の関数によって操作することに限られます。"
+"いうことになります。サイズ不明の内部状態は、ユーザ側ではなく、ライブラリが管"
+"理するメモリに保持されます。ユーザが行えるのは、 `DBM` のライフサイクルを "
+"`open` と `close` によって管理し、他の関数によって操作することに限られます。"
 
 #: src/patterns/ffi/export.md:83
-#, fuzzy
 msgid ""
 "The `datum` type was called a \"transactional\" type above. It is designed "
 "to facilitate the exchange of information between the library and its user."
 msgstr ""
-"`datum` 型は上述した 「トランザクション」型と呼ばれるものです。\n"
-"これはライブラリと利用者の間の情報交換を容易にするために設計されています。"
+"`datum` 型は上述した 「トランザクション」型と呼ばれるものです。これはライブラ"
+"リとユーザの間の情報交換を容易にするために設計されています。"
 
 #: src/patterns/ffi/export.md:86
-#, fuzzy
 msgid ""
 "The database is designed to store \"unstructured data\", with no pre-defined "
 "length or meaning. As a result, the `datum` is the C equivalent of a Rust "
@@ -4855,39 +4829,35 @@ msgid ""
 "indicates."
 msgstr ""
 "データベースは、あらかじめ長さや意味の定義されていない「非構造化データ」を保"
-"存するように設計されています。\n"
-"その結果、`datum` は C において Rust のスライス - バイトの列であり、その数を"
-"カウントされたもの - に相当します。\n"
-"主な相違点は、これには型情報がないことです。 `void` はそれを示唆しています。"
+"存するように設計されています。その結果、`datum` はCにおいてRust のスライスに"
+"相当するもの - バイトの列であり、その数をカウントされたもの - です。主な相違"
+"点は、これには型情報がないことです。 `void` はそれを示唆しています。"
 
 #: src/patterns/ffi/export.md:91
-#, fuzzy
 msgid ""
 "Keep in mind that this header is written from the library's point of view. "
 "The user likely has some type they are using, which has a known size. But "
 "the library does not care, and by the rules of C casting, any type behind a "
 "pointer can be cast to `void`."
 msgstr ""
-"このヘッダーはライブラリーの視点から記述されていることに留意してください。\n"
-"ユーザは、サイズが既知である何らかの型を使用しているはずです。\n"
-"しかし、ライブラリはそれについて関知しません。またCのキャストの規則では、あら"
-"ゆる型を `void` にキャストできます。"
+"このヘッダはライブラリの視点から記述されていることに留意してください。ユーザ"
+"は、サイズが既知である何らかの型を使用しているはずです。しかし、ライブラリは"
+"それについて関知しません。またCのキャストの規則では、あらゆる型を `void` に"
+"キャストできます。"
 
 #: src/patterns/ffi/export.md:96
-#, fuzzy
 msgid ""
 "As noted earlier, this type is _transparent_ to the user. But also, this "
 "type is _owned_ by the user. This has subtle ramifications, due to that "
 "pointer inside it. The question is, who owns the memory that pointer points "
 "to?"
 msgstr ""
-"前述したように、この型はユーザーにとって _透過的_ です。しかし同時に、この型"
-"はユーザーによって _所有_ されます。\n"
-"このことは、内部にあるポインタによって、微妙な影響を及ぼします。\n"
-"問題は、そのポインタが指すメモリは誰のものなのか、ということです。"
+"前述したように、この型はユーザにとって _透過的_ です。しかし同時に、この型は"
+"ユーザによって _所有_ されます。このことは、内部にあるポインタによって、微妙"
+"な派生があります。問題は、そのポインタが指すメモリは誰が所有するのか？という"
+"ことです。"
 
 #: src/patterns/ffi/export.md:100
-#, fuzzy
 msgid ""
 "The answer for best memory safety is, \"the user\". But in cases such as "
 "retrieving a value, the user does not know how to allocate it correctly "
@@ -4896,15 +4866,13 @@ msgid ""
 "C library `malloc` and `free` -- and then _transfer ownership_ in the Rust "
 "sense."
 msgstr ""
-"最高のメモリ安全性のための答えは「ユーザ」です。\n"
-"しかし、値を取得するような場合、ユーザは(値の長さを知らないので)どのように値"
-"を正しく割り当ればよいのかわかりません。\n"
-"この場合ライブラリのコードには、ユーザがアクセスできるヒープを使用 - Cの "
-"`malloc` や `free` のように - し、その語、Rust的の意味での _所有権移転_ を行"
-"うことが期待されます。"
+"最高のメモリ安全性のための答えは「ユーザ」です。しかし、値の取得を行うような"
+"場合、ユーザは (値の長さを知らないので) 正しくアロケートする方法を知りませ"
+"ん。この場合ライブラリのコードには、ユーザがアクセスできるヒープを使用 - Cの "
+"`malloc` や `free` のように - することが期待され、さらにはRust的な意味での _"
+"所有権移転_ を行うことが期待されます。"
 
 #: src/patterns/ffi/export.md:106
-#, fuzzy
 msgid ""
 "This may all seem speculative, but this is what a pointer means in C. It "
 "means the same thing as Rust: \"user defined lifetime.\" The user of the "
@@ -4913,93 +4881,84 @@ msgid ""
 "users do it wrong. Minimizing those are what this best practice is about, "
 "and the key is to _transfer ownership of everything that is transparent_."
 msgstr ""
-"まったく観念的ですが、これこそがC言語におけるポインタの意味です。\n"
-"これはRustにおける「ユーザー定義のライフタイム」と同じ意味です。\n"
-"このライブラリのユーザーは、正しく使うためにドキュメントを読む必要がありま"
-"す。\n"
-"ドキュメントは、ユーザーが間違った使い方をした場合に、\n"
-"大小さまざまな悪い結果をもたらす可能性があることについて記載されています。\n"
-"それらを最小限にすることが、このベストプラクティスの目的であり、\n"
-"_透過的であるものすべての所有権を移転すること_ が鍵なのです。"
+"まったく観念的ですが、これこそがC言語におけるポインタの意味です。これはRustに"
+"おける「ユーザ定義のライフタイム」と同じ意味です。このライブラリのユーザは、"
+"正しく使うためにドキュメントを読む必要があります。ドキュメントは、ユーザが間"
+"違った使い方をした場合に、大小さまざまな悪い結果をもたらす可能性があることに"
+"ついて記載されています。それらを最小限にすることが、このベストプラクティスの"
+"目的であり、 _透過的であるものすべての所有権を移転すること_ が鍵なのです。"
 
 #: src/patterns/ffi/export.md:115
-#, fuzzy
 msgid ""
 "This minimizes the number of memory safety guarantees the user must uphold "
 "to a relatively small number:"
 msgstr ""
 "これにより、ユーザが守らなければならないメモリ安全性保証を、比較的少数に抑え"
-"ます："
+"ます:"
 
 #: src/patterns/ffi/export.md:118
-#, fuzzy
 msgid ""
 "Do not call any function with a pointer not returned by `dbm_open` (invalid "
 "access or corruption)."
 msgstr ""
-"dbm_open`が返していないポインタを持つ関数を呼び出してはならない（無効なアクセ"
-"スまたは破損）。"
+"`dbm_open`が返していないポインタを使って関数を呼び出さないでください (無効な"
+"アクセスや破損)。"
 
 #: src/patterns/ffi/export.md:120
-#, fuzzy
 msgid "Do not call any function on a pointer after close (use after free)."
-msgstr "close後のポインタに対して関数を呼び出さない（free後に使用する）。"
+msgstr ""
+"close後のポインタを使って関数を呼び出さないでください (解放後参照( Use-After-"
+"Free ))。"
 
 #: src/patterns/ffi/export.md:121
-#, fuzzy
 msgid ""
 "The `dptr` on any `datum` must be `NULL`, or point to a valid slice of "
 "memory at the advertised length."
 msgstr ""
-"任意の `datum` の `dptr` は `NULL` であるか、指定された長さの有効なメモリスラ"
-"イスを指していなければならない。"
+"`datum` の `dptr` は `NULL` であるか、または適切な長さの有効なメモリスライス"
+"を指している必要があります。"
 
 #: src/patterns/ffi/export.md:124
-#, fuzzy
 msgid ""
 "In addition, it avoids a lot of pointer provenance issues. To understand "
 "why, let us consider an alternative in some depth: key iteration."
 msgstr ""
-"さらに、ポインタの provenance に関する多くの問題を回避することができます。\n"
-"その理由を理解するために、キーの反復という代替案について少し深く検討してみま"
+"さらに、これは、ポインタの由来に関する多くの問題を回避することができます。そ"
+"の理由を理解するために、キーの反復という代替案について少し深く検討してみま"
 "しょう。"
 
 #: src/patterns/ffi/export.md:127
-#, fuzzy
 msgid ""
 "Rust is well known for its iterators. When implementing one, the programmer "
 "makes a separate type with a bounded lifetime to its owner, and implements "
 "the `Iterator` trait."
 msgstr ""
-"Rustはイテレータでよく知られています。\n"
-"イテレータを実装する場合、プログラマは、所有型に対しライフタイムが制限された"
-"別の型を作成し、 `Iterator` トレイトを実装します。"
+"Rustはイテレータでよく知られています。イテレータを実装する場合、プログラマ"
+"は、所有型に対しライフタイムが制限された別の型を作成し、 `Iterator` トレイト"
+"を実装します。"
 
 #: src/patterns/ffi/export.md:131
 msgid "Here is how iteration would be done in Rust for `DBM`:"
-msgstr "以下は `DBM` に対して行われ得る Rust での反復処理の方法です："
+msgstr "以下は `DBM` に対して行われ得る Rust での反復処理の方法です:"
 
 #: src/patterns/ffi/export.md:149
-#, fuzzy
 msgid ""
 "This is clean, idiomatic, and safe. thanks to Rust's guarantees. However, "
 "consider what a straightforward API translation would look like:"
 msgstr ""
-"これはクリーンでイディオム的で安全です。Rustの保障によるものです。\n"
-"しかし、APIの簡素な翻訳がどのようになるかを考えてみましょう："
+"これはクリーンでイディオム的で安全です。Rustの保障によるものです。しかし、API"
+"をそのままに翻訳したものがどのようになるかを考えてみましょう:"
 
 #: src/patterns/ffi/export.md:155 src/patterns/ffi/export.md:162
 #: src/patterns/ffi/export.md:166
-#, fuzzy
 msgid ""
 "// THIS API IS A BAD IDEA! For real applications, use object-based design "
 "instead.\n"
 msgstr ""
-"// このAPIは悪い考えだ！実際のアプリケーションでは、代わりにオブジェクト・"
-"ベースの設計を使おう。\n"
+"// このAPIは悪い例です! 実際のアプリケーションではオブジェクトベースの設計を"
+"使用してください。\n"
 
 #: src/patterns/ffi/export.md:170
-#, fuzzy
 msgid ""
 "This API loses a key piece of information: the lifetime of the iterator must "
 "not exceed the lifetime of the `Dbm` object that owns it. A user of the "
@@ -5007,68 +4966,61 @@ msgid ""
 "it is iterating on, resulting in reading uninitialized memory."
 msgstr ""
 "このAPIは重要な情報を失っています。それは、イテレータのライフタイムはそれを所"
-"有する `Dbm` オブジェクトのライフタイムを超えてはいけない、ということです。\n"
-"ライブラリのユーザは反復対象のデータよりも長生きするイテレータを使用してしま"
-"う可能性があります。\n"
-"その結果、初期化されていないメモリを読み込むことになります。"
+"有する `Dbm` オブジェクトのライフタイムを超えてはいけない、ということです。ラ"
+"イブラリのユーザは反復対象のデータよりも長生きするイテレータを使用してしまう"
+"可能性があります。その結果、初期化されていないメモリを読み込むことになりま"
+"す。"
 
 #: src/patterns/ffi/export.md:175
 msgid ""
 "This example written in C contains a bug that will be explained afterwards:"
-msgstr "C言語で書かれたこの例には後述するバグがあります："
+msgstr "C言語で書かれたこの例には後述するバグがあります:"
 
 #: src/patterns/ffi/export.md:179
-#, fuzzy
 msgid "// DO NOT USE THIS FUNCTION. IT HAS A SUBTLE BUT SERIOUS BUG!\n"
-msgstr "// この関数は使用しないでください。微妙だが重大なバグがある！\n"
+msgstr "// この関数は使わないでください。微妙な、しかし重大なバグがあります!\n"
 
 #: src/patterns/ffi/export.md:189
-#, fuzzy
 msgid "// an error is indicated by -1\n"
-msgstr "// エラーは -1 で示される\n"
+msgstr "// エラーは -1 で示す\n"
 
 #: src/patterns/ffi/export.md:192
-#, fuzzy
 msgid "// end of the iterator\n"
-msgstr "// イテレータの終わり\n"
+msgstr "// 反復終了\n"
 
 #: src/patterns/ffi/export.md:204
-#, fuzzy
 msgid ""
 "This bug is a classic. Here's what happens when the iterator returns the end-"
 "of-iteration marker:"
 msgstr ""
-"このバグは古典的なものです。イテレータが反復完了を返したときに起こります："
+"このバグは古典的なものです。イテレータが反復完了を返したときに起こります:"
 
 #: src/patterns/ffi/export.md:207
-#, fuzzy
 msgid ""
 "The loop condition sets `l` to zero, and enters the loop because `0 >= 0`."
-msgstr "ループ条件は `l` をゼロに設定し、`0 >= 0` なのでループに入る。"
+msgstr "ループの条件式は `l` を 0 に設定し、`0 >= 0` なのでループに入ります。"
 
 #: src/patterns/ffi/export.md:208
-#, fuzzy
 msgid "The length is incremented, in this case by zero."
-msgstr "長さはインクリメントされ、この場合はゼロである。"
+msgstr "len が計上されます。この場合 0 です。"
 
 #: src/patterns/ffi/export.md:209
-#, fuzzy
 msgid ""
 "The if statement is true, so the database is closed. There should be a break "
 "statement here."
 msgstr ""
-"if文は真なので、データベースは閉じられている。ここにbreak文があるはずだ。"
+"3. if文は真なので、データベースは閉じられます。ここで break文があるはずでし"
+"た。"
 
 #: src/patterns/ffi/export.md:211
-#, fuzzy
 msgid ""
 "The loop condition executes again, causing a `next` call on the closed "
 "object."
 msgstr ""
-"ループ条件が再び実行され、閉じたオブジェクトに対して `next` が呼び出される。"
+"ループの条件式が再度実行され、closeされたオブジェクトに対して `next` が呼び出"
+"されてしまいます。"
 
 #: src/patterns/ffi/export.md:214
-#, fuzzy
 msgid ""
 "The worst part about this bug? If the Rust implementation was careful, this "
 "code will work most of the time! If the memory for the `Dbm` object is not "
@@ -5077,40 +5029,33 @@ msgid ""
 "will cause a segmentation fault, or even worse, nonsensical memory "
 "corruption!"
 msgstr ""
-"このバグで最悪なことはなんでしょう？\n"
-"Rustの実装が慎重なものであれば、このコードはほとんどの場合動いてしまいま"
-"す！\n"
-"もし `Dbm` オブジェクトのメモリがすぐに再利用されなければ、内部チェックはほぼ"
-"確実に失敗し、\n"
-"イテレータはエラーを示す `-1` を返します。\n"
-"しかし、時にはセグメンテーションフォールトを引き起こしたり、さらに悪いことに"
-"わけのわからないメモリ破壊を引き起こすこともあります！"
+"このバグで最悪なことはなんでしょう？Rustの実装が慎重なものであれば、このコー"
+"ドはほとんどの場合動いてしまいます！もし `Dbm` オブジェクトのメモリがすぐに再"
+"利用されなければ、内部チェックはほぼ確実に失敗し、イテレータはエラーを示す "
+"`-1` を返します。しかし、時にはセグメンテーションフォールトを引き起こしたり、"
+"さらに悪いことにわけのわからないメモリ破壊を引き起こすこともあります！"
 
 #: src/patterns/ffi/export.md:220
-#, fuzzy
 msgid ""
 "None of this can be avoided by Rust. From its perspective, it put those "
 "objects on its heap, returned pointers to them, and gave up control of their "
 "lifetimes. The C code simply must \"play nice\"."
 msgstr ""
-"Rust側はこのどれも避けようがありません。\n"
-"Rust側から見れば、オブジェクトをヒープに置き、ポインタを返し、そのライフタイ"
-"ムの制御を任せたことになります。\n"
-"Cコードが「うまくやる」しかないのです。"
+"Rust側はこのどれも避けようがありません。Rust側から見れば、オブジェクトをヒー"
+"プに置き、ポインタを返し、そのライフタイムの制御を任せたことになります。Cコー"
+"ドが「うまくやる」しかないのです。"
 
 #: src/patterns/ffi/export.md:224
-#, fuzzy
 msgid ""
 "The programmer must read and understand the API documentation. While some "
 "consider that par for the course in C, a good API design can mitigate this "
 "risk. The POSIX API for `DBM` did this by _consolidating the ownership_ of "
 "the iterator with its parent:"
 msgstr ""
-"プログラマーはAPIドキュメントを読み、理解しなければなりません。\n"
-"C言語では当然のことだと考える人もいますが、優れたAPI設計はこのリスクを軽減す"
-"ることができます。\n"
-"`DBM` の POSIX API ではイテレータの _所有権をその親に統合する_ ことによりこれ"
-"を実現しています。"
+"プログラマはAPIドキュメントを読み、理解しなければなりません。C言語では当然の"
+"ことだと考える人もいますが、優れたAPI設計はこのリスクを軽減することができま"
+"す。`DBM` の POSIX API ではイテレータの _所有権をその親に統合する_ ことにより"
+"これを実現しています:"
 
 #: src/patterns/ffi/export.md:234
 msgid ""
@@ -5120,7 +5065,6 @@ msgstr ""
 "防されています。"
 
 #: src/patterns/ffi/export.md:238
-#, fuzzy
 msgid ""
 "However, this design choice also has a number of drawbacks, which should be "
 "considered as well."
@@ -5128,7 +5072,6 @@ msgstr ""
 "しかしながら、この設計の選択にはいくつかの欠点があり、十分に検討すべきです。"
 
 #: src/patterns/ffi/export.md:241
-#, fuzzy
 msgid ""
 "First, the API itself becomes less expressive. With POSIX DBM, there is only "
 "one iterator per object, and every call changes its state. This is much more "
@@ -5136,70 +5079,54 @@ msgid ""
 "Perhaps with other related objects, whose lifetimes are less hierarchical, "
 "this limitation is more of a cost than the safety."
 msgstr ""
-"まず、API自体の表現力が低下します。\n"
-"POSIX DBMでは、1つのオブジェクトにつきイテレータは1つしかありません。\n"
-"また呼び出しにより状態が変更されます。\n"
-"これは、安全であるとはいえ、ほとんどすべての言語のイテレータよりもはるかに制"
-"限的なものです。\n"
-"おそらく、ライフタイムはそれほど階層的でない他の関連オブジェクトについて"
-"は、\n"
-"この制限は安全性よりもコストになります。"
+"まず、API自体の表現力が低下します。POSIX DBMでは、1つのオブジェクトにつきイテ"
+"レータは1つしかありません。また呼び出しにより状態が変更されます。これは、安全"
+"であるとはいえ、ほとんどすべての言語のイテレータよりもはるかに制限的なもので"
+"す。おそらく他の関連オブジェクトの、そのライフタイムがそれほど階層的でないも"
+"の、については、この制限は安全性よりもコストになります。"
 
 #: src/patterns/ffi/export.md:247
-#, fuzzy
 msgid ""
 "Second, depending on the relationships of the API's parts, significant "
 "design effort may be involved. Many of the easier design points have other "
 "patterns associated with them:"
 msgstr ""
-"次に、APIの部品の関係によっては、設計に多大な労力が必要になるかもしれませ"
-"ん。\n"
-"より簡単な設計点の多くには、他のパターンが関係しています："
+"次に、APIの部品との関係によっては、設計に多大な労力が必要になるかもしれませ"
+"ん。より簡単な設計点の多くには、他のパターンが関係しています:"
 
 #: src/patterns/ffi/export.md:251
-#, fuzzy
 msgid ""
 "[Wrapper Type Consolidation](./wrappers.md) groups multiple Rust types "
 "together into an opaque \"object\""
 msgstr ""
-"[ラッパー型の統合](./wrappers.md)は、複数のRust型を不透明な \"オブジェクト "
-"\"にまとめる。"
+"[ラッパーへの型の統合](./wrappers.md)は、複数のRustタイプを不透明な「オブジェ"
+"クト」にまとめます。"
 
 #: src/patterns/ffi/export.md:254
-#, fuzzy
 msgid ""
 "[FFI Error Passing](../../idioms/ffi/errors.md) explains error handling with "
 "integer codes and sentinel return values (such as `NULL` pointers)"
 msgstr ""
-"[FFI Error Passing](../../idioms/ffi/errors.md) では、整数コードとセンチネル"
-"戻り値 (`NULL` ポインタなど) を使ったエラー処理について説明しています。"
+"[FFI のエラー処理](../../idioms/ffi/errors.md) では整数コードと番兵の戻り値 "
+"(`NULL` ポインタなど) によるエラー処理について説明しています。"
 
 #: src/patterns/ffi/export.md:257
-#, fuzzy
 msgid ""
 "[Accepting Foreign Strings](../../idioms/ffi/accepting-strings.md) allows "
 "accepting strings with minimal unsafe code, and is easier to get right than "
 "[Passing Strings to FFI](../../idioms/ffi/passing-strings.md)"
 msgstr ""
-"- [ラッパーへの型の統合](./wrappers.md)は、複数のRustタイプを不透明な「オブ"
-"ジェクト」にまとめます。\n"
-"\n"
-"- [FFI のエラー処理](../../idioms/ffi/errors.md) では整数コードと番兵の戻り"
-"値 (`NULL` ポインタなど) によるエラー処理について説明しています。\n"
-"\n"
-"- [文字列の受け入れ](../../idioms/ffi/accepting-strings.md) は、安全でない"
-"コードを最小限に抑えて文字列を受け入れることができます。\n"
-"  [文字列の受け渡し](../../idioms/ffi/passing-strings.md) よりも簡単に正しく"
-"できます。"
+"[文字列の受け入れ](../../idioms/ffi/accepting-strings.md) は、安全でないコー"
+"ドを最小限に抑えて文字列を受け入れることができます。[文字列の受け渡し](../../"
+"idioms/ffi/passing-strings.md) よりも簡単に正しくできます。"
 
 #: src/patterns/ffi/export.md:261
-#, fuzzy
 msgid ""
 "However, not every API can be done this way. It is up to the best judgement "
 "of the programmer as to who their audience is."
 msgstr ""
-"しかしながら、すべてのAPIがこの方法でできるわけではありません。\n"
-"利用者が誰であるか、プログラマの最善の判断次第です。"
+"しかしながら、すべてのAPIがこの方法でできるわけではありません。利用者が誰であ"
+"るかは、プログラマの最善の判断次第です。"
 
 #: src/patterns/ffi/wrappers.md:5
 #, fuzzy
