@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-05-12 22:56+0900\n"
+"PO-Revision-Date: 2024-05-13 22:46+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -5128,28 +5128,28 @@ msgstr ""
 "しかしながら、すべてのAPIがこの方法でできるわけではありません。利用者が誰であ"
 "るかは、プログラマの最善の判断次第です。"
 
+# surface area の意図は？
 #: src/patterns/ffi/wrappers.md:5
 #, fuzzy
 msgid ""
 "This pattern is designed to allow gracefully handling multiple related "
 "types, while minimizing the surface area for memory unsafety."
 msgstr ""
-"このパターンは、メモリ安全性の損なわれる表面面積を最小化しつつ、\n"
-"関連する複数の型を優雅に扱えるように設計されています。"
+"このパターンは、メモリ安全性の損なわれる表面面積を最小化しつつ、関連する複数"
+"の型を優雅に扱えるように設計されています。"
 
+# Rust's 「aliasing rules」は何を指すものか？
+# → aliasing なので、同じものを別名として参照する話と思う。Rustの参照はライフタイムが付くから、同じオブジェクトを参照していたとしても、そのライフタイムが異なることもある。このライフタイムによって、安全なメモリアクセスが提供される、、、という話・・・なはず。続く話で、外部側の言語にそれがないぜ！となっている
 #: src/patterns/ffi/wrappers.md:8
-#, fuzzy
 msgid ""
 "One of the cornerstones of Rust's aliasing rules is lifetimes. This ensures "
 "that many patterns of access between types can be memory safe, data race "
 "safety included."
 msgstr ""
-"Rustのエイリアシングルールの基礎の1つはライフタイムです。\n"
-"これにより、型間のアクセスの多くのパターン(データ競合の安全性を含む)がメモリ"
-"セーフになります。"
+"Rustのエイリアシングルールの基礎の1つはライフタイムです。これにより、型間のア"
+"クセスの多くのパターン(データ競合の安全性を含む)がメモリセーフになります。"
 
 #: src/patterns/ffi/wrappers.md:12
-#, fuzzy
 msgid ""
 "However, when Rust types are exported to other languages, they are usually "
 "transformed into pointers. In Rust, a pointer means \"the user manages the "
@@ -5157,11 +5157,13 @@ msgid ""
 "unsafety."
 msgstr ""
 "しかし、Rustの型が他の言語にエクスポートされる場合、通常はポインタに変換され"
-"ます。\n"
-"Rustでは、ポインタは「ポインタが指すオブジェクトのライフタイムを、ユーザが管"
-"理する」ことを意味します。\n"
-"メモリの安全性が損なわれないようにすることは、ユーザの責務です。"
+"ます。Rustでは、ポインタは「ポインタが指すオブジェクトのライフタイムを、ユー"
+"ザが管理する」ことを意味します。メモリの安全性が損なわれないようにすること"
+"は、ユーザの責務です。"
 
+# place higher burdens とは？
+# →１解釈：
+# APIのユーザ側に、メモリ安全性への寄与を、負担させる。信頼して任せるのではなく、設計により強制する。かな？
 #: src/patterns/ffi/wrappers.md:16
 #, fuzzy
 msgid ""
@@ -5169,24 +5171,21 @@ msgid ""
 "after-free which Rust can do nothing about. However, some API designs place "
 "higher burdens than others on the code written in the other language."
 msgstr ""
-"そのため、ユーザーコードにはある程度の信頼性が要求されます。Rust ではどうしよ"
-"うもない 「使用後にfreeすること」 については特にこの通りです。\n"
-"とはいえ、APIの設計によっては、ほかの言語によって記述されたコードと比して、高"
-"い負担を強いることがあります。"
+"これ故に、ユーザコードにはある程度の信頼性が要求されます。Rust ではどうしよう"
+"もない 「Use-After-Free（解放後参照）」 については特にこの通りです。とはい"
+"え、いくつかのAPIの設計は、ほかの言語によって記述されたコードのものと比して、"
+"高い負担を強います。"
 
 #: src/patterns/ffi/wrappers.md:20
-#, fuzzy
 msgid ""
 "The lowest risk API is the \"consolidated wrapper\", where all possible "
 "interactions with an object are folded into a \"wrapper type\", while "
 "keeping the Rust API clean."
 msgstr ""
-"最もリスクの低いAPIは「統合ラッパー」です。\n"
-"RustのAPIをクリーンに保ちながら、オブジェクトとの間のやりとりはすべて「ラッ"
-"パー型」に折り畳むものです。"
+"最もリスクの低いAPIは「統合ラッパー」です。RustのAPIをクリーンに保ちながら、"
+"オブジェクトとの間のやりとりはすべて「ラッパー型」に畳み込むものです。"
 
 #: src/patterns/ffi/wrappers.md:26
-#, fuzzy
 msgid ""
 "To understand this, let us look at a classic example of an API to export: "
 "iteration through a collection."
@@ -5196,59 +5195,52 @@ msgstr ""
 
 #: src/patterns/ffi/wrappers.md:29
 msgid "That API looks like this:"
-msgstr "このAPIは以下の通りです："
+msgstr "このAPIは以下の通りです:"
 
 #: src/patterns/ffi/wrappers.md:31
-#, fuzzy
 msgid "The iterator is initialized with `first_key`."
-msgstr "イテレータは `first_key` で初期化される。"
+msgstr "イテレータは `first_key` で初期化されます。"
 
 #: src/patterns/ffi/wrappers.md:32
-#, fuzzy
 msgid "Each call to `next_key` will advance the iterator."
-msgstr "next_key`を呼び出すたびにイテレータが進む。"
+msgstr "`next_key` を呼び出すたびにイテレータが進みます。"
 
 #: src/patterns/ffi/wrappers.md:33
-#, fuzzy
 msgid "Calls to `next_key` if the iterator is at the end will do nothing."
-msgstr "イテレータが末尾にある場合、`next_key`を呼んでも何も起こらない。"
+msgstr ""
+"イテレータが末尾にある場合に `next_key` を呼び出しても何も起こりません。"
 
 #: src/patterns/ffi/wrappers.md:34
-#, fuzzy
 msgid ""
 "As noted above, the iterator is \"wrapped into\" the collection (unlike the "
 "native Rust API)."
 msgstr ""
-"上述したように、反復子は（RustネイティブAPIとは異なり）コレクションに「包まれ"
-"る」。"
+"上述の通り、イテレータはコレクションに「ラップ」されます(Rust ネイティブ の"
+"API とは異なる部分です)。"
 
 #: src/patterns/ffi/wrappers.md:37
-#, fuzzy
 msgid ""
 "If the iterator implements `nth()` efficiently, then it is possible to make "
 "it ephemeral to each function call:"
 msgstr ""
-"イテレータが `nth()` を効率的に実装しているならば、\n"
-"関数の各呼び出しに対してイテレータを短命なものとすることが可能です。"
+"イテレータが `nth()` を効率的に実装しているならば、関数の各呼び出しに対してイ"
+"テレータを短命なものとすることが可能です:"
 
 #: src/patterns/ffi/wrappers.md:62
 msgid "As a result, the wrapper is simple and contains no `unsafe` code."
 msgstr "結果、ラッパーはシンプルで、 `unsafe` コードを含みません。"
 
 #: src/patterns/ffi/wrappers.md:66
-#, fuzzy
 msgid ""
 "This makes APIs safer to use, avoiding issues with lifetimes between types. "
 "See [Object-Based APIs](./export.md) for more on the advantages and pitfalls "
 "this avoids."
 msgstr ""
 "これにより、APIをより安全に使用できるようになり、型間のライフタイムの問題を避"
-"けることができます。\n"
-"[オブジェクトベースのAPI](./export.md) には、この利点と、これにより回避できる"
-"落とし穴についてさらなる記載があります。"
+"けることができます。[オブジェクトベースのAPI](./export.md) には、この利点と、"
+"これにより回避できる落とし穴についてさらなる記載があります。"
 
 #: src/patterns/ffi/wrappers.md:72
-#, fuzzy
 msgid ""
 "Often, wrapping types is quite difficult, and sometimes a Rust API "
 "compromise would make things easier."
@@ -5257,26 +5249,22 @@ msgstr ""
 "API を妥協することになるかもしれません。"
 
 #: src/patterns/ffi/wrappers.md:75
-#, fuzzy
 msgid ""
 "As an example, consider an iterator which does not efficiently implement "
 "`nth()`. It would definitely be worth putting in special logic to make the "
 "object handle iteration internally, or to support a different access pattern "
 "efficiently that only the Foreign Function API will use."
 msgstr ""
-"例として、`nth()` の実装が効率的でないイテレータを考えてみましょう。\n"
-"オブジェクトに内部にて反復を処理するような特殊なロジックを組むことや、\n"
-"FFI の API から使用されるためだけに効率的に異なるアクセスパターンをサポートす"
-"ること、\n"
-"これらには間違いなく価値があります。"
+"例として、`nth()` の実装が効率的でないイテレータを考えてみましょう。オブジェ"
+"クトに内部に反復を処理させる特殊なロジックや、FFI の API からのみ使用される別"
+"のアクセスパターンを効率的にサポートすること、これらには間違いなく価値があり"
+"ます。"
 
 #: src/patterns/ffi/wrappers.md:80
-#, fuzzy
 msgid "Trying to Wrap Iterators (and Failing)"
-msgstr "### イテレータのラップに挑戦(そして失敗)"
+msgstr "イテレータのラップに挑戦(そして失敗)"
 
 #: src/patterns/ffi/wrappers.md:82
-#, fuzzy
 msgid ""
 "To wrap any type of iterator into the API correctly, the wrapper would need "
 "to do what a C version of the code would do: erase the lifetime of the "
@@ -5299,23 +5287,20 @@ msgid "A first version of `MySetWrapper` would look like this:"
 msgstr "最初のバージョンの `MySetWrapper` は次のようになります："
 
 #: src/patterns/ffi/wrappers.md:96
-#, fuzzy
 msgid "// created from a transmuted Box<KeysIter + 'self>\n"
-msgstr "// Box<KeysIter+'self>を変換して作成。\n"
+msgstr "// Box<KeysIter + 'self> を transmute して作成\n"
 
 #: src/patterns/ffi/wrappers.md:101
-#, fuzzy
 msgid ""
 "With `transmute` being used to extend a lifetime, and a pointer to hide it, "
 "it's ugly already. But it gets even worse: _any other operation can cause "
 "Rust `undefined behaviour`_."
 msgstr ""
-"`transmute` は寿命の延長に使われ、ポインタはそれを隠すのに使われます。\n"
-"もうすでに醜いですね。しかし、さらに悪くなります： _他のあらゆる操作がRust "
-"の `未定義の動作` を引き起こします_ 。"
+"ライフタイムを延長するために行う `transmute` に、それを隠すためのポインタ、も"
+"うすでに醜いでしょう。しかし、さらに悪くなります: _他のあらゆる操作がRust の "
+"`undefinded behaviour` を引き起こします_ 。"
 
 #: src/patterns/ffi/wrappers.md:105
-#, fuzzy
 msgid ""
 "Consider that the `MySet` in the wrapper could be manipulated by other "
 "functions during iteration, such as storing a new value to the key it was "
@@ -5323,32 +5308,28 @@ msgid ""
 "libraries expect it."
 msgstr ""
 "ラッパー内の `MySet` は、イテレーション中に他の関数によって操作される可能性が"
-"あります。\n"
-"例えば、イテレーション中に新しい値を格納するなどです。APIはこれを禁じておら"
-"ず、実際のところ同様のCライブラリの中にはこれを想定しているものもあります。"
+"あります。例えば、イテレーション中に新しい値を格納するなどです。APIはこれを禁"
+"じておらず、実際のところ同様のCライブラリの中にはこれを想定しているものもあり"
+"ます。"
 
 #: src/patterns/ffi/wrappers.md:109
 msgid "A simple implementation of `myset_store` would be:"
-msgstr "`myset_store` の単純な実装は次のようになります："
+msgstr "`myset_store` の単純な実装は次のようになります:"
 
 #: src/patterns/ffi/wrappers.md:117
-#, fuzzy
 msgid "// DO NOT USE THIS CODE. IT IS UNSAFE TO DEMONSTRATE A PROLBEM.\n"
 msgstr ""
-"// このコードは使用しないでください。プロルベムのデモは安全ではありません。\n"
+"// このコードを使用しないでください。不具合を実証することは危険です。\n"
 
 #: src/patterns/ffi/wrappers.md:120
-#, fuzzy
 msgid "// SAFETY: whoops, UB occurs in here!\n"
-msgstr "// セーフティ：おっと、ここでUBが発生した！\n"
+msgstr "// SAFETY: あぁ・・・ここで UB が発生します！\n"
 
 #: src/patterns/ffi/wrappers.md:124
-#, fuzzy
 msgid "/* ...check and cast key and value data... */"
-msgstr "/* キーと値のデータをチェックし、キャストする。 */"
+msgstr "/* ...キーと値のデータをチェックし、キャスト... */"
 
 #: src/patterns/ffi/wrappers.md:134
-#, fuzzy
 msgid ""
 "If the iterator exists when this function is called, we have violated one of "
 "Rust's aliasing rules. According to Rust, the mutable reference in this "
@@ -5356,14 +5337,12 @@ msgid ""
 "exists, it's not exclusive, so we have `undefined behaviour`! [^1]"
 msgstr ""
 "この関数が呼ばれたときにイテレータが存在していた場合、Rustののエイリアシング"
-"ルールに違反したことになります。\n"
-"Rustによると、このブロック内の可変参照はオブジェクトへの _排他的_ アクセスで"
-"なければなりません。\n"
-"イテレータが単に存在しているだけで、排他的ではなくなります。よって "
-"`undefined behaviour` が発生します!"
+"ルールに違反したことになります。Rustによると、このブロック内の可変参照はオブ"
+"ジェクトへの _排他的_ アクセスでなければなりません。イテレータが単に存在して"
+"いるだけで、排他的ではなくなります。よって `undefined behaviour` が発生しま"
+"す! [^1]"
 
 #: src/patterns/ffi/wrappers.md:139
-#, fuzzy
 msgid ""
 "To avoid this, we must have a way of ensuring that mutable reference really "
 "is exclusive. That basically means clearing out the iterator's shared "
@@ -5371,13 +5350,11 @@ msgid ""
 "will still be less efficient than the C version."
 msgstr ""
 "これを避けるには、可変参照が本当に排他的であることを保証する方法を持たなけれ"
-"ばなりません。\n"
-"これは基本的に、イテレータの共有参照が存在する間にそれを消去し、後に再構築す"
-"ることを意味します。\n"
-"たいていの場合、それでもCのバージョンより効率は悪くなります。"
+"ばなりません。これは基本的に、イテレータの共有参照が存在する間にそれを消去"
+"し、後に再構築することを意味します。たいていの場合、それでもCのバージョンより"
+"効率は悪くなります。"
 
 #: src/patterns/ffi/wrappers.md:144
-#, fuzzy
 msgid ""
 "Some may ask: how can C do this more efficiently? The answer is, it cheats. "
 "Rust's aliasing rules are the problem, and C simply ignores them for its "
@@ -5386,29 +5363,24 @@ msgid ""
 "[GNU C library](https://manpages.debian.org/buster/manpages/attributes.7.en."
 "html) has an entire lexicon dedicated to concurrent behavior!"
 msgstr ""
-"Cではどうすればもっと効率的にできるのか？疑問に思う人もいるでしょう。\n"
-"答えは・・・ズルです。Rustのエイリアシングルールが問題なのであり、Cではそのポ"
-"インタについてルールを無視します。\n"
-"その代わりに、マニュアルで特定の(もしくはすべての)状況にて「スレッドセーフで"
-"はない」と宣言されているコードをよく見かけます。\n"
-"実際に[GNU Cライブラリ](https://manpages.debian.org/buster/manpages/"
-"attributes.7.en.html)には、\n"
-"並列動作に特化した用語集があります！"
+"Cではどうすればもっと効率的にできるのか？疑問に思う人もいるでしょう。答え"
+"は・・・ズルすることです。Rustのエイリアシングルールが問題なのであり、Cではそ"
+"のポインタについてルールを無視します。その代わりに、マニュアルで特定の(もしく"
+"はすべての)状況にて「スレッドセーフではない」と宣言されているコードをよく見か"
+"けます。実際に[GNU Cライブラリ](https://manpages.debian.org/buster/manpages/"
+"attributes.7.en.html)には、並列動作に特化した用語集があります！"
 
 #: src/patterns/ffi/wrappers.md:151
-#, fuzzy
 msgid ""
 "Rust would rather make everything memory safe all the time, for both safety "
 "and optimizations that C code cannot attain. Being denied access to certain "
 "shortcuts is the price Rust programmers need to pay."
 msgstr ""
 "むしろRustは、安全性とCコードでは達成できない最適化の両方を実現するために、す"
-"べてを常にメモリセーフにします。\n"
-"特定のショートカットへのアクセスを拒否されることは、Rustプログラマが支払う価"
-"値のある代償です。"
+"べてを常にメモリセーフにします。特定のショートカットへのアクセスを拒否される"
+"ことは、Rustプログラマが支払う価値のある代償です。"
 
 #: src/patterns/ffi/wrappers.md:155
-#, fuzzy
 msgid ""
 "For the C programmers out there scratching their heads, the iterator need "
 "not be read _during_ this code cause the UB. The exclusivity rule also "
@@ -5418,15 +5390,13 @@ msgid ""
 "the mutable reference is created."
 msgstr ""
 "頭を悩ませているCプログラマーのために言っておくと、UBを引き起こすこのコード中"
-"の間に、イテレータを読み出す必要はありません。\n"
-"また排他的ルールはコンパイラの一部の最適化を有効にしますが、これはイテレータ"
-"の共有参照からみて一貫性のない現象(例えば、スタックの漏洩や、効率化のための命"
-"令の並び替え)を引き起こすことがあります。\n"
-"このような現象は、 可変参照を生成した後は _いつでも_ 発生する可能性がありま"
-"す。"
+"の間に、イテレータを読み出す必要はありません。また排他的ルールはコンパイラの"
+"一部の最適化を有効にしますが、これはイテレータの共有参照からみて一貫性のない"
+"現象(例えば、スタックの漏洩や、効率化のための命令の並び替え)を引き起こすこと"
+"があります。このような現象は、 可変参照を生成した後は _いつでも_ 発生する可能"
+"性があります。"
 
 #: src/anti_patterns/index.md:3
-#, fuzzy
 msgid ""
 "An [anti-pattern](https://en.wikipedia.org/wiki/Anti-pattern) is a solution "
 "to a \"recurring problem that is usually ineffective and risks being highly "
@@ -5435,15 +5405,12 @@ msgid ""
 "to consider relative to design patterns. Anti-patterns are not confined to "
 "code. For example, a process can be an anti-pattern, too."
 msgstr ""
-"[アンチパターン](https://en.wikipedia.org/wiki/Anti-pattern)とは\n"
-"「通常、効果がなく、大きな逆効果になるリスクのある、頻繁に見られる問題のある"
-"こと」に対するソリューションです。\n"
-"問題を解決する方法を知ることと同じくらい価値があるのは、問題を解決しない方法"
-"を知ることです。\n"
-"アンチパターンは、デザインパターンに対して、考慮すべき素晴らしい反例を与えて"
-"くれます。\n"
-"アンチパターンはコードに限ったことではありません。\n"
-"例えば、プロセスもアンチパターンになりえます。"
+"[アンチパターン](https://en.wikipedia.org/wiki/Anti-pattern)とは「通常、効果"
+"がなく、大きな逆効果になるリスクのある、頻繁に見られる問題のあること」に対す"
+"るソリューションです。問題を解決する方法を知ることと同じくらい価値があるの"
+"は、問題を解決しない方法を知ることです。アンチパターンは、デザインパターンに"
+"対して、考慮すべき素晴らしい反例を与えてくれます。アンチパターンはコードに"
+"限ったことではありません。例えば、プロセスもアンチパターンになりえます。"
 
 #: src/anti_patterns/borrow_clone.md:5
 #, fuzzy
