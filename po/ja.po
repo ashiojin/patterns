@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-05-14 22:26+0900\n"
+"PO-Revision-Date: 2024-05-14 22:28+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -6116,7 +6116,7 @@ msgstr "`b`"
 
 #: src/functional/paradigms.md:57
 msgid "result"
-msgstr "件"
+msgstr "結果"
 
 #: src/functional/paradigms.md:59
 msgid "0"
