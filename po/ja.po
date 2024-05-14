@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-05-14 22:28+0900\n"
+"PO-Revision-Date: 2024-05-14 23:07+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -6123,7 +6123,6 @@ msgid "0"
 msgstr "0"
 
 #: src/functional/generics-type-classes.md:5
-#, fuzzy
 msgid ""
 "Rust's type system is designed more like functional languages (like Haskell) "
 "rather than imperative languages (like Java and C++). As a result, Rust can "
@@ -6132,14 +6131,11 @@ msgid ""
 "critical to many of Rust's compile time guarantees."
 msgstr ""
 "Rustの型システムは、(JavaやC++のような)命令型言語ではなく、(Haskellのような)"
-"関数型言語のように設計されています。\n"
-"その結果、Rustは多くのプログラミング上の問題を「静的型付け」の問題にすること"
-"ができます。\n"
-"これは関数型言語を選択する最大の利点の1つでありまたRustのコンパイル時保証の多"
-"くにとって重要なものです。"
+"関数型言語のように設計されています。その結果、Rustは多くのプログラミング上の"
+"問題を「静的型付け」の問題にすることができます。これは関数型言語を選択する最"
+"大の利点の1つでありまたRustのコンパイル時保証の多くにとって重要なものです。"
 
 #: src/functional/generics-type-classes.md:11
-#, fuzzy
 msgid ""
 "A key part of this idea is the way generic types work. In C++ and Java, for "
 "example, generic types are a meta-programming construct for the compiler. "
@@ -6147,15 +6143,13 @@ msgid ""
 "same boilerplate code for a `vector` type (known as a `template`) with two "
 "different types filled in."
 msgstr ""
-"この考え方の重要な部分は、ジェネリック型の動作方法です。\n"
-"例えばC++やJavaでは、ジェネリック型はコンパイラのメタプログラミングの構成要素"
-"です。\n"
-"C++ における `vector<int>` や `vector<char>` は、 `vector` 型のボイラーテンプ"
-"レート( `template` として知られるもの ) の\n"
-"(それに異なる2つの型を埋め込んだ)異なる2つのコピーにすぎません。"
+"この考え方の重要な部分は、ジェネリック型の動作方法です。例えばC++やJavaでは、"
+"ジェネリック型はコンパイラのメタプログラミングの構成要素です。C++ における "
+"`vector<int>` や `vector<char>` は、 `vector` 型のボイラーテンプレート "
+"( `template` として知られるもの) の (それに異なる2つの型を埋め込んだ)異なる2"
+"つのコピーにすぎません。"
 
 #: src/functional/generics-type-classes.md:17
-#, fuzzy
 msgid ""
 "In Rust, a generic type parameter creates what is known in functional "
 "languages as a \"type class constraint\", and each different parameter "
@@ -6164,14 +6158,12 @@ msgid ""
 "as distinct by all parts of the type system."
 msgstr ""
 "Rustでは、ジェネリック型パラメータは関数型言語で「型クラス制約」として知られ"
-"ているものを作成します。\n"
-"and エンドユーザが埋め込むそれぞれの異なるパラメータは、 _実際に型を変えます"
-"_ 。\n"
-"言い換えると、 `Vec<isize> と `Vec<char>` は2つの _異なる型_ です。\n"
-"これらは型システムのすべての箇所にて、別個の型として認識されます。"
+"ているものを作成します。 またエンドユーザが埋め込むそれぞれの異なるパラメータ"
+"は、 _実際に型を変えます_ 。言い換えると、 `Vec<isize> と `Vec<char>` は2つ"
+"の _異なる型_ で、これらは型システムのすべての箇所にて、別個の型として認識さ"
+"れます。"
 
 #: src/functional/generics-type-classes.md:23
-#, fuzzy
 msgid ""
 "This is called **monomorphization**, where different types are created from "
 "**polymorphic** code. This special behavior requires `impl` blocks to "
@@ -6179,51 +6171,38 @@ msgid ""
 "different types, and different types can have different `impl` blocks."
 msgstr ""
 "これは **モノモーフィズム(単相化)** と呼ばれ、 **ポリモーフィック(多相の)** "
-"コードから異なる型が作成されます。\n"
-"この特別な振る舞いには、`impl`ブロックにジェネリックパラメータを指定する必要"
-"があります。\n"
-"ジェネリック型に異なる値を与えれば、異なる型が生成されます。\n"
-"そして、異なる型は異なる `impl` ブロックを持つことができます。"
+"コードから異なる型が作成されます。この特別な振る舞いには、`impl`ブロックに"
+"ジェネリックパラメータを指定する必要があります。ジェネリック型に異なる値を与"
+"えれば、異なる型が生成されます。そして、異なる型は異なる `impl` ブロックを持"
+"つことができます。"
 
-# 2023/8/26 いまいち意味が取れない。
-# ---
-# OO言語の継承はbehaviorを継承できる。
-# でも、「to particular members of a type class」に「additional behavior」 を付加するだけでなく
-# 「extra behavior」 も付加しちゃうよ！
-# ---
-# ・・・これはなんだろ？以下がぱっと思いついたが・・・
-# (1)
-# BaseClass を SubClass が継承する。
-# 継承したかった振る舞いが、BaseClassのメソッドなどで表現されていたら、
-# これが SubClassにとっての additinal behavior である。
-# そして BaseClass の他の振る舞いは extra behavior である。
-# (2)
-# BaseClassがすでにある。機能拡張したものが必要だ。
-# BaseClassをSubClass に継承させ、SubClassに機能追加を行う。
-# これが additinal behavior の付加。
-# でもその気になれば、当初その気がなかった別の機能をSubClassに追加できる。
-# それが extra behavior 。
-# ---
-# ここで「additional behavior」の付加についての追加説明である、
-# 「to particular members of a type class」を考える。
-# ある型クラスの特定のメンバ、というのは BaseClass に対し SubClass を指すように聞こえる。BaseClasssという型の範囲に対し、その一部はSubClassであり、そこにadditinal behaviorを追加する。
-# ---
-# (1)でいいのかな？ほかのブロックと組み合わせてよんだとき意味がとおるかな・・・
+# １つ前の「別のimplブロックを持てる」についての対比かな？
+# 継承により additional behavior を付与できる。
+# だが、 extra behavior も許容してしまう。
+# ーーーー
+# うーんよくわからんな・・・
+# ーーーー
+# 話題は型クラスとしてのジェネリック、で一つ前が単相化した型に個別のimplを作れる。
+# ＝ たとえば Vec<MyType> に impl ブロックを使って、機能追加できる。
+# ーーー
+# 対して、OO言語では、親クラスから振る舞いを継承可能であるが・・・
+# ここまではいいとして
+# ーーーー
+# 「型クラスの特定のメンバに対して機能追加する」は Rust の↑のでできることと同等。
+# だがそれにとどまらずに、extra behavior も付加する・・・というのがよくわからんな。
+# Rustの↑の話と同じことを、OO言語のクラス継承でやろうとすると、余計なことが起こる、という文面なんだろうけど・・・
 #: src/functional/generics-type-classes.md:28
-#, fuzzy
 msgid ""
 "In object-oriented languages, classes can inherit behavior from their "
 "parents. However, this allows the attachment of not only additional behavior "
 "to particular members of a type class, but extra behavior as well."
 msgstr ""
-"オブジェクト指向言語では、クラスは親から振る舞いを継承することができます。\n"
-"しかしながらこれは、\n"
-"ある型クラスの特定のメンバに対して、\n"
-"追加的な振る舞いだけを付加することを可能にするにとどまらず、\n"
-"同様に余分な振る舞いを付加することも許容します。"
+"オブジェクト指向言語では、クラスは親から振る舞いを継承することができます。し"
+"かしながらこれは、ある型クラスの特定のメンバに対して、追加的な振る舞いだけを"
+"付加することを可能にするにとどまらず、余分な振る舞いを付加することも同様に許"
+"容してしまいます。"
 
 #: src/functional/generics-type-classes.md:32
-#, fuzzy
 msgid ""
 "The nearest equivalent is the runtime polymorphism in Javascript and Python, "
 "where new members can be added to objects willy-nilly by any constructor. "
@@ -6231,25 +6210,22 @@ msgid ""
 "type checked when they are used, because their generics are statically "
 "defined. That makes them more usable while remaining safe."
 msgstr ""
-"最も近いのは、JavascriptやPythonのランタイムポリモーフィズムです。\n"
-"これらの言語では、あらゆるコンストラクタにより、思ったときにオブジェクトに新"
-"しいメンバを追加可能です。\n"
-"しかしながら、これらの言語と異なりRustでは、追加されたメソッドは使用時にすべ"
-"て型チェックされます。\n"
-"なぜなら、それらジェネリックは静的に定義されているからです。\n"
-"これはより使いやすく、かつ安全性を確保したものになっています。"
+"最も近いのは、JavascriptやPythonのランタイムポリモーフィズムです。これらの言"
+"語では、あらゆるコンストラクタにより、思ったときにオブジェクトに新しいメンバ"
+"を追加可能です。しかしながら、これらの言語と異なりRustでは、追加されたメソッ"
+"ドは使用時にすべて型チェックされます。なぜなら、それらジェネリックは静的に定"
+"義されているからです。これはより使いやすく、かつ安全性を確保したものになって"
+"います。"
 
 #: src/functional/generics-type-classes.md:40
-#, fuzzy
 msgid ""
 "Suppose you are designing a storage server for a series of lab machines. "
 "Because of the software involved, there are two different protocols you need "
 "to support: BOOTP (for PXE network boot), and NFS (for remote mount storage)."
 msgstr ""
-"あなたは、一連のラボマシン用のストレージサーバを設計しているとします。\n"
-"関連するソフトウェアのため、次の2つの異なるプロトコルをサポートする必要があり"
-"ます：BOOTP（PXEネットワークブート用）とNFS（リモートマウントストレージ用）で"
-"す。"
+"あなたは、一連のラボマシン用のストレージサーバを設計しているとします。関連す"
+"るソフトウェアのため、次の2つの異なるプロトコルをサポートする必要があります: "
+"BOOTP (PXEネットワークブート用) とNFS (リモートマウントストレージ用) です。"
 
 #: src/functional/generics-type-classes.md:44
 #, fuzzy
