@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-05-13 22:46+0900\n"
+"PO-Revision-Date: 2024-05-14 22:26+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -5413,7 +5413,6 @@ msgstr ""
 "限ったことではありません。例えば、プロセスもアンチパターンになりえます。"
 
 #: src/anti_patterns/borrow_clone.md:5
-#, fuzzy
 msgid ""
 "The borrow checker prevents Rust users from developing otherwise unsafe code "
 "by ensuring that either: only one mutable reference exists, or potentially "
@@ -5422,66 +5421,41 @@ msgid ""
 "resolves the compiler error by cloning the variable."
 msgstr ""
 "借用チェッカーは、Rustユーザが安全でないコードを開発することを、次のことを確"
-"保することで防ぎます：\n"
-"1つだけの可変参照が存在するか、もしくは幾つでもよいがすべて不変である参照が存"
-"在すること。\n"
-"もし書かれたコードがこれらの条件を満たさない場合に、\n"
-"コンパイラのエラーを解決するために開発者が変数のクローンを作成したとき、\n"
-"このアンチパターンが発生します。"
+"保することで防ぎます: 1つだけの可変参照が存在するか、もしくは幾つでもよいがす"
+"べて不変である参照が存在すること。もし書かれたコードがこれらの条件を満たさな"
+"い場合に、コンパイルエラーを解決するために開発者が変数のクローンを作成したと"
+"き、このアンチパターンが発生します。"
 
 #: src/anti_patterns/borrow_clone.md:14
-#, fuzzy
 msgid "// define any variable\n"
-msgstr "// 任意の変数を定義する\n"
+msgstr "// 変数を定義\n"
 
 #: src/anti_patterns/borrow_clone.md:16
-#, fuzzy
 msgid "// Borrow `x` -- but clone it first\n"
-msgstr "// x` を借りる。\n"
+msgstr "// `x` を借用 -- ただし、先だってクローンする\n"
 
 #: src/anti_patterns/borrow_clone.md:19
-#, fuzzy
 msgid ""
 "// without the x.clone() two lines prior, this line would fail on compile "
 "as\n"
 "// x has been borrowed\n"
 "// thanks to x.clone(), x was never borrowed, and this line will run.\n"
 msgstr ""
-"// 2行前のx.clone()がなければ、この行はコンパイル時に失敗する。\n"
-"// x が借用された\n"
-"// x.clone()のおかげで、xは借用されなかったので、この行は実行される。\n"
+"// 2行前の x.clone() 無しでは、xが借用されているためこの行がコンパイルエラー"
+"になります。\n"
+"// x.clone() により、 x は借用されていないため、この行が動作します。\n"
 
 #: src/anti_patterns/borrow_clone.md:23
-#, fuzzy
 msgid "\"{x}\""
-msgstr ""
-"```rust\n"
-"mod a {\n"
-"    // X!(); // 定義されていない\n"
-"}\n"
-"mod b {\n"
-"    // X!(); // 定義されていない\n"
-"    macro_rules! X { () => {}; }\n"
-"    X!(); // 定義されている\n"
-"}\n"
-"mod c {\n"
-"    // X!(); // 定義されていない\n"
-"}\n"
-"# fn main() {}\n"
-"```"
+msgstr "\"{x}\""
 
 #: src/anti_patterns/borrow_clone.md:24
-#, fuzzy
 msgid ""
 "// perform some action on the borrow to prevent rust from optimizing this\n"
 "//out of existence\n"
-msgstr ""
-"// サビによる最適化を防ぐために、ボローに対して何らかのアクションを実行す"
-"る。\n"
-"//存在しない\n"
+msgstr "// Rust がこれを消去する形の最適化を防ぐため、何らかの操作をします。\n"
 
 #: src/anti_patterns/borrow_clone.md:32
-#, fuzzy
 msgid ""
 "It is tempting, particularly for beginners, to use this pattern to resolve "
 "confusing issues with the borrow checker. However, there are serious "
@@ -5490,26 +5464,21 @@ msgid ""
 "separate variables exist."
 msgstr ""
 "特に初心者の方にとっては、借入チェッカーによるややこしい問題を、このパターン"
-"を使って解決したくなるものです。\n"
-"しかし、この方法は深刻な悪影響があります。\n"
-"`.clone()` を使うと、存在するデータのコピーが作成されます。\n"
-"この2つの間の変更は同期されません -- 完全に別の2つの変数が存在することと同じ"
-"です。"
+"を使って解決したくなるものです。しかし、ここには深刻な結果があります。`."
+"clone()` を使うと、データのコピーが作成されます。この2つの間の変更は同期され"
+"ません -- 完全に別の2つの変数が存在することと同じです。"
 
 #: src/anti_patterns/borrow_clone.md:38
-#, fuzzy
 msgid ""
 "There are special cases -- `Rc<T>` is designed to handle clones "
 "intelligently. It internally manages exactly one copy of the data, and "
 "cloning it will only clone the reference."
 msgstr ""
 "特別なケースがあります -- `Rc<T>` はクローンをインテリジェントに扱うように設"
-"計されています。\n"
-"内部的にデータのコピーを1つだけ持っており、クローンを作成しても参照だけをク"
-"ローンします。"
+"計されています。内部的にデータのコピーを1つだけ持っており、クローンを作成して"
+"も参照だけをクローンします。"
 
 #: src/anti_patterns/borrow_clone.md:42
-#, fuzzy
 msgid ""
 "There is also `Arc<T>` which provides shared ownership of a value of type T "
 "that is allocated in the heap. Invoking `.clone()` on `Arc` produces a new "
@@ -5517,68 +5486,59 @@ msgid ""
 "source `Arc`, while increasing a reference count."
 msgstr ""
 "また、ヒープに確保されたT型の値に対する共有所有権を提供する `Arc<T>` もありま"
-"す。\n"
-"`Arc` に対して `.clone()` を呼び出すと、新しい `Arc` インスタンスが生成されま"
-"すが、\n"
-"このインスタンスは元とヒープの同じ値を指しています。また同時に、参照カウンタ"
-"がインクリメントされます。"
+"す。`Arc` に対して `.clone()` を呼び出すと、新しい `Arc` インスタンスが生成さ"
+"れますが、このインスタンスは元とヒープの同じ値を指しています。また同時に、参"
+"照カウンタがインクリメントされます。"
 
 #: src/anti_patterns/borrow_clone.md:47
-#, fuzzy
 msgid ""
 "In general, clones should be deliberate, with full understanding of the "
 "consequences. If a clone is used to make a borrow checker error disappear, "
 "that's a good indication this anti-pattern may be in use."
 msgstr ""
-"一般に、クローンはその影響を十全に理解し、意図的に行われるべきものです。\n"
-"もしも借用チェッカーのエラーを消すためにクローンが使われてるなら、それはこの"
-"アンチパターンの使われている可能性を示す兆候と言えます。"
+"一般に、クローンはその影響を十全に理解し、意図的に行われるべきものです。もし"
+"も借用チェッカーのエラーを消すためにクローンが使われてるなら、それはこのアン"
+"チパターンの使われている可能性を示す兆候と言えます。"
 
 #: src/anti_patterns/borrow_clone.md:51
-#, fuzzy
 msgid ""
 "Even though `.clone()` is an indication of a bad pattern, sometimes **it is "
 "fine to write inefficient code**, in cases such as when:"
 msgstr ""
 "`.clone()` は悪しきパターンの表れですが、ときに **非効率なコードを書いてもよ"
-"い** こともあります。\n"
-"次のようなケースです："
+"い** こともあります。次のようなケースです:"
 
 #: src/anti_patterns/borrow_clone.md:54
-#, fuzzy
 msgid "the developer is still new to ownership"
-msgstr "開発者はまだオーナーになって日が浅い"
+msgstr "開発者が所有権に慣れていない"
 
 #: src/anti_patterns/borrow_clone.md:55
-#, fuzzy
 msgid ""
 "the code doesn't have great speed or memory constraints (like hackathon "
 "projects or prototypes)"
 msgstr ""
-"コードのスピードやメモリに大きな制約がない（ハッカソンプロジェクトやプロトタ"
-"イプのように）。"
+"コードの速度やメモリに大きな制約がない場合 (ハッカソンプロジェクトやプロトタ"
+"イプなど)"
 
 #: src/anti_patterns/borrow_clone.md:57
-#, fuzzy
 msgid ""
 "satisfying the borrow checker is really complicated, and you prefer to "
 "optimize readability over performance"
 msgstr ""
-"借用チェッカーが本当に複雑で、パフォーマンスよりも読みやすさを最適化したい。"
+"借用チェッカーを満足させることが本当に複雑で難しく、パフォーマンスよりも読み"
+"やすさを最適化したい"
 
 #: src/anti_patterns/borrow_clone.md:60
-#, fuzzy
 msgid ""
 "If an unnecessary clone is suspected, The [Rust Book's chapter on Ownership]"
 "(https://doc.rust-lang.org/book/ownership.html) should be understood fully "
 "before assessing whether the clone is required or not."
 msgstr ""
 "不必要なクローンが疑われる場合、[Rust Book の所有権の章](https://doc.rust-"
-"lang.org/book/ownership.html)\n"
-"を十分に理解した上で、クローンが必要かどうかを判断してください。"
+"lang.org/book/ownership.html) を十分に理解した上で、クローンが必要かどうかを"
+"判断してください。"
 
 #: src/anti_patterns/borrow_clone.md:65
-#, fuzzy
 msgid ""
 "Also be sure to always run `cargo clippy` in your project, which will detect "
 "some cases in which `.clone()` is not necessary, like [1](https://rust-lang."
@@ -5587,95 +5547,85 @@ msgid ""
 "rust-lang.github.io/rust-clippy/master/index.html#map_clone) or [4](https://"
 "rust-lang.github.io/rust-clippy/master/index.html#clone_double_ref)."
 msgstr ""
-"また、プロジェクト内で常に `cargo clippy` を実行するようにしてください。\n"
-"これは[1](https://rust-lang.github.io/rust-clippy/master/index."
-"html#redundant_clone)、\n"
-"[2](https://rust-lang.github.io/rust-clippy/master/index."
-"html#clone_on_copy)、\n"
-"[3](https://rust-lang.github.io/rust-clippy/master/index.html#map_clone)、[4]"
-"(https://rust-lang.github.io/rust-clippy/master/index.html#clone_double_ref)"
-"のような `clone()` が不要なケースをいくつか検出します。"
+"また、プロジェクト内で常に `cargo clippy` を実行するようにしてください。これ"
+"は[1](https://rust-lang.github.io/rust-clippy/master/index."
+"html#redundant_clone)、 [2](https://rust-lang.github.io/rust-clippy/master/"
+"index.html#clone_on_copy)、 [3](https://rust-lang.github.io/rust-clippy/"
+"master/index.html#map_clone)、 [4](https://rust-lang.github.io/rust-clippy/"
+"master/index.html#clone_double_ref) のような `clone()` が不要なケースをいくつ"
+"か検出します。"
 
 #: src/anti_patterns/borrow_clone.md:74
-#, fuzzy
 msgid ""
 "[`mem::{take(_), replace(_)}` to keep owned values in changed enums](../"
 "idioms/mem-replace.md)"
-msgstr "# `mem::{take(_), replace(_)}` による値を所有したままの列挙値の変換"
+msgstr ""
+"[変更するenum値の所有された値を維持する `mem::{take(_), replace(_)}`](../"
+"idioms/mem-replace.md)"
 
 #: src/anti_patterns/borrow_clone.md:75
-#, fuzzy
 msgid ""
 "[`Rc<T>` documentation, which handles .clone() intelligently](http://doc."
 "rust-lang.org/std/rc/)"
 msgstr ""
-"[.clone() をスマートに扱う `Rc<T>` ドキュメント](http://doc.rust-lang.org/"
-"std/rc/)"
+"[`Rc<T>` のドキュメント ( .clone() をインテリジェントに扱う)](http://doc."
+"rust-lang.org/std/rc/)"
 
 #: src/anti_patterns/borrow_clone.md:76
-#, fuzzy
 msgid ""
 "[`Arc<T>` documentation, a thread-safe reference-counting pointer](https://"
 "doc.rust-lang.org/std/sync/struct.Arc.html)"
 msgstr ""
-"[スレッドセーフな参照カウントポインタ `Arc<T>` ドキュメント](https://doc."
-"rust-lang.org/std/sync/struct.Arc.html)"
+"[`Arc<T>` のドキュメント (スレッドセーフな参照カウンタ付きポインタ)](https://"
+"doc.rust-lang.org/std/sync/struct.Arc.html)"
 
 #: src/anti_patterns/borrow_clone.md:77
-#, fuzzy
 msgid ""
 "[Tricks with ownership in Rust](https://web.archive.org/web/20210120233744/"
 "https://xion.io/post/code/rust-borrowchk-tricks.html)"
 msgstr ""
-"[Rustにおける所有権のトリック](https://web.archive.org/web/20210120233744/"
+"[Rust における所有権のトリック](https://web.archive.org/web/20210120233744/"
 "https://xion.io/post/code/rust-borrowchk-tricks.html)"
 
 #: src/anti_patterns/deny-warnings.md:1
-#, fuzzy
 msgid "`#![deny(warnings)]`"
-msgstr "`#[deny(warnings)]`"
+msgstr "`#![deny(warnings)]`"
 
 #: src/anti_patterns/deny-warnings.md:5
-#, fuzzy
 msgid ""
 "A well-intentioned crate author wants to ensure their code builds without "
 "warnings. So they annotate their crate root with the following:"
 msgstr ""
 "善意のあるcrate作成者は、自分たちのコードが警告なしでビルドされることを保証し"
-"たいと考えています。\n"
-"そこで、彼らはcrateのルートに次のようなアノテーションを付けます："
+"たいと考えています。そこで、彼らはcrateのルートに次のようなアノテーションを付"
+"けます:"
 
 #: src/anti_patterns/deny-warnings.md:12
-#, fuzzy
 msgid "// All is well.\n"
-msgstr "// すべて順調だ。\n"
+msgstr "// すべてちゃんとしている。\n"
 
 #: src/anti_patterns/deny-warnings.md:18
 msgid "It is short and will stop the build if anything is amiss."
 msgstr "これは簡単で、もし何か間違いがあるならビルドが止まります。"
 
 #: src/anti_patterns/deny-warnings.md:20
-#, fuzzy
 msgid "Drawbacks"
-msgstr "## デメリット"
+msgstr "欠点"
 
 #: src/anti_patterns/deny-warnings.md:22
-#, fuzzy
 msgid ""
 "By disallowing the compiler to build with warnings, a crate author opts out "
 "of Rust's famed stability. Sometimes new features or old misfeatures need a "
 "change in how things are done, thus lints are written that `warn` for a "
 "certain grace period before being turned to `deny`."
 msgstr ""
-"コンパイラが警告付きでビルドすることを禁止することにより、\n"
-"Rustの有名な安定性から、crate作成者が切り離されてしまうことになります。\n"
-"時に、新しい機能や古い問題ある機能により、物事の進め方を変える必要がでてくる"
-"ことがあります。\n"
-"このような場合に、lintは十分な一定の期間 `warn` し、その後に `deny` に切り替"
-"えるように記述されます。"
+"コンパイラが警告ありでビルドすることを禁止することにより、Rustの有名な安定性"
+"から、crate作成者が切り離されてしまうことになります。時に、新しい機能や古い問"
+"題ある機能により、物事の進め方を変える必要がでてくることがあります。このよう"
+"な場合に、lintは一定の猶予期間 `warn` し、その後に `deny` に切り替えるように"
+"記述されます。"
 
 #: src/anti_patterns/deny-warnings.md:27
-#, fuzzy
 msgid ""
 "For example, it was discovered that a type could have two `impl`s with the "
 "same method. This was deemed a bad idea, but in order to make the transition "
@@ -5684,15 +5634,11 @@ msgid ""
 "future release."
 msgstr ""
 "例えば、ある型が同じメソッドを持つ2つの`impl`を持つことができることが発見され"
-"ました。\n"
-"これは悪いアイデアだと判断されました。\n"
-"しかしスムーズに移行するために、`overlapping-inherent-impls`というlintが導入"
-"を導入し、\n"
-"将来のリリースで完全なエラーとされる前に、この事実につまずいた人に警告を与え"
-"るようにしました。"
+"ました。これは悪いアイデアだと判断されました。しかしスムーズに移行するため"
+"に、`overlapping-inherent-impls`というlintが導入を導入し、将来のリリースで完"
+"全なエラーとされる前に、この事実につまずいた人に警告を与えるようにしました。"
 
 #: src/anti_patterns/deny-warnings.md:32
-#, fuzzy
 msgid ""
 "Also sometimes APIs get deprecated, so their use will emit a warning where "
 "before there was none."
@@ -5707,7 +5653,6 @@ msgstr ""
 "これらすべてが、何かが変わるたびにビルドを壊してしまう可能性を持っています。"
 
 #: src/anti_patterns/deny-warnings.md:37
-#, fuzzy
 msgid ""
 "Furthermore, crates that supply additional lints (e.g. [rust-clippy](https://"
 "github.com/Manishearth/rust-clippy)) can no longer be used unless the "
@@ -5716,38 +5661,34 @@ msgid ""
 "command line argument, turns all `deny` lint errors into warnings."
 msgstr ""
 "さらに、追加のlintを提供するcrate（[rust-clippy]など）は、このアノテーション"
-"を削除しない限り使用できなくなりました。\n"
-"これは[--cap-lints]で緩和されます。\n"
-"コマンドライン引数に `--cap-lints=warn` を指定すると、すべての `deny` lint エ"
+"を削除しない限り使用できなくなりました。これは[--cap-lints]で緩和されます。コ"
+"マンドライン引数に `--cap-lints=warn` を指定すると、すべての `deny` lint エ"
 "ラーを警告に変えます。"
 
 #: src/anti_patterns/deny-warnings.md:42
 #: src/functional/generics-type-classes.md:226
 msgid "Alternatives"
-msgstr "代替手段"
+msgstr "代替案"
 
 #: src/anti_patterns/deny-warnings.md:44
-#, fuzzy
 msgid ""
 "There are two ways of tackling this problem: First, we can decouple the "
 "build setting from the code, and second, we can name the lints we want to "
 "deny explicitly."
 msgstr ""
-"この問題に対処する方法は2つあります。\n"
-"一つは、コードからビルド設定を切り離すことです。\n"
-"もう一つは、denyしたい lint を明示的に指定することです。"
+"この問題に対処する方法は2つあります。一つは、コードからビルド設定を切り離すこ"
+"とです。もう一つは、denyしたい lint を明示的に指定することです。"
 
 #: src/anti_patterns/deny-warnings.md:48
 msgid "The following command line will build with all warnings set to `deny`:"
 msgstr ""
-"次のコマンドラインは、すべての警告を `deny` に設定してビルドを行います："
+"次のコマンドラインは、すべての警告を `deny` に設定してビルドを行います:"
 
 #: src/anti_patterns/deny-warnings.md:50
 msgid "`RUSTFLAGS=\"-D warnings\" cargo build`"
 msgstr "`RUSTFLAGS=\"-D warnings\" cargo build`"
 
 #: src/anti_patterns/deny-warnings.md:52
-#, fuzzy
 msgid ""
 "This can be done by any individual developer (or be set in a CI tool like "
 "Travis, but remember that this may break the build when something changes) "
@@ -5757,19 +5698,18 @@ msgstr ""
 "ときビルドが壊れる可能性に注意は必要）コードに変更を加えずに行えます。"
 
 #: src/anti_patterns/deny-warnings.md:56
-#, fuzzy
 msgid ""
 "Alternatively, we can specify the lints that we want to `deny` in the code. "
 "Here is a list of warning lints that is (hopefully) safe to deny (as of "
 "Rustc 1.48.0):"
 msgstr ""
-"あるいは、コード中で `deny` したいlintを指定することもできます。\n"
-"以下は、(たぶん) 安全にdenyできる警告リントのリストです (Rustc 1.48.0 時点)："
+"あるいは、コード中で `deny` したいlintを指定することもできます。以下は、(たぶ"
+"ん) 安全にdenyできる警告リントのリストです (Rustc 1.48.0 時点):"
 
 #: src/anti_patterns/deny-warnings.md:81
 msgid ""
 "In addition, the following `allow`ed lints may be a good idea to `deny`:"
-msgstr "さらに、以下の`allow`されたリントを`deny`するのはよい考えでしょう："
+msgstr "さらに、以下の`allow`されたリントを`deny`するのはよい考えでしょう:"
 
 #: src/anti_patterns/deny-warnings.md:96
 msgid "Some may also want to add `missing-copy-implementations` to their list."
@@ -5777,56 +5717,46 @@ msgstr ""
 "また、`missing-copy-implementations` をリストに加えたい人もいるでしょう。"
 
 #: src/anti_patterns/deny-warnings.md:98
-#, fuzzy
 msgid ""
 "Note that we explicitly did not add the `deprecated` lint, as it is fairly "
 "certain that there will be more deprecated APIs in the future."
 msgstr ""
-"`deprecated`のlintを明示的に追加していないことに注意してください。\n"
-"将来的に非推奨のAPIが増えることは確実だからです。"
+"`deprecated`のlintを明示的に追加していないことに注意してください。将来的に非"
+"推奨のAPIが増えることは確実だからです。"
 
 #: src/anti_patterns/deny-warnings.md:103
-#, fuzzy
 msgid ""
 "[A collection of all clippy lints](https://rust-lang.github.io/rust-clippy/"
 "master)"
-msgstr ""
-"[クリッピー・リント全集](https://rust-lang.github.io/rust-clippy/master)"
+msgstr "[すべての crippy lint](https://rust-lang.github.io/rust-clippy/master)"
 
 #: src/anti_patterns/deny-warnings.md:104
-#, fuzzy
 msgid ""
 "[deprecate attribute](https://doc.rust-lang.org/reference/attributes."
 "html#deprecation) documentation"
 msgstr ""
-"[非推奨属性](https://doc.rust-lang.org/reference/attributes."
-"html#deprecation) ドキュメント"
+"[deprecated属性](https://doc.rust-lang.org/reference/attributes."
+"html#deprecation) のドキュメント"
 
 #: src/anti_patterns/deny-warnings.md:105
-#, fuzzy
 msgid ""
 "Type `rustc -W help` for a list of lints on your system. Also type `rustc --"
 "help` for a general list of options"
 msgstr ""
-"rustc -W help` と入力すると、システム上のリントのリストが表示される。また、"
-"`rustc --help` と入力すると、一般的なオプションのリストが表示される。"
+"`rustc -W help` と入力するとあなたのシステム上の lint のリストが表示されま"
+"す。また`rustc --help` と入力すると一般的なオプションのリストが表示されます"
 
 #: src/anti_patterns/deny-warnings.md:107
-#, fuzzy
 msgid ""
 "[rust-clippy](https://github.com/Manishearth/rust-clippy) is a collection of "
 "lints for better Rust code"
-msgstr ""
-"[rust-clippy](https://github.com/Manishearth/rust-clippy)は、より良いRustコー"
-"ドのためのリントのコレクションである。"
+msgstr "[rust-clippy] はより良い Rust コードのための lint のコレクションです"
 
 #: src/anti_patterns/deref.md:1
-#, fuzzy
 msgid "`Deref` polymorphism"
-msgstr "# `Deref` ポリモーフィズム"
+msgstr "`Deref` ポリモーフィズム"
 
 #: src/anti_patterns/deref.md:5
-#, fuzzy
 msgid ""
 "Misuse the `Deref` trait to emulate inheritance between structs, and thus "
 "reuse methods."
@@ -5835,20 +5765,18 @@ msgstr ""
 "ソッドを再利用しようとすること。"
 
 #: src/anti_patterns/deref.md:10
-#, fuzzy
 msgid ""
 "Sometimes we want to emulate the following common pattern from OO languages "
 "such as Java:"
 msgstr ""
-"JavaのようなOO言語から、次のような一般的なパターンをエミュレートしたいことが"
-"あります："
+"JavaのようなOO言語からの、次のような一般的なパターンをエミュレートしたいこと"
+"があります:"
 
 #: src/anti_patterns/deref.md:26
 msgid "We can use the deref polymorphism anti-pattern to do so:"
-msgstr "deref ポリモーフィズムのアンチパターンを使い、これを行います："
+msgstr "deref ポリモーフィズムのアンチパターンを使い、これを行います:"
 
 #: src/anti_patterns/deref.md:56
-#, fuzzy
 msgid ""
 "There is no struct inheritance in Rust. Instead we use composition and "
 "include an instance of `Foo` in `Bar` (since the field is a value, it is "
@@ -5856,16 +5784,13 @@ msgid ""
 "memory as the Java version (probably, you should use `#[repr(C)]` if you "
 "want to be sure))."
 msgstr ""
-"Rustには構造体の継承はありません。\n"
-"代わりにコンポジションを使用し、 `Foo` のインスタンスを `Bar` の持ち物にしま"
-"す(\n"
-"フィールドは値なのでインラインに保持されます。\n"
-"したがってフィールドがあるのであれば、それらはJavaのバージョンと同じメモリレ"
-"イアウトとなるでしょう(おそらくは。確実にそうしたいなら\n"
-"`#[repr(C)]` を使うべきです))。"
+"Rustには構造体の継承はありません。代わりにコンポジションを使用し、 `Foo` のイ"
+"ンスタンスを `Bar` の持ち物にします (フィールドは値なのでインラインに保持され"
+"ます。したがってフィールドがあるのであれば、それらはJavaのバージョンと同じメ"
+"モリレイアウトとなるでしょう (おそらくは。確実にそうしたいなら `#[repr(C)]` "
+"を使うべきです))。"
 
 #: src/anti_patterns/deref.md:61
-#, fuzzy
 msgid ""
 "In order to make the method call work we implement `Deref` for `Bar` with "
 "`Foo` as the target (returning the embedded `Foo` field). That means that "
@@ -5875,38 +5800,31 @@ msgid ""
 "operator does implicit dereferencing, it means that the method call will "
 "search for methods on `Foo` as well as `Bar`."
 msgstr ""
-"メソッドコールを機能させるために、`Bar` に対して `Foo` をターゲットとして "
-"`Deref` を実装します（埋め込まれた `Foo` フィールドを返します）。\n"
-"これは (例えば `*` を使い) `Bar` を参照外しすると、 `Foo` が返されるというこ"
-"とになります。\n"
-"これはかなり奇怪なことです。\n"
-"参照外しは通常 `T` の参照に対して `T` を返します。\n"
-"例で扱っているのは２つの関連しない型です。\n"
-"しかしながら、ドット演算子は暗黙的な参照外しを行うため、\n"
-"メソッド呼び出しは `Bar` に対してと同様に `Foo` のメソッドを検索することにな"
-"ります。"
+"メソッドコールを機能させるために、`Bar` に対して `Foo` をターゲット(Target)と"
+"して `Deref` を実装します (埋め込まれた `Foo` フィールドを返します) 。これは "
+"(例えば `*` を使い) `Bar` を参照外しすると、 `Foo` が返されるということになり"
+"ます。これはかなり奇怪なことです。参照外しは通常 `T` の参照に対して `T` を返"
+"します。例で扱っているのは２つの関連しない型です。しかしながら、ドット演算子"
+"は暗黙的な参照外しを行うため、メソッド呼び出しは `Bar` に対してと同様に "
+"`Foo` のメソッドを検索することになります。"
 
 #: src/anti_patterns/deref.md:71
 msgid "You save a little boilerplate, e.g.,"
 msgstr "ちょっとしたボイラーテンプレートを省けます。例えは、"
 
 #: src/anti_patterns/deref.md:83
-#, fuzzy
 msgid ""
 "Most importantly this is a surprising idiom - future programmers reading "
 "this in code will not expect this to happen. That's because we are misusing "
 "the `Deref` trait rather than using it as intended (and documented, etc.). "
 "It's also because the mechanism here is completely implicit."
 msgstr ""
-"最も重要なことは、これは人を驚かせるイディオムであるということです - \n"
-"コードのこれを読む後のプログラマーは、このようなことが起こるとは思わないで"
-"しょう。\n"
-"これは私たちが `Deref` トレイトを、その意図(およびドキュメント等)に反して、誤"
-"用しているからです。\n"
-"またこのメカニズムは完全に暗黙的なものだからです。"
+"最も重要なことは、これは人を驚かせるイディオムであるということです - コードの"
+"これを読む後のプログラマーは、このようなことが起こるとは思わないでしょう。こ"
+"れは私たちが `Deref` トレイトを、その意図 (およびドキュメント等) に反して、誤"
+"用しているからです。またこのメカニズムは完全に暗黙的なものだからです。"
 
 #: src/anti_patterns/deref.md:88
-#, fuzzy
 msgid ""
 "This pattern does not introduce subtyping between `Foo` and `Bar` like "
 "inheritance in Java or C++ does. Furthermore, traits implemented by `Foo` "
@@ -5914,42 +5832,21 @@ msgid ""
 "with bounds checking and thus generic programming."
 msgstr ""
 "このパターンでは、JavaやC++の継承のように`Foo` と `Bar` の間に部分型を導入す"
-"ることはありません。\n"
-"さらに、 `Foo` で実装された trait は自動的に `Bar` で実装されるわけではありま"
-"せん。\n"
-"そのため、このパターンは境界チェックと相性が悪くなり、それゆえにジェネリック"
-"プログラミングとの相性も悪くなります。"
+"ることはありません。さらに、 `Foo` で実装された trait は自動的に `Bar` で実装"
+"されるわけではありません。そのため、このパターンは境界チェックと相性が悪くな"
+"り、それゆえにジェネリックプログラミングとの相性も悪くなります。"
 
-# 2023/8/20 訳中思考メモ：
-# いまいち意味がとれていない。どういうこと？
-# (A)ほとんどのOO言語では：
-# self (java なら this) は
-# 「サブクラスへの参照」？そう？・・・うーん。
-# 定義されているクラス、およびそのサブクラスへの参照というならわかる気はする。
-# (B)このパターンでは：
-# 「メソッドが定義されているクラス」。
-# implしたstructで、ここではstructをクラスのように扱おうとしているのだから、ここだけなら、まぁ理解はできるような。
-# (A)との対比を考える。
-# `Foo` の impl 時の self は あくまで `Foo` である。
-# これはパターンの意図するサブタイプ（を deref で模倣したもの)、これを含めた表現になっていない、という感じかな。
-# `Bar` が `Foo` のサブタイプもどきのつもりだが、`Foo` の impl 内の self はサブタイプを含めた表現でない。
-# これが表にでてくる状況はまずそうそうないんだろう。リフレクションとか出てくると影響しそうではある。
-# いずれにせよ、動きだけ模倣して、意味的には異なる状態といのは、危うい。
-# 言語仕様的なものと異なる意味を持たせると、理解しにくいだけでなく、言語仕様上の意味を前提にした言語拡張や第三者のライブラリ等々と組み合わせられなくなる。
 #: src/anti_patterns/deref.md:93
-#, fuzzy
 msgid ""
 "Using this pattern gives subtly different semantics from most OO languages "
 "with regards to `self`. Usually it remains a reference to the sub-class, "
 "with this pattern it will be the 'class' where the method is defined."
 msgstr ""
 "このパターンを使うことは、`self`に関して、ほとんどのOO言語とは微妙に異なるセ"
-"マンティクスを与えます。\n"
-"通常はこれはサブクラスに対する参照のままですが、このパターンではメソッドが定"
-"義されている「クラス」に対するものになります。"
+"マンティクスを与えます。通常はこれはサブクラスに対する参照ですが、このパター"
+"ンではメソッドが定義されている「クラス」に対するものになります。"
 
 #: src/anti_patterns/deref.md:97
-#, fuzzy
 msgid ""
 "Finally, this pattern only supports single inheritance, and has no notion of "
 "interfaces, class-based privacy, or other inheritance-related features. So, "
@@ -5957,13 +5854,11 @@ msgid ""
 "Java inheritance, etc."
 msgstr ""
 "最後に、このパターンは単一継承のみをサポートし、インターフェイス、クラスベー"
-"スのプライバシー、\n"
-"その他の継承に関連する機能はありません。\n"
-"そのためJavaの継承などに慣れているプログラマにとっては、微妙に驚くような経験"
-"をすることになります。"
+"スのプライバシー、その他の継承に関連する機能はありません。そのためJavaの継承"
+"などに慣れているプログラマにとっては、微妙に驚くような経験をすることになりま"
+"す。"
 
 #: src/anti_patterns/deref.md:104
-#, fuzzy
 msgid ""
 "There is no one good alternative. Depending on the exact circumstances it "
 "might be better to re-implement using traits or to write out the facade "
@@ -5975,34 +5870,28 @@ msgid ""
 "this [RFC issue](https://github.com/rust-lang/rfcs/issues/349) for more "
 "details."
 msgstr ""
-"唯一の良い代替案はありません。\n"
-"それぞれの状況によっては\n"
-"トレイトを再実装するのがよいかもしれませんし、または手動で `Foo` にディスパッ"
-"チするファサードメソッドを書くのがよいかもしれません。\n"
-"このような継承の仕組みがRustに追加されようとしていますが、しかし安定版の "
-"Rust に至るまでに時間がかかりそうです。\n"
-"詳細は [blog](http://aturon.github.io/blog/2015/09/18/reuse/)\n"
-"[posts](http://smallcultfollowing.com/babysteps/blog/2015/10/08/virtual-"
-"structs-part-4-extended-enums-and-thin-traits/)\n"
-"や [RFC issue](https://github.com/rust-lang/rfcs/issues/349) \n"
-"を参照してください。"
+"唯一の良い代替案はありません。それぞれの状況によってはトレイトを再実装するの"
+"がよいかもしれませんし、または手動で `Foo` にディスパッチするファサードメソッ"
+"ドを書くのがよいかもしれません。このような継承の仕組みがRustに追加されようと"
+"していますが、しかし安定版の Rust に至るまでに時間がかかりそうです。詳細は "
+"[blog](http://aturon.github.io/blog/2015/09/18/reuse/) [posts](http://"
+"smallcultfollowing.com/babysteps/blog/2015/10/08/virtual-structs-part-4-"
+"extended-enums-and-thin-traits/) や [RFC issue](https://github.com/rust-lang/"
+"rfcs/issues/349) を参照してください。"
 
 #: src/anti_patterns/deref.md:113
-#, fuzzy
 msgid ""
 "The `Deref` trait is designed for the implementation of custom pointer "
 "types. The intention is that it will take a pointer-to-`T` to a `T`, not "
 "convert between different types. It is a shame that this isn't (probably "
 "cannot be) enforced by the trait definition."
 msgstr ""
-"`Deref` トレイトはカスタムポインタ型の実装のために設計されています。\n"
-"これは、`T` へのポインタを `T` に変換するもので、異なる型間の変換を行うもので"
-"はありません。\n"
-"このことをトレイトの定義により強制されない（おそらくはできない）のは残念で"
-"す。"
+"`Deref` トレイトはカスタムポインタ型の実装のために設計されています。これは、"
+"`T` へのポインタを `T` に変換するもので、異なる型間の変換を行うものではありま"
+"せん。このことをトレイトの定義により強制されない (おそらくはできない) のは残"
+"念なことです。"
 
 #: src/anti_patterns/deref.md:118
-#, fuzzy
 msgid ""
 "Rust tries to strike a careful balance between explicit and implicit "
 "mechanisms, favouring explicit conversions between types. Automatic "
@@ -6011,48 +5900,37 @@ msgid ""
 "degrees of indirection, not conversion between arbitrary types."
 msgstr ""
 "Rustは、明示的なメカニズムと暗黙的なメカニズムのバランスを慎重に取ろうとして"
-"います。\n"
-"そして型間の変換では明示的な変換を支持しています。\n"
-"ドット演算子での自動参照外しは、人間工学的に暗黙的なメカニズムを強く支持する"
-"ケースですが、\n"
-"これは間接的な程度に限定されており、任意の型間の変換を行うものではありませ"
-"ん。"
+"います。そして型間の変換では明示的な変換を支持しています。ドット演算子での自"
+"動参照外しは、人間工学的に暗黙的なメカニズムを強く支持するケースですが、これ"
+"は間接的な程度に限定されており、任意の型間の変換を行うものではありません。"
 
 #: src/anti_patterns/deref.md:126
-#, fuzzy
 msgid "[Collections are smart pointers idiom](../idioms/deref.md)."
-msgstr "# スマートポインタとしてのコレクション"
+msgstr ""
+"イディオムの [スマートポインタとしてのコレクション](../idioms/deref.md)。"
 
 #: src/anti_patterns/deref.md:127
-#, fuzzy
 msgid ""
 "Delegation crates for less boilerplate like [delegate](https://crates.io/"
 "crates/delegate) or [ambassador](https://crates.io/crates/ambassador)"
 msgstr ""
-"- イディオムの [スマートポインタとしてのコレクション](../idioms/deref.md)。\n"
-"- [delegate](https://crates.io/crates/delegate)や[ambassador](https://crates."
+"[delegate](https://crates.io/crates/delegate)や[ambassador](https://crates."
 "io/crates/ambassador)ような、ボイラーテンプレートを減らすデリゲーション"
-"crate。\n"
-"- [`Deref` トレイトのドキュメント](https://doc.rust-lang.org/std/ops/trait."
-"Deref.html)."
+"crate。"
 
 #: src/functional/index.md:1
-#, fuzzy
 msgid "Functional Usage of Rust"
-msgstr "# Rustので関数型使用法"
+msgstr "Rustので関数型使用法"
 
 #: src/functional/index.md:3
-#, fuzzy
 msgid ""
 "Rust is an imperative language, but it follows many [functional programming]"
 "(https://en.wikipedia.org/wiki/Functional_programming) paradigms."
 msgstr ""
 "Rustは命令型言語ですが、数々の[関数型プログラミング](https://en.wikipedia."
-"org/wiki/Functional_programming)\n"
-"のパラダイムを模範としています。"
+"org/wiki/Functional_programming) のパラダイムを模範としています。"
 
 #: src/functional/index.md:7
-#, fuzzy
 msgid ""
 "In computer science, _functional programming_ is a programming paradigm "
 "where programs are constructed by applying and composing functions. It is a "
@@ -6060,20 +5938,17 @@ msgid ""
 "expressions that each return a value, rather than a sequence of imperative "
 "statements which change the state of the program."
 msgstr ""
-"> In computer science, _functional programming_ is a programming paradigm "
-"where\n"
-"> programs are constructed by applying and composing functions.\n"
-"> It is a declarative programming paradigm in which function definitions "
-"are\n"
-"> trees of expressions that each return a value, rather than a sequence of\n"
-"> imperative statements which change the state of the program.\n"
-"> (コンピュータサイエンスにおいて、関数型プログラミングとは、関数の適用と合成"
-"によってプログラムを構成するプログラミングパラダイムです。\n"
-"> これは宣言的なプログラミングパラダイムです。その関数の定義は、プログラムの"
-"状態を変更する命令文の列ではなく、値を返す式のツリーです。)"
+"In computer science, _functional programming_ is a programming paradigm "
+"where programs are constructed by applying and composing functions. It is a "
+"declarative programming paradigm in which function definitions are trees of "
+"expressions that each return a value, rather than a sequence of imperative "
+"statements which change the state of the program. (コンピュータサイエンスにお"
+"いて、 _関数型プログラミング_ とは、関数の適用と合成によってプログラムを構成"
+"するプログラミングパラダイムです。これは宣言的なプログラミングパラダイムで"
+"す。その関数の定義は、プログラムの状態を変更する命令文の列ではなく、値を返す"
+"式のツリーです。)"
 
 #: src/functional/paradigms.md:3
-#, fuzzy
 msgid ""
 "One of the biggest hurdles to understanding functional programs when coming "
 "from an imperative background is the shift in thinking. Imperative programs "
@@ -6081,23 +5956,19 @@ msgid ""
 "**what** to do. Let's sum the numbers from 1 to 10 to show this."
 msgstr ""
 "関数型プログラミングを理解する上で、命令型プログラミング出身者にとって最大の"
-"ハードルのひとつは、考え方の転換です。\n"
-"命令型プログラムは **どうやるのか** を記述するのに対し、\n"
-"宣言型プログラムは **何をするのか** を記述します。\n"
-"これを示すために1から10までの数字を合計してみましょう。"
+"ハードルのひとつは、考え方の転換です。命令型プログラムは **どうやるのか** を"
+"記述するのに対し、宣言型プログラムは **何をするのか** を記述します。これを示"
+"すために1から10までの数字を合計してみましょう。"
 
 #: src/functional/paradigms.md:8
-#, fuzzy
 msgid "Imperative"
-msgstr "## 命令型"
+msgstr "命令型"
 
 #: src/functional/paradigms.md:15
-#, fuzzy
 msgid "\"{sum}\""
 msgstr "\"{sum}\""
 
 #: src/functional/paradigms.md:18
-#, fuzzy
 msgid ""
 "With imperative programs, we have to play compiler to see what is happening. "
 "Here, we start with a `sum` of `0`. Next, we iterate through the range from "
@@ -6105,28 +5976,17 @@ msgid ""
 "range. Then we print it out."
 msgstr ""
 "命令型プログラムでは、何が起こっているのかを確認するためにコンパイラを演じな"
-"ければなりません。\n"
-"ここでは、まず `sum` が `0` から始めます。\n"
-"次に、1から10までの範囲を繰り返します。\n"
-"ループの各回で、ループ範囲内の対応する値を加算します。\n"
+"ければなりません。ここでは、まず `sum` が `0` から始めます。次に、1から10まで"
+"の範囲を繰り返します。ループの各回で、ループ範囲内の対応する値を加算します。 "
 "そして結果を出力します。"
 
 #: src/functional/paradigms.md:23
-#, fuzzy
 msgid "`i`"
-msgstr ""
-"```rust\n"
-"let mut sum = 0;\n"
-"for i in 1..11 {\n"
-"    sum += i;\n"
-"}\n"
-"println!(\"{}\", sum);\n"
-"```"
+msgstr "`i`"
 
 #: src/functional/paradigms.md:23
-#, fuzzy
 msgid "`sum`"
-msgstr "合計"
+msgstr "`sum`"
 
 #: src/functional/paradigms.md:25 src/functional/paradigms.md:59
 #: src/functional/paradigms.md:60
@@ -6204,41 +6064,34 @@ msgid "55"
 msgstr "55"
 
 #: src/functional/paradigms.md:36
-#, fuzzy
 msgid ""
 "This is how most of us start out programming. We learn that a program is a "
 "set of steps."
 msgstr ""
-"私たちの多くは、こうしてプログラミングを始めました。\n"
-"私たちはプログラムをステップの集まりだと学んできました。"
+"私たちの多くは、こうしてプログラミングを始めました。私たちはプログラムをス"
+"テップの集まりだと学んできました。"
 
 #: src/functional/paradigms.md:39
-#, fuzzy
 msgid "Declarative"
-msgstr "## 宣言的"
+msgstr "宣言的"
 
 #: src/functional/paradigms.md:42
-#, fuzzy
 msgid "\"{}\""
 msgstr "\"{}\""
 
 #: src/functional/paradigms.md:45
-#, fuzzy
 msgid ""
 "Whoa! This is really different! What's going on here? Remember that with "
 "declarative programs we are describing **what** to do, rather than **how** "
 "to do it. `fold` is a function that [composes](https://en.wikipedia.org/wiki/"
 "Function_composition) functions. The name is a convention from Haskell."
 msgstr ""
-"おぉ!これは全く異なりますね!何が起こっているのでしょう?\n"
-"宣言型プログラムでは、**どうやるのか** ではなく、**何をするのか** を記述して"
-"いることに留意してください。\n"
-"`fold`は関数を[合成](https://en.wikipedia.org/wiki/Function_composition)する"
-"関数です。\n"
-"この関数名はHaskellからの慣例です。"
+"おぉ!これは全く異なりますね!何が起こっているのでしょう?宣言型プログラムでは、"
+"**どうやるのか** ではなく、**何をするのか** を記述していることに留意してくだ"
+"さい。`fold`は関数を[合成](https://en.wikipedia.org/wiki/"
+"Function_composition)する関数です。この関数名はHaskellからの慣例です。"
 
 #: src/functional/paradigms.md:51
-#, fuzzy
 msgid ""
 "Here, we are composing functions of addition (this closure: `|a, b| a + b`) "
 "with a range from 1 to 10. The `0` is the starting point, so `a` is `0` at "
@@ -6248,22 +6101,18 @@ msgid ""
 "the range, `10`."
 msgstr ""
 "ここでは、足し算の関数（クロージャ：`|a, b| a + b`）を1から10までの範囲に対し"
-"合成しています。\n"
-"この `0` は開始点です。よって `a` は最初は `0` です。\n"
-"`b` は範囲の最初の要素である `1` です。 `0 + 1 = 1` が結果になります。\n"
-"そして `a = 1` 、 `b=2` としてまた `fold` (折り返)し、 `1 + 2 = 3` が次の結果"
-"になります。\n"
+"合成しています。この `0` は開始点です。よって `a` は最初は `0` です。`b` は範"
+"囲の最初の要素である `1` です。 `0 + 1 = 1` が結果になります。そして `a = "
+"1` 、 `b=2` としてまた `fold` (折り返)し、 `1 + 2 = 3` が次の結果になります。"
 "このプロセスは範囲の最後の要素である `10` まで繰り返されます。"
 
 #: src/functional/paradigms.md:57
-#, fuzzy
 msgid "`a`"
 msgstr "`a`"
 
 #: src/functional/paradigms.md:57
-#, fuzzy
 msgid "`b`"
-msgstr "`$name ! $arg`; _e.g._ `println!(\"Hi!\")`, `concat!(\"a\", \"b\")`, …"
+msgstr "`b`"
 
 #: src/functional/paradigms.md:57
 msgid "result"
