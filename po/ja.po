@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-05-14 23:07+0900\n"
+"PO-Revision-Date: 2024-05-16 22:45+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -5130,7 +5130,6 @@ msgstr ""
 
 # surface area の意図は？
 #: src/patterns/ffi/wrappers.md:5
-#, fuzzy
 msgid ""
 "This pattern is designed to allow gracefully handling multiple related "
 "types, while minimizing the surface area for memory unsafety."
@@ -5165,7 +5164,6 @@ msgstr ""
 # →１解釈：
 # APIのユーザ側に、メモリ安全性への寄与を、負担させる。信頼して任せるのではなく、設計により強制する。かな？
 #: src/patterns/ffi/wrappers.md:16
-#, fuzzy
 msgid ""
 "Some level of trust in the user code is thus required, notably around use-"
 "after-free which Rust can do nothing about. However, some API designs place "
@@ -6228,7 +6226,6 @@ msgstr ""
 "BOOTP (PXEネットワークブート用) とNFS (リモートマウントストレージ用) です。"
 
 #: src/functional/generics-type-classes.md:44
-#, fuzzy
 msgid ""
 "Your goal is to have one program, written in Rust, which can handle both of "
 "them. It will have protocol handlers and listen for both kinds of requests. "
@@ -6236,83 +6233,71 @@ msgid ""
 "storage and security controls for the actual files."
 msgstr ""
 "あなたの目標は、Rustで書かれた1つのプログラムで、その両方を処理できるようにす"
-"ることです。\n"
-"です。このプログラムは(2つの)プロトコルハンドラを持ち、両方のリクエストを待ち"
-"受けます。\n"
-"そしてメインのアプリケーションロジックは、ラボの管理者が、実際のファイルのた"
-"めの、ストレージとセキュリティ制御を設定できるようにします。"
+"ることです。このプログラムは (2つの) プロトコルハンドラを持ち、両方のリクエス"
+"トを待ち受けます。そしてメインのアプリケーションロジックは、ラボの管理者が、"
+"実際のファイルのための、ストレージとセキュリティ制御を設定できるようにしま"
+"す。"
 
 #: src/functional/generics-type-classes.md:49
-#, fuzzy
 msgid ""
 "The requests from machines in the lab for files contain the same basic "
 "information, no matter what protocol they came from: an authentication "
 "method, and a file name to retrieve. A straightforward implementation would "
 "look something like this:"
 msgstr ""
-"ラボのマシンからの、ファイルに対してのリクエストは同じ基本情報を含みます。\n"
-"どのプロトコルからであっても、認証方法と取得したいファイルの名前はありま"
-"す。\n"
-"ストレートな実装はこのようになるでしょう："
+"ラボのマシンからの、ファイルに対してのリクエストは同じ基本情報を含みます。ど"
+"のプロトコルからであっても、認証方法と取得したいファイルの名前はあります。ス"
+"トレートな実装はこのようになるでしょう:"
 
 #: src/functional/generics-type-classes.md:66
-#, fuzzy
 msgid ""
 "This design might work well enough. But now suppose you needed to support "
 "adding metadata that was _protocol specific_. For example, with NFS, you "
 "wanted to determine what their mount point was in order to enforce "
 "additional security rules."
 msgstr ""
-"この設計は十分に機能するかもしれません。\n"
-"しかし、次に _プロトコル固有_ のメタデータの追加をサポートする必要があるとし"
-"ます。\n"
-"例えば、NFSでは、あなたは追加のセキュリティ規則を実施するために、\n"
-"マウントポイントを何にするか決定したいとします。"
+"この設計は十分に機能するかもしれません。しかし、次に _プロトコル固有_ のメタ"
+"データの追加をサポートする必要があるとします。例えば、NFSでは、追加のセキュリ"
+"ティルールを適用するために、そのマウントポイントが何であるかを確定したいとし"
+"ます。"
 
 #: src/functional/generics-type-classes.md:71
-#, fuzzy
 msgid ""
 "The way the current struct is designed leaves the protocol decision until "
 "runtime. That means any method that applies to one protocol and not the "
 "other requires the programmer to do a runtime check."
 msgstr ""
-"現在の構造体の設計では、プロトコルは実行時まで決定されません。\n"
-"つまり、一方のプロトコルにて適用されもう一方ではそうしないすべてのメソッドで"
-"は、プログラマが実行時チェックを行う必要があります。"
+"現在の構造体の設計では、プロトコルは実行時まで決定されません。つまり、一方の"
+"プロトコルにて適用され、もう一方では適用されないメソッドは、プログラマが実行"
+"時にチェックを行う必要があります。"
 
 #: src/functional/generics-type-classes.md:75
 msgid "Here is how getting an NFS mount point would look:"
-msgstr "NFSマウントポイントの取得方法は以下のようになります："
+msgstr "NFSマウントポイントの取得方法は以下のようになります:"
 
 #: src/functional/generics-type-classes.md:85
-#, fuzzy
 msgid "// ... other methods ...\n"
 msgstr "// ... その他のメソッド ...\n"
 
 #: src/functional/generics-type-classes.md:87
-#, fuzzy
 msgid ""
 "/// Gets an NFS mount point if this is an NFS request. Otherwise,\n"
 "    /// return None.\n"
 msgstr ""
-"/// これがNFSリクエストであれば、NFSマウントポイントを取得する。そうでない場"
-"合は\n"
-"    /// None を返します。\n"
+"/// NFSリクエストであれば、NFSマウントポイントを取得する。\n"
+"    ///そうでなければ None を返す。\n"
 
 #: src/functional/generics-type-classes.md:95
-#, fuzzy
 msgid ""
 "Every caller of `mount_point()` must check for `None` and write code to "
 "handle it. This is true even if they know only NFS requests are ever used in "
 "a given code path!"
 msgstr ""
 "`mount_point()`のすべての呼び出し元は `None` をチェックして、それを処理する"
-"コードを書かなければなりません。\n"
-"これは、たとえそのコードパス上ではNFS リクエストしか使われないと知っていたと"
-"してもです!"
+"コードを書かなければなりません。これは、たとえそのコードパス上ではNFS リクエ"
+"ストしか使われないと知っていたとしてもです!"
 
 #: src/functional/generics-type-classes.md:99
-#, fuzzy
 msgid ""
 "It would be far more optimal to cause a compile-time error if the different "
 "request types were confused. After all, the entire path of the user's code, "
@@ -6320,223 +6305,182 @@ msgid ""
 "request is an NFS request or a BOOTP request."
 msgstr ""
 "もし異なるリクエストタイプが混同されるのであれば、コンパイル時エラーを発生さ"
-"せる方がはるかに最適でしょう。\n"
-"結局のところ、ユーザのコードパス全体は、\n"
-"このライブラリのどの関数を使うかも含め、\n"
-"あるリクエストがNFSリクエストかBOOTPリクエストか、わかっていることでしょう。"
+"せる方がはるかに最適でしょう。結局のところ、ユーザコードのすべてのパスは、こ"
+"のライブラリのどの関数を使うのかも含めて、あるリクエストがNFSリクエストか"
+"BOOTPリクエストか、わかっていることでしょう。"
 
 #: src/functional/generics-type-classes.md:104
-#, fuzzy
 msgid ""
 "In Rust, this is actually possible! The solution is to _add a generic type_ "
 "in order to split the API."
 msgstr ""
-"Rustでは、実際にこれができます!\n"
-"解決策は、APIを分割するために _ジェネリック型を追加_ することです。"
+"Rustでは、実際にこれができます!解決策は、APIを分割するために _ジェネリック型"
+"を追加_ することです。"
 
 #: src/functional/generics-type-classes.md:107
 msgid "Here is what that looks like:"
-msgstr "これは以下のようになります："
+msgstr "これは以下のようになります:"
 
 #: src/functional/generics-type-classes.md:114
-#, fuzzy
 msgid "// NFS session management omitted\n"
 msgstr "// NFSセッション管理は省略\n"
 
 #: src/functional/generics-type-classes.md:118
-#, fuzzy
 msgid "// no authentication in bootp\n"
-msgstr "// ブート時に認証を行わない\n"
+msgstr "// bootp では認証なし\n"
 
 #: src/functional/generics-type-classes.md:120
-#, fuzzy
 msgid ""
 "// private module, lest outside users invent their own protocol kinds!\n"
-msgstr "// 外部ユーザーが独自のプロトコルを作らないようにするため！\n"
+msgstr ""
+"// 外部のユーザが独自のプロトコルを作れないようにするための、 private なモ"
+"ジュールです！\n"
 
 #: src/functional/generics-type-classes.md:149
-#, fuzzy
 msgid "// no additional metadata\n"
-msgstr "// メタデータの追加なし\n"
+msgstr "// 追加のメタデータなし\n"
 
 #: src/functional/generics-type-classes.md:159
-#, fuzzy
 msgid "// keep internal to prevent impls\n"
-msgstr "// インプットを防ぐため、内部に留めておく\n"
+msgstr "// impl を防ぐため、非publicを維持\n"
 
 #: src/functional/generics-type-classes.md:160
-#, fuzzy
 msgid "// re-export so callers can see them\n"
-msgstr "呼び出し元がそれらを見ることができるように、 // 再エクスポートする。\n"
+msgstr "// 呼び出し元に見えるよう再エクスポート\n"
 
 #: src/functional/generics-type-classes.md:166
-#, fuzzy
 msgid "// all common API parts go into a generic impl block\n"
-msgstr "// すべての共通API部分は、一般的なimplブロックに入る\n"
+msgstr "// すべての共通のAPIは、ジェネリックの impl ブロックに入れます\n"
 
 #: src/functional/generics-type-classes.md:177
-#, fuzzy
 msgid "// all protocol-specific impls go into their own block\n"
-msgstr "// プロトコル固有のインプットはすべて独自のブロックに入れる\n"
+msgstr "// すべてのプロトコル固有の実装は、それぞれのブロックに入れます\n"
 
 #: src/functional/generics-type-classes.md:186
-#, fuzzy
 msgid "// your code here\n"
-msgstr "// ここにコードを記述する\n"
+msgstr "// ここにあなたのコード\n"
 
 #: src/functional/generics-type-classes.md:190
-#, fuzzy
 msgid ""
 "With this approach, if the user were to make a mistake and use the wrong "
 "type;"
-msgstr "このアプローチでは、もしユーザが間違えて異なる型を使ってしまったとき；"
+msgstr ""
+"このアプローチにて、もしもユーザが間違えて異なる型を使ってしまったとき;"
 
 #: src/functional/generics-type-classes.md:197
-#, fuzzy
 msgid "\"/secure\""
 msgstr "\"/secure\""
 
 #: src/functional/generics-type-classes.md:197
-#, fuzzy
 msgid "\"Access denied\""
-msgstr "「アクセス拒否"
+msgstr "\"Access denied\""
 
 #: src/functional/generics-type-classes.md:198
-#, fuzzy
 msgid "// continue on...\n"
-msgstr ""
-"```rust,ignore\n"
-"fn main() {\n"
-"    let mut socket = crate::bootp::listen()?;\n"
-"    while let Some(request) = socket.next_request()? {\n"
-"        match request.mount_point().as_ref()\n"
-"            \"/secure\" => socket.send(\"Access denied\"),\n"
-"            _ => {} // 続く...\n"
-"        }\n"
-"        // ここに残りのコード\n"
-"    }\n"
-"}\n"
-"```"
+msgstr "// 続く...\n"
 
 #: src/functional/generics-type-classes.md:200
-#, fuzzy
 msgid "// Rest of the code here\n"
-msgstr "// 残りのコードはこちら\n"
+msgstr "// ここに残りのコード\n"
 
 #: src/functional/generics-type-classes.md:205
-#, fuzzy
 msgid ""
 "They would get a syntax error. The type `FileDownloadRequest<Bootp>` does "
 "not implement `mount_point()`, only the type `FileDownloadRequest<Nfs>` "
 "does. And that is created by the NFS module, not the BOOTP module of course!"
 msgstr ""
-"構文エラーが発生します。\n"
-"型 `FileDownloadRequest<Bootp>` は `mount_point()` を実装していません。\n"
-"`FileDownloadRequest<Nfs>` 型だけが実装しています。\n"
-"またもちろん、これはNFSモジュールによって作成されるもので、BOOTPモジュールに"
-"よるって作成されるものではありません!"
+"構文エラーが発生します。型 `FileDownloadRequest<Bootp>` は `mount_point()` を"
+"実装していません。`FileDownloadRequest<Nfs>` 型だけが実装しています。またもち"
+"ろん、これはNFSモジュールによって作成されるもので、BOOTPモジュールによるって"
+"作成されるものではありません!"
 
 #: src/functional/generics-type-classes.md:211
-#, fuzzy
 msgid ""
 "First, it allows fields that are common to multiple states to be de-"
 "duplicated. By making the non-shared fields generic, they are implemented "
 "once."
 msgstr ""
-"第一に、複数のステートに共通するフィールドの重複をなくすことができます。\n"
-"非共有のフィールドをジェネリックなものにすることで、それらは一度だけ実装され"
-"ます。"
+"第一に、複数のステートに共通するフィールドの重複をなくすことができます。非共"
+"有のフィールドをジェネリックなものにすることで、それらは一度だけ実装されま"
+"す。"
 
 #: src/functional/generics-type-classes.md:214
-#, fuzzy
 msgid ""
 "Second, it makes the `impl` blocks easier to read, because they are broken "
 "down by state. Methods common to all states are typed once in one block, and "
 "methods unique to one state are in a separate block."
 msgstr ""
-"第二に、状態別に分割されているため、`impl` ブロックが読みやすくなります。\n"
-"すべてのステートに共通するメソッドは1つのブロックに1回だけ記述され、あるス"
-"テートに固有のメソッドは別のブロックに記述されます。"
+"第二に、状態別に分割されているため、`impl` ブロックが読みやすくなります。すべ"
+"てのステートに共通するメソッドは1つのブロックに1回だけ記述され、あるステート"
+"に固有のメソッドは別のブロックに記述されます。"
 
 #: src/functional/generics-type-classes.md:218
 msgid ""
 "Both of these mean there are fewer lines of code, and they are better "
 "organized."
-msgstr "どちらも、コード行数が少なく、整理されているということになります。"
+msgstr ""
+"どちらも、コード行数がより少なく、よく整理されているということになります。"
 
 #: src/functional/generics-type-classes.md:222
-#, fuzzy
 msgid ""
 "This currently increases the size of the binary, due to the way "
 "monomorphization is implemented in the compiler. Hopefully the "
 "implementation will be able to improve in the future."
 msgstr ""
 "現時点では、コンパイラの単相化の実装方法により、バイナリのサイズが大きくなり"
-"ます。\n"
-"将来的に実装が改善されることを願っています。"
+"ます。将来的に実装が改善されることを願っています。"
 
 #: src/functional/generics-type-classes.md:228
-#, fuzzy
 msgid ""
 "If a type seems to need a \"split API\" due to construction or partial "
 "initialization, consider the [Builder Pattern](../patterns/creational/"
 "builder.md) instead."
 msgstr ""
-"- 型が、構築や部分的な初期化のために「分割API」を必要とするようであれば、\n"
-"  [Builderパターン](../patterns/creational/builder.md)を検討してください。\n"
-"\n"
-"- 型間のAPIが変化しない場合 -- 振る舞いだけが変化する場合 -- は\n"
-"  代わりに[Strategyパターン](../patterns/behavioural/strategy.md)を使うのがよ"
-"いでしょう。"
+"型が、その構築や部分的な初期化のために「分割API」を必要とするようであれば、"
+"[Builderパターン](../patterns/creational/builder.md)を検討してください。"
 
 #: src/functional/generics-type-classes.md:232
-#, fuzzy
 msgid ""
 "If the API between types does not change -- only the behavior does -- then "
 "the [Strategy Pattern](../patterns/behavioural/strategy.md) is better used "
 "instead."
 msgstr ""
-"- 型が、構築や部分的な初期化のために「分割API」を必要とするようであれば、\n"
-"  [Builderパターン](../patterns/creational/builder.md)を検討してください。\n"
-"\n"
-"- 型間のAPIが変化しない場合 -- 振る舞いだけが変化する場合 -- は\n"
-"  代わりに[Strategyパターン](../patterns/behavioural/strategy.md)を使うのがよ"
-"いでしょう。"
+"型間のAPIが変化しない場合 -- 振る舞いだけが変化する場合 -- は代わりに"
+"[Strategyパターン](../patterns/behavioural/strategy.md)を使うのがよいでしょ"
+"う。"
 
 #: src/functional/generics-type-classes.md:238
 msgid "This pattern is used throughout the standard library:"
-msgstr "このパターンは標準ライブラリ全体で使われています："
+msgstr "このパターンは標準ライブラリ全体で使われています:"
 
 #: src/functional/generics-type-classes.md:240
-#, fuzzy
 msgid ""
 "`Vec<u8>` can be cast from a String, unlike every other type of `Vec<T>`.[^1]"
 msgstr ""
-"Vec<u8>` は、他のすべての `Vec<T>` の型とは異なり、文字列からキャストすること"
-"ができる[^1]。"
+"`Vec<u8>` は、他の全ての `Vec<T>` の型とは異なり、Stringからキャストすること"
+"ができます。[^1]"
 
 #: src/functional/generics-type-classes.md:241
-#, fuzzy
 msgid ""
 "They can also be cast into a binary heap, but only if they contain a type "
 "that implements the `Ord` trait.[^2]"
 msgstr ""
-"バイナリヒープにキャストすることもできるが、`Ord` traitを実装した型を含む場合"
-"に限られる[^2]。"
+"また、バイナリヒープにキャストすることもできます。ただしそれが `Ord` トレイト"
+"を実装している場合に限ります。[^2]"
 
 #: src/functional/generics-type-classes.md:243
-#, fuzzy
 msgid ""
 "The `to_string` method was specialized for `Cow` only of type `str`.[^3]"
-msgstr "to_string` メソッドは `str` 型の `Cow` のみに特化されていた[^3]。"
+msgstr ""
+"`to_string` メソッドは、 `str` 型に対しての `Cow` について特殊化されていま"
+"す。[^3]"
 
 #: src/functional/generics-type-classes.md:245
 msgid "It is also used by several popular crates to allow API flexibility:"
 msgstr ""
-"また、APIの柔軟性のために、いくつかの人気のあるクレートで使用されています："
+"また、APIの柔軟性のために、いくつかの人気のあるクレートで使用されています:"
 
 #: src/functional/generics-type-classes.md:247
-#, fuzzy
 msgid ""
 "The `embedded-hal` ecosystem used for embedded devices makes extensive use "
 "of this pattern. For example, it allows statically verifying the "
@@ -6545,97 +6489,79 @@ msgid ""
 "determines the functions usable in that mode, which are not on the `Pin` "
 "itself. [^4]"
 msgstr ""
-"- 組み込み機器のための `embedded-hal` エコシステムは、このパターンを多用して"
-"います。\n"
-"  例えば、組み込みのピンの制御に使われるデバイスレジスタの設定を静的に検証す"
-"ることができます。\n"
-"  ピンがあるモードになると、`Pin<MODE>` 構造体を返します。\n"
-"  そのジェネリックはそのモードで使用可能な機能を決定します。 それら機能は "
-"`Pin` 自体には実装されません。 [^4]\n"
-"\n"
-"- HTTPクライアントライブラリ `hyper` は、このパターンを使い、さまざまなプラグ"
-"イン可能なリクエストに対して、リッチなAPIを公開しています。\n"
-"  異なるコネクタを持つクライアントは、異なるメソッドと異なるトレイト実装を持"
-"ちますが、\n"
-"  メソッドのコアセットはすべてのコネクタに適用されます。[^5]\n"
-"\n"
-"- 「Type State」パターン -- 内部状態や不変量に基づいてオブジェクトがAPIを得た"
-"り失ったりするパターン -- は、Rustで同じ基本概念と少し異なる手法を使って実装"
-"されています。[^6]"
+"組み込み機器のための `embedded-hal` エコシステムは、このパターンを多用してい"
+"ます。例えば、組み込みのピンの制御に使われるデバイスレジスタの設定を静的に検"
+"証することができます。ピンがあるモードになると、`Pin<MODE>` 構造体を返しま"
+"す。そのジェネリックはそのモードで使用可能な機能を決定します。 それら機能は "
+"`Pin` 自体には実装されません。 [^4]"
 
 #: src/functional/generics-type-classes.md:253
-#, fuzzy
 msgid ""
 "The `hyper` HTTP client library uses this to expose rich APIs for different "
 "pluggable requests. Clients with different connectors have different methods "
 "on them as well as different trait implementations, while a core set of "
 "methods apply to any connector. [^5]"
 msgstr ""
-"HTTPクライアントライブラリ `hyper` は、さまざまなプラグイン可能なリクエストの"
-"ためのリッチなAPIを公開するためにこれを使用する。異なるコネクタを持つクライア"
-"ントは異なるメソッドと異なる trait の実装を持つが、コアとなるメソッドのセット"
-"はどのコネクタにも適用される。[^5]"
+"HTTPクライアントライブラリ `hyper` は、このパターンを使い、さまざまなプラグイ"
+"ン可能なリクエストに対して、リッチなAPIを公開しています。異なるコネクタを持つ"
+"クライアントは、異なるメソッドと異なるトレイト実装を持ちますが、メソッドのコ"
+"アセットはすべてのコネクタに適用されます。[^5]"
 
 #: src/functional/generics-type-classes.md:258
-#, fuzzy
 msgid ""
 "The \"type state\" pattern -- where an object gains and loses API based on "
 "an internal state or invariant -- is implemented in Rust using the same "
 "basic concept, and a slightly different technique. [^6]"
 msgstr ""
-"オブジェクトが内部状態や不変量に基づいてAPIを得たり失ったりする「型状態」パ"
-"ターンは、Rustでも同じ基本概念と少し異なる手法を使って実装されている。[^6]"
+"「Type State」パターン -- 内部状態や不変量に基づいてオブジェクトがAPIを得たり"
+"失ったりするパターン -- は、Rustで同じ基本概念と少し異なる手法を使って実装さ"
+"れています。[^6]"
 
 #: src/functional/generics-type-classes.md:262
 msgid ""
 "See: [impl From\\<CString\\> for Vec\\<u8\\>](https://doc.rust-lang."
 "org/1.59.0/src/std/ffi/c_str.rs.html#803-811)"
 msgstr ""
-"参照：[impl From<CString> for Vec<u8>](https://doc.rust-lang.org/1.59.0/src/"
+"参照: [impl From<CString> for Vec<u8>](https://doc.rust-lang.org/1.59.0/src/"
 "std/ffi/c_str.rs.html#803-811)"
 
 #: src/functional/generics-type-classes.md:265
-#, fuzzy
 msgid ""
 "See: [impl\\<T: Ord\\> FromIterator\\<T\\> for BinaryHeap\\<T\\>](https://"
 "web.archive.org/web/20201030132806/https://doc.rust-lang.org/stable/src/"
 "alloc/collections/binary_heap.rs.html#1330-1335)"
 msgstr ""
-"参照：[impl <T> From<Vec<T, Global>> for BinaryHeap<T>](https://doc.rust-"
-"lang.org/stable/src/alloc/collections/binary_heap.rs.html#1345-1354)"
+"参照: [impl\\<T: Ord\\> FromIterator\\<T\\> for BinaryHeap\\<T\\>](https://"
+"web.archive.org/web/20201030132806/https://doc.rust-lang.org/stable/src/"
+"alloc/collections/binary_heap.rs.html#1330-1335)"
 
 #: src/functional/generics-type-classes.md:268
 msgid ""
 "See: [impl\\<'\\_\\> ToString for Cow\\<'\\_, str>](https://doc.rust-lang."
 "org/stable/src/alloc/string.rs.html#2235-2240)"
 msgstr ""
-"参照：[impl <' \\_xxxx ToString for Cow<' \\_, str>](https://doc.rust-lang."
+"参照: [impl <' \\_xxxx ToString for Cow<' \\_, str>](https://doc.rust-lang."
 "org/stable/src/alloc/string.rs.html#2235-2240)"
 
 #: src/functional/generics-type-classes.md:271
-#, fuzzy
 msgid ""
 "Example: [https://docs.rs/stm32f30x-hal/0.1.0/stm32f30x_hal/gpio/gpioa/"
 "struct.PA0.html](https://docs.rs/stm32f30x-hal/0.1.0/stm32f30x_hal/gpio/"
 "gpioa/struct.PA0.html)"
 msgstr ""
-"例：\n"
-"[https://docs.rs/stm32f30x-hal/0.1.0/stm32f30x_hal/gpio/gpioa/struct.PA0."
+"例: [https://docs.rs/stm32f30x-hal/0.1.0/stm32f30x_hal/gpio/gpioa/struct.PA0."
 "html](https://docs.rs/stm32f30x-hal/0.1.0/stm32f30x_hal/gpio/gpioa/struct."
 "PA0.html)"
 
 #: src/functional/generics-type-classes.md:274
-#, fuzzy
 msgid ""
 "See: [https://docs.rs/hyper/0.14.5/hyper/client/struct.Client.html](https://"
 "docs.rs/hyper/0.14.5/hyper/client/struct.Client.html)"
 msgstr ""
-"参照：\n"
-"[https://docs.rs/hyper/0.14.5/hyper/client/struct.Client.html](https://docs."
-"rs/hyper/0.14.5/hyper/client/struct.Client.html)"
+"参照: [https://docs.rs/hyper/0.14.5/hyper/client/struct.Client.html](https://"
+"docs.rs/hyper/0.14.5/hyper/client/struct.Client.html)"
 
 #: src/functional/generics-type-classes.md:277
-#, fuzzy
 msgid ""
 "See: [The Case for the Type State Pattern](https://web.archive.org/"
 "web/20210325065112/https://www.novatec-gmbh.de/en/blog/the-case-for-the-"
@@ -6643,19 +6569,15 @@ msgid ""
 "(an extensive thesis)](https://web.archive.org/web/20210328164854/https://"
 "rustype.github.io/notes/notes/rust-typestate-series/rust-typestate-index)"
 msgstr ""
-"参照：\n"
-"[The Case for the Type State Pattern](https://web.archive.org/"
+"参照: [The Case for the Type State Pattern](https://web.archive.org/"
 "web/20210325065112/https://www.novatec-gmbh.de/en/blog/the-case-for-the-"
-"typestate-pattern-the-typestate-pattern-itself/)\n"
-" および \n"
-"[Rusty Typestate Series (広範な論説)](https://web.archive.org/"
-"web/20210328164854/https://rustype.github.io/notes/notes/rust-typestate-"
-"series/rust-typestate-index)"
+"typestate-pattern-the-typestate-pattern-itself/) および [Rusty Typestate "
+"Series (広範な論説)](https://web.archive.org/web/20210328164854/https://"
+"rustype.github.io/notes/notes/rust-typestate-series/rust-typestate-index)"
 
 #: src/functional/optics.md:1
-#, fuzzy
 msgid "Functional Language Optics"
-msgstr "# Rustので関数型使用法"
+msgstr "関数型言語のオプティクス"
 
 #: src/functional/optics.md:3
 #, fuzzy
