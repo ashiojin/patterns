@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Rust Design Patterns\n"
 "POT-Creation-Date: 2024-04-22T15:58:43+09:00\n"
-"PO-Revision-Date: 2024-05-16 22:45+0900\n"
+"PO-Revision-Date: 2024-07-07 11:01+0900\n"
 "Last-Translator: MORI, Yuji <ashiojin@gmail.com>\n"
 "Language-Team: Japanese <translation-team-ja@lists.sourceforge.net>\n"
 "Language: ja\n"
@@ -6580,440 +6580,393 @@ msgid "Functional Language Optics"
 msgstr "関数型言語のオプティクス"
 
 #: src/functional/optics.md:3
-#, fuzzy
 msgid ""
 "Optics is a type of API design that is common to functional languages. This "
 "is a pure functional concept that is not frequently used in Rust."
 msgstr ""
-"Opticsは、関数型言語に共通するAPI設計の一種である。これは純粋な関数型の概念で"
-"あり、Rustではあまり使われない。"
+"Opticsは、関数型言語の一般的なAPI設計の一種です。これは純粋関数風のコンセプト"
+"であり、Rustではあまり使われません。"
 
 #: src/functional/optics.md:6
-#, fuzzy
 msgid ""
 "Nevertheless, exploring the concept may be helpful to understand other "
 "patterns in Rust APIs, such as [visitors](../patterns/behavioural/visitor."
 "md). They also have niche use cases."
 msgstr ""
-"これは純粋な関数型の概念で、Rustではあまり使われません。\n"
-"とはいえ、この概念を探求することは、\n"
-"[visitors](../patterns/behavioural/visitor.md)のようなRust APIにおける他のパ"
-"ターンを理解するのに役立つかもしれません。\n"
-"これらのパターンにもニッチなユースケースがあります。"
+"とはいえ、このコンセプトを探求することは、Rust APIにおける他のパターン、例え"
+"ば[visitors](../patterns/behavioural/visitor.md) 、を理解するのに役立つかもし"
+"れません。これらもニッチなユースケースがあります。"
 
 #: src/functional/optics.md:10
-#, fuzzy
 msgid ""
 "This is quite a large topic, and would require actual books on language "
 "design to fully get into its abilities. However their applicability in Rust "
 "is much simpler."
 msgstr ""
 "これは非常に大きなトピックであり、その能力を完全に理解するには、言語設計に関"
-"する実際の書籍が必要になるだろう。しかし、Rustでの応用はもっと簡単だ。"
+"する実際の書籍が必要になるでしょう。しかし、Rustでの適用はもっと簡単です。"
 
 #: src/functional/optics.md:14
-#, fuzzy
 msgid ""
 "To explain the relevant parts of the concept, the `Serde`\\-API will be used "
 "as an example, as it is one that is difficult for many to to understand from "
 "simply the API documentation."
-msgstr "コンセプトの関連部分を説明するために、`Serde`-APIを例として使用する。"
+msgstr ""
+"コンセプトの関連部分を説明するために、`Serde`-APIを例として使用します。これ"
+"は、単にAPIドキュメントから理解することが、多くの人によって難しいものの一つだ"
+"からです。"
 
 #: src/functional/optics.md:18
-#, fuzzy
 msgid ""
 "In the process, different specific patterns, called Optics, will be covered. "
 "These are _The Iso_, _The Poly Iso_, and _The Prism_."
 msgstr ""
-"その過程で、オプティクスと呼ばれるさまざまな特定のパターンをカバーすることに"
-"なる。これらは、_アイソ、_ポリアイソ、_プリズムである。"
+"その過程で、オプティクスと呼ばれる、ある別のパターンをカバーします。 "
+"_Iso_ 、 _Poly Iso_、 _Prism_ です。"
 
 #: src/functional/optics.md:21
-#, fuzzy
 msgid "An API Example: Serde"
-msgstr "APIの例：セルデ"
+msgstr "APIの例: Serde"
 
 #: src/functional/optics.md:23
-#, fuzzy
 msgid ""
 "Trying to understand the way _Serde_ works by only reading the API is a "
 "challenge, especially the first time. Consider the `Deserializer` trait, "
 "implemented by any library which parses a new data format:"
 msgstr ""
-"APIを読むだけで、_Serde_の仕組みを理解しようとするのは難しいことで、特に最初"
-"のうちは大変です。\n"
-"`Deserializer` トレイトについて考えてみましょう。これは、新しいフォーマットを"
-"パースするあらゆるライブラリの中で、なんらかの型に対し実装されるものです："
+"APIを読むだけで、_Serde_ の仕組みを理解しようとすることは難しく、初めてなら尚"
+"の事です。`Deserializer` トレイトについて考えてみましょう。新しいデータフォー"
+"マットをパースするライブラリによって実装されるものです:"
 
 #: src/functional/optics.md:39 src/functional/optics.md:61
 #: src/functional/optics.md:379 src/functional/optics.md:401
-#, fuzzy
 msgid "// remainder omitted\n"
-msgstr "// 余りは省略\n"
+msgstr "// あとは省略\n"
 
 #: src/functional/optics.md:43
-#, fuzzy
 msgid "And here's the definition of the `Visitor` trait passed in generically:"
-msgstr ""
-"これを理解するためには、lensの概念を念頭に置き、総称的に渡される `Visitor` 型"
-"の定義を見てみる必要があります："
+msgstr "そして以下が、ジェネリックに渡される `Visitor` トレイトの定義です:"
 
 #: src/functional/optics.md:65
-#, fuzzy
 msgid ""
 "There is a lot of type erasure going on here, with multiple levels of "
 "associated types being passed back and forth."
 msgstr ""
-"ここでは多くの型消去が行われており、複数のレベルの関連型が行き来している。"
+"ここでは多くの型消去が行われており、複数のレベルでの関連型が行ったり来たりし"
+"ています。"
 
 #: src/functional/optics.md:68
-#, fuzzy
 msgid ""
 "But what is the big picture? Why not just have the `Visitor` return the "
 "pieces the caller needs in a streaming API, and call it a day? Why all the "
 "extra pieces?"
 msgstr ""
-"しかし、全体像とは何だろう？なぜ`Visitor`がストリーミングAPIで呼び出し元が必"
-"要とする部分を返して、それで終わりにしないのか？なぜ余計なことをするのか？"
+"しかし、全体像はどうなのでしょう？なぜ、`Visitor` が呼び出し元が必要とするも"
+"のを返し、それを呼んで終わりとしないのでしょうか？なぜほかのことを行うので"
+"しょうか？"
 
 #: src/functional/optics.md:72
-#, fuzzy
 msgid ""
 "One way to understand it is to look at a functional languages concept called "
 "_optics_."
 msgstr ""
-"これを理解するひとつの方法は、関数型言語の概念である「光学」を見ることだ。"
+"これを理解するひとつの方法が、関数型言語の概念である _オプティクス(Optics)_ "
+"を考察することです。"
 
 #: src/functional/optics.md:75
-#, fuzzy
 msgid ""
 "This is a way to do composition of behavior and proprieties that is designed "
 "to facilitate patterns common to Rust: failure, type transformation, etc.[^1]"
 msgstr ""
-"これは、Rustに共通するパターン（失敗、型変換など）を容易にするように設計され"
-"た、動作とプロパティの合成を行う方法である[^1]。"
+"これは、振る舞いとプロパティの合成を行うための方法であり、Rustにて共通するパ"
+"ターン (エラー処理、型変換など) を容易にするように設計されたものです。"
 
 #: src/functional/optics.md:78
-#, fuzzy
 msgid ""
 "The Rust language does not have very good support for these directly. "
 "However, they appear in the design of the language itself, and their "
 "concepts can help to understand some of Rust's APIs. As a result, this "
 "attempts to explain the concepts with the way Rust does it."
 msgstr ""
-"Rust言語では、これらを直接的にあまりうまくサポートしていない。しかし、Rust言"
-"語自体の設計にはこれらの概念が登場し、RustのAPIの一部を理解するのに役立ちま"
-"す。そのため、ここではRustの方法でその概念を説明します。"
+"Rustという言語は、直接的には、これらを良くサポートしているわけではありませ"
+"ん。しかし、Rustの言語自体の設計にはこれらの概念が登場し、Rustの一部APIについ"
+"て理解するのに役立ちます。つまりは、これは Rust のやり方で、この概念を説明し"
+"ようとするものです。"
 
+# 2024/5/25
+# specific properties : 特異性、で合ってそうかあとで確認しておきたい・・・
 #: src/functional/optics.md:83
-#, fuzzy
 msgid ""
 "This will perhaps shed light on what those APIs are achieving: specific "
 "properties of composability."
 msgstr ""
-"これはおそらく、それらのAPIが何を達成しているのか、つまりコンポーザビリティの"
-"具体的な特性を明らかにするものだろう。"
+"これはおそらく、それらAPIが達成しようとするもの、つまりは合成可能性の特異性、"
+"を明るみに出すことでしょう。"
 
 #: src/functional/optics.md:86
-#, fuzzy
 msgid "Basic Optics"
-msgstr "基本光学"
+msgstr "基本オプティクス"
 
 #: src/functional/optics.md:88
-#, fuzzy
 msgid "The Iso"
-msgstr "磯"
+msgstr "Iso"
 
 #: src/functional/optics.md:90
-#, fuzzy
 msgid ""
 "The Iso is a value transformer between two types. It is extremely simple, "
 "but a conceptually important building block."
 msgstr ""
-"アイソは、2つのタイプの間の値変換器である。非常にシンプルだが、概念的に重要な"
-"構成要素である。"
+"Iso は、2つの型間の値変換器です。これは非常にシンプルなものですが、概念的に重"
+"要な構成要素です。"
 
 #: src/functional/optics.md:93
-#, fuzzy
 msgid ""
 "As an example, suppose that we have a custom Hash table structure used as a "
 "concordance for a document.[^2] It uses strings for keys (words) and a list "
 "of indexes for values (file offsets, for instance)."
 msgstr ""
-"例として、文書のコンコーダンスとして使用されるカスタム・ハッシュ・テーブル構"
-"造があるとする[^2]。キー（単語）には文字列を使用し、値（ファイル・オフセット"
-"など）にはインデックスのリストを使用する。"
+"例として、文書のコンコルダンス (用語索引) として使用されるカスタム・ハッ"
+"シュ・テーブル構造があるとします[^2]。これはキー (単語) には文字列を使用し、"
+"値 (例えばファイルオフセット) にはインデックスのリストを使用します。"
 
 #: src/functional/optics.md:97
-#, fuzzy
 msgid ""
 "A key feature is the ability to serialize this format to disk. A \"quick and "
 "dirty\" approach would be to implement a conversion to and from a string in "
 "JSON format. (Errors are ignored for the time being, they will be handled "
 "later.)"
 msgstr ""
-"重要な特徴は、このフォーマットをディスクにシリアライズできることである。手っ"
-"取り早く汚い」アプローチは、JSON形式の文字列との変換を実装することだろう。(エ"
-"ラーは当面無視され、後で処理される）。"
+"重要な機能は、このフォーマットをディスクにシリアライズできることです。「ク"
+"イック＆ダーティ」なアプローチは、JSON形式の文字列との相互の変換を実装するこ"
+"とでしょう。(当面、エラーは無視し、後に扱います)"
 
 #: src/functional/optics.md:101
-#, fuzzy
 msgid "To write it in a normal form expected by functional language users:"
-msgstr "関数型言語のユーザーが期待する普通の形式で書くこと："
+msgstr "関数型言語のユーザーが期待する正規系で記述すると:"
 
 #: src/functional/optics.md:110
-#, fuzzy
 msgid ""
 "The Iso is thus a pair of functions which convert values of different types: "
 "`serialize` and `deserialize`."
 msgstr ""
-"Isoはこのように、異なる型の値を変換する関数のペアである：シリアライズ`とデシ"
-"リアライズ`である。"
+"Isoはこのように、異なる型の値を変換する関数のペア: `serialize` と "
+"`deserialize`です。"
 
 #: src/functional/optics.md:113
-#, fuzzy
 msgid "A straightforward implementation:"
-msgstr "わかりやすい実装だ："
+msgstr "単純な実装:"
 
 #: src/functional/optics.md:129
-#, fuzzy
 msgid "// invalid concordances are empty\n"
-msgstr "// 無効なコンコーダンスが空になる\n"
+msgstr "// 無効なコンコルダンスは空\n"
 
 #: src/functional/optics.md:136
-#, fuzzy
 msgid ""
 "This may seem rather silly. In Rust, this type of behavior is typically done "
 "with traits. After all, the standard library has `FromStr` and `ToString` in "
 "it."
 msgstr ""
-"これはかなり馬鹿げていると思われるかもしれない。Rustでは、この種の動作は一般"
-"的にtraitで行う。結局のところ、標準ライブラリには `FromStr` と `ToString` が"
-"ある。"
+"これは馬鹿げたものに見えるかもしれません。Rustでは、この種の振る舞いは一般的"
+"にトレイトで行います。なにせ、標準ライブラリには `FromStr` と `ToString` があ"
+"ります。"
 
 #: src/functional/optics.md:139
-#, fuzzy
 msgid "But that is where our next subject comes in: Poly Isos."
-msgstr "しかし、そこで次のテーマが登場する：ポリ・アイソスである。"
+msgstr "しかし、そこで次のテーマ: Poly Iso が登場します。"
 
 #: src/functional/optics.md:141
-#, fuzzy
 msgid "Poly Isos"
-msgstr "ポリ・アイソス"
+msgstr "Poly Isos"
 
 #: src/functional/optics.md:143
-#, fuzzy
 msgid ""
 "The previous example was simply converting between values of two fixed "
 "types. This next block builds upon it with generics, and is more interesting."
 msgstr ""
-"前の例では、単純に2つの固定型の値を変換しただけだった。この次のブロックは、"
-"ジェネリックスを使ってそれをさらに発展させたもので、より興味深いものだ。"
+"前の例では、単純に2つの固定型の値を相互に変換するだけでした。この次のブロック"
+"は、その上にジェネリクスを加えるもので、より興味深いものです。"
 
+# ちょっと怪しい
 #: src/functional/optics.md:146
 #, fuzzy
 msgid ""
 "Poly Isos allow an operation to be generic over any type while returning a "
 "single type."
 msgstr ""
-"ポリアイソは、単一の型を返しながら、どの型に対しても汎用的な操作を可能にす"
-"る。"
+"Poly Iso は、任意の型に対しジェネリックでありかつ単一の型を返す操作を実現しま"
+"す。"
 
 #: src/functional/optics.md:149
-#, fuzzy
 msgid ""
 "This brings us closer to parsing. Consider what a basic parser would do "
 "ignoring error cases. Again, this is its normal form:"
 msgstr ""
-"これで構文解析に近づいた。基本的なパーサーがエラー・ケースを無視して何をする"
-"か考えてみよう。繰り返すが、これが正規形である："
+"これでパースに近づけました。エラーケースを無視して、基本的なパーサーが何をす"
+"るか考えてみよう。繰り返しますが、これが正規形です:"
 
 #: src/functional/optics.md:159
-#, fuzzy
 msgid "Here we have our first generic, the type `T` being converted."
-msgstr "ここでは、最初のジェネリックである `T` 型が変換されている。"
+msgstr "ここで私たちは、最初のジェネリック型、変換される `T` を手にしました。"
 
 #: src/functional/optics.md:161
-#, fuzzy
 msgid ""
 "In Rust, this could be implemented with a pair of traits in the standard "
 "library: `FromStr` and `ToString`. The Rust version even handles errors:"
 msgstr ""
-"Rustでは、これは標準ライブラリの2つのトレイトで実装できる：FromStr`と"
-"`ToString`である。Rustバージョンはエラーも処理する："
+"Rustでは、これは標準ライブラリの2つのトレイト: FromStr`と`ToString`の組にて実"
+"装可能です。Rustのバージョンはエラーも処理します:"
 
 #: src/functional/optics.md:176
-#, fuzzy
 msgid ""
 "Unlike the Iso, the Poly Iso allows application of multiple types, and "
 "returns them generically. This is what you would want for a basic string "
 "parser."
 msgstr ""
-"Isoとは異なり、Poly Isoは複数の型を適用でき、それらを汎用的に返す。これは、基"
-"本的な文字列パーサーに求められるものだ。"
+"Isoとは異なり、Poly Isoは複数の型に適用でき、それらを汎用的に返します。これ"
+"は、基本的な文字列パーサーに求められるものです。"
 
 #: src/functional/optics.md:179
-#, fuzzy
 msgid ""
 "At first glance, this seems like a good option for writing a parser. Let's "
 "see it in action:"
 msgstr ""
-"一見したところ、これはパーサーを書くのに良い選択肢のように思える。実際に使っ"
-"てみよう："
+"一見したところ、これはパーサーを記述するための良い選択肢であるように思えま"
+"す。実際にやってみましょう:"
 
 #: src/functional/optics.md:208 src/functional/optics.md:282
-#, fuzzy
 msgid "\"hello\""
-msgstr "「こんにちは"
+msgstr "\"hello\""
 
 #: src/functional/optics.md:210
-#, fuzzy
 msgid "\"Our Test Struct as JSON: {}\""
-msgstr "\"JSONとしてのテスト構造：{}\""
+msgstr "\"Our Test Struct as JSON: {}\""
 
 #: src/functional/optics.md:214
-#, fuzzy
 msgid "That seems quite logical. However, there are two problems with this."
-msgstr "それは極めて論理的に思える。しかし、これには2つの問題がある。"
+msgstr ""
+"極めて論理的なものに見えます。しかしながら、ここには2つの問題があります。"
 
 #: src/functional/optics.md:216
-#, fuzzy
 msgid ""
 "First, `to_string` does not indicate to API users, \"this is JSON.\" Every "
 "type would need to agree on a JSON representation, and many of the types in "
 "the Rust standard library already don't. Using this is a poor fit. This can "
 "easily be resolved with our own trait."
 msgstr ""
-"まず、`to_string`はAPIユーザーに「これはJSONです」と示すことはできない。すべ"
-"ての型がJSON表現に同意する必要があるが、Rust標準ライブラリの型の多くはすでに"
-"同意していない。これを使用するのは適合性が低い。これは、独自のtraitで簡単に解"
-"決できます。"
+"第一に、`to_string`はAPIのユーザーに「これはJSONです」ということを示しませ"
+"ん。すべての型がJSON表現に対応している必要がありますが、Rust標準ライブラリの"
+"型の多くがすでに対応していません。これを使用するのは合わないでしょう。これ"
+"は、独自のトレイトで簡単に解決できます。"
 
 #: src/functional/optics.md:221
-#, fuzzy
 msgid "But there is a second, subtler problem: scaling."
-msgstr "しかし、2つ目の微妙な問題がある。"
+msgstr "ですが、第二の微妙な問題があります。スケーリングです。"
 
 #: src/functional/optics.md:223
-#, fuzzy
 msgid ""
 "When every type writes `to_string` by hand, this works. But if every single "
 "person who wants their type to be serializable has to write a bunch of code "
 "-- and possibly different JSON libraries -- to do it themselves, it will "
 "turn into a mess very quickly!"
 msgstr ""
-"すべての型が手作業で `to_string` を書く場合、これはうまくいく。しかし、自分の"
-"型をシリアライズ可能にしたいすべての人が、それを実現するためにたくさんのコー"
-"ドを書かなければならないのであれば、そしておそらく異なるJSONライブラリを書か"
-"なければならないのであれば、それはすぐに混乱に変わってしまうだろう！"
+"すべての型に手作業で `to_string` を書くのであれば、これは機能します。しかし、"
+"自分の型をシリアライズ可能にしたいすべての人が、たくさんのコード -- そしてお"
+"そらくは別のJSONライブラリ -- を自分で書かなければならないのであれば、これは"
+"あっという間にめちゃくちゃなことになってしまうでしょう！"
 
 #: src/functional/optics.md:228
-#, fuzzy
 msgid ""
 "The answer is one of Serde's two key innovations: an independent data model "
 "to represent Rust data in structures common to data serialization languages. "
 "The result is that it can use Rust's code generation abilities to create an "
 "intermediary conversion type it calls a `Visitor`."
 msgstr ""
-"その答えは、Serdeの2つの重要なイノベーションの1つ、データ直列化言語に共通する"
-"構造でRustデータを表現する独立したデータモデルにある。その結果、Rustのコード"
-"生成能力を利用して、`Visitor`と呼ぶ中間的な変換型を作成することができる。"
+"これの解答は、Serdeの2つの重要なイノベーションの1つです。データシリアライズ言"
+"語間に共通する構造によりRustデータを表現する、独立したデータモデルです。これ"
+"により、Rustのコード生成能力を活かして、 `Visitor` と呼ばれる、中間的な変換型"
+"を生成することが可能となります。"
 
 #: src/functional/optics.md:233
-#, fuzzy
 msgid ""
 "This means, in normal form (again, skipping error handling for simplicity):"
-msgstr "つまり、通常の形式では（これも簡単のためにエラー処理は省略する）："
+msgstr "つまり、正規形では (これも簡潔のためにエラー処理は省略):"
 
 #: src/functional/optics.md:247
-#, fuzzy
 msgid ""
 "The result is one Poly Iso and one Iso (respectively). Both of these can be "
 "implemented with traits:"
 msgstr ""
-"その結果、ポリ・イソとイソがそれぞれ1つずつできる。この2つは、どちらも形質で"
-"実装することができる："
+"その結果は、Poly Iso と Iso が (それぞれ) 1つになります。この2つは、どちらも"
+"トレイトで実装可能です:"
 
 #: src/functional/optics.md:263
-#, fuzzy
 msgid ""
 "Because there is a uniform set of rules to transform Rust structures to the "
 "independent form, it is even possible to have code generation creating the "
 "`Visitor` associated with type `T`:"
 msgstr ""
-"Rust構造を独立した形に変換するための統一されたルールがあるため、タイプ`T`に関"
-"連する`ビジター`を作成するコード生成も可能である："
+"Rustの構造体を独立した形に変換するための統一されたルールがあるために、型`T`に"
+"関連する `Visitor` を作成するコード生成も可能です:"
 
 #: src/functional/optics.md:268
-#, fuzzy
 msgid "// the \"Serde\" derive creates the trait impl block\n"
-msgstr "// Serde \"ディライブはtrait implブロックを作成します。\n"
+msgstr "// \"Serde\" の derive は trait impl ブロックを生成します\n"
 
 #: src/functional/optics.md:273
-#, fuzzy
 msgid "// user writes this macro to generate an associated visitor type\n"
-msgstr ""
-"// ユーザは、このマクロを記述して、関連するビジターのタイプを生成する。\n"
+msgstr "// ユーザは、このマクロを記述して、関連する Visitor 型を生成します\n"
 
 #: src/functional/optics.md:278
-#, fuzzy
 msgid "Or do they?"
-msgstr ""
-"ヒープ上に何もアロケートする必要がありません。\n"
-"後で使わないものを初期化する必要もなく、 `File` と `Stdin` の両方で動作するよ"
-"うに、続くコード全体を単相化する必要もありません。"
+msgstr "さて、次のようにするでしょうか？"
 
 #: src/functional/optics.md:284
-#, fuzzy
 msgid "\"Our Test Struct as JSON: {a_data}\""
-msgstr "\"JSONとしてのテスト構造：{a_data}\""
+msgstr "\"Our Test Struct as JSON: {a_data}\""
 
 #: src/functional/optics.md:290
-#, fuzzy
 msgid ""
 "It turns out that the conversion isn't symmetric after all! On paper it is, "
 "but with the auto-generated code the name of the actual type necessary to "
 "convert all the way from `String` is hidden. We'd need some kind of "
 "`generated_visitor_for!` macro to obtain the type name."
 msgstr ""
-"結局、変換は対称ではないことがわかった！紙の上ではそうなのだが、自動生成され"
-"たコードでは `String` からの変換に必要な実際の型名が隠されている。型名を得る"
-"ためには、`generated_visitor_for!`マクロのようなものが必要だ。"
+"これは、結局、変換が対称的でないことを明らかにしました！紙の上ではともかく、"
+"自動生成コードを使うと、`String` からの変換に必要となる実際の型の名前が隠され"
+"ています。型名を得るために、 `generated_visitor_for!` マクロのようなものが必"
+"要になります。"
 
 #: src/functional/optics.md:295
-#, fuzzy
 msgid "It's wonky, but it works... until we get to the elephant in the room."
 msgstr ""
-"この方法は奇妙だが、うまくいっている......部屋の中の象にたどり着くまでは。"
+"この方法は歪ですが、しかし機能しています...私たちが、分かっていても触れたくな"
+"いものに手を付けるまでは。"
 
 #: src/functional/optics.md:297
-#, fuzzy
 msgid ""
 "The only format currently supported is JSON. How would we support more "
 "formats?"
 msgstr ""
-"現在サポートされているフォーマットはJSONだけです。より多くのフォーマットをサ"
+"現在サポートしているフォーマットはJSONだけです。より多くのフォーマットをサ"
 "ポートするにはどうすればよいでしょうか？"
 
 #: src/functional/optics.md:299
-#, fuzzy
 msgid ""
 "The current design requires completely re-writing all of the code generation "
 "and creating a new Serde trait. That is quite terrible and not extensible at "
 "all!"
 msgstr ""
-"現在の設計では、すべてのコード生成を完全に書き直し、新しいセルデの特徴を作成"
-"する必要があります。これは非常にひどいことで、拡張性はまったくない！"
+"現在の設計では、すべてのコード生成を完全に書き直し、新しい Serde トレイトを作"
+"成する必要があります。これは非常に恐ろしいことで、拡張性がまったくありませ"
+"ん！"
 
 #: src/functional/optics.md:302
-#, fuzzy
 msgid "In order to solve that, we need something more powerful."
-msgstr "それを解決するには、もっと強力なものが必要だ。"
+msgstr "これを解決するには、もっと強力なものが必要です。"
 
 #: src/functional/optics.md:304
-#, fuzzy
 msgid "Prism"
-msgstr "プリズム"
+msgstr "Prism"
 
 #: src/functional/optics.md:306
 #, fuzzy
@@ -7348,68 +7301,62 @@ msgid "See Also"
 msgstr "あわせて読みたい"
 
 #: src/functional/optics.md:494
-#, fuzzy
 msgid ""
 "[lens-rs crate](https://crates.io/crates/lens-rs) for a pre-built lenses "
 "implementation, with a cleaner interface than these examples"
 msgstr ""
-"[lens-rs crate](https://crates.io/crates/lens-rs)には、これらの例よりもすっき"
-"りとしたインターフェイスを持つ、あらかじめ組み込まれたレンズの実装がある。"
+"[lens-rs クレート](https://crates.io/crates/lens-rs)は、これらの例よりもすっ"
+"きりとしたインターフェイスを持つ、プリビルドなlensの実装です"
 
 #: src/functional/optics.md:496
-#, fuzzy
 msgid ""
 "[Serde](https://serde.rs) itself, which makes these concepts intuitive for "
 "end users (i.e. defining the structs) without needing to understand the "
 "details"
 msgstr ""
-"[Serde](https://serde.rs)自体が、これらのコンセプトをエンドユーザーにとって直"
-"感的なものにしている（つまり、構造体を定義している）ので、詳細を理解する必要"
-"はない。"
+"[serde](https://serde.rs) 自体が、これらのコンセプトを、エンドユーザが詳細を"
+"知ることなく、直感的に理解可能なもの (すなわち構造体の定義) にするものです"
 
 #: src/functional/optics.md:498
-#, fuzzy
 msgid ""
 "[luminance](https://github.com/phaazon/luminance-rs) is a crate for drawing "
 "computer graphics that uses similar API design, including procedural macros "
 "to create full prisms for buffers of different pixel types that remain "
 "generic"
 msgstr ""
-"[luminance](https://github.com/phaazon/luminance-rs)は、同様のAPI設計を使用す"
-"るコンピュータ・グラフィックス描画用のクレートで、汎用的なまま、異なるピクセ"
-"ル・タイプのバッファ用の完全なプリズムを作成する手続き型マクロを含みます。"
+"[luminance](https://github.com/phaazon/luminance-rs)は、レンズAPIの設計を使用"
+"した、コンピュータグラフィックスを描画するためのクレートです。手続き型マクロ"
+"を持ち、このマクロは、異なるピクセルタイプのバッファに対する完全なprismを汎用"
+"性を保ち作成します"
 
 #: src/functional/optics.md:501
-#, fuzzy
 msgid ""
 "[An Article about Lenses in Scala](https://web.archive.org/"
 "web/20221128185849/https://medium.com/zyseme-technology/functional-"
 "references-lens-and-other-optics-in-scala-e5f7e2fdafe) that is very readable "
 "even without Scala expertise."
 msgstr ""
-"[Scalaのレンズに関する記事](https://web.archive.org/web/20221128185849/"
-"https://medium.com/zyseme-technology/functional-references-lens-and-other-"
-"optics-in-scala-e5f7e2fdafe)は、Scalaの専門知識がなくても非常に読みやすい。"
+"[Scala における lens についての記事](https://web.archive.org/"
+"web/20221128185849/https://medium.com/zyseme-technology/functional-"
+"references-lens-and-other-optics-in-scala-e5f7e2fdafe) は、Scalaの経験なしで"
+"もとても読みやすいものです"
 
 #: src/functional/optics.md:503
-#, fuzzy
 msgid ""
 "[Paper: Profunctor Optics: Modular Data Accessors](https://web.archive.org/"
 "web/20220701102832/https://arxiv.org/ftp/arxiv/papers/1703/1703.10857.pdf)"
 msgstr ""
-"[論文：プロファンクター・オプティクス：モジュラー・データ・アクセッサ]"
-"(https://web.archive.org/web/20220701102832/https://arxiv.org/ftp/arxiv/"
-"papers/1703/1703.10857.pdf)"
+"[論文：Profunctor Optics: Modular Data Accessors](https://web.archive.org/"
+"web/20220701102832/https://arxiv.org/ftp/arxiv/papers/1703/1703.10857.pdf)"
 
 #: src/functional/optics.md:505
-#, fuzzy
 msgid ""
 "[Musli](https://github.com/udoprog/musli) is a library which attempts to use "
 "a similar structure with a different approach, e.g. doing away with the "
 "visitor"
 msgstr ""
-"[Musli](https://github.com/udoprog/musli)は、似たような構造を異なるアプローチ"
-"で使おうとするライブラリである。"
+"[Musli](https://github.com/udoprog/musli)は、似たような構造を異なるアプロー"
+"チ、たとえば visitor を使わずに、で使おうとするライブラリである"
 
 #: src/functional/optics.md:508
 msgid ""
@@ -7422,25 +7369,23 @@ msgstr ""
 "tutorial)"
 
 #: src/functional/optics.md:510
-#, fuzzy
 msgid ""
 "[Concordance on Wikipedia](https://en.wikipedia.org/wiki/"
 "Concordance_(publishing))"
-msgstr "[Wikipedia](https://en.wikipedia.org/wiki/Creational_pattern)より："
+msgstr ""
+"[Concordance のWikipedia](https://en.wikipedia.org/wiki/Creational_pattern)"
 
 #: src/additional_resources/index.md:1
-#, fuzzy
 msgid "Additional resources"
-msgstr "# 追加リソース"
+msgstr "追加リソース"
 
 #: src/additional_resources/index.md:3
 msgid "A collection of complementary helpful content"
 msgstr "補完的なお役立ちコンテンツ集"
 
 #: src/additional_resources/index.md:5
-#, fuzzy
 msgid "Talks"
-msgstr "## トーク"
+msgstr "トーク"
 
 #: src/additional_resources/index.md:7
 #, fuzzy
