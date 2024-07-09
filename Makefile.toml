@@ -1,12 +1,3 @@
-[tasks.install-mdbook]
-install_crate = { crate_name = "mdbook", min_version = "0.4.37" }
-
-[tasks.install-mdbook-i18n-helpers]
-install_crate = { crate_name = "mdbook-i18n-helpers", min_version = "0.3.2" }
-
-[tasks.install-mdbook-last-changed]
-install_crate = { crate_name = "mdbook-last-changed", min_version = "0.1.4" }
-
 [tasks.build-ja]
 env = { "MDBOOK_BOOK__LANGUAGE" = "ja" }
 command = "mdbook"
@@ -18,7 +9,36 @@ command = "mdbook"
 args = ["build", "-d", "book"]
 dependencies = ["install-mdbook", "install-mdbook-i18n-helpers", "install-mdbook-last-changed"]
 
+[tasks.make-release]
+run_task = [
+    { name = [ "clear-release-dir", "collect-en", "collect-ja", ] },
+]
+
 [tasks.merge-pot-to-ja]
 command = "msgmerge"
 args = ["--update", "po/ja.po", "book/xgettext/messages.pot"]
 dependencies = ["build"]
+
+[tasks.clear-release-dir]
+command = "rm"
+args = ["-rf", "book/release"]
+
+[tasks.collect-en]
+command = "cp"
+args = ["-r", "book/html", "book/release"]
+dependencies = ["build"]
+
+[tasks.collect-ja]
+command = "cp"
+args = ["-r", "book/ja/html", "book/release/ja"]
+dependencies = ["build-ja"]
+
+[tasks.install-mdbook]
+install_crate = { crate_name = "mdbook", version = "0.4.37" }
+
+[tasks.install-mdbook-i18n-helpers]
+install_crate = { crate_name = "mdbook-i18n-helpers", version = "0.3.4" }
+
+[tasks.install-mdbook-last-changed]
+install_crate = { crate_name = "mdbook-last-changed", version = "0.1.4" }
+

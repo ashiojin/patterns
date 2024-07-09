@@ -28,29 +28,24 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    env:
-      MDBOOK_VERSION: 0.4.30
-      MDBOOK_I18N_HELPERS_VERSION: 0.1.0
     steps:
-      - uses: actions/checkout@v3
-      - name: Install mdBook
-        run: |
-          curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
-          rustup update
-          cargo install --version ${MDBOOK_VERSION} mdbook
-          cargo install --version ${MDBOOK_I18N_HELPERS_VERSION} mdbook-i18n-helpers
+      - uses: actions/checkout@v4
+      - name: Get rust toolchain
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: stable
+          override: true
+      - name: Get cargo-make
+        uses: davidB/rust-cargo-make@v1
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v3
-      - name: Build with mdBook
-        run: |
-             mdbook build
-             MDBOOK_BOOK__LANGUAGE=ja \
-             mdbook build -d book/ja
+        uses: actions/configure-pages@v5
+      - name: Make release
+        run: cargo make make-release
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: ./book
+          path: ./book/release
 
   # Deployment job
   deploy:
@@ -62,4 +57,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
