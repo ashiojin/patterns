@@ -1,3 +1,25 @@
+# 'Rust Design Patterns' 日本語訳
+
+[Rust Design Patterns](https://github.com/rust-unofficial/patterns) の日本語訳です。 [ここ](https://ashiojin.github.io/patterns/ja/) で読めます。上部アイコンから英語と切り替えできます。
+
+
+## Builds
+
+Install `cargo-make` first.
+
+Then, Use:
+
+- `makers make-release` to build book (ja and en) to `book/release`.
+
+- `makers build-ja` to book (ja only) to `book/ja/html`.
+
+
+
+
+-----------------------------------------
+Below is the README.md from the original repository.
+-----------------------------------------
+
 # Rust Design Patterns
 
 An open source book about design patterns and idioms in the Rust programming
