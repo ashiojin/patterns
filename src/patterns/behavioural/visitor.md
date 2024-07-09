@@ -7,8 +7,8 @@ collection of objects. It allows multiple different algorithms to be written
 over the same data without having to modify the data (or their primary
 behaviour).
 
-Furthermore, the visitor pattern allows separating the traversal of
-a collection of objects from the operations performed on each object.
+Furthermore, the visitor pattern allows separating the traversal of a collection
+of objects from the operations performed on each object.
 
 ## Example
 
@@ -42,13 +42,15 @@ mod visit {
     }
 }
 
-use visit::*;
 use ast::*;
+use visit::*;
 
 // An example concrete implementation - walks the AST interpreting it as code.
 struct Interpreter;
 impl Visitor<i64> for Interpreter {
-    fn visit_name(&mut self, n: &Name) -> i64 { panic!() }
+    fn visit_name(&mut self, n: &Name) -> i64 {
+        panic!()
+    }
     fn visit_stmt(&mut self, s: &Stmt) -> i64 {
         match *s {
             Stmt::Expr(ref e) => self.visit_expr(e),
@@ -72,9 +74,9 @@ to modify the AST data.
 ## Motivation
 
 The visitor pattern is useful anywhere that you want to apply an algorithm to
-heterogeneous data. If data is homogeneous, you can use an iterator-like pattern.
-Using a visitor object (rather than a functional approach) allows the visitor to
-be stateful and thus communicate information between nodes.
+heterogeneous data. If data is homogeneous, you can use an iterator-like
+pattern. Using a visitor object (rather than a functional approach) allows the
+visitor to be stateful and thus communicate information between nodes.
 
 ## Discussion
 
@@ -87,7 +89,7 @@ example,
 ```rust,ignore
 pub fn walk_expr(visitor: &mut Visitor, e: &Expr) {
     match *e {
-        Expr::IntLit(_) => {},
+        Expr::IntLit(_) => {}
         Expr::Add(ref lhs, ref rhs) => {
             visitor.visit_expr(lhs);
             visitor.visit_expr(rhs);
@@ -109,5 +111,5 @@ The visitor pattern is a common pattern in most OO languages.
 
 [Wikipedia article](https://en.wikipedia.org/wiki/Visitor_pattern)
 
-The [fold](../creational/fold.md) pattern is similar to visitor but produces
-a new version of the visited data structure.
+The [fold](../creational/fold.md) pattern is similar to visitor but produces a
+new version of the visited data structure.

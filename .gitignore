@@ -1,6 +1,7 @@
 # Generated output of mdbook
 /book
 .DS_Store
+.vscode/settings.json
 
 # *.mo Compoiled from *.po
 /po/*.mo

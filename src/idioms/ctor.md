@@ -2,8 +2,9 @@
 
 ## Description
 
-Rust does not have constructors as a language construct. Instead, the
-convention is to use an [associated function][associated function] `new` to create an object:
+Rust does not have constructors as a language construct. Instead, the convention
+is to use an [associated function][associated function] `new` to create an
+object:
 
 ````rust
 /// Time in seconds.
@@ -15,7 +16,7 @@ convention is to use an [associated function][associated function] `new` to crea
 /// assert_eq!(42, s.value());
 /// ```
 pub struct Second {
-    value: u64
+    value: u64,
 }
 
 impl Second {
@@ -46,7 +47,7 @@ Rust supports default constructors with the [`Default`][std-default] trait:
 /// assert_eq!(0, s.value());
 /// ```
 pub struct Second {
-    value: u64
+    value: u64,
 }
 
 impl Second {
@@ -77,7 +78,7 @@ like they do with `Second`:
 /// ```
 #[derive(Default)]
 pub struct Second {
-    value: u64
+    value: u64,
 }
 
 impl Second {
@@ -88,11 +89,10 @@ impl Second {
 }
 ````
 
-**Note:** It is common and expected for types to implement both
-`Default` and an empty `new` constructor. `new` is the constructor
-convention in Rust, and users expect it to exist, so if it is
-reasonable for the basic constructor to take no arguments, then it
-should, even if it is functionally identical to default.
+**Note:** It is common and expected for types to implement both `Default` and an
+empty `new` constructor. `new` is the constructor convention in Rust, and users
+expect it to exist, so if it is reasonable for the basic constructor to take no
+arguments, then it should, even if it is functionally identical to default.
 
 **Hint:** The advantage of implementing or deriving `Default` is that your type
 can now be used where a `Default` implementation is required, most prominently,

@@ -2,9 +2,9 @@
 
 ## Description
 
-Use the [`Deref`](https://doc.rust-lang.org/std/ops/trait.Deref.html)
-trait to treat collections like smart pointers, offering owning
-and borrowed views of data.
+Use the [`Deref`](https://doc.rust-lang.org/std/ops/trait.Deref.html) trait to
+treat collections like smart pointers, offering owning and borrowed views of
+data.
 
 ## Example
 
@@ -27,7 +27,7 @@ impl<T> Deref for Vec<T> {
 
 A `Vec<T>` is an owning collection of `T`s, while a slice (`&[T]`) is a borrowed
 collection of `T`s. Implementing `Deref` for `Vec` allows implicit dereferencing
-from `&Vec<T>` to `&[T]` and includes the relationship in auto-derefencing
+from `&Vec<T>` to `&[T]` and includes the relationship in auto-dereferencing
 searches. Most methods you might expect to be implemented for `Vec`s are instead
 implemented for slices.
 
@@ -36,9 +36,9 @@ Also `String` and `&str` have a similar relation.
 ## Motivation
 
 Ownership and borrowing are key aspects of the Rust language. Data structures
-must account for these semantics properly to give a good user
-experience. When implementing a data structure that owns its data, offering a
-borrowed view of that data allows for more flexible APIs.
+must account for these semantics properly to give a good user experience. When
+implementing a data structure that owns its data, offering a borrowed view of
+that data allows for more flexible APIs.
 
 ## Advantages
 

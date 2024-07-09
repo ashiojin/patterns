@@ -2,11 +2,11 @@
 
 ## Description
 
-Many types in Rust have a [constructor]. However, this is _specific_ to the
-type; Rust cannot abstract over "everything that has a `new()` method". To
-allow this, the [`Default`] trait was conceived, which can be used with
-containers and other generic types (e.g. see [`Option::unwrap_or_default()`]).
-Notably, some containers already implement it where applicable.
+Many types in Rust have a [constructor]. However, this is *specific* to the
+type; Rust cannot abstract over "everything that has a `new()` method". To allow
+this, the [`Default`] trait was conceived, which can be used with containers and
+other generic types (e.g. see [`Option::unwrap_or_default()`]). Notably, some
+containers already implement it where applicable.
 
 Not only do one-element containers like `Cow`, `Box` or `Arc` implement
 `Default` for contained `Default` types, one can automatically
@@ -44,8 +44,8 @@ fn main() {
     let mut conf = MyConfiguration::default();
     // do something with conf here
     conf.check = true;
-    println!("conf = {:#?}", conf);
-        
+    println!("conf = {conf:#?}");
+
     // partial initialization with default values, creates the same instance
     let conf1 = MyConfiguration {
         check: true,

@@ -18,13 +18,14 @@ fn say_hello(name: &str) -> String {
     // result
 
     // But using format! is better.
-    format!("Hello {}!", name)
+    format!("Hello {name}!")
 }
 ```
 
 ## Advantages
 
-Using `format!` is usually the most succinct and readable way to combine strings.
+Using `format!` is usually the most succinct and readable way to combine
+strings.
 
 ## Disadvantages
 
